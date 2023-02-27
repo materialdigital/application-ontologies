@@ -11,7 +11,7 @@ It is therefore classified as PMD application ontology (PMDao).
    1. [Ontology Development Steps](#Ontology-Development-Steps)
    2. [Design Principles | Decision log](#Design-Principles-|-Decision-log)
       1. [Fundamentals](#Fundamentals)
-      2. [Case decisions | Specific issues](#Case-decisions-|-Specific issues)
+      2. [Case decisions | Specific issues](#Case-decisions-|-Specific-issues)
       3. [Namespaces](#Namespaces)
 <!-- TOC -->
 
