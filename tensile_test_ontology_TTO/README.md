@@ -12,7 +12,7 @@ It is therefore classified as PMD application ontology (PMDao).
       1. [Fundamentals](####Fundamentals)
       
 
-##Abstract
+## Abstract
 This document is supposed to provide general information on the development of an 
 ontology in the field of materials sciences and engineering (MSE) that was 
 realized within [PMD](https://materialdigital.de) as a first best practice example. 
@@ -41,7 +41,7 @@ approach to provide an example for the creation of an application ontology.
 The result of this development is also given in this repository in a separate
 branch ([TTO_0.1](https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO)).* 
 
-##Documents | Links
+## Documents | Links
 In this section, some documents and tools are listed (and linked, if applicable) that 
 supported the ontology creation or provide some additional information.
 
@@ -61,12 +61,12 @@ concepts are partly also included in PMDco. Such are
 
 
 
-##Documentation
+## Documentation
 This section provides information on the TTO development process and fundamental
 design principles used in TTO. Some basic design principles are already given
 in the PMDco the TTO is based on.
 
-###Ontology Development Steps
+### Ontology Development Steps
 During the development of TTO, the following steps were taken:
 1. Usage of all necessary and supporting information, e.g., ISO standard and preferable data structures created therefrom
 2. Creation of concepts and plausible relations (T-Box) between them on a visual basis using Ontopanel tool
@@ -82,12 +82,12 @@ numerously after findings in step 5 and also possible changes concerning
 implemented content. Likewise, steps 4 and 5 were repeatedly taken when new 
 relations between concepts were introduced.
 
-###Design Principles | Decision log
+### Design Principles | Decision log
 In this section, **design principles** used to model the TTO and, 
 especially, underlying modelling decisions are logged and explained with 
 a focus on modelling goals.
 
-####Fundamentals
+#### Fundamentals
 + many class definitions allowing interconnection / interoperability / reuse
 + object properties condensed to a lower number to reach clarity
 + reusage of known and well-established concepts / schema, such as in the field of datatype definitions
