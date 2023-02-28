@@ -39,7 +39,7 @@ The resulting [TTO](https://github.com/materialdigital/application-ontologies/bl
 [PMD website](https://materialdigital.de/download/) (download section, available after free registration), this [PMD GitHub repository](https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO) 
 and on [MatPortal.org](https://matportal.org/ontologies). 
 
-The TTO was strongly designed on the basis of the PMD core ontology ([PMDco](https://github.com/materialdigital/core-ontology)). 
+The TTO was strongly designed on the basis of the PMD Core Ontology ([PMDco](https://github.com/materialdigital/core-ontology)). 
 Accordingly, classic PMDco concepts are re-used and concepts included due to
 the consideration of the tensile test are always connected to PMDco concepts.
 Moreover, PMDco is connected to other (higher-level) ontologies (cf. section [Documents | Links](#Documents-|-Links)).
@@ -58,7 +58,7 @@ supported the ontology creation or provide some additional information.
 + [Tensile Test Ontology (TTO)](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/pmdao_TTO.ttl) | TTL file of the TTO in this repository
 + [Standard ISO 6892-1:2019-11](https://www.beuth.de/de/norm/iso-6892-1/316885984) | The ISO standard the TTO development is based on
 + [Visualization of preferable tensile test data structure](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/Tensile_Test_Data_Structure_DIN_ad-hoc.pdf) | Visualization of a preferable tensile test data structure, which is the result of an ad-hoc group of the DIN EN ISO 6892-1 standardization committee; basis for TTO development
-+ [PMD core ontology (PMDco)](https://github.com/materialdigital/core-ontology) | The mid-level ontology in the field of materials sciences and engineering (MSE) the TTO is based on
++ [PMD Core Ontology (PMDco)](https://github.com/materialdigital/core-ontology) | The mid-level ontology in the field of materials sciences and engineering (MSE) the TTO is based on
 + [Ontopanel tool](https://yuechenbam.github.io/src/main/webapp/index.html) | A tool created for domain experts based on [diagrams.net](https://www.diagrams.net/) that facilitates visual ontology development and mapping for FAIR data sharing in materials testing (more information in open access [scientific paper](https://link.springer.com/article/10.1007/s40192-022-00279-y))
 + [Protégé tool](https://protege.stanford.edu/) | A tool used for the creation of ontologies; especially, annotations and relations were included in the ontology by applying the Protégé tool
 
@@ -112,7 +112,7 @@ Some basic ideas and conceptual approaches that were kept in mind when creating 
 
 | Aim / modelling goal                                                                                                                                                        | Decision / modelling approach                                                                                                       | Remarks / Explanation                                                                                                                                                                                                                                                                                                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integration of generic terms and definitions from the field of MSE                                                                                                          | Usage of higher-level ontologies (e.g. EMMO), if possible; add own definitions.                                                     | Since basic MSE concepts are to be included, concepts already given in other ontologies (e.g. in EMMO) are used to avoid doubled work. If there are no concepts that fit the specific need, such are simply created.                                                                                                                     |
+| Integration of generic terms and definitions from the field of MSE                                                                                                          | Usage of higher-level ontologies, if possible; add own definitions.                                                                 | Since basic MSE concepts are to be included, concepts already given in other ontologies are used to avoid doubled work. If there are no concepts that fit the specific need, such are simply created.                                                                                                                                    |
 | Include concepts of (characteristic) parameters to the characterization method description. Q: Where to put such parameters conceptually - to TT process or the test piece? | Due to the general modelling approach using the mid-level ontology PMDco, such parameters are connected as 'output' to the process. | In general, this modelling is process-centered as the ontology is supposed to focus the tensile test process and respective data originating therefrom. Therefore, especially, characteristic values are semantically connected to the process. Data distinctly referring to the test piece are accordingly connected to the test piece. |
 | Include expressivity for the description of the material used, e.g., 'steel'.                                                                                               | The possibility to name the material used was inherited from the PMDco using the class *'MaterialDesignation'*                      | The material tested in a tensile test has to be named, for sure. This is possible using the *'MaterialDesignation'* class. Some more expressivity can be included by using the classes given by PMDco to describe chemical compositions.                                                                                                 |
 
@@ -121,13 +121,13 @@ Some basic ideas and conceptual approaches that were kept in mind when creating 
 In this section, the namespaces used in TTO are listed. These can also be found in the [pmdao_TTO.ttl file](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/pmdao_TTO.ttl). By definition,
 https:// is commonly used for namespaces.
 
-| Prefix | Namespace / URI                              |
-|:-------|----------------------------------------------|
-| :      | https://material-digital.de/pmdco/           |
-| owl    | https://www.w3.org/2002/07/owl#              |
-| rdf    | https://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| sdo    | https://schema.org/                          |
-| xml    | https://www.w3.org/XML/1998/namespace        |
-| xsd    | https://www.w3.org/2001/XMLSchema#           |
-| rdfs   | https://www.w3.org/2000/01/rdf-schema#       |
-| base   | https://material-digital.de/pmdao/tto        |
+| Prefix | Namespace / URI                             |
+|:-------|---------------------------------------------|
+| :      | http://material-digital.de/pmdco/           |
+| owl    | http://www.w3.org/2002/07/owl#              |
+| rdf    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
+| sdo    | http://schema.org/                          |
+| xml    | http://www.w3.org/XML/1998/namespace        |
+| xsd    | http://www.w3.org/2001/XMLSchema#           |
+| rdfs   | http://www.w3.org/2000/01/rdf-schema#       |
+| base   | http://material-digital.de/pmdao/tto        |
