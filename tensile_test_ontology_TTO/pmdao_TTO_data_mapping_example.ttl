@@ -1,0 +1,5367 @@
+@prefix base: <http://material-digital.de/pmdco/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns1: <http://material-digital.de/pmdco/> .
+@prefix ns2: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tte: <http://material-digital.de/pmdao/tte/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tte: a owl:Ontology ;
+    dc:creator "Bernd Bayerlein | ORCiD: 0000-0002-3717-7104" ,
+"Jörg Waitelonis | ORCiD: 0000-0001-7192-7143" ,
+"Markus Schilling | ORCiD: 0000-0002-7094-5371" ;
+    dc:title "Tensile Test Ontology (TTO) - Data mapping example" ;
+    owl:versionInfo "1.0.0" .
+
+tte:caliperCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:caliperCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:caliperCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:changeInTransversalDimension_ a base:ChangeInTransversalDimension,
+        owl:NamedIndividual,
+        ns1:PrimaryData,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:crossheadSeparation_ a base:CrossheadSeparation,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasResource tte:crossheadSeparationList_ ;
+    ns1:hasUnit unit:MilliM .
+
+tte:duration_ a base:Duration,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasResource tte:TimeList_ ;
+    ns1:hasUnit unit:SEC .
+
+tte:extension_ a base:Extension,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasResource tte:extensionList_ ;
+    ns1:hasUnit unit:MilliM .
+
+tte:extensometerCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:extensometerCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:force_ a owl:NamedIndividual,
+        ns1:Force,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasResource tte:forceList_ ;
+    ns1:hasUnit unit:KiloN .
+
+tte:furnaceCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:furnaceCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DEG_C ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:gripsCoating_ a base:CoatingDesignation,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsInspectionDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsInspectionInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:gripsRoughness_ a base:Roughness,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MicroM ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:insertSurface_ a base:InsertSurface,
+        owl:NamedIndividual .
+
+tte:insert_ a owl:NamedIndividual,
+        ns1:Grips .
+
+tte:loadCellCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:loadCellCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:N ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:micrometerGaugeCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugeCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:micrometerGaugeCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MicroM ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-1 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.987"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-10 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.985"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-2 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-3 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.994"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-4 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.978"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-5 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.992"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-6 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.989"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-7 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-8 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.979"^^xsd:float .
+
+tte:originalThickness_2_pmdao-tto-tt-S355-9 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-1 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.992"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-10 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.99"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-2 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.992"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-3 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.992"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-4 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.977"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-5 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.993"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-6 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.998"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-7 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "6.002"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-8 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.99"^^xsd:float .
+
+tte:originalThickness_3_pmdao-tto-tt-S355-9 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.993"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-1 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.145"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-10 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.141"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-2 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.101"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-3 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.092"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-4 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.072"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-5 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.133"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-6 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.137"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-7 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.127"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-8 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.154"^^xsd:float .
+
+tte:originalWidth_2_pmdao-tto-tt-S355-9 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.144"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-1 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.131"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-10 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.152"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-2 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.094"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-3 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.099"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-4 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.07"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-5 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.128"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-6 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.134"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-7 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.131"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-8 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.148"^^xsd:float .
+
+tte:originalWidth_3_pmdao-tto-tt-S355-9 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.159"^^xsd:float .
+
+tte:project_pmdao-tto-tt-S355-1 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-1,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-10 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-10,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-2 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-2,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-3 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-3,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-4 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-4,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-5 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-5,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-6 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-6,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-7 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-7,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-8 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-8,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:project_pmdao-tto-tt-S355-9 a base:Project,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:projectId_pmdao-tto-tt-S355-9,
+        tte:projectReferenceId_ ;
+    ns1:hasParticipant tte:customer_ .
+
+tte:tensileTest_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-1 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-1,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-1,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-1,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-1,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-1,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-1,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-1,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-1 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-1,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-1,
+        tte:note_pmdao-tto-tt-S355-1,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-1,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-1,
+        tte:strainRate_pmdao-tto-tt-S355-1,
+        tte:switchPoint_pmdao-tto-tt-S355-1 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-1,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-1,
+        tte:extensometer_pmdao-tto-tt-S355-1,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-1,
+        tte:micrometerGauge_pmdao-tto-tt-S355-1,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-1,
+        tte:testStandard_pmdao-tto-tt-S355-1,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-1,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-1,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-1,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-1,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-1,
+        tte:performElongationProcess_pmdao-tto-tt-S355-1,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-1,
+        tte:removeTestPiece_pmdao-tto-tt-S355-1 .
+
+tte:tensileTest_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-10 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-10,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-10,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-10,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-10,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-10,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-10,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-10,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-10 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-10,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-10,
+        tte:note_pmdao-tto-tt-S355-10,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-10,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-10,
+        tte:strainRate_pmdao-tto-tt-S355-10,
+        tte:switchPoint_pmdao-tto-tt-S355-10 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-10,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-10,
+        tte:extensometer_pmdao-tto-tt-S355-10,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-10,
+        tte:micrometerGauge_pmdao-tto-tt-S355-10,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-10,
+        tte:testStandard_pmdao-tto-tt-S355-10,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-10,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-10,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-10,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-10,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-10,
+        tte:performElongationProcess_pmdao-tto-tt-S355-10,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-10,
+        tte:removeTestPiece_pmdao-tto-tt-S355-10 .
+
+tte:tensileTest_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-2 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-2,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-2,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-2,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-2,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-2,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-2,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-2,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-2 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-2,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-2,
+        tte:note_pmdao-tto-tt-S355-2,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-2,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-2,
+        tte:strainRate_pmdao-tto-tt-S355-2,
+        tte:switchPoint_pmdao-tto-tt-S355-2 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-2,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-2,
+        tte:extensometer_pmdao-tto-tt-S355-2,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-2,
+        tte:micrometerGauge_pmdao-tto-tt-S355-2,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-2,
+        tte:testStandard_pmdao-tto-tt-S355-2,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-2,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-2,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-2,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-2,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-2,
+        tte:performElongationProcess_pmdao-tto-tt-S355-2,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-2,
+        tte:removeTestPiece_pmdao-tto-tt-S355-2 .
+
+tte:tensileTest_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-3 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-3,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-3,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-3,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-3,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-3,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-3,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-3,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-3 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-3,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-3,
+        tte:note_pmdao-tto-tt-S355-3,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-3,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-3,
+        tte:strainRate_pmdao-tto-tt-S355-3,
+        tte:switchPoint_pmdao-tto-tt-S355-3 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-3,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-3,
+        tte:extensometer_pmdao-tto-tt-S355-3,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-3,
+        tte:micrometerGauge_pmdao-tto-tt-S355-3,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-3,
+        tte:testStandard_pmdao-tto-tt-S355-3,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-3,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-3,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-3,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-3,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-3,
+        tte:performElongationProcess_pmdao-tto-tt-S355-3,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-3,
+        tte:removeTestPiece_pmdao-tto-tt-S355-3 .
+
+tte:tensileTest_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-4 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-4,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-4,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-4,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-4,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-4,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-4,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-4,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-4 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-4,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-4,
+        tte:note_pmdao-tto-tt-S355-4,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-4,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-4,
+        tte:strainRate_pmdao-tto-tt-S355-4,
+        tte:switchPoint_pmdao-tto-tt-S355-4 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-4,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-4,
+        tte:extensometer_pmdao-tto-tt-S355-4,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-4,
+        tte:micrometerGauge_pmdao-tto-tt-S355-4,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-4,
+        tte:testStandard_pmdao-tto-tt-S355-4,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-4,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-4,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-4,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-4,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-4,
+        tte:performElongationProcess_pmdao-tto-tt-S355-4,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-4,
+        tte:removeTestPiece_pmdao-tto-tt-S355-4 .
+
+tte:tensileTest_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-5 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-5,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-5,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-5,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-5,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-5,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-5,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-5,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-5 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-5,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-5,
+        tte:note_pmdao-tto-tt-S355-5,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-5,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-5,
+        tte:strainRate_pmdao-tto-tt-S355-5,
+        tte:switchPoint_pmdao-tto-tt-S355-5 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-5,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-5,
+        tte:extensometer_pmdao-tto-tt-S355-5,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-5,
+        tte:micrometerGauge_pmdao-tto-tt-S355-5,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-5,
+        tte:testStandard_pmdao-tto-tt-S355-5,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-5,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-5,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-5,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-5,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-5,
+        tte:performElongationProcess_pmdao-tto-tt-S355-5,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-5,
+        tte:removeTestPiece_pmdao-tto-tt-S355-5 .
+
+tte:tensileTest_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-6 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-6,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-6,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-6,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-6,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-6,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-6,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-6,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-6 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-6,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-6,
+        tte:note_pmdao-tto-tt-S355-6,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-6,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-6,
+        tte:strainRate_pmdao-tto-tt-S355-6,
+        tte:switchPoint_pmdao-tto-tt-S355-6 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-6,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-6,
+        tte:extensometer_pmdao-tto-tt-S355-6,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-6,
+        tte:micrometerGauge_pmdao-tto-tt-S355-6,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-6,
+        tte:testStandard_pmdao-tto-tt-S355-6,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-6,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-6,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-6,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-6,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-6,
+        tte:performElongationProcess_pmdao-tto-tt-S355-6,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-6,
+        tte:removeTestPiece_pmdao-tto-tt-S355-6 .
+
+tte:tensileTest_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-7 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-7,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-7,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-7,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-7,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-7,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-7,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-7,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-7 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-7,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-7,
+        tte:note_pmdao-tto-tt-S355-7,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-7,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-7,
+        tte:strainRate_pmdao-tto-tt-S355-7,
+        tte:switchPoint_pmdao-tto-tt-S355-7 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-7,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-7,
+        tte:extensometer_pmdao-tto-tt-S355-7,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-7,
+        tte:micrometerGauge_pmdao-tto-tt-S355-7,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-7,
+        tte:testStandard_pmdao-tto-tt-S355-7,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-7,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-7,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-7,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-7,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-7,
+        tte:performElongationProcess_pmdao-tto-tt-S355-7,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-7,
+        tte:removeTestPiece_pmdao-tto-tt-S355-7 .
+
+tte:tensileTest_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-8 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-8,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-8,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-8,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-8,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-8,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-8,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-8,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-8 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-8,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-8,
+        tte:note_pmdao-tto-tt-S355-8,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-8,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-8,
+        tte:strainRate_pmdao-tto-tt-S355-8,
+        tte:switchPoint_pmdao-tto-tt-S355-8 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-8,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-8,
+        tte:extensometer_pmdao-tto-tt-S355-8,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-8,
+        tte:micrometerGauge_pmdao-tto-tt-S355-8,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-8,
+        tte:testStandard_pmdao-tto-tt-S355-8,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-8,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-8,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-8,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-8,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-8,
+        tte:performElongationProcess_pmdao-tto-tt-S355-8,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-8,
+        tte:removeTestPiece_pmdao-tto-tt-S355-8 .
+
+tte:tensileTest_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:TensileTest ;
+    base:hasCharacteristic tte:testOperator_pmdao-tto-tt-S355-9 ;
+    base:hasOutput tte:PercentageReductionOfArea_pmdao-tto-tt-S355-9,
+        tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-9,
+        tte:lowerYieldStrength_,
+        tte:maximumForce_pmdao-tto-tt-S355-9,
+        tte:modulusOfElasticity_pmdao-tto-tt-S355-9,
+        tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-9,
+        tte:percentageElongation_,
+        tte:percentageExtension_,
+        tte:percentagePermanentElongation_,
+        tte:percentagePlasticExtensionAtMaximumForce_,
+        tte:percentageTotalExtensionAtMaximumForce_,
+        tte:proofStrengthPlasticExtensionRp01_,
+        tte:proofStrengthPlasticExtensionRp02_,
+        tte:proofStrengthPlasticExtension_,
+        tte:proofStrengthTotalExtension_,
+        tte:slopeOfTheElasticPart_,
+        tte:stress_,
+        tte:tensileStrength_pmdao-tto-tt-S355-9,
+        tte:upperYieldStrength_pmdao-tto-tt-S355-9,
+        tte:yieldStrength_ ;
+    ns2:RO_0000057 tte:tensileTestPiece_pmdao-tto-tt-S355-9 ;
+    prov:atLocation tte:laboratoryLocation_,
+        tte:laboratory_ ;
+    ns1:hasCharacteristic tte:date_pmdao-tto-tt-S355-9,
+        tte:environmentalTemperature_pmdao-tto-tt-S355-9,
+        tte:note_pmdao-tto-tt-S355-9,
+        tte:preload_,
+        tte:processDocumentation_,
+        tte:projectId_pmdao-tto-tt-S355-9,
+        tte:projectReferenceId_,
+        tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-9,
+        tte:strainRate_pmdao-tto-tt-S355-9,
+        tte:switchPoint_pmdao-tto-tt-S355-9 ;
+    ns1:hasParticipant tte:algorithm_,
+        tte:caliper_pmdao-tto-tt-S355-9,
+        tte:coolingMedium_,
+        tte:customer_,
+        tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-9,
+        tte:extensometer_pmdao-tto-tt-S355-9,
+        tte:filter_,
+        tte:furnace_,
+        tte:grips_,
+        tte:loadCell_pmdao-tto-tt-S355-9,
+        tte:micrometerGauge_pmdao-tto-tt-S355-9,
+        tte:regression_,
+        tte:temperatueMeasurementDevice_,
+        tte:temperatureChangeDevice_,
+        tte:tensileTestingMachine_pmdao-tto-tt-S355-9,
+        tte:testStandard_pmdao-tto-tt-S355-9,
+        tte:thermocouple_ ;
+    ns1:hasSubordinateProcess tte:AlignTestPiece_pmdao-tto-tt-S355-9,
+        tte:ClampTestPiece_pmdao-tto-tt-S355-9,
+        tte:TestPieceTempering_pmdao-tto-tt-S355-9,
+        tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-9,
+        tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-9,
+        tte:performElongationProcess_pmdao-tto-tt-S355-9,
+        tte:performMeasurementEvaluation_pmdao-tto-tt-S355-9,
+        tte:removeTestPiece_pmdao-tto-tt-S355-9 .
+
+tte:testingMachineCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:testingMachineCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:thermocoupleCalibrationDate_ a base:Date,
+        owl:NamedIndividual ;
+    base:hasUnit unit:date ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleCalibrationInterval_ a base:Duration,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DAY ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:thermocoupleCalibrationRange_ a base:CalibrationRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DEG_C ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+base:hasCharacteristic a owl:ObjectProperty .
+
+base:hasOutput a owl:ObjectProperty .
+
+base:hasUnit a owl:ObjectProperty .
+
+base:relatesToPercentageExtension a owl:ObjectProperty .
+
+ns2:RO_0000057 a owl:ObjectProperty .
+
+xsd:anyURI a rdfs:Datatype .
+
+xsd:float a rdfs:Datatype .
+
+xsd:string a rdfs:Datatype .
+
+prov:atLocation a owl:ObjectProperty .
+
+prov:value a owl:DatatypeProperty .
+
+ns1:hasCharacteristic a owl:ObjectProperty ;
+    rdfs:domain ns1:ProcessingNode ;
+    rdfs:range ns1:NodeInfo .
+
+ns1:hasNextProcess a owl:ObjectProperty .
+
+ns1:hasParticipant a owl:ObjectProperty .
+
+ns1:hasResource a owl:ObjectProperty .
+
+ns1:hasSubordinateProcess a owl:ObjectProperty .
+
+ns1:hasUnit a owl:ObjectProperty .
+
+ns1:hasValue a owl:DatatypeProperty .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-1 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "56.34869917188786"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-10 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "63.60809785607171"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-2 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "58.83174398450212"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-3 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "58.05332902901787"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-4 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "60.51951375933701"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-5 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "53.56338797989294"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-6 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "55.73254078184996"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-7 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "58.25966329887156"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-8 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "55.10779071230684"^^xsd:float .
+
+tte:PercentageReductionOfArea_pmdao-tto-tt-S355-9 a base:PercentageReductionOfArea,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "59.5611898866266"^^xsd:float .
+
+tte:TimeList_ a owl:NamedIndividual .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperManufacturer_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-1 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "BA606983"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-10 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-2 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "BA606983"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-3 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "BA606983"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-4 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "BA606983"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-5 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-6 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-7 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-8 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:caliperSerialNumber_pmdao-tto-tt-S355-9 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "AK807114"^^xsd:string .
+
+tte:clampingPressure_ a base:ClampingPressure,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:contactAddress_ a base:Address,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:crossheadSeparationList_ a owl:NamedIndividual .
+
+tte:date_pmdao-tto-tt-S355-1 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-10 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-12-20 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-2 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-3 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-4 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-5 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-6 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-7 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-8 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-02-22 00:00:00"^^xsd:string .
+
+tte:date_pmdao-tto-tt-S355-9 a base:Date,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:date ;
+    ns1:hasValue "2021-12-20 00:00:00"^^xsd:string .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-1 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-1,
+        tte:micrometerGauge_pmdao-tto-tt-S355-1 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-10 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-10,
+        tte:micrometerGauge_pmdao-tto-tt-S355-10 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-2 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-2,
+        tte:micrometerGauge_pmdao-tto-tt-S355-2 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-3 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-3,
+        tte:micrometerGauge_pmdao-tto-tt-S355-3 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-4 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-4,
+        tte:micrometerGauge_pmdao-tto-tt-S355-4 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-5 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-5,
+        tte:micrometerGauge_pmdao-tto-tt-S355-5 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-6 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-6,
+        tte:micrometerGauge_pmdao-tto-tt-S355-6 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-7 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-7,
+        tte:micrometerGauge_pmdao-tto-tt-S355-7 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-8 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-8,
+        tte:micrometerGauge_pmdao-tto-tt-S355-8 .
+
+tte:dimensionMeasurementDevice_pmdao-tto-tt-S355-9 a base:DimensionMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:caliper_pmdao-tto-tt-S355-9,
+        tte:micrometerGauge_pmdao-tto-tt-S355-9 .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-1 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-10 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-2 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-3 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-4 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-5 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-6 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-7 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-8 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:environmentalTemperature_pmdao-tto-tt-S355-9 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:Metadata ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C .
+
+tte:extensionList_ a owl:NamedIndividual .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "DIN EN ISO 17025"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-1 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-1 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-10 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-10 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-2 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-2 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-3 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-3 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-4 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-4 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-5 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-5 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-6 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-6 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-7 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-7 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-8 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-8 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerClassification_pmdao-tto-tt-S355-9 a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:extensometerClassificationReferenceStandard_pmdao-tto-tt-S355-9 ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerManufacturer_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "HBM"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-1 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28023/28024"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-10 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-2 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28023/28024"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-3 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28023/28024"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-4 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28023/28024"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-5 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-6 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-7 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-8 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerSerialNumber_pmdao-tto-tt-S355-9 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "28323/28324"^^xsd:string .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-1 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-10 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-2 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-3 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-4 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-5 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-6 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-7 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-8 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometerWorkingRange_pmdao-tto-tt-S355-9 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "50.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:extensometer_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-1,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-1,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-1,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-1 .
+
+tte:extensometer_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-10,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-10,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-10,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-10 .
+
+tte:extensometer_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-2,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-2,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-2,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-2 .
+
+tte:extensometer_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-3,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-3,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-3,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-3 .
+
+tte:extensometer_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-4,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-4,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-4,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-4 .
+
+tte:extensometer_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-5,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-5,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-5,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-5 .
+
+tte:extensometer_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-6,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-6,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-6,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-6 .
+
+tte:extensometer_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-7,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-7,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-7,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-7 .
+
+tte:extensometer_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-8,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-8,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-8,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-8 .
+
+tte:extensometer_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Extensometer ;
+    ns1:hasCharacteristic tte:extensometerCalibration_,
+        tte:extensometerClassification_pmdao-tto-tt-S355-9,
+        tte:extensometerDataAcquisitionRate_,
+        tte:extensometerErrorReport_,
+        tte:extensometerManufacturer_pmdao-tto-tt-S355-9,
+        tte:extensometerModel_,
+        tte:extensometerSerialNumber_pmdao-tto-tt-S355-9,
+        tte:extensometerType_,
+        tte:extensometerWorkingRange_pmdao-tto-tt-S355-9 .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-1 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "-"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-10 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "79.87"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-2 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "81.0"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-3 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "81.1"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-4 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "80.9"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-5 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "-"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-6 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "81.0"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-7 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "80.14"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-8 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "79.74"^^xsd:float .
+
+tte:finalGaugeLengthAfterFracture_pmdao-tto-tt-S355-9 a base:FinalGaugeLengthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "80.02"^^xsd:float .
+
+tte:forceList_ a owl:NamedIndividual .
+
+tte:furnaceCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceHeatCapacity_ a owl:NamedIndividual,
+        ns1:HeatCapacity ;
+    base:hasUnit unit:J-PER-K ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:furnaceManufacturer_ a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceSerialNumber_ a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnaceWorkingRange_ a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DEG_C ;
+    prov:value "minValue"^^xsd:float .
+
+tte:geometryShape_pmdao-tto-tt-S355-1 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-10 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-2 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-3 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-4 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-5 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-6 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-7 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-8 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:geometryShape_pmdao-tto-tt-S355-9 a base:GeometryShape,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    base:hasCharacteristic tte:geometryReferenceStandard_ ;
+    prov:value "E6x20x60"^^xsd:string .
+
+tte:gripsAlignmentReferenceStandard_ a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "value"^^xsd:string .
+
+tte:gripsAlignment_ a base:GripsAlignment,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:gripsAlignmentReferenceStandard_ ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsInspection_ a base:InspectionDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsManufacturer_ a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsSerialNumber_ a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:gripsType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:laboratoryAccreditationCertificate_ a base:AccreditationDocument,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:laboratoryId_ a owl:NamedIndividual,
+        ns1:Identifier,
+        ns1:Metadata ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellClassificationReferenceStandard_ a owl:NamedIndividual,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "value"^^xsd:string .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-1 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-10 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-2 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-3 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-4 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-5 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-6 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-7 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-8 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCellWorkingRange_pmdao-tto-tt-S355-9 a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:KiloN ;
+    prov:value "100.0"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:loadCell_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-1 .
+
+tte:loadCell_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-10 .
+
+tte:loadCell_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-2 .
+
+tte:loadCell_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-3 .
+
+tte:loadCell_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-4 .
+
+tte:loadCell_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-5 .
+
+tte:loadCell_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-6 .
+
+tte:loadCell_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-7 .
+
+tte:loadCell_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-8 .
+
+tte:loadCell_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:LoadCell ;
+    ns1:hasCharacteristic tte:loadCellCalibration_,
+        tte:loadCellClassification_,
+        tte:loadCellDataAcquisitionRate_,
+        tte:loadCellErrorReport_,
+        tte:loadCellManufacturer_,
+        tte:loadCellModel_,
+        tte:loadCellSerialNumber_,
+        tte:loadCellType_,
+        tte:loadCellWorkingRange_pmdao-tto-tt-S355-9 .
+
+tte:maximumForce_pmdao-tto-tt-S355-1 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "62.006923703333335"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-10 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "61.681309193000004"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-2 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "60.703660584000005"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-3 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "60.6795672"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-4 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "62.28751477400001"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-5 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "61.30510810666667"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-6 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "61.199912708999996"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-7 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "60.93464262666666"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-8 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "61.979578732"^^xsd:float .
+
+tte:maximumForce_pmdao-tto-tt-S355-9 a base:MaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:N ;
+    ns1:hasValue "62.16814105499999"^^xsd:float .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-1 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-1 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-10 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-10 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-2 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-2 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-3 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-3 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-4 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-4 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-5 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-5 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-6 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-6 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-7 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-7 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-8 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-8 .
+
+tte:measuringTestPieceDimensions_pmdao-tto-tt-S355-9 a base:MeasurementProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:AlignTestPiece_pmdao-tto-tt-S355-9 .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Orion"^^xsd:string .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-1 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "194.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-10 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "195.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-2 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "199.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-3 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "199.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-4 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "196.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-5 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "210.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-6 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "214.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-7 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "206.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-8 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "211.0"^^xsd:float .
+
+tte:modulusOfElasticity_pmdao-tto-tt-S355-9 a base:ModulusOfElasticity,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "201.0"^^xsd:float .
+
+tte:note_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "In Walzrichtung aus Stahlblech entnommen; Abweichend von den anderen Proben. Weggeschwindigkeit wurde erhöht."^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:note_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Note ;
+    prov:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-1 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-10 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-2 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-3 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-4 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-5 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-6 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-7 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-8 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalGaugeLength_pmdao-tto-tt-S355-9 a base:OriginalGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "60.0"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-1 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.993"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-10 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.993"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-2 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-3 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-4 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.982"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-5 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "6.0"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-6 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.996"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-7 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.991"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-8 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.982"^^xsd:float .
+
+tte:originalThickness_1_pmdao-tto-tt-S355-9 a base:OriginalThickness,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "5.992"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-1 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.136"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-10 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.168"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-2 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.114"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-3 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.084"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-4 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.076"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-5 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.129"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-6 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.141"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-7 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.127"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-8 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.154"^^xsd:float .
+
+tte:originalWidth_1_pmdao-tto-tt-S355-9 a base:OriginalWidth,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "20.135"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-1 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "-"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-10 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "33.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-2 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "35.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-3 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "35.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-4 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "35.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-5 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "-"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-6 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "35.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-7 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "33.5"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-8 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "33.0"^^xsd:float .
+
+tte:percentageElongationAfterFracture_pmdao-tto-tt-S355-9 a base:PercentageElongationAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "33.5"^^xsd:float .
+
+tte:percentageExtensionList_ a owl:NamedIndividual .
+
+tte:personnelList_ a owl:NamedIndividual .
+
+tte:personnel_ a owl:NamedIndividual,
+        prov:Person,
+        ns1:Metadata ;
+    ns1:hasResource tte:personnelList_ ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-1 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-10 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-2 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-3 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-4 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-5 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-6 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-7 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-8 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:setEnvironmentalTemperature_pmdao-tto-tt-S355-9 a base:EnvironmentalTemperature,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "20.0"^^xsd:float ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "minValue"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-1 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-10 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-2 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-3 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-4 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-5 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-6 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-7 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-8 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:strainRate_pmdao-tto-tt-S355-9 a base:StrainRate,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasUnit unit:PER-SEC ;
+    ns1:hasValue "0.00025"^^xsd:float .
+
+tte:stressList_ a owl:NamedIndividual .
+
+tte:switchPoint_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "1.6"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "4.0"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "3.8"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:switchPoint_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Extension,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    base:relatesToPercentageExtension tte:switchPointPercentageExtensionReferenceValue_ ;
+    prov:value "4.0"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:tensileStrength_pmdao-tto-tt-S355-1 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "514.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-10 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "511.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-2 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "504.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-3 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "504.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-4 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "519.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-5 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "508.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-6 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "507.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-7 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "505.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-8 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "514.0"^^xsd:float .
+
+tte:tensileStrength_pmdao-tto-tt-S355-9 a base:TensileStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "515.0"^^xsd:float .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-1 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-1,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-1,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-1,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-1,
+        tte:originalWidth_1_pmdao-tto-tt-S355-1,
+        tte:testPieceId_pmdao-tto-tt-S355-1,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-1,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-1 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-10 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-10,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-10,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-10,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-10,
+        tte:originalWidth_1_pmdao-tto-tt-S355-10,
+        tte:testPieceId_pmdao-tto-tt-S355-10,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-10,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-10 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-2 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-2,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-2,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-2,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-2,
+        tte:originalWidth_1_pmdao-tto-tt-S355-2,
+        tte:testPieceId_pmdao-tto-tt-S355-2,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-2,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-2 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-3 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-3,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-3,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-3,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-3,
+        tte:originalWidth_1_pmdao-tto-tt-S355-3,
+        tte:testPieceId_pmdao-tto-tt-S355-3,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-3,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-3 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-4 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-4,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-4,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-4,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-4,
+        tte:originalWidth_1_pmdao-tto-tt-S355-4,
+        tte:testPieceId_pmdao-tto-tt-S355-4,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-4,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-4 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-5 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-5,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-5,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-5,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-5,
+        tte:originalWidth_1_pmdao-tto-tt-S355-5,
+        tte:testPieceId_pmdao-tto-tt-S355-5,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-5,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-5 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-6 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-6,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-6,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-6,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-6,
+        tte:originalWidth_1_pmdao-tto-tt-S355-6,
+        tte:testPieceId_pmdao-tto-tt-S355-6,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-6,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-6 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-7 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-7,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-7,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-7,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-7,
+        tte:originalWidth_1_pmdao-tto-tt-S355-7,
+        tte:testPieceId_pmdao-tto-tt-S355-7,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-7,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-7 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-8 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-8,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-8,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-8,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-8,
+        tte:originalWidth_1_pmdao-tto-tt-S355-8,
+        tte:testPieceId_pmdao-tto-tt-S355-8,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-8,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-8 .
+
+tte:tensileTestPiece_pmdao-tto-tt-S355-9 a base:TestPiece,
+        owl:NamedIndividual ;
+    base:hasCharacteristic tte:extensometerGaugeLength_,
+        tte:geometryShape_pmdao-tto-tt-S355-9,
+        tte:originalGaugeLength_pmdao-tto-tt-S355-9,
+        tte:parallelLength_,
+        tte:testPieceClassification_,
+        tte:testPieceMaterial_pmdao-tto-tt-S355-9,
+        tte:typeGaugeLengthMarks_ ;
+    ns2:RO_0000057 tte:diameterAfterFracture_,
+        tte:originalDiameter_1_,
+        tte:originalDiameter_2_,
+        tte:originalDiameter_3_,
+        tte:originalThickness_1_pmdao-tto-tt-S355-9,
+        tte:originalWidth_1_pmdao-tto-tt-S355-9,
+        tte:testPieceId_pmdao-tto-tt-S355-9,
+        tte:testPieceTemperature_,
+        tte:thicknessAfterFracture_pmdao-tto-tt-S355-9,
+        tte:widthAfterFracture_pmdao-tto-tt-S355-9 .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-1,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-1,
+        tte:testingMachineType_pmdao-tto-tt-S355-1,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-10,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-10,
+        tte:testingMachineType_pmdao-tto-tt-S355-10,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-2,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-2,
+        tte:testingMachineType_pmdao-tto-tt-S355-2,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-3,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-3,
+        tte:testingMachineType_pmdao-tto-tt-S355-3,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-4,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-4,
+        tte:testingMachineType_pmdao-tto-tt-S355-4,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-5,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-5,
+        tte:testingMachineType_pmdao-tto-tt-S355-5,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-6,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-6,
+        tte:testingMachineType_pmdao-tto-tt-S355-6,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-7,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-7,
+        tte:testingMachineType_pmdao-tto-tt-S355-7,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-8,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-8,
+        tte:testingMachineType_pmdao-tto-tt-S355-8,
+        tte:testingMachineWorkingRange_ .
+
+tte:tensileTestingMachine_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:TestingMachine ;
+    base:hasCharacteristic tte:basicStiffnessOfFrame_,
+        tte:dataAcquisitionRate_,
+        tte:testingMachineCalibration_,
+        tte:testingMachineErrorReport_,
+        tte:testingMachineManufacturer_pmdao-tto-tt-S355-9,
+        tte:testingMachineModel_,
+        tte:testingMachineSerialNumber_pmdao-tto-tt-S355-9,
+        tte:testingMachineType_pmdao-tto-tt-S355-9,
+        tte:testingMachineWorkingRange_ .
+
+tte:testOperator_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M./S./G."^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M. (S., J.)"^^xsd:string .
+
+tte:testOperator_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Operator ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "M./S./G."^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-1 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zx1"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-10 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zd3"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-2 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zx2"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-3 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zx3"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-4 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zx4"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-5 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zy1"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-6 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zy2"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-7 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zy3"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-8 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zy4"^^xsd:string .
+
+tte:testPieceId_pmdao-tto-tt-S355-9 a base:TestPieceName,
+        owl:NamedIndividual ;
+    ns1:hasValue "Zd2"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testPieceMaterial_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:MaterialDesignation,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "S355"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testStandard_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "DIN EN ISO 6892-1"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineManufacturer_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "Instron"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-1 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-10 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-2 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-3 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-4 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-5 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-6 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-7 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-8 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineSerialNumber_pmdao-tto-tt-S355-9 a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "h2486"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:testingMachineType_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "4505"^^xsd:string .
+
+tte:thermocoupleCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleManufacturer_ a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleSerialNumber_ a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocoupleWorkingRange_ a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:DEG_C ;
+    prov:value "minValue"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-1 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.52"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-10 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.16"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-2 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.38"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-3 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.41"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-4 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.27"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-5 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.82"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-6 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.64"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-7 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.5"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-8 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.69"^^xsd:float .
+
+tte:thicknessAfterFracture_pmdao-tto-tt-S355-9 a base:ThicknessAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "3.55"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-1 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "380.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-10 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "396.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-2 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "379.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-3 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "379.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-4 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "388.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-5 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "399.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-6 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "399.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-7 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "408.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-8 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "407.0"^^xsd:float .
+
+tte:upperYieldStrength_pmdao-tto-tt-S355-9 a base:UpperYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "399.0"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-1 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.96"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-10 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "13.9"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-2 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.67"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-3 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.81"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-4 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.49"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-5 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.67"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-6 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.68"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-7 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.39"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-8 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "14.67"^^xsd:float .
+
+tte:widthAfterFracture_pmdao-tto-tt-S355-9 a base:WidthAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "13.75"^^xsd:float .
+
+base:AccreditationDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:Address a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:ChangeInTransversalDimension a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:ClampingPressure a owl:Class ;
+    rdfs:subClassOf ns1:Stress .
+
+base:CoatingDesignation a owl:Class ;
+    rdfs:subClassOf ns1:MaterialDesignation .
+
+base:CrossheadSeparation a owl:Class .
+
+base:DiameterAfterFracture a owl:Class ;
+    rdfs:subClassOf ns1:Diameter .
+
+base:Extension a owl:Class .
+
+base:ExtensometerGaugeLength a owl:Class ;
+    rdfs:subClassOf base:GaugeLength .
+
+base:Furnace a owl:Class ;
+    rdfs:subClassOf ns1:ProcessingNode .
+
+base:GripsAlignment a owl:Class ;
+    rdfs:subClassOf ns1:QualifyingNodeAnnotation .
+
+base:InsertSurface a owl:Class ;
+    rdfs:subClassOf ns1:QualifyingNodeAnnotation .
+
+base:InspectionDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+base:Location a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:LowerYieldStrength a owl:Class .
+
+base:MechanicalTestingProcess a owl:Class .
+
+base:ParallelLength a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:PercentageElongation a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:PercentageExtension a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:PercentagePermanentElongation a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:PercentagePlasticExtensionAtMaximumForce a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:PercentageTotalExtensionAtMaximumForce a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:ProjectReferenceIdentifier a owl:Class ;
+    rdfs:subClassOf ns1:Identifier .
+
+base:ProofStrengthPlasticExtension a owl:Class ;
+    rdfs:subClassOf base:ProofStrength .
+
+base:ProofStrengthTotalExtension a owl:Class ;
+    rdfs:subClassOf base:ProofStrength .
+
+base:Roughness a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:Rp01 a owl:Class .
+
+base:Rp02 a owl:Class .
+
+base:SlopeOfTheElasticPart a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:Stiffness a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:TemperatueMeasurementDevice a owl:Class ;
+    rdfs:subClassOf ns1:MeasurementDevice .
+
+base:Temperature a owl:Class .
+
+base:TemperatureChangeDevice a owl:Class ;
+    rdfs:subClassOf ns1:ProcessingNode .
+
+base:TestPieceClassification a owl:Class ;
+    rdfs:subClassOf base:TestPieceInfo .
+
+base:Thermocouple a owl:Class ;
+    rdfs:subClassOf ns1:MeasurementDevice .
+
+base:TypeGaugeLengthMarks a owl:Class ;
+    rdfs:subClassOf base:TestPieceInfo .
+
+base:YieldStrength a owl:Class .
+
+unit:J-PER-K a owl:NamedIndividual .
+
+unit:N-PER-MilliM2 a owl:NamedIndividual .
+
+unit:SEC a owl:NamedIndividual .
+
+ns1:Algorithm a owl:Class ;
+    rdfs:subClassOf ns1:Method .
+
+ns1:Filter a owl:Class ;
+    rdfs:subClassOf ns1:Method .
+
+ns1:FinalProcess a owl:Class .
+
+ns1:HeatCapacity a owl:Class .
+
+ns1:Laboratory a owl:Class .
+
+ns1:Medium a owl:Class .
+
+ns1:Regression a owl:Class ;
+    rdfs:subClassOf ns1:Method .
+
+ns1:Temperature a owl:Class .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-1 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-1 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-10 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-10 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-2 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-2 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-3 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-3 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-4 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-4 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-5 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-5 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-6 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-6 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-7 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-7 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-8 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-8 .
+
+tte:AlignTestPiece_pmdao-tto-tt-S355-9 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:TestPieceTempering_pmdao-tto-tt-S355-9 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-1 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-1 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-10 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-10 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-2 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-2 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-3 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-3 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-4 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-4 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-5 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-5 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-6 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-6 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-7 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-7 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-8 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-8 .
+
+tte:ClampTestPiece_pmdao-tto-tt-S355-9 a base:MountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-9 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-1 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-1 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-10 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-10 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-2 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-2 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-3 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-3 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-4 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-4 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-5 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-5 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-6 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-6 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-7 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-7 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-8 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-8 .
+
+tte:TestPieceTempering_pmdao-tto-tt-S355-9 a base:TemperatureChangingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:ClampTestPiece_pmdao-tto-tt-S355-9 .
+
+tte:caliper_pmdao-tto-tt-S355-1 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-1,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-1,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-10 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-10,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-10,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-2 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-2,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-2,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-3 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-3,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-3,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-4 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-4,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-4,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-5 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-5,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-5,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-6 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-6,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-6,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-7 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-7,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-7,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-8 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-8,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-8,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:caliper_pmdao-tto-tt-S355-9 a base:Caliper,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:caliperCalibration_,
+        tte:caliperErrorReport_,
+        tte:caliperManufacturer_pmdao-tto-tt-S355-9,
+        tte:caliperModel_,
+        tte:caliperPrecision_,
+        tte:caliperSerialNumber_pmdao-tto-tt-S355-9,
+        tte:caliperType_,
+        tte:caliperWorkingRange_ .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-1 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-10 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-2 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-3 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-4 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-5 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-6 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-7 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-8 .
+
+tte:measuringOriginalGaugeLength_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:performElongationProcess_pmdao-tto-tt-S355-9 .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-1 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-1,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-10 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-10,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-2 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-2,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-3 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-3,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-4 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-4,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-5 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-5,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-6 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-6,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-7 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-7,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-8 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-8,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:micrometerGauge_pmdao-tto-tt-S355-9 a base:MicrometerGauge,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:micrometerGaugeCalibration_,
+        tte:micrometerGaugeErrorReport_,
+        tte:micrometerGaugeManufacturer_pmdao-tto-tt-S355-9,
+        tte:micrometerGaugeModel_,
+        tte:micrometerGaugePrecision_,
+        tte:micrometerGaugeSerialNumber_,
+        tte:micrometerGaugeType_,
+        tte:micrometerGaugeWorkingRange_ .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-1 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-10 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-2 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-3 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-4 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-5 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-6 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-7 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-8 .
+
+tte:performElongationProcess_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:TransformativeAnalysisProcess ;
+    ns1:hasNextProcess tte:removeTestPiece_pmdao-tto-tt-S355-9 .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-1 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-10 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-2 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-3 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-4 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-5 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-6 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-7 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-8 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:performMeasurementEvaluation_pmdao-tto-tt-S355-9 a owl:NamedIndividual,
+        ns1:AnalysisProcess .
+
+tte:projectId_pmdao-tto-tt-S355-1 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-10 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-2 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-3 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-4 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-5 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-6 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-7 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-8 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:projectId_pmdao-tto-tt-S355-9 a base:ProjectIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "PMDao-onto_1"^^xsd:string .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-1 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-1 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-10 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-10 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-2 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-2 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-3 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-3 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-4 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-4 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-5 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-5 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-6 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-6 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-7 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-7 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-8 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-8 .
+
+tte:removeTestPiece_pmdao-tto-tt-S355-9 a base:DemountingProcess,
+        owl:NamedIndividual ;
+    ns1:hasNextProcess tte:performMeasurementEvaluation_pmdao-tto-tt-S355-9 .
+
+base:Precision a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:ProofStrength a owl:Class .
+
+unit:PER-MilliM a owl:NamedIndividual .
+
+prov:Entity a owl:Class .
+
+prov:Person a owl:Class .
+
+ns1:Diameter a owl:Class .
+
+ns1:Grips a owl:Class ;
+    rdfs:subClassOf ns1:ProcessingNode .
+
+ns1:InitialProcess a owl:Class .
+
+ns1:NodeInfo a owl:Class .
+
+ns1:NonTransformativeAnalysisProcess a owl:Class .
+
+ns1:QualifyingNodeAnnotation a owl:Class .
+
+ns1:Stress a owl:Class .
+
+ns1:Time a owl:Class .
+
+base:DataAcquisitionRate a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:GaugeLength a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:OriginalDiameter a owl:Class ;
+    rdfs:subClassOf ns1:Diameter .
+
+base:TestPieceInfo a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+ns1:DataScope a owl:Class .
+
+ns1:Force a owl:Class .
+
+ns1:Method a owl:Class .
+
+unit:MicroM a owl:NamedIndividual .
+
+ns1:Identifier a owl:Class .
+
+ns1:MeasurementDevice a owl:Class .
+
+ns1:ProcessingNode a owl:Class .
+
+base:CalibrationRange a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:Document a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:CalibrationDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+ns1:Length a owl:Class .
+
+base:ErrorReportDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+unit:DAY a owl:NamedIndividual .
+
+ns1:NodeModel a owl:Class .
+
+base:Duration a owl:Class ;
+    rdfs:subClassOf ns1:Time .
+
+tte:algorithm_ a owl:NamedIndividual,
+        ns1:Algorithm,
+        ns1:Metadata ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:basicStiffnessOfFrame_ a base:Stiffness,
+        owl:NamedIndividual ;
+    base:hasUnit unit:N-PER-MilliM2 ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:caliperCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:caliperErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:caliperModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:caliperPrecision_ a base:Precision,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:caliperType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:caliperWorkingRange_ a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "minValue"^^xsd:float .
+
+tte:dataAcquisitionRate_ a base:DataAcquisitionRate,
+        owl:NamedIndividual ;
+    base:hasUnit unit:PER-SEC ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:diameterAfterFracture_ a base:DiameterAfterFracture,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:extensometerCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerDataAcquisitionRate_ a base:DataAcquisitionRate,
+        owl:NamedIndividual ;
+    base:hasUnit unit:PER-MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:extensometerErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerGaugeLength_ a base:ExtensometerGaugeLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:extensometerModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:extensometerType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:filter_ a owl:NamedIndividual,
+        ns1:Filter,
+        ns1:Metadata ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:geometryReferenceStandard_ a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Norm ;
+    prov:value "value"^^xsd:anyURI,
+        "value"^^xsd:string .
+
+tte:grips_ a owl:NamedIndividual,
+        ns1:Grips ;
+    base:hasCharacteristic tte:gripsErrorReport_,
+        tte:gripsInspection_,
+        tte:gripsManufacturer_,
+        tte:gripsModel_,
+        tte:gripsSerialNumber_,
+        tte:gripsType_ ;
+    ns1:hasCharacteristic tte:clampingPressure_,
+        tte:gripsAlignment_ .
+
+tte:laboratory_ a owl:NamedIndividual,
+        ns1:Laboratory ;
+    ns1:hasParticipant tte:contactAddress_,
+        tte:laboratoryAccreditationCertificate_,
+        tte:laboratoryId_,
+        tte:laboratoryLocation_,
+        tte:personnel_ .
+
+tte:loadCellCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    prov:value "URI"^^xsd:float ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellClassification_ a base:ClassificationDocument,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:loadCellClassificationReferenceStandard_ ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellDataAcquisitionRate_ a base:DataAcquisitionRate,
+        owl:NamedIndividual ;
+    base:hasUnit unit:PER-MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:loadCellErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    prov:value "URI"^^xsd:float ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellManufacturer_ a owl:NamedIndividual,
+        ns1:Manufacturer ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellSerialNumber_ a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:loadCellType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:lowerYieldStrength_ a base:LowerYieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:micrometerGaugeCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugeErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugeModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugePrecision_ a base:Precision,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MicroM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:micrometerGaugeSerialNumber_ a base:NodeSerialNumber,
+        owl:NamedIndividual ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugeType_ a owl:NamedIndividual,
+        ns1:NodeType ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:micrometerGaugeWorkingRange_ a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MicroM ;
+    prov:value "minValue"^^xsd:float .
+
+tte:originalDiameter_1_ a base:OriginalDiameter,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:originalDiameter_2_ a base:OriginalDiameter,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:originalDiameter_3_ a base:OriginalDiameter,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:MilliM ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:parallelLength_ a base:ParallelLength,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:float ;
+    ns1:hasUnit unit:MilliM .
+
+tte:percentageElongation_ a base:PercentageElongation,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    prov:value "value"^^xsd:float ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:percentageExtension_ a base:PercentageExtension,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasResource tte:percentageExtensionList_ ;
+    ns1:hasUnit unit:PERCENT .
+
+tte:percentagePermanentElongation_ a base:PercentagePermanentElongation,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:percentagePlasticExtensionAtMaximumForce_ a base:PercentagePlasticExtensionAtMaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:percentageTotalExtensionAtMaximumForce_ a base:PercentageTotalExtensionAtMaximumForce,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:preload_ a owl:NamedIndividual,
+        ns1:Force,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:float ;
+    ns1:hasUnit unit:KiloN .
+
+tte:processDocumentation_ a base:Document,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:proofStrengthPlasticExtensionRp01_ a base:Rp01,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:proofStrengthPlasticExtensionRp02_ a base:Rp02,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:proofStrengthPlasticExtension_ a base:ProofStrengthPlasticExtension,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:proofStrengthTotalExtension_ a base:ProofStrengthTotalExtension,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:regression_ a owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:Regression ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:slopeOfTheElasticPart_ a base:SlopeOfTheElasticPart,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:GigaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:stress_ a owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData,
+        ns1:Stress ;
+    ns1:hasResource tte:stressList_ ;
+    ns1:hasUnit unit:MegaPA .
+
+tte:switchPointPercentageExtensionReferenceValue_ a owl:NamedIndividual,
+        ns1:Extension ;
+    ns1:hasUnit unit:PERCENT ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:temperatueMeasurementDevice_ a base:TemperatueMeasurementDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:thermocouple_ .
+
+tte:temperatureChangeDevice_ a base:TemperatureChangeDevice,
+        owl:NamedIndividual ;
+    ns1:hasParticipant tte:coolingMedium_,
+        tte:furnace_ .
+
+tte:testPieceClassification_ a base:TestPieceClassification,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:string .
+
+tte:testPieceTemperature_ a base:Temperature,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:PrimaryData ;
+    ns1:hasUnit unit:DEG_C ;
+    ns1:hasValue "value"^^xsd:float .
+
+tte:testingMachineCalibration_ a base:CalibrationDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:testingMachineErrorReport_ a base:ErrorReportDocument,
+        owl:NamedIndividual ;
+    prov:value "value"^^xsd:anyURI ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:testingMachineModel_ a owl:NamedIndividual,
+        ns1:NodeModel ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:testingMachineWorkingRange_ a base:WorkingRange,
+        owl:NamedIndividual ;
+    base:hasUnit unit:MilliM ;
+    prov:value "maxValue"^^xsd:float,
+        "minValue"^^xsd:float .
+
+tte:typeGaugeLengthMarks_ a base:TypeGaugeLengthMarks,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    prov:value "value"^^xsd:string .
+
+tte:yieldStrength_ a base:YieldStrength,
+        owl:NamedIndividual,
+        ns1:Measurement,
+        ns1:SecondaryData ;
+    ns1:hasUnit unit:MegaPA ;
+    ns1:hasValue "value"^^xsd:float .
+
+base:Caliper a owl:Class ;
+    rdfs:subClassOf ns1:MeasurementDevice .
+
+base:DemountingProcess a owl:Class ;
+    rdfs:subClassOf ns1:FinalProcess .
+
+base:DimensionMeasurementDevice a owl:Class ;
+    rdfs:subClassOf ns1:MeasurementDevice .
+
+base:FinalGaugeLengthAfterFracture a owl:Class ;
+    rdfs:subClassOf base:GaugeLength .
+
+base:GeometryShape a owl:Class ;
+    rdfs:subClassOf base:TestPieceInfo .
+
+base:MaximumForce a owl:Class ;
+    rdfs:subClassOf ns1:Force .
+
+base:MeasurementProcess a owl:Class ;
+    rdfs:subClassOf ns1:NonTransformativeAnalysisProcess .
+
+base:MicrometerGauge a owl:Class ;
+    rdfs:subClassOf ns1:MeasurementDevice .
+
+base:ModulusOfElasticity a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:OriginalGaugeLength a owl:Class ;
+    rdfs:subClassOf base:GaugeLength .
+
+base:PercentageElongationAfterFracture a owl:Class ;
+    rdfs:subClassOf ns1:Extension .
+
+base:PercentageReductionOfArea a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+base:Project a owl:Class ;
+    rdfs:subClassOf prov:Entity .
+
+base:ProjectIdentifier a owl:Class ;
+    rdfs:subClassOf ns1:Identifier .
+
+base:StrainRate a owl:Class ;
+    rdfs:subClassOf ns1:Metadata .
+
+base:TemperatureChangingProcess a owl:Class ;
+    rdfs:subClassOf ns1:InitialProcess .
+
+base:TensileStrength a owl:Class .
+
+base:TestPiece a owl:Class .
+
+base:TestPieceName a owl:Class ;
+    rdfs:subClassOf ns1:Identifier .
+
+base:ThicknessAfterFracture a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:UpperYieldStrength a owl:Class .
+
+base:WidthAfterFracture a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+ns1:AnalysisProcess a owl:Class .
+
+ns1:Extensometer a owl:Class .
+
+ns1:LoadCell a owl:Class .
+
+ns1:Note a owl:Class .
+
+ns1:Operator a owl:Class .
+
+ns1:TensileTest a owl:Class ;
+    rdfs:subClassOf base:MechanicalTestingProcess .
+
+tte:coolingMedium_ a owl:NamedIndividual,
+        ns1:Medium ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:furnace_ a base:Furnace,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:furnaceCalibration_,
+        tte:furnaceErrorReport_,
+        tte:furnaceHeatCapacity_,
+        tte:furnaceManufacturer_,
+        tte:furnaceModel_,
+        tte:furnaceSerialNumber_,
+        tte:furnaceType_,
+        tte:furnaceWorkingRange_ .
+
+tte:laboratoryLocation_ a base:Location,
+        owl:NamedIndividual,
+        ns1:Metadata ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:thermocouple_ a base:Thermocouple,
+        owl:NamedIndividual ;
+    ns1:hasCharacteristic tte:thermocoupleCalibration_,
+        tte:thermocoupleErrorReport_,
+        tte:thermocoupleManufacturer_,
+        tte:thermocoupleModel_,
+        tte:thermocoupleSerialNumber_,
+        tte:thermocoupleType_,
+        tte:thermocoupleWorkingRange_ .
+
+base:ClassificationDocument a owl:Class ;
+    rdfs:subClassOf base:Document .
+
+unit:GigaPA a owl:NamedIndividual .
+
+unit:N a owl:NamedIndividual .
+
+unit:PER-SEC a owl:NamedIndividual .
+
+ns1:MaterialDesignation a owl:Class .
+
+ns1:TestingMachine a owl:Class ;
+    rdfs:subClassOf ns1:ProcessingNode,
+        ns1:TestingMachine .
+
+unit:KiloN a owl:NamedIndividual .
+
+ns1:ValueObject a owl:Class ;
+    rdfs:subClassOf prov:Entity .
+
+ns1:Extension a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+ns1:NodeType a owl:Class .
+
+base:Date a owl:Class ;
+    rdfs:subClassOf ns1:Time .
+
+unit:date a owl:NamedIndividual .
+
+tte:customer_ a owl:NamedIndividual,
+        prov:Person,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "value"^^xsd:string .
+
+tte:projectReferenceId_ a base:ProjectReferenceIdentifier,
+        owl:NamedIndividual,
+        ns1:Metadata,
+        ns1:SetPoint ;
+    ns1:hasValue "value"^^xsd:string .
+
+base:EnvironmentalTemperature a owl:Class ;
+    rdfs:subClassOf ns1:Temperature .
+
+base:MountingProcess a owl:Class ;
+    rdfs:subClassOf ns1:InitialProcess .
+
+ns1:TransformativeAnalysisProcess a owl:Class ;
+    rdfs:subClassOf ns1:NonTransformativeAnalysisProcess .
+
+ns1:Norm a owl:Class .
+
+base:WorkingRange a owl:Class ;
+    rdfs:subClassOf ns1:ValueObject .
+
+unit:DEG_C a owl:NamedIndividual .
+
+unit:MegaPA a owl:NamedIndividual .
+
+base:OriginalThickness a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:OriginalWidth a owl:Class ;
+    rdfs:subClassOf ns1:Length .
+
+base:NodeSerialNumber a owl:Class ;
+    rdfs:subClassOf ns1:NodeInfo .
+
+unit:PERCENT a owl:NamedIndividual .
+
+ns1:Manufacturer a owl:Class .
+
+ns1:SetPoint a owl:Class .
+
+ns1:SecondaryData a owl:Class ;
+    rdfs:subClassOf ns1:DataScope .
+
+ns1:PrimaryData a owl:Class ;
+    rdfs:subClassOf ns1:DataScope ;
+    owl:disjointWith ns1:SecondaryData .
+
+unit:MilliM a owl:NamedIndividual .
+
+ns1:Metadata a owl:Class ;
+    rdfs:subClassOf ns1:DataScope,
+        ns1:ValueObject ;
+    owl:disjointWith ns1:PrimaryData .
+
+ns1:Measurement a owl:Class .
+
