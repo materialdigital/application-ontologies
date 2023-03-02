@@ -39,6 +39,10 @@ The resulting [TTO](https://github.com/materialdigital/application-ontologies/bl
 [PMD website](https://materialdigital.de/download/) (download section, available after free registration), this [PMD GitHub repository](https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO) 
 and on [MatPortal.org](https://matportal.org/ontologies). 
 
+Moreover, an exemplary TTL file is given in this repository which resulted from data mapping of typical
+tensile test data that was published on an open access [Zenodo repository](https://zenodo.org/record/6778336)
+to the TTO applying the [Ontopanel tool](https://yuechenbam.github.io/src/main/webapp/index.html). 
+
 The TTO was strongly designed on the basis of the PMD Core Ontology ([PMDco](https://github.com/materialdigital/core-ontology)). 
 Accordingly, classic PMDco concepts are re-used and concepts included due to
 the consideration of the tensile test are always connected to PMDco concepts.
@@ -61,6 +65,8 @@ supported the ontology creation or provide some additional information.
 + [PMD Core Ontology (PMDco)](https://github.com/materialdigital/core-ontology) | The mid-level ontology in the field of materials sciences and engineering (MSE) the TTO is based on
 + [Ontopanel tool](https://yuechenbam.github.io/src/main/webapp/index.html) | A tool created for domain experts based on [diagrams.net](https://www.diagrams.net/) that facilitates visual ontology development and mapping for FAIR data sharing in materials testing (more information in open access [scientific paper](https://link.springer.com/article/10.1007/s40192-022-00279-y))
 + [Protégé tool](https://protege.stanford.edu/) | A tool used for the creation of ontologies; especially, annotations and relations were included in the ontology by applying the Protégé tool
++ [Tensile Test Ontology (TTO) data mapping example](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/pmdao_TTO_data_mapping_example.ttl) | An example on how a TTL file may look like after actual tensile test data was mapped to TTO
++ [Zenodo repository for tensile test data](https://zenodo.org/record/6778336) | In this open access Zenodo repository, typical tensile test data can be found which may be used for digitalization efforts 
 
 Furthermore, other (higher-level) ontologies are used in TTO since their 
 concepts are partly also included in PMDco. Such are
