@@ -9,11 +9,11 @@
 @base <http://material-digital.de/pmdao/hto/> .
 
 <http://material-digital.de/pmdao/hto/> rdf:type owl:Ontology ;
-                                         owl:versionIRI <http://material-digital.de/pmdao/hto/1.1> ;
+                                         owl:versionIRI <http://material-digital.de/pmdao/hto/1.0> ;
                                          owl:imports pmdco: ;
                                          <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-9014-2920> ,
                                                                                    "Jannis Grundmann" ,
-                                                                                   "Matthias Steinbacher" ;
+                                                                                   "https://orcid.org/0000-0003-4461-6539" ;
                                          <http://purl.org/dc/elements/1.1/title> "Heat Treatment Ontology (HTO)"@en ;
                                          owl:versionInfo "1.0"^^xsd:string ;
                                          <http://www.w3.org/2004/02/skos/core#definition> "This is a pre version of the PMD application ontology (PMDao) of generic heat treatments (Heat Treatment Ontology - HTO)."@en ;
@@ -47,26 +47,33 @@
 #    Classes
 #################################################################
 
-###  http://material-digital.de/pmdao/hto/Carbourizing
-:Carbourizing rdf:type owl:Class ;
-              rdfs:subClassOf :SoakingProcess ;
-              rdfs:comment """Soaking Process zur ehröhung des Carbon-Gehalts.
-
-Note: potentiell ableitbar mit bestimmten Fluss-Einstellungen"""@de .
+###  http://material-digital.de/pmdao/hto/Carburizing
+:Carburizing rdf:type owl:Class ;
+             rdfs:subClassOf :Holding ;
+             rdfs:comment "Notiz: potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ,
+                          "Process step during which carbon is transferred from the atmosphere to the component surface."@en ,
+                          "Prozessschritt, während dessen Kohlenstoff aus der Atmosphäre an der Bauteiloberfläche übertragen wird"@de ;
+             rdfs:label "Aufkohlen"@de ,
+                        "Carburizing"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/CoolingProcess
 :CoolingProcess rdf:type owl:Class ;
                 rdfs:subClassOf pmdco:HeatTreatmentProcess ;
-                rdfs:comment "Ein Pozess, bei dem die Temperatur von einem höherem auf ein niedreiges nivau abgesenkt wird."@de ;
-                rdfs:label "Cooling Process"@en .
+                rdfs:comment "A process in which the temperature is lowered from a higher to a lower level."@en ,
+                             "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ;
+                rdfs:label "Abkühlprozess"@de ,
+                           "Cooling Process"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/DurationTillTargetTemperature
 :DurationTillTargetTemperature rdf:type owl:Class ;
                                rdfs:subClassOf pmdco:Duration ;
-                               rdfs:comment "Measurement representing the derived duration of a heat-up."@en ;
-                               rdfs:label "Duration Till Target Temperature"@en .
+                               rdfs:comment "Erwärmdauer = Heizzeit + Durchwärmdauer"@de ,
+                                            "Maß für die tatsächliche Dauer eines Erwärmvorgangs."@de ,
+                                            "Measurement representing the actual duration of a heating procedure."@en ;
+                               rdfs:label "Duration Till Target Temperature"@en ,
+                                          "Erwärmdauer"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/Flow
@@ -88,37 +95,38 @@ vo1 hasValue 29.2 ;
 ###  http://material-digital.de/pmdao/hto/HardeningProcess
 :HardeningProcess rdf:type owl:Class ;
                   rdfs:subClassOf :HeatTreatmentType ;
-                  rdfs:comment "Wärmebhandalungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen."@de ;
-                  rdfs:label "Hardening Process"@en .
+                  rdfs:comment "Heat treatment process with the aim of achieving an increase in strength."@en ,
+                               "Wärmebehandlungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen."@de ;
+                  rdfs:label "Hardening Process"@en ,
+                             "Härten"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/HeatTreatmentChamber
 :HeatTreatmentChamber rdf:type owl:Class ;
                       rdfs:subClassOf pmdco:ProcessingNode ;
-                      rdfs:comment "Distinguishable heat treatment chambers that are components of heat treatment furnaces."@en ;
-                      rdfs:label "Heat Treatment Chamber"@en ;
-                      <http://www.w3.org/2004/02/skos/core#example> "Sollte mit Unit-Volume (m^3) verbunden sein"@de .
+                      rdfs:comment "Functional furnace chamber."@en ,
+                                   "Funktionale Ofenkammer."@de ,
+                                   "Notiz: Sollte mit Unit-Volume (m^3) verbunden sein"@de ;
+                      rdfs:label "Heat Treatment Chamber"@en ,
+                                 "Wärmebehandlungsofenkammer"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/HeatTreatmentFurnace
 :HeatTreatmentFurnace rdf:type owl:Class ;
-                      rdfs:subClassOf :HeatTreatmentNode ;
+                      rdfs:subClassOf pmdco:ProcessingNode ;
                       rdfs:comment "A furnace intended to change the physical and chemical properties of objects (e.g., test pieces or blanks) achieved through heat treatment techniques such as annealing, case hardening, precipitation, strengthening, tempering, normalizing, or quenching."@en ;
-                      rdfs:label "Heat Treatment Furnace"@en .
-
-
-###  http://material-digital.de/pmdao/hto/HeatTreatmentNode
-:HeatTreatmentNode rdf:type owl:Class ;
-                   rdfs:subClassOf pmdco:ProcessingNode ;
-                   rdfs:comment "A subclass of process node representing heat treatment process nodes."@en ;
-                   rdfs:label "Heat Treatment Node"@en .
+                      rdfs:label "Ein Ofen, der dazu bestimmt ist, die physikalischen und chemischen Eigenschaften von Objekten (z. B. Prüfstücke oder Rohlinge) durch Wärmebehandlungsverfahren wie Glühen, Einsatzhärten, Nitrieren, Borieren, Ausscheidungsbildung, Verfestigen, Anlassen, Normalisieren oder Abschrecken zu verändern."@de ,
+                                 "Heat Treatment Furnace"@en ,
+                                 "Wärmebehandlungsofen"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/HeatTreatmentOverheat
 :HeatTreatmentOverheat rdf:type owl:Class ;
                        rdfs:subClassOf pmdco:Temperature ;
-                       rdfs:comment "Maximum allowed deviation of a actual temperature that exceeds the heatup-target temperature. Overheat may be set higher than the intended heatup-target temperature deliberatly in order to implictly control an object's temperature (based on the assumption that an object is cooler than the measured furnace temperature)."@en ;
-                       rdfs:label "Heat Treatment Overheat"@en .
+                       rdfs:comment "Maximal zulässige Abweichung einer Ist-Temperatur, die die Aufheiz-Soll-Temperatur überschreitet. Die Überhitzung kann absichtlich höher als die vorgesehene Aufheiz-Soll-Temperatur eingestellt werden, um die Temperatur eines Objekts implizit zu steuern (in der Annahme, dass ein Objekt kühler ist als die gemessene Ofentemperatur)."@de ,
+                                    "Maximum allowed deviation of a actual temperature that exceeds the heatup-target temperature. Overheat may be set higher than the intended heatup-target temperature deliberatly in order to implictly control an object's temperature (based on the assumption that an object is cooler than the measured furnace temperature)."@en ;
+                       rdfs:label "Heat Treatment Overheat"@en ,
+                                  "Übertemperatur"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/HeatTreatmentType
@@ -130,29 +138,55 @@ vo1 hasValue 29.2 ;
 ###  http://material-digital.de/pmdao/hto/HeatingChamber
 :HeatingChamber rdf:type owl:Class ;
                 rdfs:subClassOf :HeatTreatmentChamber ;
-                rdfs:comment "Chamber of a Heattreatment Furnace that is designed to heat up objects."@en ;
-                rdfs:label "Heating Chamber"@en .
+                rdfs:comment "Distinguishable chamber of a heat treatment furnace with a heater."@en ;
+                rdfs:label "Heating Chamber"@en ,
+                           "Heizkammer"@de ,
+                           "Ofenkammer mit einer Heizung."@de .
 
 
 ###  http://material-digital.de/pmdao/hto/HeatingProcess
 :HeatingProcess rdf:type owl:Class ;
                 rdfs:subClassOf pmdco:HeatTreatmentProcess ;
-                rdfs:comment "Ein Pozessschrit, bei dem die Temperatur von einem niedrigem auf ein höheres nivau erhöht wird."@de ;
-                rdfs:label "Heating Process"@en .
+                rdfs:comment "A process in which the temperature is increased from a lower to a higher level."@en ,
+                             "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de ;
+                rdfs:label "Erwärmprozess"@de ,
+                           "Heating Process"@en .
+
+
+###  http://material-digital.de/pmdao/hto/HeatingTime
+:HeatingTime rdf:type owl:Class ;
+             rdfs:subClassOf pmdco:Duration ;
+             rdfs:comment "Dauer bis zum Erreichen der Zieltemperatur im Ofen."@de ,
+                          "Duration until the target temperature is reached in the furnace."@en ;
+             rdfs:label "Erwärmdauer"@de ,
+                        "Heating Time"@en .
+
+
+###  http://material-digital.de/pmdao/hto/Holding
+:Holding rdf:type owl:Class ;
+         rdfs:subClassOf pmdco:HeatTreatmentProcess ;
+         rdfs:comment "Process step without temperature change in the furnace."@en ,
+                      "Prozessschritt ohne Temperaturänderung im Ofen."@de ;
+         rdfs:label "Halten"@de ,
+                    "Holding"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/OilQuenchingDuration
 :OilQuenchingDuration rdf:type owl:Class ;
                       rdfs:subClassOf pmdco:Duration ;
-                      rdfs:comment "Duration of the conducted quenching action."@en ;
-                      rdfs:label "Oil Quenching Duration"@en .
+                      rdfs:comment "Dwell time of the components in the quenching medium."@en ,
+                                   "Verweildauer der Bauteile im Abschreckmedium."@de ;
+                      rdfs:label "Abschreckdauer"@de ,
+                                 "Oil Quenching Duration"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/OilTemperature
 :OilTemperature rdf:type owl:Class ;
                 rdfs:subClassOf pmdco:EnvironmentalTemperature ;
-                rdfs:comment "The intended oil temperature in a quenching chamber. Is used in preperation to heat up oil before quenching."@en ;
-                rdfs:label "Oil Temperature"@en ;
+                rdfs:comment "Am Anfang der Abschreckung vorliegenden Temperatur des Abschreckmediums."@de ,
+                             "The temperature of the quenching medium at the start of quenching."@en ;
+                rdfs:label "Abschreckmediumtemperatur"@de ,
+                           "Media Temperature"@en ;
                 <http://www.w3.org/2004/02/skos/core#example> """oil a Medium ;
    hasCharacterstic vo1 ;
    relatesTo CHEBI:XXXX .
@@ -161,7 +195,7 @@ vo1 a ValueObject ,
           Temperature ,
           Setpoint , 
           Metadata ;
-      hasValue 33.0 ;
+      hasValue 60.0 ;
       hasUnit qudt:DegreeCelsius ."""@en .
 
 
@@ -184,31 +218,46 @@ https://en.wikipedia.org/wiki/Pressure"""@en ;
 ###  http://material-digital.de/pmdao/hto/QuenchingChamber
 :QuenchingChamber rdf:type owl:Class ;
                   rdfs:subClassOf :HeatTreatmentChamber ;
-                  rdfs:comment "Chamber of a Heattreatment Furnace that is designed to quench objects."@en ;
-                  rdfs:label "Quenching Chamber"@en .
+                  rdfs:comment "Chamber of a heat treatment furnace that is designed to quench objects."@en ;
+                  rdfs:label "Abschreckkammer"@de ,
+                             "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de ,
+                             "Quenching Chamber"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/QuenchingLeadtime
 :QuenchingLeadtime rdf:type owl:Class ;
                    rdfs:subClassOf pmdco:Duration ;
-                   rdfs:comment "Dauer zwischen dem rausholen der Charge aus dem Ofen und dem Ölabschrecken."@de ;
-                   rdfs:label "Quenching Leadtime"@en .
+                   rdfs:comment "Dauer zwischen Verlassen der Heizkammer und Beginn der effektiven Abschreckung. Gilt für Zweikammeröfen."@de ,
+                                "Duration between leaving the heating chamber and the start of effective quenching. Applies to two-chamber furnaces."@en ;
+                   rdfs:label "Abschreckvorlaufzeit"@de ,
+                              "Quenching Leadtime"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/QuenchingProcess
 :QuenchingProcess rdf:type owl:Class ;
                   rdfs:subClassOf :CoolingProcess ;
-                  rdfs:comment "Prozess mit stark ehöhter abkühlgschwidnigkeit, mit dem Ziel der verhinderung spezieller gefügeumwandlung"@de ;
-                  rdfs:label "Quenching Process"@en .
+                  rdfs:comment "Process with significantly increased cooling rate, aimed at preventing certain structural transformations."@en ,
+                               "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung bestimmter Gefügeumwandlungen."@de ;
+                  rdfs:label "Abschreckprozess"@de ,
+                             "Quenching Process"@en .
+
+
+###  http://material-digital.de/pmdao/hto/SoakingLeadTime
+:SoakingLeadTime rdf:type owl:Class ;
+                 rdfs:subClassOf pmdco:Duration ;
+                 rdfs:comment "Dauer bis zum Erreichen der homogenen Temperatur im Bauteil."@de ,
+                              "Duration until the homogeneous temperature is reached in the component."@en ;
+                 rdfs:label "Durchwärmzeit"@de ,
+                            "Soaking Time"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/SoakingProcess
 :SoakingProcess rdf:type owl:Class ;
-                rdfs:subClassOf pmdco:HeatTreatmentProcess ;
-                rdfs:comment """kann zigmal hinteriander auftreten mit unterschiedlichen einstellungen.
-z.B. mit Acythelen-Atmo bei austentisierungstemp
-oder ohne atmo für hardening"""@de ;
-                rdfs:label "Soaking Process"@en .
+                rdfs:subClassOf :Holding ;
+                rdfs:comment "Process step during which temperature homogenization is achieved in the component."@en ,
+                             "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de ;
+                rdfs:label "Durchwärmen"@de ,
+                           "Soaking Process"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/Status
@@ -220,22 +269,27 @@ oder ohne atmo für hardening"""@de ;
 ###  http://material-digital.de/pmdao/hto/TargetTemperature
 :TargetTemperature rdf:type owl:Class ;
                    rdfs:subClassOf pmdco:Temperature ;
-                   rdfs:comment "Representing the intended target temperature in celsius at the end of a heat-up."@en ;
-                   rdfs:label "Target Temperature"@en .
+                   rdfs:comment "Darstellung der beabsichtigten Zieltemperatur in Celsius am Ende eines Aufheizvorgangs."@de ,
+                                "Representing the intended target temperature in celsius at the end of a heating process."@en ;
+                   rdfs:label "Target Temperature"@en ,
+                              "Zieltemperatur"@de .
 
 
-###  http://material-digital.de/pmdao/hto/TemperatureDelta
-:TemperatureDelta rdf:type owl:Class ;
-                  rdfs:subClassOf pmdco:Temperature ;
-                  rdfs:comment "Representing the intended temperature diffeence in celsius per minute."@en ,
-                               "[FIXME] better Naming. Are two units appendable?"@en ;
-                  rdfs:label "Temperature Delta"@en .
+###  http://material-digital.de/pmdao/hto/TemperatureChangeRate
+:TemperatureChangeRate rdf:type owl:Class ;
+                       rdfs:subClassOf pmdco:Temperature ;
+                       rdfs:comment "Defined temperature change rate in temperature change per time unit."@en ,
+                                    "Definierte Temperaturänderungsrate in Temperaturänderung pro Zeiteinheit."@de ,
+                                    "[FIXME] Are two units appendable?"@en ;
+                       rdfs:label "Temperature Change Rate"@en ,
+                                  "Temperaturänderungsrate"@de .
 
 
 ###  http://material-digital.de/pmdao/hto/TemperingProcess
 :TemperingProcess rdf:type owl:Class ;
                   rdfs:subClassOf :HeatTreatmentType ;
-                  rdfs:comment "Prozess um das Härtungsgefüge, das man eingestellt hat weder mehr einem Gleichgewichts-nahes Gefüge anzunähern."@de ;
+                  rdfs:comment "A heat treatment process to transform the hardening structure into the direction or equilibrium structure."@en ,
+                               "Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln."@de ;
                   rdfs:label "Anlassen"@de ,
                              "Tempering Process"@en .
 
@@ -244,7 +298,8 @@ oder ohne atmo für hardening"""@de ;
 :TypeDescription rdf:type owl:Class ;
                  rdfs:subClassOf pmdco:NodeInfo ;
                  rdfs:comment "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\""@en ;
-                 rdfs:label "Type Description"@en .
+                 rdfs:label "Typbeschreibung"@de ,
+                            "Type Description"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/VacuumHeatingPressure
@@ -289,18 +344,18 @@ oder ohne atmo für hardening"""@de ;
                   rdfs:label "is Gas Ingress Back"@en .
 
 
-###  http://material-digital.de/pmdao/hto/isGasIngressBass
-:isGasIngressBass rdf:type owl:Class ;
-                  rdfs:subClassOf :Status ;
-                  rdfs:comment "Boolean parameter that opens a magnetic-controlled valve to induce gas ingress from bass/side (if set to true) into the heating chamber."@en ;
-                  rdfs:label "is Gas Ingress Bass"@en .
-
-
 ###  http://material-digital.de/pmdao/hto/isGasIngressFront
 :isGasIngressFront rdf:type owl:Class ;
                    rdfs:subClassOf :Status ;
                    rdfs:comment "Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber."@en ;
                    rdfs:label "is Gas Ingress Front"@en .
+
+
+###  http://material-digital.de/pmdao/hto/isGasIngressIntermediate
+:isGasIngressIntermediate rdf:type owl:Class ;
+                          rdfs:subClassOf :Status ;
+                          rdfs:comment "Boolean parameter that opens a magnetic-controlled valve to induce gas ingress from side (if set to true) into the heating chamber."@en ;
+                          rdfs:label "is Gas Ingress Intermediate"@en .
 
 
 ###  http://material-digital.de/pmdao/hto/isOilFlowFast
