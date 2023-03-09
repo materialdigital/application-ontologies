@@ -1,11 +1,11 @@
-@prefix base: <http://material-digital.de/pmdco/> .
+@prefix base: <http://w3id.org/pmd/co/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix ns1: <http://material-digital.de/pmdco/> .
+@prefix ns1: <http://w3id.org/pmd/co/> .
 @prefix ns2: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix tte: <http://material-digital.de/pmdao/tte/> .
+@prefix tte: <http://w3id.org/pmd/ao/tte/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
