@@ -43,13 +43,15 @@ can be found at the gh-pages: [TTO pyLODE documentation](https://markusschilling
 
 Moreover, an exemplary TTL file is given in this repository which resulted from data mapping of typical
 tensile test data that was published on an open access [Zenodo repository](https://zenodo.org/record/6778336)
-to the TTO applying the [Ontopanel tool](https://yuechenbam.github.io/src/main/webapp/index.html). 
+to the TTO. 
 As it is the case for the plain TTO, an HTML documentation of the TTO mapped with exemplary data 
 that was auto-generated using the [pyLODE online tool](http://pylode.surroundaustralia.com/) can be found at this gh-pages: [TTO data mapped pyLODE documentation](https://markusschilling.github.io/application-ontologies/index-mapped).
 
 The TTO was strongly designed on the basis of the PMD Core Ontology ([PMDco](https://github.com/materialdigital/core-ontology)). 
-Accordingly, classic PMDco concepts are re-used and concepts included due to
-the consideration of the tensile test are always connected to PMDco concepts.
+Accordingly, PMDco concepts are re-used. Thus, the TTO is contained in its entirety in PMDco, since the consideration of 
+the tensile test was used as a first example to define classic concepts from the field of materials sciences and engineering (MSE).
+As a result, TTO concepts are all referring to the PMDco namespace (cf. [Namespaces](#Namespaces)).
+
 Moreover, PMDco is connected to other (higher-level) ontologies (cf. section [Documents | Links](#Documents-|-Links)).
 Therefore, a consideration of the PMDco and its documentation is recommended.
 
@@ -130,16 +132,15 @@ Some basic ideas and conceptual approaches that were kept in mind when creating 
 
 
 #### Namespaces
-In this section, the namespaces used in TTO are listed. These can also be found in the [pmdao_TTO.ttl file](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/pmdao_TTO.ttl). 
-By definition, http:// is commonly used for namespaces.
+In this section, the namespaces used in TTO are listed. These can also be found in the [pmdao_TTO.ttl file](https://github.com/materialdigital/application-ontologies/blob/main/tensile_test_ontology_TTO/pmdao_TTO.ttl).
+Since TTO is in its entirety part of the PMDco, PMDco namespace (https://w3id.org/pmd/co/) is used as basis. 
 
 | Prefix | Namespace / URI                             |
 |:-------|---------------------------------------------|
-| :      | http://material-digital.de/pmdco/           |
+| :      | https://w3id.org/pmd/co/                    |
 | owl    | http://www.w3.org/2002/07/owl#              |
 | rdf    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
-| sdo    | http://schema.org/                          |
 | xml    | http://www.w3.org/XML/1998/namespace        |
 | xsd    | http://www.w3.org/2001/XMLSchema#           |
 | rdfs   | http://www.w3.org/2000/01/rdf-schema#       |
-| base   | http://material-digital.de/pmdao/tto        |
+| base   | https://w3id.org/pmd/co                     |
