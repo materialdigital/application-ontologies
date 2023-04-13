@@ -1,5 +1,5 @@
-@prefix DC: <http://purl.org/dc/terms/> .
 @prefix base: <https://w3id.org/pmd/co/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prefix: <https://w3id.org/pmd/ao/tte/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -8,10 +8,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 prefix: a owl:Ontology ;
-    DC:creator <https://orcid.org/0000-0001-7192-7143>,
+    dcterms:creator <https://orcid.org/0000-0001-7192-7143>,
         <https://orcid.org/0000-0002-3717-7104>,
         <https://orcid.org/0000-0002-7094-5371>,
         <https://orcid.org/0000-0003-4971-3645> ;
+    dcterms:title "Tensile Test Ontology (TTO) data mapping example"^^xsd:string ;
     owl:imports base: .
 
 prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
