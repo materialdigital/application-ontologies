@@ -1,22 +1,27 @@
 @prefix base: <https://w3id.org/pmd/co/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prefix: <https://w3id.org/pmd/ao/tte/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 prefix: a owl:Ontology ;
-    dcterms:creator <https://orcid.org/0000-0001-7192-7143>,
+    dc:creator <https://orcid.org/0000-0001-7192-7143>,
         <https://orcid.org/0000-0002-3717-7104>,
         <https://orcid.org/0000-0002-7094-5371>,
         <https://orcid.org/0000-0003-4971-3645> ;
-    dcterms:title "Tensile Test Ontology (TTO) data mapping example"^^xsd:string ;
+    dc:title "Tensile Test Ontology (TTO) data mapping example"^^xsd:string ;
     owl:imports base: .
 
 prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zd3_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -61,7 +66,8 @@ prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zx1_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -106,7 +112,8 @@ prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zx2_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -151,7 +158,8 @@ prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zx3_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -196,7 +204,8 @@ prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zx4_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -241,7 +250,8 @@ prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zy1_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -286,7 +296,8 @@ prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zy2_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -331,7 +342,8 @@ prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zy3_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -376,7 +388,8 @@ prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zy4_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -421,7 +434,8 @@ prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
-    base:characteristic prefix:_extensometer,
+    base:characteristic prefix:Zd2_dataset,
+        prefix:_extensometer,
         prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
@@ -465,10 +479,345 @@ prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
     base:output <https://w3id.org/pmd/ao/tte/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tte/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_2> .
 
+datacite:FunderIdentifierScheme rdfs:subClassOf datacite:IdentifierScheme .
+
+datacite:Wikidata a datacite:IdentifierScheme .
+
+datacite:local-funder-identifier-scheme a datacite:FunderIdentifierScheme .
+
 <https://orcid.org/0000-0002-3717-7104> rdfs:label "Bernd Bayerlein"^^xsd:string,
         "Jörg Waitelonis"^^xsd:string,
         "Markus Schilling"^^xsd:string,
         "Philipp von Hartrott"^^xsd:string .
+
+prefix:Zd2_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zd2csv .
+
+prefix:Zd2_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zd2csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-9testpiece_id/Zd2"^^xsd:string ;
+    csvw:tableSchema prefix:Zd2_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zd2.csv"^^xsd:string .
+
+prefix:Zd3_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zd3csv .
+
+prefix:Zd3_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zd3csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-10testpiece_id/Zd3"^^xsd:string ;
+    csvw:tableSchema prefix:Zd3_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zd3.csv"^^xsd:string .
+
+prefix:Zx1_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zx1csv .
+
+prefix:Zx1_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ),
+        ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zx1csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-1testpiece_id/Zx1"^^xsd:string ;
+    csvw:tableSchema prefix:Zx1_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zx1.csv"^^xsd:string .
+
+prefix:Zx2_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zx2csv .
+
+prefix:Zx2_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zx2csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-2testpiece_id/Zx2"^^xsd:string ;
+    csvw:tableSchema prefix:Zx2_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zx2.csv"^^xsd:string .
+
+prefix:Zx3_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zx3csv .
+
+prefix:Zx3_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zx3csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-3testpiece_id/Zx3"^^xsd:string ;
+    csvw:tableSchema prefix:Zx3_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zx3.csv"^^xsd:string .
+
+prefix:Zx4_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zx4csv .
+
+prefix:Zx4_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zx4csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-4testpiece_id/Zx4"^^xsd:string ;
+    csvw:tableSchema prefix:Zx4_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zx4.csv"^^xsd:string .
+
+prefix:Zy1_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zy1csv .
+
+prefix:Zy1_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zy1csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-5testpiece_id/Zy1"^^xsd:string ;
+    csvw:tableSchema prefix:Zy1_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zy1.csv"^^xsd:string .
+
+prefix:Zy2_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zy2csv .
+
+prefix:Zy2_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zy2csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-6testpiece_id/Zy2"^^xsd:string ;
+    csvw:tableSchema prefix:Zy2_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zy2.csv"^^xsd:string .
+
+prefix:Zy3_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zy3csv .
+
+prefix:Zy3_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zy3csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-7testpiece_id/Zy3"^^xsd:string ;
+    csvw:tableSchema prefix:Zy3_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zy3.csv"^^xsd:string .
+
+prefix:Zy4_dataset a base:Dataset,
+        base:Measurement ;
+    base:resource prefix:Zy4csv .
+
+prefix:Zy4_schema a csvw:Schema ;
+    csvw:column ( [ a csvw:Column,
+                    base:Duration ;
+                dc:title "Time"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Time"^^xsd:string ;
+                base:unit unit:SEC ] [ a csvw:Column,
+                    base:CrossheadSeparation,
+                    base:Force,
+                    base:PercentageExtension ;
+                dc:title "Crosshead Separation"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Percentage Extension"^^xsd:string ;
+                csvw:datatype "Number"^^xsd:float ;
+                csvw:name "Crosshead travel"^^xsd:string,
+                    "Force"^^xsd:string,
+                    "Strain"^^xsd:string ;
+                base:unit unit:KiloN,
+                    unit:MilliM,
+                    unit:PERCENT ] [ a csvw:Column ] [ a csvw:Column ] ) .
+
+prefix:Zy4csv a csvw:Table ;
+    dc:format "text/csv"^^xsd:string ;
+    dc:title "process/pmdao-tto-tt-S355-8testpiece_id/Zy4"^^xsd:string ;
+    csvw:tableSchema prefix:Zy4_schema ;
+    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/testpiece_id/Zy4.csv"^^xsd:string .
 
 prefix:_extensometerName a base:Metadata,
         base:NodeName ;
@@ -605,7 +954,8 @@ prefix:pmdao-tto-tt-S355-10_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-10_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "195"^^xsd:float .
 
@@ -637,6 +987,8 @@ prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-10_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-10_project_ID .
 
 prefix:pmdao-tto-tt-S355-10_project_ID a base:Metadata,
@@ -786,7 +1138,8 @@ prefix:pmdao-tto-tt-S355-1_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-1_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "194"^^xsd:float .
 
@@ -818,6 +1171,8 @@ prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-1_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-1_project_ID .
 
 prefix:pmdao-tto-tt-S355-1_project_ID a base:Metadata,
@@ -970,7 +1325,8 @@ prefix:pmdao-tto-tt-S355-2_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-2_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "199"^^xsd:float .
 
@@ -1002,6 +1358,8 @@ prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-2_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-2_project_ID .
 
 prefix:pmdao-tto-tt-S355-2_project_ID a base:Metadata,
@@ -1154,7 +1512,8 @@ prefix:pmdao-tto-tt-S355-3_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-3_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "199"^^xsd:float .
 
@@ -1186,6 +1545,8 @@ prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-3_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-3_project_ID .
 
 prefix:pmdao-tto-tt-S355-3_project_ID a base:Metadata,
@@ -1338,7 +1699,8 @@ prefix:pmdao-tto-tt-S355-4_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-4_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "196"^^xsd:float .
 
@@ -1370,6 +1732,8 @@ prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-4_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-4_project_ID .
 
 prefix:pmdao-tto-tt-S355-4_project_ID a base:Metadata,
@@ -1522,7 +1886,8 @@ prefix:pmdao-tto-tt-S355-5_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-5_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "210"^^xsd:float .
 
@@ -1554,6 +1919,8 @@ prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-5_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-5_project_ID .
 
 prefix:pmdao-tto-tt-S355-5_project_ID a base:Metadata,
@@ -1706,7 +2073,8 @@ prefix:pmdao-tto-tt-S355-6_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-6_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "214"^^xsd:float .
 
@@ -1738,6 +2106,8 @@ prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-6_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-6_project_ID .
 
 prefix:pmdao-tto-tt-S355-6_project_ID a base:Metadata,
@@ -1890,7 +2260,8 @@ prefix:pmdao-tto-tt-S355-7_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-7_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "206"^^xsd:float .
 
@@ -1922,6 +2293,8 @@ prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-7_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-7_project_ID .
 
 prefix:pmdao-tto-tt-S355-7_project_ID a base:Metadata,
@@ -2074,7 +2447,8 @@ prefix:pmdao-tto-tt-S355-8_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-8_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "211"^^xsd:float .
 
@@ -2106,6 +2480,8 @@ prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-8_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-8_project_ID .
 
 prefix:pmdao-tto-tt-S355-8_project_ID a base:Metadata,
@@ -2258,7 +2634,8 @@ prefix:pmdao-tto-tt-S355-9_maximumForce a base:MaximumForce,
 
 prefix:pmdao-tto-tt-S355-9_modulusOfElasticity a base:Measurement,
         base:ModulusOfElasticity,
-        base:SecondaryData ;
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
     base:unit unit:GigaPa ;
     base:value "201"^^xsd:float .
 
@@ -2290,6 +2667,8 @@ prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-9_project a base:Metadata,
         base:Project ;
+    datacite:hasIdentifier prefix:BMBF,
+        prefix:Funder_Identifier ;
     base:characteristic prefix:pmdao-tto-tt-S355-9_project_ID .
 
 prefix:pmdao-tto-tt-S355-9_project_ID a base:Metadata,
@@ -2584,6 +2963,16 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
 
 <https://w3id.org/pmd/ao/tte/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tte/testpiece_name/Zy4_afterTest_2> .
+
+prefix:BMBF a datacite:OrganizationIdentifier ;
+    datacite:usesIdentifierScheme datacite:Wikidata ;
+    skos:altLabel "Federal Ministry of Education and Research@en"^^xsd:string ;
+    skos:prefLabel "Bundesministerium für Bildung und Forschung (BMBF)@de"^^xsd:string ;
+    base:value "Q492234"^^xsd:string .
+
+prefix:Funder_Identifier a datacite:FunderIdentifier ;
+    datacite:usesIdentifierScheme datacite:local-funder-identifier-scheme ;
+    base:value "13XP5094"^^xsd:string .
 
 prefix:_extensometer base:characteristic prefix:_extensometerName,
         prefix:_extensometerStandard,
