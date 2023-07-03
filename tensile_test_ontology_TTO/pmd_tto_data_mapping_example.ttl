@@ -526,7 +526,7 @@ prefix:Zd2_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-9testpiece_id/Zd2"^^xsd:string ;
     csvw:tableSchema prefix:Zd2_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zd2.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zd2.csv"^^xsd:string .
 
 prefix:Zd2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -560,7 +560,7 @@ prefix:Zd3_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-10testpiece_id/Zd3"^^xsd:string ;
     csvw:tableSchema prefix:Zd3_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zd3.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zd3.csv"^^xsd:string .
 
 prefix:Zd3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -594,7 +594,7 @@ prefix:Zx1_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-1testpiece_id/Zx1"^^xsd:string ;
     csvw:tableSchema prefix:Zx1_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zx1.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zx1.csv"^^xsd:string .
 
 prefix:Zx1_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -628,7 +628,7 @@ prefix:Zx2_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-2testpiece_id/Zx2"^^xsd:string ;
     csvw:tableSchema prefix:Zx2_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zx2.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zx2.csv"^^xsd:string .
 
 prefix:Zx2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -662,7 +662,7 @@ prefix:Zx3_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-3testpiece_id/Zx3"^^xsd:string ;
     csvw:tableSchema prefix:Zx3_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zx3.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zx3.csv"^^xsd:string .
 
 prefix:Zx3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -696,7 +696,7 @@ prefix:Zx4_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-4testpiece_id/Zx4"^^xsd:string ;
     csvw:tableSchema prefix:Zx4_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zx4.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zx4.csv"^^xsd:string .
 
 prefix:Zx4_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -730,7 +730,7 @@ prefix:Zy1_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-5testpiece_id/Zy1"^^xsd:string ;
     csvw:tableSchema prefix:Zy1_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zy1.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zy1.csv"^^xsd:string .
 
 prefix:Zy1_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -764,7 +764,7 @@ prefix:Zy2_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-6testpiece_id/Zy2"^^xsd:string ;
     csvw:tableSchema prefix:Zy2_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zy2.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zy2.csv"^^xsd:string .
 
 prefix:Zy2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -798,7 +798,7 @@ prefix:Zy3_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-7testpiece_id/Zy3"^^xsd:string ;
     csvw:tableSchema prefix:Zy3_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zy3.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zy3.csv"^^xsd:string .
 
 prefix:Zy3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -832,7 +832,7 @@ prefix:Zy4_csv a csvw:Table,
     dc:format "text/csv"^^xsd:string ;
     dc:title "process/pmdao-tto-tt-S355-8testpiece_id/Zy4"^^xsd:string ;
     csvw:tableSchema prefix:Zy4_schema ;
-    csvw:url "https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO/data/primary_data/Zy4.csv"^^xsd:string .
+    csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/main/tensile_test_ontology_TTO/data/primary_data/Zy4.csv"^^xsd:string .
 
 prefix:Zy4_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
