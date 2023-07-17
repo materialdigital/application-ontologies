@@ -22,491 +22,301 @@ prefix: a owl:Ontology ;
 
 prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zd3_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-10,
-        prefix:pmdao-tto-tt-S355-10_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-10_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-10_date,
         prefix:pmdao-tto-tt-S355-10_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-10_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-10_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-10_materialDescription,
-        prefix:pmdao-tto-tt-S355-10_maximumForce,
-        prefix:pmdao-tto-tt-S355-10_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-10_note,
         prefix:pmdao-tto-tt-S355-10_operator,
-        prefix:pmdao-tto-tt-S355-10_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-10_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-10_project,
-        prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-10_rollingDirection,
-        prefix:pmdao-tto-tt-S355-10_specimenShape,
         prefix:pmdao-tto-tt-S355-10_strainRate,
-        prefix:pmdao-tto-tt-S355-10_tensileStrength,
-        prefix:pmdao-tto-tt-S355-10_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-10_thickness_a1,
-        prefix:pmdao-tto-tt-S355-10_thickness_a2,
-        prefix:pmdao-tto-tt-S355-10_thickness_a3,
-        prefix:pmdao-tto-tt-S355-10_transitionPoint,
-        prefix:pmdao-tto-tt-S355-10_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-10_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-10_width_b1,
-        prefix:pmdao-tto-tt-S355-10_width_b2,
-        prefix:pmdao-tto-tt-S355-10_width_b3 ;
+        prefix:pmdao-tto-tt-S355-10_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3> ;
     base:output prefix:Zd3_dataset,
+        prefix:pmdao-tto-tt-S355-10_maximumForce,
+        prefix:pmdao-tto-tt-S355-10_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-10_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-10_tensileStrength,
+        prefix:pmdao-tto-tt-S355-10_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zx1_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-1,
-        prefix:pmdao-tto-tt-S355-1_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-1_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-1_date,
         prefix:pmdao-tto-tt-S355-1_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-1_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-1_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-1_materialDescription,
-        prefix:pmdao-tto-tt-S355-1_maximumForce,
-        prefix:pmdao-tto-tt-S355-1_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-1_note,
         prefix:pmdao-tto-tt-S355-1_operator,
-        prefix:pmdao-tto-tt-S355-1_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-1_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-1_project,
-        prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-1_rollingDirection,
-        prefix:pmdao-tto-tt-S355-1_specimenShape,
         prefix:pmdao-tto-tt-S355-1_strainRate,
-        prefix:pmdao-tto-tt-S355-1_tensileStrength,
-        prefix:pmdao-tto-tt-S355-1_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-1_thickness_a1,
-        prefix:pmdao-tto-tt-S355-1_thickness_a2,
-        prefix:pmdao-tto-tt-S355-1_thickness_a3,
-        prefix:pmdao-tto-tt-S355-1_transitionPoint,
-        prefix:pmdao-tto-tt-S355-1_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-1_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-1_width_b1,
-        prefix:pmdao-tto-tt-S355-1_width_b2,
-        prefix:pmdao-tto-tt-S355-1_width_b3 ;
+        prefix:pmdao-tto-tt-S355-1_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1> ;
     base:output prefix:Zx1_dataset,
+        prefix:pmdao-tto-tt-S355-1_maximumForce,
+        prefix:pmdao-tto-tt-S355-1_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-1_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-1_tensileStrength,
+        prefix:pmdao-tto-tt-S355-1_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zx2_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-2,
-        prefix:pmdao-tto-tt-S355-2_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-2_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-2_date,
         prefix:pmdao-tto-tt-S355-2_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-2_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-2_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-2_materialDescription,
-        prefix:pmdao-tto-tt-S355-2_maximumForce,
-        prefix:pmdao-tto-tt-S355-2_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-2_note,
         prefix:pmdao-tto-tt-S355-2_operator,
-        prefix:pmdao-tto-tt-S355-2_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-2_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-2_project,
-        prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-2_rollingDirection,
-        prefix:pmdao-tto-tt-S355-2_specimenShape,
         prefix:pmdao-tto-tt-S355-2_strainRate,
-        prefix:pmdao-tto-tt-S355-2_tensileStrength,
-        prefix:pmdao-tto-tt-S355-2_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-2_thickness_a1,
-        prefix:pmdao-tto-tt-S355-2_thickness_a2,
-        prefix:pmdao-tto-tt-S355-2_thickness_a3,
-        prefix:pmdao-tto-tt-S355-2_transitionPoint,
-        prefix:pmdao-tto-tt-S355-2_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-2_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-2_width_b1,
-        prefix:pmdao-tto-tt-S355-2_width_b2,
-        prefix:pmdao-tto-tt-S355-2_width_b3 ;
+        prefix:pmdao-tto-tt-S355-2_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2> ;
     base:output prefix:Zx2_dataset,
+        prefix:pmdao-tto-tt-S355-2_maximumForce,
+        prefix:pmdao-tto-tt-S355-2_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-2_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-2_tensileStrength,
+        prefix:pmdao-tto-tt-S355-2_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zx3_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-3,
-        prefix:pmdao-tto-tt-S355-3_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-3_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-3_date,
         prefix:pmdao-tto-tt-S355-3_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-3_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-3_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-3_materialDescription,
-        prefix:pmdao-tto-tt-S355-3_maximumForce,
-        prefix:pmdao-tto-tt-S355-3_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-3_note,
         prefix:pmdao-tto-tt-S355-3_operator,
-        prefix:pmdao-tto-tt-S355-3_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-3_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-3_project,
-        prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-3_rollingDirection,
-        prefix:pmdao-tto-tt-S355-3_specimenShape,
         prefix:pmdao-tto-tt-S355-3_strainRate,
-        prefix:pmdao-tto-tt-S355-3_tensileStrength,
-        prefix:pmdao-tto-tt-S355-3_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-3_thickness_a1,
-        prefix:pmdao-tto-tt-S355-3_thickness_a2,
-        prefix:pmdao-tto-tt-S355-3_thickness_a3,
-        prefix:pmdao-tto-tt-S355-3_transitionPoint,
-        prefix:pmdao-tto-tt-S355-3_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-3_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-3_width_b1,
-        prefix:pmdao-tto-tt-S355-3_width_b2,
-        prefix:pmdao-tto-tt-S355-3_width_b3 ;
+        prefix:pmdao-tto-tt-S355-3_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3> ;
     base:output prefix:Zx3_dataset,
+        prefix:pmdao-tto-tt-S355-3_maximumForce,
+        prefix:pmdao-tto-tt-S355-3_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-3_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-3_tensileStrength,
+        prefix:pmdao-tto-tt-S355-3_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zx4_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-4,
-        prefix:pmdao-tto-tt-S355-4_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-4_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-4_date,
         prefix:pmdao-tto-tt-S355-4_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-4_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-4_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-4_materialDescription,
-        prefix:pmdao-tto-tt-S355-4_maximumForce,
-        prefix:pmdao-tto-tt-S355-4_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-4_note,
         prefix:pmdao-tto-tt-S355-4_operator,
-        prefix:pmdao-tto-tt-S355-4_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-4_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-4_project,
-        prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-4_rollingDirection,
-        prefix:pmdao-tto-tt-S355-4_specimenShape,
         prefix:pmdao-tto-tt-S355-4_strainRate,
-        prefix:pmdao-tto-tt-S355-4_tensileStrength,
-        prefix:pmdao-tto-tt-S355-4_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-4_thickness_a1,
-        prefix:pmdao-tto-tt-S355-4_thickness_a2,
-        prefix:pmdao-tto-tt-S355-4_thickness_a3,
-        prefix:pmdao-tto-tt-S355-4_transitionPoint,
-        prefix:pmdao-tto-tt-S355-4_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-4_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-4_width_b1,
-        prefix:pmdao-tto-tt-S355-4_width_b2,
-        prefix:pmdao-tto-tt-S355-4_width_b3 ;
+        prefix:pmdao-tto-tt-S355-4_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4> ;
     base:output prefix:Zx4_dataset,
+        prefix:pmdao-tto-tt-S355-4_maximumForce,
+        prefix:pmdao-tto-tt-S355-4_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-4_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-4_tensileStrength,
+        prefix:pmdao-tto-tt-S355-4_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zy1_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-5,
-        prefix:pmdao-tto-tt-S355-5_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-5_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-5_date,
         prefix:pmdao-tto-tt-S355-5_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-5_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-5_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-5_materialDescription,
-        prefix:pmdao-tto-tt-S355-5_maximumForce,
-        prefix:pmdao-tto-tt-S355-5_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-5_note,
         prefix:pmdao-tto-tt-S355-5_operator,
-        prefix:pmdao-tto-tt-S355-5_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-5_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-5_project,
-        prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-5_rollingDirection,
-        prefix:pmdao-tto-tt-S355-5_specimenShape,
         prefix:pmdao-tto-tt-S355-5_strainRate,
-        prefix:pmdao-tto-tt-S355-5_tensileStrength,
-        prefix:pmdao-tto-tt-S355-5_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-5_thickness_a1,
-        prefix:pmdao-tto-tt-S355-5_thickness_a2,
-        prefix:pmdao-tto-tt-S355-5_thickness_a3,
-        prefix:pmdao-tto-tt-S355-5_transitionPoint,
-        prefix:pmdao-tto-tt-S355-5_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-5_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-5_width_b1,
-        prefix:pmdao-tto-tt-S355-5_width_b2,
-        prefix:pmdao-tto-tt-S355-5_width_b3 ;
+        prefix:pmdao-tto-tt-S355-5_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1> ;
     base:output prefix:Zy1_dataset,
+        prefix:pmdao-tto-tt-S355-5_maximumForce,
+        prefix:pmdao-tto-tt-S355-5_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-5_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-5_tensileStrength,
+        prefix:pmdao-tto-tt-S355-5_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zy2_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-6,
-        prefix:pmdao-tto-tt-S355-6_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-6_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-6_date,
         prefix:pmdao-tto-tt-S355-6_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-6_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-6_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-6_materialDescription,
-        prefix:pmdao-tto-tt-S355-6_maximumForce,
-        prefix:pmdao-tto-tt-S355-6_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-6_note,
         prefix:pmdao-tto-tt-S355-6_operator,
-        prefix:pmdao-tto-tt-S355-6_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-6_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-6_project,
-        prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-6_rollingDirection,
-        prefix:pmdao-tto-tt-S355-6_specimenShape,
         prefix:pmdao-tto-tt-S355-6_strainRate,
-        prefix:pmdao-tto-tt-S355-6_tensileStrength,
-        prefix:pmdao-tto-tt-S355-6_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-6_thickness_a1,
-        prefix:pmdao-tto-tt-S355-6_thickness_a2,
-        prefix:pmdao-tto-tt-S355-6_thickness_a3,
-        prefix:pmdao-tto-tt-S355-6_transitionPoint,
-        prefix:pmdao-tto-tt-S355-6_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-6_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-6_width_b1,
-        prefix:pmdao-tto-tt-S355-6_width_b2,
-        prefix:pmdao-tto-tt-S355-6_width_b3 ;
+        prefix:pmdao-tto-tt-S355-6_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2> ;
     base:output prefix:Zy2_dataset,
+        prefix:pmdao-tto-tt-S355-6_maximumForce,
+        prefix:pmdao-tto-tt-S355-6_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-6_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-6_tensileStrength,
+        prefix:pmdao-tto-tt-S355-6_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zy3_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-7,
-        prefix:pmdao-tto-tt-S355-7_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-7_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-7_date,
         prefix:pmdao-tto-tt-S355-7_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-7_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-7_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-7_materialDescription,
-        prefix:pmdao-tto-tt-S355-7_maximumForce,
-        prefix:pmdao-tto-tt-S355-7_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-7_note,
         prefix:pmdao-tto-tt-S355-7_operator,
-        prefix:pmdao-tto-tt-S355-7_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-7_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-7_project,
-        prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-7_rollingDirection,
-        prefix:pmdao-tto-tt-S355-7_specimenShape,
         prefix:pmdao-tto-tt-S355-7_strainRate,
-        prefix:pmdao-tto-tt-S355-7_tensileStrength,
-        prefix:pmdao-tto-tt-S355-7_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-7_thickness_a1,
-        prefix:pmdao-tto-tt-S355-7_thickness_a2,
-        prefix:pmdao-tto-tt-S355-7_thickness_a3,
-        prefix:pmdao-tto-tt-S355-7_transitionPoint,
-        prefix:pmdao-tto-tt-S355-7_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-7_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-7_width_b1,
-        prefix:pmdao-tto-tt-S355-7_width_b2,
-        prefix:pmdao-tto-tt-S355-7_width_b3 ;
+        prefix:pmdao-tto-tt-S355-7_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3> ;
     base:output prefix:Zy3_dataset,
+        prefix:pmdao-tto-tt-S355-7_maximumForce,
+        prefix:pmdao-tto-tt-S355-7_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-7_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-7_tensileStrength,
+        prefix:pmdao-tto-tt-S355-7_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zy4_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-8,
-        prefix:pmdao-tto-tt-S355-8_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-8_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-8_date,
         prefix:pmdao-tto-tt-S355-8_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-8_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-8_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-8_materialDescription,
-        prefix:pmdao-tto-tt-S355-8_maximumForce,
-        prefix:pmdao-tto-tt-S355-8_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-8_note,
         prefix:pmdao-tto-tt-S355-8_operator,
-        prefix:pmdao-tto-tt-S355-8_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-8_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-8_project,
-        prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-8_rollingDirection,
-        prefix:pmdao-tto-tt-S355-8_specimenShape,
         prefix:pmdao-tto-tt-S355-8_strainRate,
-        prefix:pmdao-tto-tt-S355-8_tensileStrength,
-        prefix:pmdao-tto-tt-S355-8_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-8_thickness_a1,
-        prefix:pmdao-tto-tt-S355-8_thickness_a2,
-        prefix:pmdao-tto-tt-S355-8_thickness_a3,
-        prefix:pmdao-tto-tt-S355-8_transitionPoint,
-        prefix:pmdao-tto-tt-S355-8_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-8_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-8_width_b1,
-        prefix:pmdao-tto-tt-S355-8_width_b2,
-        prefix:pmdao-tto-tt-S355-8_width_b3 ;
+        prefix:pmdao-tto-tt-S355-8_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4> ;
     base:output prefix:Zy4_dataset,
+        prefix:pmdao-tto-tt-S355-8_maximumForce,
+        prefix:pmdao-tto-tt-S355-8_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-8_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-8_tensileStrength,
+        prefix:pmdao-tto-tt-S355-8_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
     prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:Zd2_dataset,
-        prefix:_extensometer,
-        prefix:_institute_BAM,
+    base:characteristic prefix:_institute_BAM,
         prefix:_standard,
         prefix:caliper,
-        prefix:load_cell,
-        prefix:machine,
         prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-9,
-        prefix:pmdao-tto-tt-S355-9_crossSectionArea_S0,
-        prefix:pmdao-tto-tt-S355-9_crossSectionArea_Su,
-        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s1,
-        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s2,
-        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s3,
         prefix:pmdao-tto-tt-S355-9_date,
         prefix:pmdao-tto-tt-S355-9_environmentalTemperature,
         prefix:pmdao-tto-tt-S355-9_extensometerGaugeLength,
-        prefix:pmdao-tto-tt-S355-9_finalGaugeLengthAfterFracture_Lu,
-        prefix:pmdao-tto-tt-S355-9_materialDescription,
-        prefix:pmdao-tto-tt-S355-9_maximumForce,
-        prefix:pmdao-tto-tt-S355-9_modulusOfElasticity,
         prefix:pmdao-tto-tt-S355-9_note,
         prefix:pmdao-tto-tt-S355-9_operator,
-        prefix:pmdao-tto-tt-S355-9_originalGaugeLength_L0,
-        prefix:pmdao-tto-tt-S355-9_percentageElongationAfterFracture,
-        prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea,
         prefix:pmdao-tto-tt-S355-9_project,
-        prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02,
-        prefix:pmdao-tto-tt-S355-9_rollingDirection,
-        prefix:pmdao-tto-tt-S355-9_specimenShape,
         prefix:pmdao-tto-tt-S355-9_strainRate,
-        prefix:pmdao-tto-tt-S355-9_tensileStrength,
-        prefix:pmdao-tto-tt-S355-9_thicknessAfterFracture_au,
-        prefix:pmdao-tto-tt-S355-9_thickness_a1,
-        prefix:pmdao-tto-tt-S355-9_thickness_a2,
-        prefix:pmdao-tto-tt-S355-9_thickness_a3,
-        prefix:pmdao-tto-tt-S355-9_transitionPoint,
-        prefix:pmdao-tto-tt-S355-9_upperYieldStrength,
-        prefix:pmdao-tto-tt-S355-9_widthAfterFracture_bu,
-        prefix:pmdao-tto-tt-S355-9_width_b1,
-        prefix:pmdao-tto-tt-S355-9_width_b2,
-        prefix:pmdao-tto-tt-S355-9_width_b3 ;
+        prefix:pmdao-tto-tt-S355-9_transitionPoint ;
+    base:executedBy prefix:_extensometer,
+        prefix:load_cell,
+        prefix:machine ;
     base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2> ;
     base:output prefix:Zd2_dataset,
+        prefix:pmdao-tto-tt-S355-9_maximumForce,
+        prefix:pmdao-tto-tt-S355-9_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-9_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-9_tensileStrength,
+        prefix:pmdao-tto-tt-S355-9_upperYieldStrength,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_1>,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_2> .
 
@@ -527,6 +337,11 @@ prefix:Zd2_csv a csvw:Table,
     dc:title "process/pmdao-tto-tt-S355-9testpiece_id/Zd2"^^xsd:string ;
     csvw:tableSchema prefix:Zd2_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zd2.csv"^^xsd:string .
+
+prefix:Zd2_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zd2_csv .
 
 prefix:Zd2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -562,6 +377,11 @@ prefix:Zd3_csv a csvw:Table,
     csvw:tableSchema prefix:Zd3_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zd3.csv"^^xsd:string .
 
+prefix:Zd3_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zd3_csv .
+
 prefix:Zd3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
                     base:Duration ;
@@ -595,6 +415,11 @@ prefix:Zx1_csv a csvw:Table,
     dc:title "process/pmdao-tto-tt-S355-1testpiece_id/Zx1"^^xsd:string ;
     csvw:tableSchema prefix:Zx1_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zx1.csv"^^xsd:string .
+
+prefix:Zx1_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zx1_csv .
 
 prefix:Zx1_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -630,6 +455,11 @@ prefix:Zx2_csv a csvw:Table,
     csvw:tableSchema prefix:Zx2_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zx2.csv"^^xsd:string .
 
+prefix:Zx2_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zx2_csv .
+
 prefix:Zx2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
                     base:Duration ;
@@ -663,6 +493,11 @@ prefix:Zx3_csv a csvw:Table,
     dc:title "process/pmdao-tto-tt-S355-3testpiece_id/Zx3"^^xsd:string ;
     csvw:tableSchema prefix:Zx3_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zx3.csv"^^xsd:string .
+
+prefix:Zx3_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zx3_csv .
 
 prefix:Zx3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -698,6 +533,11 @@ prefix:Zx4_csv a csvw:Table,
     csvw:tableSchema prefix:Zx4_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zx4.csv"^^xsd:string .
 
+prefix:Zx4_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zx4_csv .
+
 prefix:Zx4_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
                     base:Duration ;
@@ -731,6 +571,11 @@ prefix:Zy1_csv a csvw:Table,
     dc:title "process/pmdao-tto-tt-S355-5testpiece_id/Zy1"^^xsd:string ;
     csvw:tableSchema prefix:Zy1_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zy1.csv"^^xsd:string .
+
+prefix:Zy1_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zy1_csv .
 
 prefix:Zy1_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -766,6 +611,11 @@ prefix:Zy2_csv a csvw:Table,
     csvw:tableSchema prefix:Zy2_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zy2.csv"^^xsd:string .
 
+prefix:Zy2_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zy2_csv .
+
 prefix:Zy2_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
                     base:Duration ;
@@ -800,6 +650,11 @@ prefix:Zy3_csv a csvw:Table,
     csvw:tableSchema prefix:Zy3_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zy3.csv"^^xsd:string .
 
+prefix:Zy3_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zy3_csv .
+
 prefix:Zy3_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
                     base:Duration ;
@@ -833,6 +688,11 @@ prefix:Zy4_csv a csvw:Table,
     dc:title "process/pmdao-tto-tt-S355-8testpiece_id/Zy4"^^xsd:string ;
     csvw:tableSchema prefix:Zy4_schema ;
     csvw:url "https://raw.githubusercontent.com/materialdigital/application-ontologies/d8ab894df5d56d3362cedb18c2b482da0836e959/tensile_test_ontology_TTO/data/primary_data/Zy4.csv"^^xsd:string .
+
+prefix:Zy4_dataset a base:Measurement,
+        base:PrimaryData,
+        base:ValueObject ;
+    base:resource prefix:Zy4_csv .
 
 prefix:Zy4_schema a csvw:Schema ;
     csvw:column ( [ a csvw:Column,
@@ -988,19 +848,6 @@ prefix:pmdao-tto-tt-S355-10_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-10_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "61.681"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-10_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "195"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-10_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, diagonal der Walzrichtung"^^xsd:string .
@@ -1015,18 +862,6 @@ prefix:pmdao-tto-tt-S355-10_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-10_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "33.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "64"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-10_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1036,12 +871,6 @@ prefix:pmdao-tto-tt-S355-10_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-10_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "NaN"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-10_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -1055,12 +884,6 @@ prefix:pmdao-tto-tt-S355-10_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-10_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "511"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-10_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -1091,12 +914,6 @@ prefix:pmdao-tto-tt-S355-10_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "4.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-10_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "396"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-10_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -1178,19 +995,6 @@ prefix:pmdao-tto-tt-S355-1_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-1_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "62.007"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-1_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "194"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-1_note a base:Metadata,
         base:Note ;
     base:value "In Walzrichtung aus Stahlblech entnommen; Abweichend von den anderen Proben. Weggeschwindigkeit wurde erhöht."^^xsd:string .
@@ -1205,18 +1009,6 @@ prefix:pmdao-tto-tt-S355-1_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-1_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "NaN"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "56"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-1_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1226,12 +1018,6 @@ prefix:pmdao-tto-tt-S355-1_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-1_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "375.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-1_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -1245,12 +1031,6 @@ prefix:pmdao-tto-tt-S355-1_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-1_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "514"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-1_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -1281,12 +1061,6 @@ prefix:pmdao-tto-tt-S355-1_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "1.6"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-1_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "380"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-1_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -1371,19 +1145,6 @@ prefix:pmdao-tto-tt-S355-2_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-2_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "60.704"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-2_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "199"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-2_note a base:Metadata,
         base:Note ;
     base:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
@@ -1398,18 +1159,6 @@ prefix:pmdao-tto-tt-S355-2_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-2_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "35.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "59"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-2_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1419,12 +1168,6 @@ prefix:pmdao-tto-tt-S355-2_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-2_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "374.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-2_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -1438,12 +1181,6 @@ prefix:pmdao-tto-tt-S355-2_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-2_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "504"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-2_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -1474,12 +1211,6 @@ prefix:pmdao-tto-tt-S355-2_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-2_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "379"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-2_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -1564,19 +1295,6 @@ prefix:pmdao-tto-tt-S355-3_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-3_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "60.68"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-3_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "199"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-3_note a base:Metadata,
         base:Note ;
     base:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
@@ -1591,18 +1309,6 @@ prefix:pmdao-tto-tt-S355-3_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-3_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "35.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "58"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-3_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1612,12 +1318,6 @@ prefix:pmdao-tto-tt-S355-3_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-3_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "376.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-3_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -1631,12 +1331,6 @@ prefix:pmdao-tto-tt-S355-3_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-3_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "504"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-3_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -1667,12 +1361,6 @@ prefix:pmdao-tto-tt-S355-3_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-3_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "379"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-3_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -1757,19 +1445,6 @@ prefix:pmdao-tto-tt-S355-4_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-4_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "62.288"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-4_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "196"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-4_note a base:Metadata,
         base:Note ;
     base:value "In Walzrichtung aus Stahlblech entnommen; Extensometer nach 3,9 % Dehnung der Proben entfernt. Keine Erhöhung der Geschwindigkeit."^^xsd:string .
@@ -1784,18 +1459,6 @@ prefix:pmdao-tto-tt-S355-4_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-4_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "35.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "61"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-4_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1805,12 +1468,6 @@ prefix:pmdao-tto-tt-S355-4_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-4_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "382.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-4_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -1824,12 +1481,6 @@ prefix:pmdao-tto-tt-S355-4_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-4_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "519"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-4_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -1860,12 +1511,6 @@ prefix:pmdao-tto-tt-S355-4_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-4_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "388"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-4_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -1950,19 +1595,6 @@ prefix:pmdao-tto-tt-S355-5_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-5_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "61.305"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-5_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "210"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-5_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
@@ -1977,18 +1609,6 @@ prefix:pmdao-tto-tt-S355-5_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-5_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "NaN"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "54"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-5_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -1998,12 +1618,6 @@ prefix:pmdao-tto-tt-S355-5_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-5_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "396.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-5_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -2017,12 +1631,6 @@ prefix:pmdao-tto-tt-S355-5_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-5_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "508"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-5_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -2053,12 +1661,6 @@ prefix:pmdao-tto-tt-S355-5_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-5_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "399"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-5_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -2143,19 +1745,6 @@ prefix:pmdao-tto-tt-S355-6_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-6_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "61.2"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-6_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "214"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-6_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
@@ -2170,18 +1759,6 @@ prefix:pmdao-tto-tt-S355-6_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-6_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "35.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "56"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-6_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -2191,12 +1768,6 @@ prefix:pmdao-tto-tt-S355-6_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-6_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "390.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-6_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -2210,12 +1781,6 @@ prefix:pmdao-tto-tt-S355-6_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-6_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "507"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-6_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -2246,12 +1811,6 @@ prefix:pmdao-tto-tt-S355-6_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-6_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "399"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-6_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -2336,19 +1895,6 @@ prefix:pmdao-tto-tt-S355-7_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-7_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "60.935"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-7_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "206"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-7_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
@@ -2363,18 +1909,6 @@ prefix:pmdao-tto-tt-S355-7_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-7_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "33.5"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "58"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-7_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -2384,12 +1918,6 @@ prefix:pmdao-tto-tt-S355-7_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-7_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "NaN"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-7_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -2403,12 +1931,6 @@ prefix:pmdao-tto-tt-S355-7_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-7_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "505"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-7_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -2439,12 +1961,6 @@ prefix:pmdao-tto-tt-S355-7_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-7_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "408"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-7_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -2529,19 +2045,6 @@ prefix:pmdao-tto-tt-S355-8_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-8_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "61.98"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-8_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "211"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-8_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, entgegen der Walzrichtung"^^xsd:string .
@@ -2556,18 +2059,6 @@ prefix:pmdao-tto-tt-S355-8_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-8_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "33.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "55"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-8_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -2577,12 +2068,6 @@ prefix:pmdao-tto-tt-S355-8_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-8_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "402.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-8_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -2596,12 +2081,6 @@ prefix:pmdao-tto-tt-S355-8_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-8_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "514"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-8_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -2632,12 +2111,6 @@ prefix:pmdao-tto-tt-S355-8_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "3.8"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-8_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "407"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-8_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -2722,19 +2195,6 @@ prefix:pmdao-tto-tt-S355-9_materialDescription a base:Metadata,
         base:materialDesignation ;
     base:value "S355"^^xsd:string .
 
-prefix:pmdao-tto-tt-S355-9_maximumForce a base:MaximumForce,
-        base:Measurement,
-        base:SecondaryData ;
-    base:unit unit:kiloN ;
-    base:value "62.168"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-9_modulusOfElasticity a base:Measurement,
-        base:ModulusOfElasticity,
-        base:SecondaryData,
-        base:SlopeOfTheElasticPart ;
-    base:unit unit:GigaPa ;
-    base:value "201"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-9_note a base:Metadata,
         base:Note ;
     base:value "Proben aus Stahlblech entnommen, diagonal der Walzrichtung"^^xsd:string .
@@ -2749,18 +2209,6 @@ prefix:pmdao-tto-tt-S355-9_originalGaugeLength_L0 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "60"^^xsd:float .
 
-prefix:pmdao-tto-tt-S355-9_percentageElongationAfterFracture a base:Measurement,
-        base:PercentageElongationAfterFracture,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "33.5"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea a base:Measurement,
-        base:PercentageReductionOfArea,
-        base:SecondaryData ;
-    base:unit unit:PERCENT ;
-    base:value "60"^^xsd:float .
-
 prefix:pmdao-tto-tt-S355-9_project a base:Metadata,
         base:Project ;
     datacite:hasIdentifier prefix:BMBF,
@@ -2770,12 +2218,6 @@ prefix:pmdao-tto-tt-S355-9_project a base:Metadata,
 prefix:pmdao-tto-tt-S355-9_project_ID a base:Metadata,
         base:ProjectIdentifier ;
     base:value "PMDao-onto_1"^^xsd:string .
-
-prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02 a base:Measurement,
-        base:Rp02,
-        base:SecondaryData ;
-    base:unit unit:MegaPa ;
-    base:value "390.0"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-9_rollingDirection a base:MaterialRelated,
         base:Metadata ;
@@ -2789,12 +2231,6 @@ prefix:pmdao-tto-tt-S355-9_strainRate a base:Metadata,
         base:SetPoint,
         base:StrainRate ;
     base:value "0.00025"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-9_tensileStrength a base:Measurement,
-        base:SecondaryData,
-        base:TensileStrength ;
-    base:unit unit:MegaPa ;
-    base:value "515"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-9_thicknessAfterFracture_au a base:Measurement,
         base:PrimaryData,
@@ -2825,12 +2261,6 @@ prefix:pmdao-tto-tt-S355-9_transitionPoint a base:Metadata,
         base:TransitionPointTestingRate ;
     base:unit unit:PERCENT ;
     base:value "4.0"^^xsd:float .
-
-prefix:pmdao-tto-tt-S355-9_upperYieldStrength a base:Measurement,
-        base:SecondaryData,
-        base:UpperYieldStrength ;
-    base:unit unit:MegaPa ;
-    base:value "399"^^xsd:float .
 
 prefix:pmdao-tto-tt-S355-9_widthAfterFracture_bu a base:Measurement,
         base:PrimaryData,
@@ -2869,7 +2299,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zd2_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2> .
+    base:characteristic prefix:pmdao-tto-tt-S355-9_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-9_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-9_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-9_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-9_materialDescription,
+        prefix:pmdao-tto-tt-S355-9_maximumForce,
+        prefix:pmdao-tto-tt-S355-9_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-9_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-9_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-9_rollingDirection,
+        prefix:pmdao-tto-tt-S355-9_specimenShape,
+        prefix:pmdao-tto-tt-S355-9_tensileStrength,
+        prefix:pmdao-tto-tt-S355-9_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-9_thickness_a1,
+        prefix:pmdao-tto-tt-S355-9_thickness_a2,
+        prefix:pmdao-tto-tt-S355-9_thickness_a3,
+        prefix:pmdao-tto-tt-S355-9_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-9_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-9_width_b1,
+        prefix:pmdao-tto-tt-S355-9_width_b2,
+        prefix:pmdao-tto-tt-S355-9_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_1> .
@@ -2890,7 +2345,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zd3_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3> .
+    base:characteristic prefix:pmdao-tto-tt-S355-10_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-10_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-10_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-10_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-10_materialDescription,
+        prefix:pmdao-tto-tt-S355-10_maximumForce,
+        prefix:pmdao-tto-tt-S355-10_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-10_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-10_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-10_rollingDirection,
+        prefix:pmdao-tto-tt-S355-10_specimenShape,
+        prefix:pmdao-tto-tt-S355-10_tensileStrength,
+        prefix:pmdao-tto-tt-S355-10_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-10_thickness_a1,
+        prefix:pmdao-tto-tt-S355-10_thickness_a2,
+        prefix:pmdao-tto-tt-S355-10_thickness_a3,
+        prefix:pmdao-tto-tt-S355-10_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-10_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-10_width_b1,
+        prefix:pmdao-tto-tt-S355-10_width_b2,
+        prefix:pmdao-tto-tt-S355-10_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_1> .
@@ -2911,7 +2391,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zx1_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1> .
+    base:characteristic prefix:pmdao-tto-tt-S355-1_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-1_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-1_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-1_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-1_materialDescription,
+        prefix:pmdao-tto-tt-S355-1_maximumForce,
+        prefix:pmdao-tto-tt-S355-1_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-1_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-1_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-1_rollingDirection,
+        prefix:pmdao-tto-tt-S355-1_specimenShape,
+        prefix:pmdao-tto-tt-S355-1_tensileStrength,
+        prefix:pmdao-tto-tt-S355-1_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-1_thickness_a1,
+        prefix:pmdao-tto-tt-S355-1_thickness_a2,
+        prefix:pmdao-tto-tt-S355-1_thickness_a3,
+        prefix:pmdao-tto-tt-S355-1_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-1_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-1_width_b1,
+        prefix:pmdao-tto-tt-S355-1_width_b2,
+        prefix:pmdao-tto-tt-S355-1_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_1> .
@@ -2932,7 +2437,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zx2_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2> .
+    base:characteristic prefix:pmdao-tto-tt-S355-2_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-2_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-2_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-2_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-2_materialDescription,
+        prefix:pmdao-tto-tt-S355-2_maximumForce,
+        prefix:pmdao-tto-tt-S355-2_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-2_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-2_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-2_rollingDirection,
+        prefix:pmdao-tto-tt-S355-2_specimenShape,
+        prefix:pmdao-tto-tt-S355-2_tensileStrength,
+        prefix:pmdao-tto-tt-S355-2_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-2_thickness_a1,
+        prefix:pmdao-tto-tt-S355-2_thickness_a2,
+        prefix:pmdao-tto-tt-S355-2_thickness_a3,
+        prefix:pmdao-tto-tt-S355-2_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-2_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-2_width_b1,
+        prefix:pmdao-tto-tt-S355-2_width_b2,
+        prefix:pmdao-tto-tt-S355-2_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_1> .
@@ -2953,7 +2483,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zx3_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3> .
+    base:characteristic prefix:pmdao-tto-tt-S355-3_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-3_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-3_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-3_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-3_materialDescription,
+        prefix:pmdao-tto-tt-S355-3_maximumForce,
+        prefix:pmdao-tto-tt-S355-3_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-3_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-3_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-3_rollingDirection,
+        prefix:pmdao-tto-tt-S355-3_specimenShape,
+        prefix:pmdao-tto-tt-S355-3_tensileStrength,
+        prefix:pmdao-tto-tt-S355-3_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-3_thickness_a1,
+        prefix:pmdao-tto-tt-S355-3_thickness_a2,
+        prefix:pmdao-tto-tt-S355-3_thickness_a3,
+        prefix:pmdao-tto-tt-S355-3_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-3_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-3_width_b1,
+        prefix:pmdao-tto-tt-S355-3_width_b2,
+        prefix:pmdao-tto-tt-S355-3_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_1> .
@@ -2974,7 +2529,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zx4_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4> .
+    base:characteristic prefix:pmdao-tto-tt-S355-4_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-4_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-4_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-4_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-4_materialDescription,
+        prefix:pmdao-tto-tt-S355-4_maximumForce,
+        prefix:pmdao-tto-tt-S355-4_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-4_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-4_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-4_rollingDirection,
+        prefix:pmdao-tto-tt-S355-4_specimenShape,
+        prefix:pmdao-tto-tt-S355-4_tensileStrength,
+        prefix:pmdao-tto-tt-S355-4_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-4_thickness_a1,
+        prefix:pmdao-tto-tt-S355-4_thickness_a2,
+        prefix:pmdao-tto-tt-S355-4_thickness_a3,
+        prefix:pmdao-tto-tt-S355-4_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-4_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-4_width_b1,
+        prefix:pmdao-tto-tt-S355-4_width_b2,
+        prefix:pmdao-tto-tt-S355-4_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_1> .
@@ -2995,7 +2575,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zy1_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1> .
+    base:characteristic prefix:pmdao-tto-tt-S355-5_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-5_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-5_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-5_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-5_materialDescription,
+        prefix:pmdao-tto-tt-S355-5_maximumForce,
+        prefix:pmdao-tto-tt-S355-5_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-5_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-5_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-5_rollingDirection,
+        prefix:pmdao-tto-tt-S355-5_specimenShape,
+        prefix:pmdao-tto-tt-S355-5_tensileStrength,
+        prefix:pmdao-tto-tt-S355-5_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-5_thickness_a1,
+        prefix:pmdao-tto-tt-S355-5_thickness_a2,
+        prefix:pmdao-tto-tt-S355-5_thickness_a3,
+        prefix:pmdao-tto-tt-S355-5_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-5_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-5_width_b1,
+        prefix:pmdao-tto-tt-S355-5_width_b2,
+        prefix:pmdao-tto-tt-S355-5_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_1> .
@@ -3016,7 +2621,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zy2_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2> .
+    base:characteristic prefix:pmdao-tto-tt-S355-6_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-6_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-6_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-6_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-6_materialDescription,
+        prefix:pmdao-tto-tt-S355-6_maximumForce,
+        prefix:pmdao-tto-tt-S355-6_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-6_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-6_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-6_rollingDirection,
+        prefix:pmdao-tto-tt-S355-6_specimenShape,
+        prefix:pmdao-tto-tt-S355-6_tensileStrength,
+        prefix:pmdao-tto-tt-S355-6_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-6_thickness_a1,
+        prefix:pmdao-tto-tt-S355-6_thickness_a2,
+        prefix:pmdao-tto-tt-S355-6_thickness_a3,
+        prefix:pmdao-tto-tt-S355-6_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-6_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-6_width_b1,
+        prefix:pmdao-tto-tt-S355-6_width_b2,
+        prefix:pmdao-tto-tt-S355-6_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_1> .
@@ -3037,7 +2667,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zy3_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3> .
+    base:characteristic prefix:pmdao-tto-tt-S355-7_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-7_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-7_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-7_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-7_materialDescription,
+        prefix:pmdao-tto-tt-S355-7_maximumForce,
+        prefix:pmdao-tto-tt-S355-7_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-7_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-7_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-7_rollingDirection,
+        prefix:pmdao-tto-tt-S355-7_specimenShape,
+        prefix:pmdao-tto-tt-S355-7_tensileStrength,
+        prefix:pmdao-tto-tt-S355-7_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-7_thickness_a1,
+        prefix:pmdao-tto-tt-S355-7_thickness_a2,
+        prefix:pmdao-tto-tt-S355-7_thickness_a3,
+        prefix:pmdao-tto-tt-S355-7_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-7_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-7_width_b1,
+        prefix:pmdao-tto-tt-S355-7_width_b2,
+        prefix:pmdao-tto-tt-S355-7_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_1> .
@@ -3058,7 +2713,32 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:value "Zy4_afterTest_2"^^xsd:string .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4> a base:TestPiece ;
-    base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4> .
+    base:characteristic prefix:pmdao-tto-tt-S355-8_crossSectionArea_S0,
+        prefix:pmdao-tto-tt-S355-8_crossSectionArea_Su,
+        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s1,
+        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s2,
+        prefix:pmdao-tto-tt-S355-8_crossSectionArea_s3,
+        prefix:pmdao-tto-tt-S355-8_finalGaugeLengthAfterFracture_Lu,
+        prefix:pmdao-tto-tt-S355-8_materialDescription,
+        prefix:pmdao-tto-tt-S355-8_maximumForce,
+        prefix:pmdao-tto-tt-S355-8_modulusOfElasticity,
+        prefix:pmdao-tto-tt-S355-8_originalGaugeLength_L0,
+        prefix:pmdao-tto-tt-S355-8_percentageElongationAfterFracture,
+        prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea,
+        prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02,
+        prefix:pmdao-tto-tt-S355-8_rollingDirection,
+        prefix:pmdao-tto-tt-S355-8_specimenShape,
+        prefix:pmdao-tto-tt-S355-8_tensileStrength,
+        prefix:pmdao-tto-tt-S355-8_thicknessAfterFracture_au,
+        prefix:pmdao-tto-tt-S355-8_thickness_a1,
+        prefix:pmdao-tto-tt-S355-8_thickness_a2,
+        prefix:pmdao-tto-tt-S355-8_thickness_a3,
+        prefix:pmdao-tto-tt-S355-8_upperYieldStrength,
+        prefix:pmdao-tto-tt-S355-8_widthAfterFracture_bu,
+        prefix:pmdao-tto-tt-S355-8_width_b1,
+        prefix:pmdao-tto-tt-S355-8_width_b2,
+        prefix:pmdao-tto-tt-S355-8_width_b3,
+        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4> .
 
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_1> .
@@ -3066,55 +2746,435 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
 <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_2> .
 
-prefix:Zd2_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zd2_csv .
+prefix:pmdao-tto-tt-S355-10_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "61.681"^^xsd:float .
 
-prefix:Zd3_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zd3_csv .
+prefix:pmdao-tto-tt-S355-10_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "195"^^xsd:float .
 
-prefix:Zx1_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zx1_csv .
+prefix:pmdao-tto-tt-S355-10_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "33.0"^^xsd:float .
 
-prefix:Zx2_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zx2_csv .
+prefix:pmdao-tto-tt-S355-10_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "64"^^xsd:float .
 
-prefix:Zx3_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zx3_csv .
+prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "NaN"^^xsd:float .
 
-prefix:Zx4_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zx4_csv .
+prefix:pmdao-tto-tt-S355-10_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "511"^^xsd:float .
 
-prefix:Zy1_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zy1_csv .
+prefix:pmdao-tto-tt-S355-10_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "396"^^xsd:float .
 
-prefix:Zy2_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zy2_csv .
+prefix:pmdao-tto-tt-S355-1_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "62.007"^^xsd:float .
 
-prefix:Zy3_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zy3_csv .
+prefix:pmdao-tto-tt-S355-1_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "194"^^xsd:float .
 
-prefix:Zy4_dataset a base:Measurement,
-        base:PrimaryData,
-        base:ValueObject ;
-    base:resource prefix:Zy4_csv .
+prefix:pmdao-tto-tt-S355-1_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "NaN"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-1_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "56"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "375.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-1_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "514"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-1_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "380"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "60.704"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "199"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "35.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "59"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "374.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "504"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-2_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "379"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "60.68"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "199"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "35.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "58"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "376.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "504"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-3_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "379"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "62.288"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "196"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "35.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "61"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "382.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "519"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-4_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "388"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "61.305"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "210"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "NaN"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "54"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "396.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "508"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-5_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "399"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "61.2"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "214"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "35.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "56"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "390.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "507"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-6_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "399"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "60.935"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "206"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "33.5"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "58"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "NaN"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "505"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-7_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "408"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "61.98"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "211"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "33.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "55"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "402.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "514"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-8_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "407"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_maximumForce a base:MaximumForce,
+        base:Measurement,
+        base:SecondaryData ;
+    base:unit unit:kiloN ;
+    base:value "62.168"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_modulusOfElasticity a base:Measurement,
+        base:ModulusOfElasticity,
+        base:SecondaryData,
+        base:SlopeOfTheElasticPart ;
+    base:unit unit:GigaPa ;
+    base:value "201"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_percentageElongationAfterFracture a base:Measurement,
+        base:PercentageElongationAfterFracture,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "33.5"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_percentageReductionOfArea a base:Measurement,
+        base:PercentageReductionOfArea,
+        base:SecondaryData ;
+    base:unit unit:PERCENT ;
+    base:value "60"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02 a base:Measurement,
+        base:Rp02,
+        base:SecondaryData ;
+    base:unit unit:MegaPa ;
+    base:value "390.0"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_tensileStrength a base:Measurement,
+        base:SecondaryData,
+        base:TensileStrength ;
+    base:unit unit:MegaPa ;
+    base:value "515"^^xsd:float .
+
+prefix:pmdao-tto-tt-S355-9_upperYieldStrength a base:Measurement,
+        base:SecondaryData,
+        base:UpperYieldStrength ;
+    base:unit unit:MegaPa ;
+    base:value "399"^^xsd:float .
 
 prefix:BMBF a datacite:OrganizationIdentifier ;
     datacite:usesIdentifierScheme datacite:Wikidata ;
