@@ -21,11 +21,11 @@ prefix: a owl:Ontology ;
     owl:versionInfo "2.0.0"^^xsd:string .
 
 prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-10,
         prefix:pmdao-tto-tt-S355-10_date,
         prefix:pmdao-tto-tt-S355-10_environmentalTemperature,
@@ -36,9 +36,9 @@ prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-10_strainRate,
         prefix:pmdao-tto-tt-S355-10_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zd3> ;
     base:output prefix:Zd3_dataset,
         prefix:pmdao-tto-tt-S355-10_maximumForce,
         prefix:pmdao-tto-tt-S355-10_modulusOfElasticity,
@@ -47,15 +47,15 @@ prefix:pmdao-tto-tt-S355-10_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-10_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-10_tensileStrength,
         prefix:pmdao-tto-tt-S355-10_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zd3_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zd3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-1,
         prefix:pmdao-tto-tt-S355-1_date,
         prefix:pmdao-tto-tt-S355-1_environmentalTemperature,
@@ -66,9 +66,9 @@ prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-1_strainRate,
         prefix:pmdao-tto-tt-S355-1_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zx1> ;
     base:output prefix:Zx1_dataset,
         prefix:pmdao-tto-tt-S355-1_maximumForce,
         prefix:pmdao-tto-tt-S355-1_modulusOfElasticity,
@@ -77,15 +77,15 @@ prefix:pmdao-tto-tt-S355-1_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-1_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-1_tensileStrength,
         prefix:pmdao-tto-tt-S355-1_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx1_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-2,
         prefix:pmdao-tto-tt-S355-2_date,
         prefix:pmdao-tto-tt-S355-2_environmentalTemperature,
@@ -96,9 +96,9 @@ prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-2_strainRate,
         prefix:pmdao-tto-tt-S355-2_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zx2> ;
     base:output prefix:Zx2_dataset,
         prefix:pmdao-tto-tt-S355-2_maximumForce,
         prefix:pmdao-tto-tt-S355-2_modulusOfElasticity,
@@ -107,15 +107,15 @@ prefix:pmdao-tto-tt-S355-2_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-2_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-2_tensileStrength,
         prefix:pmdao-tto-tt-S355-2_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx2_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-3,
         prefix:pmdao-tto-tt-S355-3_date,
         prefix:pmdao-tto-tt-S355-3_environmentalTemperature,
@@ -126,9 +126,9 @@ prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-3_strainRate,
         prefix:pmdao-tto-tt-S355-3_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zx3> ;
     base:output prefix:Zx3_dataset,
         prefix:pmdao-tto-tt-S355-3_maximumForce,
         prefix:pmdao-tto-tt-S355-3_modulusOfElasticity,
@@ -137,15 +137,15 @@ prefix:pmdao-tto-tt-S355-3_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-3_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-3_tensileStrength,
         prefix:pmdao-tto-tt-S355-3_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx3_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-4,
         prefix:pmdao-tto-tt-S355-4_date,
         prefix:pmdao-tto-tt-S355-4_environmentalTemperature,
@@ -156,9 +156,9 @@ prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-4_strainRate,
         prefix:pmdao-tto-tt-S355-4_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zx4> ;
     base:output prefix:Zx4_dataset,
         prefix:pmdao-tto-tt-S355-4_maximumForce,
         prefix:pmdao-tto-tt-S355-4_modulusOfElasticity,
@@ -167,15 +167,15 @@ prefix:pmdao-tto-tt-S355-4_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-4_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-4_tensileStrength,
         prefix:pmdao-tto-tt-S355-4_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx4_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zx4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-5,
         prefix:pmdao-tto-tt-S355-5_date,
         prefix:pmdao-tto-tt-S355-5_environmentalTemperature,
@@ -186,9 +186,9 @@ prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-5_strainRate,
         prefix:pmdao-tto-tt-S355-5_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zy1> ;
     base:output prefix:Zy1_dataset,
         prefix:pmdao-tto-tt-S355-5_maximumForce,
         prefix:pmdao-tto-tt-S355-5_modulusOfElasticity,
@@ -197,15 +197,15 @@ prefix:pmdao-tto-tt-S355-5_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-5_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-5_tensileStrength,
         prefix:pmdao-tto-tt-S355-5_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy1_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy1_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-6,
         prefix:pmdao-tto-tt-S355-6_date,
         prefix:pmdao-tto-tt-S355-6_environmentalTemperature,
@@ -216,9 +216,9 @@ prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-6_strainRate,
         prefix:pmdao-tto-tt-S355-6_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zy2> ;
     base:output prefix:Zy2_dataset,
         prefix:pmdao-tto-tt-S355-6_maximumForce,
         prefix:pmdao-tto-tt-S355-6_modulusOfElasticity,
@@ -227,15 +227,15 @@ prefix:pmdao-tto-tt-S355-6_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-6_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-6_tensileStrength,
         prefix:pmdao-tto-tt-S355-6_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy2_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy2_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-7,
         prefix:pmdao-tto-tt-S355-7_date,
         prefix:pmdao-tto-tt-S355-7_environmentalTemperature,
@@ -246,9 +246,9 @@ prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-7_strainRate,
         prefix:pmdao-tto-tt-S355-7_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zy3> ;
     base:output prefix:Zy3_dataset,
         prefix:pmdao-tto-tt-S355-7_maximumForce,
         prefix:pmdao-tto-tt-S355-7_modulusOfElasticity,
@@ -257,15 +257,15 @@ prefix:pmdao-tto-tt-S355-7_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-7_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-7_tensileStrength,
         prefix:pmdao-tto-tt-S355-7_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy3_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy3_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-8,
         prefix:pmdao-tto-tt-S355-8_date,
         prefix:pmdao-tto-tt-S355-8_environmentalTemperature,
@@ -276,9 +276,9 @@ prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-8_strainRate,
         prefix:pmdao-tto-tt-S355-8_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zy4> ;
     base:output prefix:Zy4_dataset,
         prefix:pmdao-tto-tt-S355-8_maximumForce,
         prefix:pmdao-tto-tt-S355-8_modulusOfElasticity,
@@ -287,15 +287,15 @@ prefix:pmdao-tto-tt-S355-8_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-8_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-8_tensileStrength,
         prefix:pmdao-tto-tt-S355-8_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy4_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zy4_testpiece_afterTest_2> .
 
 prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
-    prov:wasAssociatedWith prefix:software_agent ;
-    base:characteristic prefix:_institute_BAM,
+    prov:wasAssociatedWith prefix:_software_agent ;
+    base:characteristic prefix:_caliper,
+        prefix:_institute_BAM,
+        prefix:_micrometer_gauge,
         prefix:_standard,
-        prefix:caliper,
-        prefix:micrometer_gauge,
         prefix:pmdao-tto-tt-S355-9,
         prefix:pmdao-tto-tt-S355-9_date,
         prefix:pmdao-tto-tt-S355-9_environmentalTemperature,
@@ -306,9 +306,9 @@ prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-9_strainRate,
         prefix:pmdao-tto-tt-S355-9_transitionPoint ;
     base:executedBy prefix:_extensometer,
-        prefix:load_cell,
-        prefix:machine ;
-    base:input <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2> ;
+        prefix:_load_cell,
+        prefix:_machine ;
+    base:input <https://w3id.org/pmd/ao/tto/testpiece/Zd2> ;
     base:output prefix:Zd2_dataset,
         prefix:pmdao-tto-tt-S355-9_maximumForce,
         prefix:pmdao-tto-tt-S355-9_modulusOfElasticity,
@@ -317,14 +317,14 @@ prefix:pmdao-tto-tt-S355-9_process a base:TensileTest ;
         prefix:pmdao-tto-tt-S355-9_proofStrength_Rp02,
         prefix:pmdao-tto-tt-S355-9_tensileStrength,
         prefix:pmdao-tto-tt-S355-9_upperYieldStrength,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_1>,
-        <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_2> .
+        <https://w3id.org/pmd/ao/tto/testpiece/Zd2_testpiece_afterTest_1>,
+        <https://w3id.org/pmd/ao/tto/testpiece/Zd2_testpiece_afterTest_2> .
 
 datacite:FunderIdentifierScheme rdfs:subClassOf datacite:IdentifierScheme .
 
 datacite:Wikidata a datacite:IdentifierScheme .
 
-datacite:local-funder-identifier-scheme a datacite:FunderIdentifierScheme .
+datacite:_local-funder-identifier-scheme a datacite:FunderIdentifierScheme .
 
 <https://orcid.org/0000-0002-3717-7104> rdfs:label "Bernd Bayerlein"^^xsd:string,
         "Jörg Waitelonis"^^xsd:string,
@@ -721,9 +721,29 @@ prefix:Zy4_schema a csvw:Schema ;
                 csvw:name "Strain"^^xsd:string ;
                 base:unit unit:PERCENT ] ) .
 
+prefix:_caliperManufacturer_Orion a base:Manufacturer,
+        base:Metadata ;
+    base:value "Orion"^^xsd:string .
+
+prefix:_caliperSerialNumber_AK807114 a base:Metadata,
+        base:NodeSerialNumber ;
+    base:value "AK807114"^^xsd:string .
+
+prefix:_caliperSerialNumber_BA606983 a base:Metadata,
+        base:NodeSerialNumber ;
+    base:value "BA606983"^^xsd:string .
+
 prefix:_extensometerName a base:Metadata,
         base:NodeName ;
     base:value "HBM"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/_extensometerSerialNumber_28023/28024> a base:Metadata,
+        base:NodeSerialNumber ;
+    base:value "28023/28024"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/_extensometerSerialNumber_28323/28324> a base:Metadata,
+        base:NodeSerialNumber ;
+    base:value "28323/28324"^^xsd:string .
 
 prefix:_extensometerStandard a base:Metadata,
         base:Norm ;
@@ -732,6 +752,11 @@ prefix:_extensometerStandard a base:Metadata,
 prefix:_institute_BAM_address a base:Address,
         base:Metadata ;
     base:value "Unter den Eichen 87. 12205 Berlin"^^xsd:string .
+
+prefix:_loadCellMaxForce_100 a base:LoadCellCapacity,
+        base:Metadata ;
+    base:unit unit:PERCENT ;
+    base:value "100"^^xsd:float .
 
 prefix:_location_Berlin a prov:Location,
         base:Metadata ;
@@ -745,44 +770,19 @@ prefix:_machineName a base:Metadata,
         base:NodeName ;
     base:value "Maschine 1"^^xsd:string .
 
+prefix:_machineSerialNumber_h2486 a base:Metadata,
+        base:NodeSerialNumber ;
+    base:value "h2486"^^xsd:string .
+
 prefix:_machineStandard a base:Metadata,
         base:Norm ;
     base:value "DIN EN ISO 7500-1:2018, DIN EN ISO 9513"^^xsd:string .
 
-prefix:caliperManufacturer_Orion a base:Manufacturer,
-        base:Metadata ;
-    base:value "Orion"^^xsd:string .
-
-prefix:caliperSerialNumber_AK807114 a base:Metadata,
-        base:NodeSerialNumber ;
-    base:value "AK807114"^^xsd:string .
-
-prefix:caliperSerialNumber_BA606983 a base:Metadata,
-        base:NodeSerialNumber ;
-    base:value "BA606983"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/extensometerSerialNumber_28023/28024> a base:Metadata,
-        base:NodeSerialNumber ;
-    base:value "28023/28024"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/extensometerSerialNumber_28323/28324> a base:Metadata,
-        base:NodeSerialNumber ;
-    base:value "28323/28324"^^xsd:string .
-
-prefix:loadCellMaxForce_100 a base:LoadCellCapacity,
-        base:Metadata ;
-    base:unit unit:PERCENT ;
-    base:value "100"^^xsd:float .
-
-prefix:machineSerialNumber_h2486 a base:Metadata,
-        base:NodeSerialNumber ;
-    base:value "h2486"^^xsd:string .
-
-prefix:machineType_4505 a base:Metadata,
+prefix:_machineType_4505 a base:Metadata,
         base:NodeType ;
     base:value "4505"^^xsd:string .
 
-prefix:micrometerGaugeManufacturer_Orion a base:Manufacturer,
+prefix:_micrometerGaugeManufacturer_Orion a base:Manufacturer,
         base:Metadata ;
     base:value "Orion"^^xsd:string .
 
@@ -864,8 +864,8 @@ prefix:pmdao-tto-tt-S355-10_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-10_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-10_project_ID .
 
 prefix:pmdao-tto-tt-S355-10_project_ID a base:Metadata,
@@ -1011,8 +1011,8 @@ prefix:pmdao-tto-tt-S355-1_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-1_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-1_project_ID .
 
 prefix:pmdao-tto-tt-S355-1_project_ID a base:Metadata,
@@ -1161,8 +1161,8 @@ prefix:pmdao-tto-tt-S355-2_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-2_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-2_project_ID .
 
 prefix:pmdao-tto-tt-S355-2_project_ID a base:Metadata,
@@ -1311,8 +1311,8 @@ prefix:pmdao-tto-tt-S355-3_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-3_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-3_project_ID .
 
 prefix:pmdao-tto-tt-S355-3_project_ID a base:Metadata,
@@ -1461,8 +1461,8 @@ prefix:pmdao-tto-tt-S355-4_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-4_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-4_project_ID .
 
 prefix:pmdao-tto-tt-S355-4_project_ID a base:Metadata,
@@ -1611,8 +1611,8 @@ prefix:pmdao-tto-tt-S355-5_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-5_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-5_project_ID .
 
 prefix:pmdao-tto-tt-S355-5_project_ID a base:Metadata,
@@ -1761,8 +1761,8 @@ prefix:pmdao-tto-tt-S355-6_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-6_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-6_project_ID .
 
 prefix:pmdao-tto-tt-S355-6_project_ID a base:Metadata,
@@ -1911,8 +1911,8 @@ prefix:pmdao-tto-tt-S355-7_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-7_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-7_project_ID .
 
 prefix:pmdao-tto-tt-S355-7_project_ID a base:Metadata,
@@ -2061,8 +2061,8 @@ prefix:pmdao-tto-tt-S355-8_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-8_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-8_project_ID .
 
 prefix:pmdao-tto-tt-S355-8_project_ID a base:Metadata,
@@ -2211,8 +2211,8 @@ prefix:pmdao-tto-tt-S355-9_originalGaugeLength_L0 a base:Measurement,
 
 prefix:pmdao-tto-tt-S355-9_project a base:Metadata,
         base:Project ;
-    datacite:hasIdentifier prefix:BMBF,
-        prefix:Funder_Identifier ;
+    datacite:hasIdentifier prefix:Funder_Identifier,
+        prefix:_BMBF ;
     base:characteristic prefix:pmdao-tto-tt-S355-9_project_ID .
 
 prefix:pmdao-tto-tt-S355-9_project_ID a base:Metadata,
@@ -2286,19 +2286,7 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
     base:unit unit:MilliM ;
     base:value "20.159"^^xsd:float .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd2_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd2_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd2> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-9_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-9_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-9_crossSectionArea_s1,
@@ -2326,25 +2314,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-9_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2testpiece/Zd2_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd2_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd3"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd3_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zd3_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd3> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-10_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-10_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-10_crossSectionArea_s1,
@@ -2372,25 +2348,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-10_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3testpiece/Zd3_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zd3_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx1_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx1_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx1> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-1_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-1_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-1_crossSectionArea_s1,
@@ -2418,25 +2382,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-1_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx1_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1testpiece/Zx1_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx1_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx2_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx2_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx2> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-2_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-2_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-2_crossSectionArea_s1,
@@ -2464,25 +2416,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-2_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2testpiece/Zx2_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx2_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx3"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx3_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx3_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx3> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-3_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-3_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-3_crossSectionArea_s1,
@@ -2510,25 +2450,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-3_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3testpiece/Zx3_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx3_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx4"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx4_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zx4_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx4> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-4_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-4_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-4_crossSectionArea_s1,
@@ -2556,25 +2484,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-4_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx4_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4testpiece/Zx4_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zx4_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy1_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy1_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy1> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-5_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-5_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-5_crossSectionArea_s1,
@@ -2602,25 +2518,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-5_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy1_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1testpiece/Zy1_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy1_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy2_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy2_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy2> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-6_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-6_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-6_crossSectionArea_s1,
@@ -2648,25 +2552,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-6_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy2_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2testpiece/Zy2_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy2_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy3"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy3_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy3_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy3> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-7_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-7_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-7_crossSectionArea_s1,
@@ -2694,25 +2586,13 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-7_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy3_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3testpiece/Zy3_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy3_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_2> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy4"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_1> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy4_afterTest_1"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_2> a base:Metadata,
-        base:TestPieceName ;
-    base:value "Zy4_afterTest_2"^^xsd:string .
-
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy4> a base:TestPiece ;
     base:characteristic prefix:pmdao-tto-tt-S355-8_crossSectionArea_S0,
         prefix:pmdao-tto-tt-S355-8_crossSectionArea_Su,
         prefix:pmdao-tto-tt-S355-8_crossSectionArea_s1,
@@ -2740,11 +2620,131 @@ prefix:pmdao-tto-tt-S355-9_width_b3 a base:Measurement,
         prefix:pmdao-tto-tt-S355-8_width_b3,
         <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_1> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy4_testpiece_afterTest_1> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_1> .
 
-<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4testpiece/Zy4_testpiece_afterTest_2> a base:TestPiece ;
+<https://w3id.org/pmd/ao/tto/testpiece/Zy4_testpiece_afterTest_2> a base:TestPiece ;
     base:characteristic <https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_2> .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd2_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd2_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd2_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd3"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd3_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zd3_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zd3_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx1_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx1_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx1_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx2_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx2_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx2_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx3"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx3_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx3_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx3_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx4"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx4_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zx4_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zx4_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy1_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy1_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy1_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy2_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy2_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy2_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy3"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy3_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy3_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy3_afterTest_2"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy4"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_1> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy4_afterTest_1"^^xsd:string .
+
+<https://w3id.org/pmd/ao/tto/testpiece_name/Zy4_afterTest_2> a base:Metadata,
+        base:TestPieceName ;
+    base:value "Zy4_afterTest_2"^^xsd:string .
 
 prefix:pmdao-tto-tt-S355-10_maximumForce a base:MaximumForce,
         base:Measurement,
@@ -3176,20 +3176,26 @@ prefix:pmdao-tto-tt-S355-9_upperYieldStrength a base:Measurement,
     base:unit unit:MegaPa ;
     base:value "399"^^xsd:float .
 
-prefix:BMBF a datacite:OrganizationIdentifier ;
+prefix:Funder_Identifier a datacite:FunderIdentifier ;
+    datacite:usesIdentifierScheme datacite:_local-funder-identifier-scheme ;
+    base:value "13XP5094"^^xsd:string .
+
+prefix:_BMBF a datacite:OrganizationIdentifier ;
     datacite:usesIdentifierScheme datacite:Wikidata ;
     skos:altLabel "Federal Ministry of Education and Research@en"^^xsd:string ;
     skos:prefLabel "Bundesministerium für Bildung und Forschung (BMBF)@de"^^xsd:string ;
     base:value "Q492234"^^xsd:string .
 
-prefix:Funder_Identifier a datacite:FunderIdentifier ;
-    datacite:usesIdentifierScheme datacite:local-funder-identifier-scheme ;
-    base:value "13XP5094"^^xsd:string .
+prefix:_caliper a base:Caliper,
+        base:Metadata ;
+    base:characteristic prefix:_caliperManufacturer_Orion,
+        prefix:_caliperSerialNumber_AK807114,
+        prefix:_caliperSerialNumber_BA606983 .
 
 prefix:_extensometer base:characteristic prefix:_extensometerName,
-        prefix:_extensometerStandard,
-        <https://w3id.org/pmd/ao/tto/extensometerSerialNumber_28023/28024>,
-        <https://w3id.org/pmd/ao/tto/extensometerSerialNumber_28323/28324> .
+        <https://w3id.org/pmd/ao/tto/_extensometerSerialNumber_28023/28024>,
+        <https://w3id.org/pmd/ao/tto/_extensometerSerialNumber_28323/28324>,
+        prefix:_extensometerStandard .
 
 prefix:_institute_BAM a prov:Organization,
         base:Metadata ;
@@ -3197,34 +3203,28 @@ prefix:_institute_BAM a prov:Organization,
     base:characteristic prefix:_institute_BAM_address,
         prefix:_location_Berlin .
 
-prefix:_standard a base:Metadata,
-        base:Norm ;
-    base:value "DIN EN ISO 6892-1"^^xsd:string .
-
-prefix:caliper a base:Caliper,
+prefix:_load_cell a base:LoadCell,
         base:Metadata ;
-    base:characteristic prefix:caliperManufacturer_Orion,
-        prefix:caliperSerialNumber_AK807114,
-        prefix:caliperSerialNumber_BA606983 .
+    base:characteristic prefix:_loadCellMaxForce_100 .
 
-prefix:load_cell a base:LoadCell,
-        base:Metadata ;
-    base:characteristic prefix:loadCellMaxForce_100 .
-
-prefix:machine a base:Extensometer,
+prefix:_machine a base:Extensometer,
         base:Metadata,
         base:TensileTestingMachine ;
     base:characteristic prefix:_machineManufacturer,
         prefix:_machineName,
+        prefix:_machineSerialNumber_h2486,
         prefix:_machineStandard,
-        prefix:machineSerialNumber_h2486,
-        prefix:machineType_4505 .
+        prefix:_machineType_4505 .
 
-prefix:micrometer_gauge a base:Metadata,
+prefix:_micrometer_gauge a base:Metadata,
         base:MicrometerGauge ;
-    base:characteristic prefix:micrometerGaugeManufacturer_Orion .
+    base:characteristic prefix:_micrometerGaugeManufacturer_Orion .
 
-prefix:software_agent a prov:SoftwareAgent,
+prefix:_software_agent a prov:SoftwareAgent,
         base:Metadata ;
     base:value "BAM Tensile Test Analysis App"^^xsd:string .
+
+prefix:_standard a base:Metadata,
+        base:Norm ;
+    base:value "DIN EN ISO 6892-1"^^xsd:string .
 
