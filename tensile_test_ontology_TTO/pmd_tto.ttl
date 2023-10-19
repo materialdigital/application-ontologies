@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/tto> .
+@base <https://w3id.org/pmd/co/> .
 
 <https://w3id.org/pmd/tto> rdf:type owl:Ontology ;
                             owl:imports <https://w3id.org/pmd/co> ;
@@ -14,10 +14,10 @@
                                                                       <https://orcid.org/0000-0002-9014-2920> ,
                                                                       <https://orcid.org/0000-0003-4971-3645> ;
                             <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                            <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (June 07th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/co"@en ;
-                            <http://purl.org/dc/terms/created> "2023-06-07"@en ;
+                            <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (July 14th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/co"@en ;
+                            <http://purl.org/dc/terms/created> "2023-07-14"@en ;
                             <http://purl.org/dc/terms/title> "Tensile Test Ontology (TTO)"@en ;
-                            owl:versionInfo "2.0.0" ;
+                            owl:versionInfo "2.0.1" ;
                             <http://www.w3.org/2004/02/skos/core#definition> """This is the stable version of the PMD ontology module of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
 
 The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile test and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
@@ -318,6 +318,13 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                    :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
+###  https://w3id.org/pmd/co/PercentageExtension
+:PercentageExtension owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :relatesTo ;
+                                           owl:someValuesFrom :ExtensometerGaugeLength
+                                         ] .
+
+
 ###  https://w3id.org/pmd/co/PercentagePermanentElongation
 :PercentagePermanentElongation rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -464,6 +471,13 @@ Note: The concept of parallel length is replaced by the concept of distance betw
 
 ###  https://w3id.org/pmd/co/ProofStrengthPlasticExtension
 :ProofStrengthPlasticExtension rdf:type owl:Class ;
+                               owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :relatesToExtension ;
+                                                     owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.w3.org/ns/prov#value> ;
+                                                                          owl:someValuesFrom xsd:float
+                                                                        ]
+                                                   ] ;
                                rdfs:subClassOf :ProofStrength ;
                                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
                                rdfs:label "Dehngrenze bei plastischer Extensometer-Dehnung"@de ,
@@ -502,6 +516,13 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
 
 ###  https://w3id.org/pmd/co/Rp01
 :Rp01 rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatesToExtension ;
+                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/prov#value> ;
+                                                 owl:hasValue "0.1"^^xsd:float
+                                               ]
+                          ] ;
       rdfs:subClassOf :ProofStrengthPlasticExtension ;
       rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
       rdfs:label "Dehngrenze bei plastischer Extensometer-Dehnung Rp01"@de ,
@@ -514,6 +535,13 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
 
 ###  https://w3id.org/pmd/co/Rp02
 :Rp02 rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatesToExtension ;
+                            owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/ns/prov#value> ;
+                                                 owl:hasValue "0.2"^^xsd:float
+                                               ]
+                          ] ;
       rdfs:subClassOf :ProofStrengthPlasticExtension ;
       rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
       rdfs:label "Dehngrenze bei plastischer Extensometer-Dehnung Rp02"@de ,
@@ -712,4 +740,4 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
