@@ -3,7 +3,7 @@ name: Create HTML documentation
 on:
   push:
     branches:
-    - hmo_documentation
+    - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
