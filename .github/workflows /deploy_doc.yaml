@@ -1,0 +1,53 @@
+name: Create HTML documentation
+
+on:
+  push:
+    branches:
+    - hmo_documentation
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref_name }}
+        path: deploy_checkout
+    - name: Get widoco.jar
+      run: |
+           wget -O widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.17/java-11-widoco-1.4.17-jar-with-dependencies.jar
+    - env:
+        ao: hmo
+        aodir: hardness_measurement_ontology_HMO
+        aottl: pmd_hmo.ttl
+      name: Build HTML docs for ${{ env.ao }} on ${{ github.ref_name }}
+      run: | 
+           mkdir -p public/${{ env.ao }}
+           java -jar widoco.jar -ontFile deploy_checkout/${{ env.aodir }}/${{ env.aottl }} -outFolder public/${{ env.ao }} -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           cp public/${{ env.ao }}/index-en.html public/${{ env.ao }}/index.html
+    - env:
+        ao: tto
+        aodir: tensile_test_ontology_TTO
+        aottl: pmd_tto.ttl
+      name: Build HTML docs for ${{ env.ao }} on ${{ github.ref_name }}
+      run: | 
+           mkdir -p public/${{ env.ao }}
+           java -jar widoco.jar -ontFile deploy_checkout/${{ env.aodir }}/${{ env.aottl }} -outFolder public/${{ env.ao }} -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           cp public/${{ env.ao }}/index-en.html public/${{ env.ao }}/index.html
+## Somehow this isn't working for hto
+#    - env:
+#        ao: hto
+#        aodir: heat_treatment_ontology_HTO
+#        aottl: pmdao_HTO.ttl
+#      name: Build HTML docs for ${{ env.ao }} on ${{ github.ref_name }}
+#      run: | 
+#           mkdir -p public/${{ env.ao }}
+#           java -jar widoco.jar -ontFile deploy_checkout/${{ env.aodir }}/${{ env.aottl }} -outFolder public/${{ env.ao }} -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+#           cp public/${{ env.ao }}/index-en.html public/${{ env.ao }}/index.html
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v3
+      with:
+        target_branch: gh-pages
+        build_dir: public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
