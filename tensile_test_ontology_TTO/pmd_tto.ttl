@@ -1,10 +1,10 @@
-@prefix : <https://w3id.org/pmd/co/> .
+@prefix : <https://w3id.org/pmd/tto/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/co/> .
+@base <https://w3id.org/pmd/tto/> .
 
 <https://w3id.org/pmd/tto> rdf:type owl:Ontology ;
                             owl:imports <https://w3id.org/pmd/co> ;
@@ -14,24 +14,43 @@
                                                                       <https://orcid.org/0000-0002-9014-2920> ,
                                                                       <https://orcid.org/0000-0003-4971-3645> ;
                             <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0/> ;
-                            <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (July 14th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/co"@en ;
+                            <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (July 14th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/tto"@en ;
                             <http://purl.org/dc/terms/created> "2023-07-14"@en ;
                             <http://purl.org/dc/terms/title> "Tensile Test Ontology (TTO)"@en ;
                             owl:versionInfo "2.0.1" ;
-                            <http://www.w3.org/2004/02/skos/core#definition> """This is the stable version of the PMD ontology module of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
+                            <http://www.w3.org/2004/02/skos/core#definition> """This is the stable version of the PMD ontology of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
 
-The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile test and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
+The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile tests and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
 
 The TTO class structure forms a comprehensible and semantic layer for unified storage of data generated in a tensile test including the possibility to record data from analysis, re-evaluation and re-use. Furthermore, extensive metadata allows to assess data quality and reproduce experiments. Following the open world assumption, object properties are deliberately low restrictive and sparse.
 
-TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO"""@en ;
-                            <http://www.w3.org/ns/prov#editorialNote> "The tensile test ontology (TTO) was developed in the frame of the joint project of platform material digital (PMD). As being one of the modules of it, the TTO is strongly connected to the PMD core ontology (PMDco) and thus, TTO concepts use the namespace https://w3id.org/pmd/co."@en .
+TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO"""@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/pmd/tto/definitionSource
+:definitionSource rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/tto/symbol
+:symbol rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/pmd/co/relatesToExtension
+###  https://w3id.org/pmd/tto/participant
+:participant rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/tto/relatesTo
+:relatesTo rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/tto/relatesToExtension
 :relatesToExtension rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :relatesTo ;
                     rdfs:domain :ProofStrengthPlasticExtension ;
@@ -44,7 +63,7 @@ TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/
 #    Classes
 #################################################################
 
-###  https://w3id.org/pmd/co/ChangeOfTransverseDimension
+###  https://w3id.org/pmd/tto/ChangeOfTransverseDimension
 :ChangeOfTransverseDimension rdf:type owl:Class ;
                              rdfs:subClassOf :Length ;
                              rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -55,7 +74,7 @@ TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/
                              :definitionSource "DIN EN ISO 10113:2021-06" .
 
 
-###  https://w3id.org/pmd/co/CrossheadSeparation
+###  https://w3id.org/pmd/tto/CrossheadSeparation
 :CrossheadSeparation rdf:type owl:Class ;
                      rdfs:subClassOf :ValueObject ;
                      rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -68,7 +87,7 @@ Unit (e.g. SI): mm"""@en ,
                      :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/CrossheadSeparationRate
+###  https://w3id.org/pmd/tto/CrossheadSeparationRate
 :CrossheadSeparationRate rdf:type owl:Class ;
                          rdfs:subClassOf :TestingRate ;
                          rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -80,7 +99,11 @@ Unit (e.g. SI): mm"""@en ,
                          :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/DiameterAfterFracture
+###  https://w3id.org/pmd/tto/Diameter
+:Diameter rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/DiameterAfterFracture
 :DiameterAfterFracture rdf:type owl:Class ;
                        rdfs:subClassOf :Diameter ;
                        rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -90,14 +113,14 @@ Unit (e.g. SI): mm"""@en ,
                                                                         "The length of a straight line through the center of an object (tensile test piece) as measured after a fracture occured during a test."@en .
 
 
-###  https://w3id.org/pmd/co/Elongation
+###  https://w3id.org/pmd/tto/Elongation
 :Elongation rdf:type owl:Class ;
             owl:equivalentClass [ rdf:type owl:Restriction ;
                                   owl:onProperty :relatesTo ;
                                   owl:someValuesFrom :OriginalGaugeLength
                                 ] ;
             rdfs:subClassOf :ValueObject ;
-            rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
             rdfs:label "Elongation"@en ,
                        "Verlängerung"@de ;
             <http://www.w3.org/2004/02/skos/core#definition> "Zunahme der Anfangsmesslänge zu einem beliebigen Zeitpunkt während des Versuchs"@de ,
@@ -105,7 +128,7 @@ Unit (e.g. SI): mm"""@en ,
             :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/EstimatedStrainRateOverTheParallelLength
+###  https://w3id.org/pmd/tto/EstimatedStrainRateOverTheParallelLength
 :EstimatedStrainRateOverTheParallelLength rdf:type owl:Class ;
                                           rdfs:subClassOf :TestingRate ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -117,7 +140,15 @@ Unit (e.g. SI): mm"""@en ,
                                           :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/ExtensometerGaugeLength
+###  https://w3id.org/pmd/tto/Extension
+:Extension rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/Extensometer
+:Extensometer rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/ExtensometerGaugeLength
 :ExtensometerGaugeLength rdf:type owl:Class ;
                          rdfs:subClassOf :GaugeLength ;
                          rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -133,7 +164,7 @@ Note: For the determination of several properties which are based (partly or com
                          :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/FinalGaugeLengthAfterFracture
+###  https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture
 :FinalGaugeLengthAfterFracture rdf:type owl:Class ;
                                rdfs:subClassOf :GaugeLength ;
                                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -145,7 +176,11 @@ Note: For the determination of several properties which are based (partly or com
                                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/GaugeLength
+###  https://w3id.org/pmd/tto/Force
+:Force rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/GaugeLength
 :GaugeLength rdf:type owl:Class ;
              rdfs:subClassOf :Length ;
              rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -157,7 +192,7 @@ Note: For the determination of several properties which are based (partly or com
              :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/GeometryShape
+###  https://w3id.org/pmd/tto/GeometryShape
 :GeometryShape rdf:type owl:Class ;
                rdfs:subClassOf :TestPieceInfo ;
                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -168,7 +203,7 @@ Note: For the determination of several properties which are based (partly or com
                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/ISO6892-1TensileTest
+###  https://w3id.org/pmd/tto/ISO6892-1TensileTest
 :ISO6892-1TensileTest rdf:type owl:Class ;
                       owl:equivalentClass [ rdf:type owl:Restriction ;
                                             owl:onProperty :participant ;
@@ -192,7 +227,15 @@ Note: For the determination of several properties which are based (partly or com
                                  "Zugversuch nach ISO 6892-1"@de .
 
 
-###  https://w3id.org/pmd/co/LowerYieldStrength
+###  https://w3id.org/pmd/tto/Length
+:Length rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/LoadCell
+:LoadCell rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/LowerYieldStrength
 :LowerYieldStrength rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :relatesTo ;
@@ -208,7 +251,7 @@ Note: For the determination of several properties which are based (partly or com
                     :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/MaximumForce
+###  https://w3id.org/pmd/tto/MaximumForce
 :MaximumForce rdf:type owl:Class ;
               rdfs:subClassOf :Force ;
               rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -228,7 +271,11 @@ Note: For materials which display discontinuous yielding, but where no work-hard
               :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/OriginalDiameter
+###  https://w3id.org/pmd/tto/MechanicalTestingProcess
+:MechanicalTestingProcess rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/OriginalDiameter
 :OriginalDiameter rdf:type owl:Class ;
                   rdfs:subClassOf :Diameter ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -239,7 +286,7 @@ Note: For materials which display discontinuous yielding, but where no work-hard
                   :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/OriginalGaugeLength
+###  https://w3id.org/pmd/tto/OriginalGaugeLength
 :OriginalGaugeLength rdf:type owl:Class ;
                      rdfs:subClassOf :GaugeLength ;
                      rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -251,7 +298,7 @@ Note: For materials which display discontinuous yielding, but where no work-hard
                      :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/OriginalThickness
+###  https://w3id.org/pmd/tto/OriginalThickness
 :OriginalThickness rdf:type owl:Class ;
                    rdfs:subClassOf :Thickness ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -261,7 +308,7 @@ Note: For materials which display discontinuous yielding, but where no work-hard
                                                                     "This entity describes the measured dimension in one direction of a test piece, as measured before the test."@en .
 
 
-###  https://w3id.org/pmd/co/OriginalWidth
+###  https://w3id.org/pmd/tto/OriginalWidth
 :OriginalWidth rdf:type owl:Class ;
                rdfs:subClassOf :Width ;
                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -271,7 +318,7 @@ Note: For materials which display discontinuous yielding, but where no work-hard
                                                                 "This entity describes a horizontal measurement of an object (test piece) taken at right angles to the length of the object (test piece), as measured before a test."@en .
 
 
-###  https://w3id.org/pmd/co/ParallelLength
+###  https://w3id.org/pmd/tto/ParallelLength
 :ParallelLength rdf:type owl:Class ;
                 rdfs:subClassOf :Length ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -287,7 +334,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                 :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageElongation
+###  https://w3id.org/pmd/tto/PercentageElongation
 :PercentageElongation rdf:type owl:Class ;
                       owl:equivalentClass [ rdf:type owl:Restriction ;
                                             owl:onProperty :relatesTo ;
@@ -302,7 +349,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                       :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageElongationAfterFracture
+###  https://w3id.org/pmd/tto/PercentageElongationAfterFracture
 :PercentageElongationAfterFracture rdf:type owl:Class ;
                                    owl:equivalentClass [ rdf:type owl:Restriction ;
                                                          owl:onProperty :relatesTo ;
@@ -318,14 +365,15 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                    :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageExtension
-:PercentageExtension owl:equivalentClass [ rdf:type owl:Restriction ;
+###  https://w3id.org/pmd/tto/PercentageExtension
+:PercentageExtension rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                            owl:onProperty :relatesTo ;
                                            owl:someValuesFrom :ExtensometerGaugeLength
                                          ] .
 
 
-###  https://w3id.org/pmd/co/PercentagePermanentElongation
+###  https://w3id.org/pmd/tto/PercentagePermanentElongation
 :PercentagePermanentElongation rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty :relatesTo ;
@@ -340,7 +388,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentagePermanentExtension
+###  https://w3id.org/pmd/tto/PercentagePermanentExtension
 :PercentagePermanentExtension rdf:type owl:Class ;
                               owl:equivalentClass [ rdf:type owl:Restriction ;
                                                     owl:onProperty :relatesTo ;
@@ -355,7 +403,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                               :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentagePlasticExtensionAtMaximumForce
+###  https://w3id.org/pmd/tto/PercentagePlasticExtensionAtMaximumForce
 :PercentagePlasticExtensionAtMaximumForce rdf:type owl:Class ;
                                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty :relatesTo ;
@@ -378,7 +426,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                           :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageReductionOfArea
+###  https://w3id.org/pmd/tto/PercentageReductionOfArea
 :PercentageReductionOfArea rdf:type owl:Class ;
                            owl:equivalentClass [ rdf:type owl:Class ;
                                                  owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -408,7 +456,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                            :symbol "Z" .
 
 
-###  https://w3id.org/pmd/co/PercentageTotalExtensionAtFracture
+###  https://w3id.org/pmd/tto/PercentageTotalExtensionAtFracture
 :PercentageTotalExtensionAtFracture rdf:type owl:Class ;
                                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                                           owl:onProperty :relatesTo ;
@@ -424,7 +472,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                     :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageTotalExtensionAtMaximumForce
+###  https://w3id.org/pmd/tto/PercentageTotalExtensionAtMaximumForce
 :PercentageTotalExtensionAtMaximumForce rdf:type owl:Class ;
                                         owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty :relatesTo ;
@@ -447,7 +495,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                         :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/PercentageYieldPointExtension
+###  https://w3id.org/pmd/tto/PercentageYieldPointExtension
 :PercentageYieldPointExtension rdf:type owl:Class ;
                                rdfs:subClassOf :Extension ;
                                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -459,7 +507,11 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/ProofStrength
+###  https://w3id.org/pmd/tto/ProcessingNode
+:ProcessingNode rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/ProofStrength
 :ProofStrength rdf:type owl:Class ;
                rdfs:subClassOf :Extension ;
                rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -469,7 +521,7 @@ Note: The concept of parallel length is replaced by the concept of distance betw
                                                                 "stress at which the a specific extension value is equal to a specified percentage of the extensometer gauge length"@en .
 
 
-###  https://w3id.org/pmd/co/ProofStrengthPlasticExtension
+###  https://w3id.org/pmd/tto/ProofStrengthPlasticExtension
 :ProofStrengthPlasticExtension rdf:type owl:Class ;
                                owl:equivalentClass [ rdf:type owl:Restriction ;
                                                      owl:onProperty :relatesToExtension ;
@@ -494,7 +546,7 @@ Source: ISO 6892-1:2019"""@en ;
                                :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/ProofStrengthTotalExtension
+###  https://w3id.org/pmd/tto/ProofStrengthTotalExtension
 :ProofStrengthTotalExtension rdf:type owl:Class ;
                              owl:equivalentClass [ rdf:type owl:Restriction ;
                                                    owl:onProperty :relatesTo ;
@@ -514,7 +566,7 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
                              :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/Rp01
+###  https://w3id.org/pmd/tto/Rp01
 :Rp01 rdf:type owl:Class ;
       owl:equivalentClass [ rdf:type owl:Restriction ;
                             owl:onProperty :relatesToExtension ;
@@ -533,7 +585,7 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
       :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/Rp02
+###  https://w3id.org/pmd/tto/Rp02
 :Rp02 rdf:type owl:Class ;
       owl:equivalentClass [ rdf:type owl:Restriction ;
                             owl:onProperty :relatesToExtension ;
@@ -552,7 +604,7 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
       :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/SlopeOfTheElasticPart
+###  https://w3id.org/pmd/tto/SlopeOfTheElasticPart
 :SlopeOfTheElasticPart rdf:type owl:Class ;
                        rdfs:subClassOf :ValueObject ;
                        rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -563,7 +615,7 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
                        :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/StrainRate
+###  https://w3id.org/pmd/tto/StrainRate
 :StrainRate rdf:type owl:Class ;
             rdfs:subClassOf :TestingRate ;
             rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -575,7 +627,11 @@ Note: A suffix is added to the subscript to indicate the prescribed percentage, 
             :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/StressRate
+###  https://w3id.org/pmd/tto/Stress
+:Stress rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/StressRate
 :StressRate rdf:type owl:Class ;
             rdfs:subClassOf :TestingRate ;
             rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -591,7 +647,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
             :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/TensileStrength
+###  https://w3id.org/pmd/tto/TensileStrength
 :TensileStrength rdf:type owl:Class ;
                  owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty :relatesTo ;
@@ -614,7 +670,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                  :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/TensileTest
+###  https://w3id.org/pmd/tto/TensileTest
 :TensileTest rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Restriction ;
                                    owl:onProperty :participant ;
@@ -633,7 +689,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
              :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/TensileTestNode
+###  https://w3id.org/pmd/tto/TensileTestNode
 :TensileTestNode rdf:type owl:Class ;
                  rdfs:subClassOf :ProcessingNode ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -643,7 +699,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                   "This entity describes a workflow constituent that hosts tools and equipment that is used for the performance of a tensile test, e.g., a tensile test machine."@en .
 
 
-###  https://w3id.org/pmd/co/TensileTestingMachine
+###  https://w3id.org/pmd/tto/TensileTestingMachine
 :TensileTestingMachine rdf:type owl:Class ;
                        rdfs:subClassOf :TensileTestNode ,
                                        :TestingMachine ;
@@ -655,7 +711,27 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                        :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/ThicknessAfterFracture
+###  https://w3id.org/pmd/tto/TestPiece
+:TestPiece rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/TestPieceInfo
+:TestPieceInfo rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/TestingMachine
+:TestingMachine rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/TestingRate
+:TestingRate rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/Thickness
+:Thickness rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/ThicknessAfterFracture
 :ThicknessAfterFracture rdf:type owl:Class ;
                         rdfs:subClassOf :Thickness ;
                         rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -665,7 +741,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                          "This entity describes the measured dimension in one direction of a test piece, as measured after the test."@en .
 
 
-###  https://w3id.org/pmd/co/TransitionPoint
+###  https://w3id.org/pmd/tto/TransitionPoint
 :TransitionPoint rdf:type owl:Class ;
                  rdfs:subClassOf :ValueObject ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -675,7 +751,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                   "This entity describes a single point at which a transition from one condition or state to another occurs, e.g. the point at which different phases of matter are capable of existing together in equilibrium (also called inversion point) or if process parameters are changed that will lead to a transition of the process during its execution."@en .
 
 
-###  https://w3id.org/pmd/co/TransitionPointTestingRate
+###  https://w3id.org/pmd/tto/TransitionPointTestingRate
 :TransitionPointTestingRate rdf:type owl:Class ;
                             owl:equivalentClass [ rdf:type owl:Restriction ;
                                                   owl:onProperty :relatesTo ;
@@ -689,7 +765,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                              "This entity describes the the transition point of the testing rate during an analysis / test process, e.g. the point referring to the strain or the stress at which the testing rate is changed during a tensile test. Typically, this transition point is associated with a removal of the extensometer from the test piece during a strain-controlled tensile test."@en .
 
 
-###  https://w3id.org/pmd/co/TypeGaugeLengthMarks
+###  https://w3id.org/pmd/tto/TypeGaugeLengthMarks
 :TypeGaugeLengthMarks rdf:type owl:Class ;
                       rdfs:subClassOf :TestPieceInfo ;
                       rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -699,7 +775,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                        "This property is used to describe the visible markers usually attached to test pieces during a tensile test for elongation / extension measurements."@en .
 
 
-###  https://w3id.org/pmd/co/UpperYieldStrength
+###  https://w3id.org/pmd/tto/UpperYieldStrength
 :UpperYieldStrength rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
                                           owl:onProperty :relatesTo ;
@@ -715,7 +791,15 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                     :definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  https://w3id.org/pmd/co/WidthAfterFracture
+###  https://w3id.org/pmd/tto/ValueObject
+:ValueObject rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/Width
+:Width rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/tto/WidthAfterFracture
 :WidthAfterFracture rdf:type owl:Class ;
                     rdfs:subClassOf :Width ;
                     rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -725,7 +809,7 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
                                                                      "This entity describes a horizontal measurement of an object (test piece) taken at right angles to the length of the object (test piece), as measured after a test."@en .
 
 
-###  https://w3id.org/pmd/co/YieldStrength
+###  https://w3id.org/pmd/tto/YieldStrength
 :YieldStrength rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Restriction ;
                                      owl:onProperty :relatesTo ;
