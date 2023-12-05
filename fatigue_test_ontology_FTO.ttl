@@ -1,0 +1,1973 @@
+@prefix : <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns1: <http://www.w3.org/ns/prov#> .
+@prefix ns2: <http://qudt.org/schema/qudt/> .
+@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix csvw: <https://w3.org/ns/csvw#> .
+@prefix prov: <https://w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pmdao: <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/> .
+@base <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/> .
+
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/> rdf:type owl:Ontology ;
+                                                                                        owl:imports <https://w3id.org/pmd/co/2.0.6> ;
+                                                                                        dc:creator "Hossein Beygi Nasrabadi (orcid.org/0000-0002-3092-0532)" ;
+                                                                                        dc:licence "creativecommons.org/licenses/by/4.0/" ;
+                                                                                        dc:title "Fatigue Test Process Graph" ;
+                                                                                        owl:versionInfo "1.0.2 (pmdao)" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/licence
+dc:licence rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+ns3:definition rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/co/definitionSource
+pmd:definitionSource rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#actedOnBehalfOf
+ns1:actedOnBehalfOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#hasAssociatedWith
+prov:hasAssociatedWith rdf:type owl:ObjectProperty .
+
+
+###  https://w3.org/ns/prov#influenced
+prov:influenced rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/characteristic
+pmd:characteristic rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/component
+pmd:component rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/executedBy
+pmd:executedBy rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/hasFunction
+pmd:hasFunction rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/hasIdentifier
+pmd:hasIdentifier rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/input
+pmd:input rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/nextProcess
+pmd:nextProcess rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/output
+pmd:output rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/participant
+pmd:participant rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/process
+pmd:process rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/resource
+pmd:resource rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/subordinateProcess
+pmd:subordinateProcess rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/unit
+pmd:unit rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#value
+ns1:value rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/Unit
+ns2:Unit rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+ns1:Activity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+ns1:Agent rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+ns1:Entity rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+ns1:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf ns1:Agent .
+
+
+###  http://www.w3.org/ns/prov#Person
+ns1:Person rdf:type owl:Class ;
+           rdfs:subClassOf ns1:Agent .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+ns1:SoftwareAgent rdf:type owl:Class ;
+                  rdfs:subClassOf ns1:Agent .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Actuator
+pmdao:Actuator rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ProcessingNode ;
+               rdfs:label "Actuator" ;
+               ns3:definition "device that provides a physical output in response to a input signal in a predetermined way" ;
+               pmd:definitionSource "ISO/IEC 29182‑2" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Amplitude
+pmdao:Amplitude rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject ;
+                rdfs:label "Amplitude" ;
+                ns3:definition "half the range of a variable" ;
+                pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Atmosphere
+pmdao:Atmosphere rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:ValueObject ;
+                 rdfs:label "Atmosphere" ;
+                 ns3:definition "ambient conditions defined by the parameters of temperature and relative humidity" ;
+                 pmd:definitionSource "ISO 18454:2018" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/AxialStrain
+pmdao:AxialStrain rdf:type owl:Class ;
+                  rdfs:subClassOf pmdao:Strain ;
+                  rdfs:label "Axial Strain" ;
+                  ns3:definition "linear strain in the direction of the applied force" ;
+                  pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CollibrationProcess
+pmdao:CollibrationProcess rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:Process ;
+                          rdfs:label "Calibration Process" ;
+                          ns3:definition "set of operations that establish, under specified conditions, the relationship between values indicated by a measuring instrument or measuring system, or values represented by a material measure, and the corresponding known values of a reference standard" ;
+                          pmd:definitionSource "ISO 22716:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Cycle
+pmdao:Cycle rdf:type owl:Class ;
+            rdfs:subClassOf pmd:ValueObject ;
+            rdfs:label "Cycle" ;
+            ns3:definition "smallest segment of the strain-time function that is repeated periodically" ;
+            pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleNumber
+pmdao:CycleNumber rdf:type owl:Class ;
+                  rdfs:subClassOf pmdao:MathematicsValueObject ;
+                  rdfs:label "Cycle Number" ;
+                  ns3:definition "number of cycles of stress in fatigue test" ;
+                  pmd:definitionSource "ISO 22214:2006" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrainHardeningExponent
+pmdao:CyclicStrainHardeningExponent rdf:type owl:Class ;
+                                    rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrengthCoefficient
+pmdao:CyclicStrengthCoefficient rdf:type owl:Class ;
+                                rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicYieldStrength
+pmdao:CyclicYieldStrength rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:YieldStrength ;
+                          rdfs:label "Cyclic Yield Strength" ;
+                          ns3:definition "0,2 % offset is typically used" ;
+                          pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DataAcquisitionDevice
+pmdao:DataAcquisitionDevice rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:ProcessingNode ;
+                            rdfs:label "Data Acquisition Device" ;
+                            ns3:definition "system for storing and/or providing permanent copies of test information" ;
+                            pmd:definitionSource "ISO 13533:2001" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Displacement
+pmdao:Displacement rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ValueObject ;
+                   rdfs:label "Displacement" ;
+                   ns3:definition "axial movement of the pile head measured during testing" ;
+                   pmd:definitionSource "ISO 22477-4:2018" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ElasticStrain
+pmdao:ElasticStrain rdf:type owl:Class ;
+                    rdfs:subClassOf pmdao:Strain ;
+                    rdfs:label "Elastic Strain" ;
+                    ns3:definition "elastic component of a total strain" ;
+                    pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ElectroMechanicalActuator
+pmdao:ElectroMechanicalActuator rdf:type owl:Class ;
+                                rdfs:subClassOf pmdao:Actuator ;
+                                rdfs:label "Electro-Mechanical Actuator" ;
+                                ns3:definition "devices that convert electric energy into mechanical force in such a way as to execute work, mostly moving an object or a device" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/EngineeringStrain
+pmdao:EngineeringStrain rdf:type owl:Class ;
+                        rdfs:subClassOf pmdao:Strain ;
+                        rdfs:label "Engineering Strain" ;
+                        ns3:definition "axial strain calculated as the change in length divided by the original length" ;
+                        pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/EngineeringStress
+pmdao:EngineeringStress rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Stress ;
+                        rdfs:label "Engineering Stress" ;
+                        ns3:definition "instantaneous force divided by the initial cross-sectional area of the gauge length" ;
+                        pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Extremum
+pmdao:Extremum rdf:type owl:Class ;
+               rdfs:subClassOf pmdao:MathematicsValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Failure
+pmdao:Failure rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject ;
+              rdfs:label "Failure" ;
+              ns3:definition "permanent deformation resulting from fracture; plastic deformation or loosening beyond the ultimate displacement that would render the spinal implant assembly ineffective or unable to adequately resist load" ;
+              pmd:definitionSource "ISO 12189:2008" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FailureTime
+pmdao:FailureTime rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Time ;
+                  rdfs:label "Time To Failure" ;
+                  ns3:definition "time duration required to obtain the number of cycles, Nf" ;
+                  pmd:definitionSource "ISO 17140:2014" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityCoefficient
+pmdao:FatigueDuctilityCoefficient rdf:type owl:Class ;
+                                  rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityExponent
+pmdao:FatigueDuctilityExponent rdf:type owl:Class ;
+                               rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueLife
+pmdao:FatigueLife rdf:type owl:Class ;
+                  rdfs:subClassOf pmdao:FatigueValueObject ;
+                  rdfs:label "Fatigue Life" ;
+                  ns3:definition "number of cycles that have to be applied to achieve a failure" ;
+                  pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthCoefficient
+pmdao:FatigueStrengthCoefficient rdf:type owl:Class ;
+                                 rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthExponent
+pmdao:FatigueStrengthExponent rdf:type owl:Class ;
+                              rdfs:subClassOf pmdao:FatigueValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTest
+pmdao:FatigueTest rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:MechanicalTestingProcess ;
+                  rdfs:label "Fatigue Test" ;
+                  ns3:definition "test where repeated stress is applied to a test specimen, and the number of cycles to fracture is measured" ;
+                  pmd:definitionSource "ISO 22214:2006" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestingMachine
+pmdao:FatigueTestingMachine rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:TestingMachine .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueValueObject
+pmdao:FatigueValueObject rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:ValueObject ;
+                         rdfs:label "Fatigue Value Object" ;
+                         ns3:definition "The mechanical properties related to the fatigue bahaviour of materials" ;
+                         pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FlatSheet
+pmdao:FlatSheet rdf:type owl:Class ;
+                rdfs:subClassOf pmd:GeometryShape ;
+                rdfs:label "Flat-Sheet" ;
+                ns3:definition "sheets with two plane, substantially parallel surfaces" ;
+                pmd:definitionSource "ISO 7823-2:2003" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ForceCapicity
+pmdao:ForceCapicity rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:Force ;
+                    rdfs:label "Force Capacity" ;
+                    ns3:definition "Force capacity refers to the fact that the machine must be able to generate enough force to fracture the specimen." .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ForceControlledFatigueTest
+pmdao:ForceControlledFatigueTest rdf:type owl:Class ;
+                                 rdfs:subClassOf pmdao:FatigueTest ;
+                                 rdfs:label "Force-Controlled Fatigue Test" ;
+                                 ns3:definition "conducting axial, constant-amplitude, force-controlled, cyclic fatigue tests on specimens of a metal for the sake of generating fatigue-life data (i.e. stress vs. cycles to failure) for material characterization." ;
+                                 pmd:definitionSource "ISO 1099:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ForceTransducer
+pmdao:ForceTransducer rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:ProcessingNode ;
+                      rdfs:label "Force Transducer" ;
+                      ns3:definition "device used to determine mass by measuring the force applied either by tension or pressure" ;
+                      pmd:definitionSource "ISO 6016:2008" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Fracture
+pmdao:Fracture rdf:type owl:Class ;
+               rdfs:subClassOf pmdao:Failure ;
+               rdfs:label "Fracture" ;
+               ns3:definition "natural fractures in a formation resulting from external stress, usually being associated with a displacement" ;
+               pmd:definitionSource "ISO 18875:2015" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FractureMode
+pmdao:FractureMode rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Frequency
+pmdao:Frequency rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject ;
+                rdfs:label "Frequency" ;
+                ns3:definition "number of force or strain cycles per unit time applied to the test piece during fatigue testing" ;
+                pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/GrindingProcess
+pmdao:GrindingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                      rdfs:label "Grinding Process" ;
+                      ns3:definition "Grinding is the process of removing the surface of a hard material using a wheel made from or covered in hard grit." ;
+                      pmd:definitionSource "Collins dictionary" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/GrippingDevice
+pmdao:GrippingDevice rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:ProcessingNode ;
+                     rdfs:label "Gripping Device" ;
+                     ns3:definition "device to hold a test specimen and to transfer a uniaxial tensile force to a test specimen during the test" ;
+                     pmd:definitionSource "ISO 22215:2006" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/HandelingProcess
+pmdao:HandelingProcess rdf:type owl:Class ;
+                       rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                       rdfs:label "Handling Process" ;
+                       ns3:definition "a process by which something is handled in a commercial transaction." .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/HighCycleFatigueTest
+pmdao:HighCycleFatigueTest rdf:type owl:Class ;
+                           rdfs:subClassOf pmdao:FatigueTest ;
+                           rdfs:label "High-Cycle Fatigue Test" ;
+                           ns3:definition "fatigue test carried out in the region where the stress behaviour is dominant and fatigue life is relatively longer" ;
+                           pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Humidity
+pmdao:Humidity rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject ;
+               rdfs:label "Humidity" ;
+               ns3:definition "general term for the amount of water vapour in the air" ;
+               pmd:definitionSource "ISO/TR 18931:2001" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/HydraulicActuator
+pmdao:HydraulicActuator rdf:type owl:Class ;
+                        rdfs:subClassOf pmdao:Actuator ;
+                        rdfs:label "Hydraulic Actuator" ;
+                        ns3:definition "cylindrical tube and piston assemblies that utilize hydraulic power to generate linear, rotary, or oscillatory motion" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ISO12106FatigueTest
+pmdao:ISO12106FatigueTest rdf:type owl:Class ;
+                          rdfs:subClassOf pmdao:StrainControlledFatigueTest ;
+                          rdfs:label "ISO 12106:2017 Fatigue Test" ;
+                          ns3:definition "Fatigue testing of metallic materials by an axial-strain-controlled method according to ISO 12106:2017 standard" ;
+                          pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/LowCycleFatigueTest
+pmdao:LowCycleFatigueTest rdf:type owl:Class ;
+                          rdfs:subClassOf pmdao:FatigueTest ;
+                          rdfs:label "Low-Cycle Fatigue Test" ;
+                          ns3:definition "fatigue test carried out in the region where the cyclic plastic strain behaviour is dominant and fatigue life is relatively shorter" ;
+                          pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MachiningProcess
+pmdao:MachiningProcess rdf:type owl:Class ;
+                       rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                       rdfs:label "Machining Process" ;
+                       ns3:definition "Machining is the process of cutting, shaping, or removing material from a workpiece using a machine tool." ;
+                       pmd:definitionSource "Collins dictionary" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MarkingProcess
+pmdao:MarkingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                     rdfs:label "Marking Process" ;
+                     ns3:definition "The action of putting a mark on samples" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MathematicsValueObject
+pmdao:MathematicsValueObject rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Maximum
+pmdao:Maximum rdf:type owl:Class ;
+              rdfs:subClassOf pmdao:Extremum ;
+              rdfs:label "Maximum" ;
+              ns3:definition "greatest algebraic value of a variable within one cycle" ;
+              pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Mean
+pmdao:Mean rdf:type owl:Class ;
+           rdfs:subClassOf pmdao:MathematicsValueObject ;
+           rdfs:label "Mean" ;
+           ns3:definition "one-half of the algebraic sum of the maximum and minimum values of a variable" ;
+           pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Minimum
+pmdao:Minimum rdf:type owl:Class ;
+              rdfs:subClassOf pmdao:Extremum ;
+              rdfs:label "Minimum" ;
+              ns3:definition "least algebraic value of a variable within one cycle" ;
+              pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Number
+pmdao:Number rdf:type owl:Class ;
+             rdfs:subClassOf pmdao:MathematicsValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/PeakStress
+pmdao:PeakStress rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Stress ;
+                 rdfs:label "Peak Stress" ;
+                 ns3:definition "highest stress in the region or component under consideration" ;
+                 pmd:definitionSource "ISO 13624-1:2009" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/PlasticStrain
+pmdao:PlasticStrain rdf:type owl:Class ;
+                    rdfs:subClassOf pmdao:Strain ;
+                    rdfs:label "Plastic Strain" ;
+                    ns3:definition "plastic strain component of a controlled strain" ;
+                    pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/PolishingProcess
+pmdao:PolishingProcess rdf:type owl:Class ;
+                       rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                       rdfs:label "Polishing Process" ;
+                       ns3:definition "make the surface of (something) smooth and shiny by rubbing it." .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Range
+pmdao:Range rdf:type owl:Class ;
+            rdfs:subClassOf pmdao:MathematicsValueObject ;
+            rdfs:label "Range" ;
+            ns3:definition "algebraic difference between the maximum and minimum values of a variable" ;
+            pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ResidualStress
+pmdao:ResidualStress rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Stress ;
+                     rdfs:label "Residual Stress" ;
+                     ns3:definition "stress that remains in a structure after processing, fabrication, assembly, testing or operation" ;
+                     pmd:definitionSource "ISO 14623:2003" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/RoundBar
+pmdao:RoundBar rdf:type owl:Class ;
+               rdfs:subClassOf pmd:GeometryShape ;
+               rdfs:label "Round Bar" ;
+               ns3:definition "bar having a circular cross section of diameter generally 8 mm or over" ;
+               pmd:definitionSource "ISO 6929:2013" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SamplingProcess
+pmdao:SamplingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                      rdfs:label "Sampling Process" ;
+                      ns3:definition "the action or process of taking samples of something for analysis." .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SignalPeriod
+pmdao:SignalPeriod rdf:type owl:Class ;
+                   rdfs:subClassOf pmdao:TimePeriod ;
+                   rdfs:label "Signal Period" ;
+                   ns3:definition "duration of the wavelength" ;
+                   pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SpecimenPreparationProcess
+pmdao:SpecimenPreparationProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf pmd:Process ;
+                                 rdfs:label "Specimen Preparation Process" ;
+                                 ns3:definition "The process of preparing qualified specimen for testing purpuse" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StoringProcess
+pmdao:StoringProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmdao:SpecimenPreparationProcess ;
+                     rdfs:label "Storing Process" ;
+                     ns3:definition "the action or method of storing something for future use." .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Strain
+pmdao:Strain rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject ;
+             rdfs:label "Strain" ;
+             ns3:definition "relative deformation caused by a force applied to a test piece" ;
+             pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainAmplitude
+pmdao:StrainAmplitude rdf:type owl:Class ;
+                      rdfs:subClassOf pmdao:Amplitude ;
+                      rdfs:label "Strain Amplitude" ;
+                      ns3:definition "one-half of the algebraic difference between the maximum strain and the minimum strain in the strain cycle" ;
+                      pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainControlledFatigueTest
+pmdao:StrainControlledFatigueTest rdf:type owl:Class ;
+                                  rdfs:subClassOf pmdao:FatigueTest ;
+                                  rdfs:label "Axial-Strain-Controlled Fatigue Test" ;
+                                  ns3:definition "method|of testing uniaxially deformed specimens under strain control at constant|amplitude" ;
+                                  pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainFatigueLifeCurve
+pmdao:StrainFatigueLifeCurve rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainRange
+pmdao:StrainRange rdf:type owl:Class ;
+                  rdfs:subClassOf pmdao:Strain ;
+                  rdfs:label "Strain Range" ;
+                  ns3:definition "algebraic difference between the maximum and minimum values of strain" ;
+                  pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainRatio
+pmdao:StrainRatio rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressAmplitude
+pmdao:StressAmplitude rdf:type owl:Class ;
+                      rdfs:subClassOf pmdao:Amplitude ;
+                      rdfs:label "Stress Amplitude" ;
+                      ns3:definition "one-half of the algebraic difference between the maximum stress and the minimum stress in the stress cycle" ;
+                      pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressStrainCurve
+pmdao:StressStrainCurve rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressStrainHystersisLoopCurve
+pmdao:StressStrainHystersisLoopCurve rdf:type owl:Class ;
+                                     rdfs:subClassOf pmd:Image .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ThermoMechanicalFatigueTest
+pmdao:ThermoMechanicalFatigueTest rdf:type owl:Class ;
+                                  rdfs:subClassOf pmdao:FatigueTest ;
+                                  rdfs:label "Thermo Mechanical Fatigue Test" ;
+                                  ns3:definition "fatigue test under the conditions where cyclic, theoretically uniform temperatures within the test section and strain fields are externally imposed, simultaneously varied and controlled" ;
+                                  pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TimePeriod
+pmdao:TimePeriod rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Time .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TransitionRadious
+pmdao:TransitionRadious rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Radius ;
+                        rdfs:label "Transition Radius" ;
+                        ns3:definition "from parallel length into the grip end of the test specimen" ;
+                        pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TrueStrain
+pmdao:TrueStrain rdf:type owl:Class ;
+                 rdfs:subClassOf pmdao:Strain ;
+                 rdfs:label "True Strain" ;
+                 ns3:definition "natural logarithm of the ratio of an instantaneous length to its original length in the direction of the applied force up to the onset of necking" ;
+                 pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TrueStress
+pmdao:TrueStress rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Stress ;
+                 rdfs:label "True Stress" ;
+                 ns3:definition "instantaneous force divided by the instantaneous cross-sectional area of the gauge length" ;
+                 pmd:definitionSource "ISO 23718:2007" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Uncertainity
+pmdao:Uncertainity rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ValueObject ;
+                   rdfs:label "Uncertainty" ;
+                   ns3:definition "non-negative parameter characterizing the dispersion of the quantity values being attributed to a measurand, based on the information used" ;
+                   pmd:definitionSource "ISO 29473:2010" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/UniaxialTensionCompressionMachine
+pmdao:UniaxialTensionCompressionMachine rdf:type owl:Class ;
+                                        rdfs:subClassOf pmd:TestingMachine ;
+                                        rdfs:label "Uniaxial Tension-Compression Machine" ;
+                                        ns3:definition "machine for smooth startup of fatigue test with no backlash when passing through zero stress." ;
+                                        pmd:definitionSource "ISO 12106:2017" .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/WaveformDevice
+pmdao:WaveformDevice rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:ProcessingNode ;
+                     rdfs:label "Waveform" ;
+                     ns3:definition "shape of the wave when seen on an oscilloscope or digitized display" ;
+                     pmd:definitionSource "ISO 26824:2022" .
+
+
+###  https://w3.org/ns/csvw#Table
+csvw:Table rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Algorithm
+pmd:Algorithm rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+pmd:AnalysingProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/Area
+pmd:Area rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/AssemblingProcess
+pmd:AssemblingProcess rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/ChemicalComposition
+pmd:ChemicalComposition rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ConditioningProcess
+pmd:ConditioningProcess rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/CrossSectionArea
+pmd:CrossSectionArea rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:Area .
+
+
+###  https://w3id.org/pmd/co/DataScope
+pmd:DataScope rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Dataset
+pmd:Dataset rdf:type owl:Class ;
+            rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Date
+pmd:Date rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Time .
+
+
+###  https://w3id.org/pmd/co/DigitalEntity
+pmd:DigitalEntity rdf:type owl:Class ;
+                  rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/Elongation
+pmd:Elongation rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/EngineeredMaterial
+pmd:EngineeredMaterial rdf:type owl:Class ;
+                       rdfs:subClassOf pmd:Object .
+
+
+###  https://w3id.org/pmd/co/Extensometer
+pmd:Extensometer rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/ExtensometerGaugeLength
+pmd:ExtensometerGaugeLength rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:GaugeLength .
+
+
+###  https://w3id.org/pmd/co/Force
+pmd:Force rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Furnace
+pmd:Furnace rdf:type owl:Class ;
+            rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/GaugeLength
+pmd:GaugeLength rdf:type owl:Class ;
+                rdfs:subClassOf pmd:Length .
+
+
+###  https://w3id.org/pmd/co/GeometryChangingProcess
+pmd:GeometryChangingProcess rdf:type owl:Class ;
+                            rdfs:subClassOf pmd:Process .
+
+
+###  https://w3id.org/pmd/co/GeometryShape
+pmd:GeometryShape rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:TestPieceInfo .
+
+
+###  https://w3id.org/pmd/co/Grips
+pmd:Grips rdf:type owl:Class ;
+          rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/GripsAlignment
+pmd:GripsAlignment rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:AssemblingProcess .
+
+
+###  https://w3id.org/pmd/co/HeatTreatmentProcess
+pmd:HeatTreatmentProcess rdf:type owl:Class ;
+                         rdfs:subClassOf pmd:ConditioningProcess .
+
+
+###  https://w3id.org/pmd/co/Identifier
+pmd:Identifier rdf:type owl:Class ;
+               rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Image
+pmd:Image rdf:type owl:Class ;
+          rdfs:subClassOf pmd:DigitalEntity .
+
+
+###  https://w3id.org/pmd/co/Laboratory
+pmd:Laboratory rdf:type owl:Class ;
+               rdfs:subClassOf ns1:Organization .
+
+
+###  https://w3id.org/pmd/co/Length
+pmd:Length rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Location
+pmd:Location rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/MaximumForce
+pmd:MaximumForce rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:Force .
+
+
+###  https://w3id.org/pmd/co/Measurement
+pmd:Measurement rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/MeasuringDevice
+pmd:MeasuringDevice rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/MeasuringProcess
+pmd:MeasuringProcess rdf:type owl:Class ;
+                     rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/MechanicalTestingProcess
+pmd:MechanicalTestingProcess rdf:type owl:Class ;
+                             rdfs:subClassOf pmd:AnalysingProcess .
+
+
+###  https://w3id.org/pmd/co/Metadata
+pmd:Metadata rdf:type owl:Class ;
+             rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Method
+pmd:Method rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ModulusOfElasticity
+pmd:ModulusOfElasticity rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/MountingProcess
+pmd:MountingProcess rdf:type owl:Class ;
+                    rdfs:subClassOf pmd:AssemblingProcess .
+
+
+###  https://w3id.org/pmd/co/NodeName
+pmd:NodeName rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ProjectIdentifier .
+
+
+###  https://w3id.org/pmd/co/Norm
+pmd:Norm rdf:type owl:Class ;
+         rdfs:subClassOf pmd:Method .
+
+
+###  https://w3id.org/pmd/co/Note
+pmd:Note rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Object
+pmd:Object rdf:type owl:Class ;
+           rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/Operator
+pmd:Operator rdf:type owl:Class ;
+             rdfs:subClassOf ns1:Person .
+
+
+###  https://w3id.org/pmd/co/OriginalGaugeLength
+pmd:OriginalGaugeLength rdf:type owl:Class ;
+                        rdfs:subClassOf pmd:GaugeLength .
+
+
+###  https://w3id.org/pmd/co/ParallelLength
+pmd:ParallelLength rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:Length .
+
+
+###  https://w3id.org/pmd/co/PrimaryData
+pmd:PrimaryData rdf:type owl:Class ;
+                rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/Process
+pmd:Process rdf:type owl:Class ;
+            rdfs:subClassOf ns1:Activity .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+pmd:ProcessingNode rdf:type owl:Class ;
+                   rdfs:subClassOf ns1:Agent .
+
+
+###  https://w3id.org/pmd/co/ProjectIdentifier
+pmd:ProjectIdentifier rdf:type owl:Class ;
+                      rdfs:subClassOf pmd:Identifier .
+
+
+###  https://w3id.org/pmd/co/ProofStrength
+pmd:ProofStrength rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ProofStrengthPlasticExtension
+pmd:ProofStrengthPlasticExtension rdf:type owl:Class ;
+                                  rdfs:subClassOf pmd:ProofStrength .
+
+
+###  https://w3id.org/pmd/co/Radius
+pmd:Radius rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Roughness
+pmd:Roughness rdf:type owl:Class ;
+              rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Rp02
+pmd:Rp02 rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ProofStrengthPlasticExtension .
+
+
+###  https://w3id.org/pmd/co/Sample
+pmd:Sample rdf:type owl:Class ;
+           rdfs:subClassOf pmd:EngineeredMaterial .
+
+
+###  https://w3id.org/pmd/co/SecondaryData
+pmd:SecondaryData rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:DataScope .
+
+
+###  https://w3id.org/pmd/co/SetPoint
+pmd:SetPoint rdf:type owl:Class ;
+             rdfs:subClassOf pmd:ValueScope .
+
+
+###  https://w3id.org/pmd/co/SlopeOfTheElasticPart
+pmd:SlopeOfTheElasticPart rdf:type owl:Class ;
+                          rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Specimen
+pmd:Specimen rdf:type owl:Class ;
+             rdfs:subClassOf pmd:Sample .
+
+
+###  https://w3id.org/pmd/co/StrainRate
+pmd:StrainRate rdf:type owl:Class ;
+               rdfs:subClassOf pmd:TestingRate .
+
+
+###  https://w3id.org/pmd/co/Stress
+pmd:Stress rdf:type owl:Class ;
+           rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Temperature
+pmd:Temperature rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TemperatureChangingProcess
+pmd:TemperatureChangingProcess rdf:type owl:Class ;
+                               rdfs:subClassOf pmd:ConditioningProcess .
+
+
+###  https://w3id.org/pmd/co/TestPiece
+pmd:TestPiece rdf:type owl:Class ;
+              rdfs:subClassOf pmd:Sample .
+
+
+###  https://w3id.org/pmd/co/TestPieceInfo
+pmd:TestPieceInfo rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/TestPieceName
+pmd:TestPieceName rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:Identifier .
+
+
+###  https://w3id.org/pmd/co/TestingMachine
+pmd:TestingMachine rdf:type owl:Class ;
+                   rdfs:subClassOf pmd:ProcessingNode .
+
+
+###  https://w3id.org/pmd/co/TestingRate
+pmd:TestingRate rdf:type owl:Class ;
+                rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/Thermocouple
+pmd:Thermocouple rdf:type owl:Class ;
+                 rdfs:subClassOf pmd:MeasuringDevice .
+
+
+###  https://w3id.org/pmd/co/Time
+pmd:Time rdf:type owl:Class ;
+         rdfs:subClassOf pmd:ValueObject .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+pmd:ValueObject rdf:type owl:Class ;
+                rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/ValueScope
+pmd:ValueScope rdf:type owl:Class ;
+               rdfs:subClassOf ns1:Entity .
+
+
+###  https://w3id.org/pmd/co/YieldStrength
+pmd:YieldStrength rdf:type owl:Class ;
+                  rdfs:subClassOf pmd:ValueObject .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/AccuracyOfTestingApparatus
+pmdao:AccuracyOfTestingApparatus rdf:type owl:NamedIndividual ,
+                                          pmdao:CollibrationProcess ;
+                                 pmd:nextProcess pmdao:SettingTheForceZeroPoint .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CalculateFatigueTestUncertainity
+pmdao:CalculateFatigueTestUncertainity rdf:type owl:NamedIndividual ,
+                                                pmd:AnalysingProcess ;
+                                       pmd:hasFunction pmdao:FatigueTestUncertainityFunction ;
+                                       pmd:output pmdao:FatigueTestUncertainity .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ChoiceOfTheMethodAndRate
+pmdao:ChoiceOfTheMethodAndRate rdf:type owl:NamedIndividual ,
+                                        pmd:ConditioningProcess ;
+                               ns1:actedOnBehalfOf pmdao:TestOperator_ ;
+                               pmd:characteristic pmdao:CycleTime ,
+                                                  pmdao:FatigueTestControllingMode ,
+                                                  pmdao:MaximumStrain ,
+                                                  pmdao:MinimumStrain ,
+                                                  pmdao:StrainRate ,
+                                                  pmdao:StrainRatio ;
+                               pmd:nextProcess pmdao:Loading .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleTime
+pmdao:CycleTime rdf:type owl:NamedIndividual ,
+                         pmdao:SignalPeriod ,
+                         pmd:Metadata ,
+                         pmd:SetPoint ;
+                pmd:unit pmd:PixelUnit ;
+                ns1:value "CycleTime"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleToFracture
+pmdao:CycleToFracture rdf:type owl:NamedIndividual ,
+                               pmdao:FatigueLife ,
+                               pmd:Measurement ,
+                               pmd:SecondaryData ;
+                      pmd:input pmdao:CalculateFatigueTestUncertainity ;
+                      pmd:resource pmdao:RowDataTable_ ;
+                      ns1:value "FinalCycle"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrainHardeningExponent
+pmdao:CyclicStrainHardeningExponent rdf:type owl:NamedIndividual ,
+                                             pmdao:CyclicStrainHardeningExponent ,
+                                             pmd:Measurement ,
+                                             pmd:SecondaryData ;
+                                    pmd:resource pmdao:RowDataTable_ ;
+                                    ns1:value "CyclicStrainHardeningExponent"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrainHardeningExponentFunction
+pmdao:CyclicStrainHardeningExponentFunction rdf:type owl:NamedIndividual ,
+                                                     pmd:Algorithm ,
+                                                     pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrengthCoefficient
+pmdao:CyclicStrengthCoefficient rdf:type owl:NamedIndividual ,
+                                         pmdao:CyclicStrengthCoefficient ,
+                                         pmd:Measurement ,
+                                         pmd:SecondaryData ;
+                                pmd:resource pmdao:RowDataTable_ ;
+                                pmd:unit pmd:PixelUnit ;
+                                ns1:value "CyclicStrengthCoefficient"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicStrengthCoefficientFunction
+pmdao:CyclicStrengthCoefficientFunction rdf:type owl:NamedIndividual ,
+                                                 pmd:Algorithm ,
+                                                 pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicYieldStrengthFunction
+pmdao:CyclicYieldStrengthFunction rdf:type owl:NamedIndividual ,
+                                           pmd:Algorithm ,
+                                           pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CyclicYieldStrength_
+pmdao:CyclicYieldStrength_ rdf:type owl:NamedIndividual ,
+                                    pmdao:CyclicYieldStrength ,
+                                    pmd:Measurement ,
+                                    pmd:SecondaryData ;
+                           pmd:resource pmdao:RowDataTable_ ;
+                           pmd:unit pmd:PixelUnit ;
+                           ns1:value "CyclicYieldStrength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DataAcquisitorID
+pmdao:DataAcquisitorID rdf:type owl:NamedIndividual ,
+                                pmd:Metadata ,
+                                pmd:NodeName ;
+                       ns1:value "DataAcquisitorName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DataAcquisitor_
+pmdao:DataAcquisitor_ rdf:type owl:NamedIndividual ,
+                               pmdao:DataAcquisitionDevice ;
+                      pmd:hasIdentifier pmdao:DataAcquisitorID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfCyclicStrainHardeningExponent
+pmdao:DeterminationOfCyclicStrainHardeningExponent rdf:type owl:NamedIndividual ,
+                                                            pmd:AnalysingProcess ;
+                                                   pmd:hasFunction pmdao:CyclicStrainHardeningExponentFunction ;
+                                                   pmd:nextProcess pmdao:DeterminationOfCyclicStrengthCoefficient ;
+                                                   pmd:output pmdao:CyclicStrainHardeningExponent .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfCyclicStrengthCoefficient
+pmdao:DeterminationOfCyclicStrengthCoefficient rdf:type owl:NamedIndividual ,
+                                                        pmd:AnalysingProcess ;
+                                               pmd:hasFunction pmdao:CyclicStrengthCoefficientFunction ;
+                                               pmd:nextProcess pmdao:CalculateFatigueTestUncertainity ;
+                                               pmd:output pmdao:CyclicStrengthCoefficient .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfCyclicYieldStrength
+pmdao:DeterminationOfCyclicYieldStrength rdf:type owl:NamedIndividual ,
+                                                  pmd:AnalysingProcess ;
+                                         pmd:hasFunction pmdao:CyclicYieldStrengthFunction ;
+                                         pmd:nextProcess pmdao:DeterminationOfFatigueStrengthCoefficient ;
+                                         pmd:output pmdao:CyclicYieldStrength_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfFatigueDuctilityCoefficient
+pmdao:DeterminationOfFatigueDuctilityCoefficient rdf:type owl:NamedIndividual ,
+                                                          pmd:AnalysingProcess ;
+                                                 pmd:hasFunction pmdao:FatigueDuctilityCoefficientFunction ;
+                                                 pmd:nextProcess pmdao:DeterminationOfFatigueStrengthExponent ;
+                                                 pmd:output pmdao:FatigueDuctilityCoefficient .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfFatigueDuctilityExponent
+pmdao:DeterminationOfFatigueDuctilityExponent rdf:type owl:NamedIndividual ,
+                                                       pmd:AnalysingProcess ;
+                                              pmd:hasFunction pmdao:FatigueDuctilityExponentFunction ;
+                                              pmd:nextProcess pmdao:DeterminationOfCyclicStrainHardeningExponent ;
+                                              pmd:output pmdao:FatigueDuctilityExponent .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfFatigueLife
+pmdao:DeterminationOfFatigueLife rdf:type owl:NamedIndividual ,
+                                          pmd:AnalysingProcess ;
+                                 pmd:nextProcess pmdao:DeterminationOfModulusOfElasticity ;
+                                 pmd:output pmdao:CycleToFracture ,
+                                            <https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleToDefiningCriteria10%> .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfFatigueStrengthCoefficient
+pmdao:DeterminationOfFatigueStrengthCoefficient rdf:type owl:NamedIndividual ,
+                                                         pmd:AnalysingProcess ;
+                                                pmd:hasFunction pmdao:FatigueStrengthCoefficientFunction ;
+                                                pmd:nextProcess pmdao:DeterminationOfFatigueDuctilityCoefficient ;
+                                                pmd:output pmdao:FatigueStrengthCoefficient .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfFatigueStrengthExponent
+pmdao:DeterminationOfFatigueStrengthExponent rdf:type owl:NamedIndividual ,
+                                                      pmd:AnalysingProcess ;
+                                             pmd:hasFunction pmdao:FatigueStrengthExponentFunction ;
+                                             pmd:nextProcess pmdao:DeterminationOfFatigueDuctilityExponent ;
+                                             pmd:output pmdao:FatigueStrengthExponent .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfModulusOfElasticity
+pmdao:DeterminationOfModulusOfElasticity rdf:type owl:NamedIndividual ,
+                                                  pmd:AnalysingProcess ;
+                                         pmd:hasFunction pmdao:ModuludOfElasticityFunction ;
+                                         pmd:nextProcess pmdao:DeterminationOfCyclicYieldStrength ;
+                                         pmd:output pmdao:ModulusOfElasticity ,
+                                                    pmdao:SlopOfElasticPartOfTheStressStreainCurve .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/DeterminationOfOriginalCrossSectionArea
+pmdao:DeterminationOfOriginalCrossSectionArea rdf:type owl:NamedIndividual ,
+                                                       pmd:MeasuringProcess ;
+                                              pmd:characteristic pmdao:OriginalCrossSectionArea ;
+                                              pmd:nextProcess pmdao:MarkingTheOriginalGaugeLength .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ExtensometerGaugeLength
+pmdao:ExtensometerGaugeLength rdf:type owl:NamedIndividual ,
+                                       pmd:ExtensometerGaugeLength ,
+                                       pmd:PrimaryData ,
+                                       pmd:SetPoint ;
+                              pmd:unit pmd:PixelUnit ;
+                              ns1:value "ExtensometerGaugeLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ExtensometerID
+pmdao:ExtensometerID rdf:type owl:NamedIndividual ,
+                              pmd:Metadata ,
+                              pmd:NodeName ;
+                     ns1:value "ExtensometerName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Extensometer_
+pmdao:Extensometer_ rdf:type owl:NamedIndividual ,
+                             pmd:Extensometer ;
+                    pmd:hasIdentifier pmdao:ExtensometerID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityCoefficient
+pmdao:FatigueDuctilityCoefficient rdf:type owl:NamedIndividual ,
+                                           pmdao:FatigueDuctilityCoefficient ,
+                                           pmd:Measurement ,
+                                           pmd:SecondaryData ;
+                                  pmd:resource pmdao:RowDataTable_ ;
+                                  ns1:value "FatigueDuctilityCoefficient"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityCoefficientFunction
+pmdao:FatigueDuctilityCoefficientFunction rdf:type owl:NamedIndividual ,
+                                                   pmd:Algorithm .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityExponent
+pmdao:FatigueDuctilityExponent rdf:type owl:NamedIndividual ,
+                                        pmdao:FatigueDuctilityExponent ,
+                                        pmd:Measurement ,
+                                        pmd:SecondaryData ;
+                               pmd:resource pmdao:RowDataTable_ ;
+                               ns1:value "FatigueDuctilityExponent"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueDuctilityExponentFunction
+pmdao:FatigueDuctilityExponentFunction rdf:type owl:NamedIndividual ,
+                                                pmd:Algorithm ,
+                                                pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthCoefficient
+pmdao:FatigueStrengthCoefficient rdf:type owl:NamedIndividual ,
+                                          pmdao:FatigueStrengthCoefficient ,
+                                          pmd:SecondaryData ;
+                                 pmd:resource pmdao:RowDataTable_ ;
+                                 pmd:unit pmd:PixelUnit ;
+                                 ns1:value "FatigueStrengthCoefficient"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthCoefficientFunction
+pmdao:FatigueStrengthCoefficientFunction rdf:type owl:NamedIndividual ,
+                                                  pmd:Algorithm ,
+                                                  pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthExponent
+pmdao:FatigueStrengthExponent rdf:type owl:NamedIndividual ,
+                                       pmdao:FatigueStrengthExponent ,
+                                       pmd:Measurement ;
+                              pmd:resource pmdao:RowDataTable_ ;
+                              ns1:value "FatigueStrengthExponent"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueStrengthExponentFunction
+pmdao:FatigueStrengthExponentFunction rdf:type owl:NamedIndividual ,
+                                               pmd:Algorithm .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestControllingMode
+pmdao:FatigueTestControllingMode rdf:type owl:NamedIndividual ,
+                                          pmdao:FatigueTest ,
+                                          pmd:Metadata ;
+                                 ns1:value "StrainControlledFatigueTest"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestExperiment
+pmdao:FatigueTestExperiment rdf:type owl:NamedIndividual ,
+                                     pmdao:FatigueTest ;
+                            pmd:characteristic pmdao:Laboratory_ ,
+                                               pmdao:TestDate ,
+                                               pmdao:TestOperator_ ,
+                                               pmdao:TestStandard ;
+                            pmd:executedBy pmdao:FatigueTestingMachine ;
+                            pmd:input pmdao:FatigueTestPiece ;
+                            pmd:output pmdao:FracturedTestPiece ,
+                                       pmdao:TestDataFile ;
+                            pmd:process pmdao:FatigueTestMeasuringProcess .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestMachineID
+pmdao:FatigueTestMachineID rdf:type owl:NamedIndividual ,
+                                    pmd:Metadata ,
+                                    pmd:NodeName ;
+                           ns1:value "MachineName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestMeasurementAnalysis
+pmdao:FatigueTestMeasurementAnalysis rdf:type owl:NamedIndividual ,
+                                              pmd:AnalysingProcess ;
+                                     prov:hasAssociatedWith pmdao:MachineSoftware_ ;
+                                     pmd:subordinateProcess pmdao:CalculateFatigueTestUncertainity ,
+                                                            pmdao:DeterminationOfCyclicStrainHardeningExponent ,
+                                                            pmdao:DeterminationOfCyclicStrengthCoefficient ,
+                                                            pmdao:DeterminationOfCyclicYieldStrength ,
+                                                            pmdao:DeterminationOfFatigueDuctilityCoefficient ,
+                                                            pmdao:DeterminationOfFatigueDuctilityExponent ,
+                                                            pmdao:DeterminationOfFatigueLife ,
+                                                            pmdao:DeterminationOfFatigueStrengthCoefficient ,
+                                                            pmdao:DeterminationOfFatigueStrengthExponent ,
+                                                            pmdao:DeterminationOfModulusOfElasticity ,
+                                                            pmdao:PlottingStrainFatigueLifeCurve ,
+                                                            pmdao:PlottingStressStrainHystersisLoopCurve ,
+                                                            pmdao:StrainCalculation ,
+                                                            pmdao:StressCalculation .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestMeasuringProcess
+pmdao:FatigueTestMeasuringProcess rdf:type owl:NamedIndividual ,
+                                           pmd:MeasuringProcess ;
+                                  pmd:executedBy pmdao:FatigueTestingMachine ;
+                                  pmd:nextProcess pmdao:FatigueTestMeasurementAnalysis ;
+                                  pmd:participant pmdao:FatigueTestPiece ;
+                                  pmd:subordinateProcess pmdao:AccuracyOfTestingApparatus ,
+                                                         pmdao:ChoiceOfTheMethodAndRate ,
+                                                         pmdao:DeterminationOfOriginalCrossSectionArea ,
+                                                         pmdao:Gripping ,
+                                                         pmdao:Loading ,
+                                                         pmdao:MarkingTheOriginalGaugeLength ,
+                                                         pmdao:MeasuringFracturedTestPiece ,
+                                                         pmdao:RecordingEnvironmentConditions ,
+                                                         pmdao:SettingTheForceZeroPoint .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestPiece
+pmdao:FatigueTestPiece rdf:type owl:NamedIndividual ,
+                                pmd:TestPiece ;
+                       pmd:characteristic pmdao:MaterialProvider ,
+                                          pmdao:TestPieceComposition ,
+                                          pmdao:TestPieceCrossSectionShape ,
+                                          pmdao:TestPieceHeatTreatment ,
+                                          pmdao:TestPieceID ,
+                                          pmdao:TestPieceParallelLength ,
+                                          pmdao:TestPiecePreparation ,
+                                          pmdao:TestPieceSupplimentaryNote ,
+                                          pmdao:TestPieceTotalLength ;
+                       pmd:output pmdao:FracturedTestPiece .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestUncertainity
+pmdao:FatigueTestUncertainity rdf:type owl:NamedIndividual ,
+                                       pmdao:Uncertainity ,
+                                       pmd:Measurement ,
+                                       pmd:SecondaryData ;
+                              ns1:value "FatigueTestUncertainity"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestUncertainityFunction
+pmdao:FatigueTestUncertainityFunction rdf:type owl:NamedIndividual ,
+                                               pmd:Algorithm ,
+                                               pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FatigueTestingMachine
+pmdao:FatigueTestingMachine rdf:type owl:NamedIndividual ,
+                                     pmdao:FatigueTestingMachine ;
+                            ns1:actedOnBehalfOf pmdao:TestOperator_ ;
+                            pmd:component pmdao:DataAcquisitor_ ,
+                                          pmdao:Extensometer_ ,
+                                          pmdao:ForceTransducer_ ,
+                                          pmdao:MachineSoftware_ ,
+                                          pmdao:Waveform_ ;
+                            pmd:hasIdentifier pmdao:FatigueTestMachineID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ForceTransducerID
+pmdao:ForceTransducerID rdf:type owl:NamedIndividual ,
+                                 pmd:Metadata ,
+                                 pmd:NodeName ;
+                        ns1:value "ForceTransducerName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ForceTransducer_
+pmdao:ForceTransducer_ rdf:type owl:NamedIndividual ,
+                                pmdao:ForceTransducer ;
+                       pmd:hasIdentifier pmdao:ForceTransducerID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FractureLocation
+pmdao:FractureLocation rdf:type owl:NamedIndividual ,
+                                pmd:Location ,
+                                pmd:Measurement ,
+                                pmd:Metadata ;
+                       ns1:value "FractureLocation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FractureMode
+pmdao:FractureMode rdf:type owl:NamedIndividual ,
+                            pmdao:FractureMode ;
+                   ns1:value "FractureMode"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FractureSupplimentaryNote
+pmdao:FractureSupplimentaryNote rdf:type owl:NamedIndividual ,
+                                         pmd:Measurement ,
+                                         pmd:Note ,
+                                         pmd:PrimaryData ;
+                                ns1:value "FractureSupplimentaryNote"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/FracturedTestPiece
+pmdao:FracturedTestPiece rdf:type owl:NamedIndividual ,
+                                  pmd:TestPiece .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Gripping
+pmdao:Gripping rdf:type owl:NamedIndividual ,
+                        pmd:GripsAlignment ;
+               pmd:executedBy pmdao:FatigueTestingMachine ;
+               pmd:nextProcess pmdao:ChoiceOfTheMethodAndRate .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Laboratory_
+pmdao:Laboratory_ rdf:type owl:NamedIndividual ,
+                           pmd:Laboratory ,
+                           pmd:Metadata ;
+                  ns1:value "LaboratoryNameAndLocation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Loading
+pmdao:Loading rdf:type owl:NamedIndividual ,
+                       pmd:GeometryChangingProcess ;
+              pmd:characteristic pmdao:TestCycleNumber ,
+                                 pmdao:TestDisplacement ,
+                                 pmdao:TestTime ;
+              pmd:executedBy pmdao:Waveform_ ;
+              pmd:nextProcess pmdao:MeasuringFracturedTestPiece ;
+              pmd:output pmdao:TestDataFile .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MachineSoftware_
+pmdao:MachineSoftware_ rdf:type owl:NamedIndividual ,
+                                ns1:SoftwareAgent ;
+                       pmd:hasIdentifier pmdao:SoftwareID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MarkingTheOriginalGaugeLength
+pmdao:MarkingTheOriginalGaugeLength rdf:type owl:NamedIndividual ,
+                                             pmd:MeasuringProcess ;
+                                    pmd:characteristic pmdao:ExtensometerGaugeLength ,
+                                                       pmdao:OriginalGaugeLength ;
+                                    pmd:executedBy pmdao:Extensometer_ ;
+                                    pmd:nextProcess pmdao:AccuracyOfTestingApparatus .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MaterialProvider
+pmdao:MaterialProvider rdf:type owl:NamedIndividual ,
+                                ns1:Organization ,
+                                pmd:Metadata ;
+                       ns1:value "MaterialProvider"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MaximumStrain
+pmdao:MaximumStrain rdf:type owl:NamedIndividual ,
+                             pmdao:Maximum ,
+                             pmdao:Strain ,
+                             pmd:Metadata ,
+                             pmd:SetPoint ;
+                    pmd:input pmdao:CalculateFatigueTestUncertainity ;
+                    pmd:unit pmd:PixelUnit ;
+                    ns1:value "MaximumStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MeasuringFracturedTestPiece
+pmdao:MeasuringFracturedTestPiece rdf:type owl:NamedIndividual ,
+                                           pmd:MeasuringProcess ;
+                                  pmd:characteristic pmdao:FractureLocation ,
+                                                     pmdao:FractureMode ,
+                                                     pmdao:FractureSupplimentaryNote ;
+                                  pmd:participant pmdao:FracturedTestPiece .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/MinimumStrain
+pmdao:MinimumStrain rdf:type owl:NamedIndividual ,
+                             pmdao:Minimum ,
+                             pmdao:Strain ,
+                             pmd:Metadata ,
+                             pmd:SetPoint ;
+                    pmd:input pmdao:CalculateFatigueTestUncertainity ;
+                    pmd:unit pmd:PixelUnit ;
+                    ns1:value "MinimumStrain"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ModuludOfElasticityFunction
+pmdao:ModuludOfElasticityFunction rdf:type owl:NamedIndividual ,
+                                           pmd:Algorithm ,
+                                           pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/ModulusOfElasticity
+pmdao:ModulusOfElasticity rdf:type owl:NamedIndividual ,
+                                   pmd:Measurement ,
+                                   pmd:ModulusOfElasticity ,
+                                   pmd:SecondaryData ;
+                          pmd:input pmdao:DeterminationOfCyclicYieldStrength ;
+                          pmd:resource pmdao:RowDataTable_ ;
+                          pmd:unit pmd:PixelUnit ;
+                          ns1:value "ModulusOfElasticity"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/OriginalCrossSectionArea
+pmdao:OriginalCrossSectionArea rdf:type owl:NamedIndividual ,
+                                        pmd:CrossSectionArea ,
+                                        pmd:Measurement ,
+                                        pmd:PrimaryData ;
+                               pmd:input pmdao:StressCalculation ;
+                               pmd:unit pmd:PixelUnit ;
+                               ns1:value "OriginalCrossSectionArea"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/OriginalGaugeLength
+pmdao:OriginalGaugeLength rdf:type owl:NamedIndividual ,
+                                   pmd:Measurement ,
+                                   pmd:OriginalGaugeLength ,
+                                   pmd:PrimaryData ;
+                          pmd:input pmdao:StrainCalculation ;
+                          pmd:unit pmd:PixelUnit ;
+                          ns1:value "OriginalGaugeLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/PlottingStrainFatigueLifeCurve
+pmdao:PlottingStrainFatigueLifeCurve rdf:type owl:NamedIndividual ,
+                                              pmd:AnalysingProcess ;
+                                     pmd:nextProcess pmdao:DeterminationOfFatigueLife ;
+                                     pmd:output pmdao:StrainFatigueLifeCurve .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/PlottingStressStrainHystersisLoopCurve
+pmdao:PlottingStressStrainHystersisLoopCurve rdf:type owl:NamedIndividual ,
+                                                      pmd:AnalysingProcess ;
+                                             pmd:nextProcess pmdao:PlottingStrainFatigueLifeCurve ;
+                                             pmd:output pmdao:StressStrainHystersisLoopCurve .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/RecordingEnvironmentConditions
+pmdao:RecordingEnvironmentConditions rdf:type owl:NamedIndividual ,
+                                              pmd:MeasuringProcess ;
+                                     pmd:characteristic pmdao:TestEnvironment ,
+                                                        pmdao:TestTemperature ;
+                                     pmd:nextProcess pmdao:DeterminationOfOriginalCrossSectionArea .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/RowDataTable_
+pmdao:RowDataTable_ rdf:type owl:NamedIndividual ,
+                             csvw:Table ,
+                             pmd:Dataset ,
+                             pmd:PrimaryData .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SettingTheForceZeroPoint
+pmdao:SettingTheForceZeroPoint rdf:type owl:NamedIndividual ,
+                                        pmd:MountingProcess ;
+                               pmd:executedBy pmdao:FatigueTestingMachine ;
+                               pmd:nextProcess pmdao:Gripping .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SlopOfElasticPartOfTheStressStreainCurve
+pmdao:SlopOfElasticPartOfTheStressStreainCurve rdf:type owl:NamedIndividual ,
+                                                        pmd:Measurement ,
+                                                        pmd:SecondaryData ,
+                                                        pmd:SlopeOfTheElasticPart ;
+                                               pmd:resource pmdao:RowDataTable_ ;
+                                               pmd:unit pmd:PixelUnit ;
+                                               ns1:value "SlopOfElasticPartOfTheStressStreainCurve"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/SoftwareID
+pmdao:SoftwareID rdf:type owl:NamedIndividual ,
+                          pmd:Metadata ,
+                          pmd:NodeName ;
+                 ns1:value "SoftwareName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainCalculation
+pmdao:StrainCalculation rdf:type owl:NamedIndividual ,
+                                 pmd:AnalysingProcess ;
+                        pmd:hasFunction pmdao:StrainFunction ;
+                        pmd:nextProcess pmdao:PlottingStressStrainHystersisLoopCurve ;
+                        pmd:output pmdao:TestStrain .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainFatigueLifeCurve
+pmdao:StrainFatigueLifeCurve rdf:type owl:NamedIndividual ,
+                                      pmdao:StrainFatigueLifeCurve ;
+                             pmd:input pmdao:DeterminationOfFatigueLife ,
+                                       pmdao:DeterminationOfFatigueStrengthCoefficient ;
+                             pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainFunction
+pmdao:StrainFunction rdf:type owl:NamedIndividual ,
+                              pmd:Algorithm ,
+                              pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainRate
+pmdao:StrainRate rdf:type owl:NamedIndividual ,
+                          pmd:Metadata ,
+                          pmd:SetPoint ,
+                          pmd:StrainRate ;
+                 pmd:unit pmd:PixelUnit ;
+                 ns1:value "StrainRate"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StrainRatio
+pmdao:StrainRatio rdf:type owl:NamedIndividual ,
+                           pmdao:StrainRatio ,
+                           pmd:Metadata ,
+                           pmd:SetPoint ;
+                  ns1:value "StrainRatio"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressCalculation
+pmdao:StressCalculation rdf:type owl:NamedIndividual ,
+                                 pmd:AnalysingProcess ;
+                        pmd:hasFunction pmdao:StressFunction ;
+                        pmd:nextProcess pmdao:StrainCalculation ;
+                        pmd:output pmdao:TestStress .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressFunction
+pmdao:StressFunction rdf:type owl:NamedIndividual ,
+                              pmd:Algorithm ,
+                              pmd:Metadata .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/StressStrainHystersisLoopCurve
+pmdao:StressStrainHystersisLoopCurve rdf:type owl:NamedIndividual ,
+                                              pmdao:StressStrainHystersisLoopCurve ;
+                                     pmd:input pmdao:DeterminationOfCyclicYieldStrength ,
+                                               pmdao:DeterminationOfModulusOfElasticity ;
+                                     pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestCycleNumber
+pmdao:TestCycleNumber rdf:type owl:NamedIndividual ,
+                               pmdao:CycleNumber ,
+                               pmd:Dataset ,
+                               pmd:Measurement ,
+                               pmd:PrimaryData ;
+                      pmd:input pmdao:DeterminationOfFatigueDuctilityExponent ,
+                                pmdao:DeterminationOfFatigueLife ,
+                                pmdao:DeterminationOfFatigueStrengthCoefficient ,
+                                pmdao:PlottingStrainFatigueLifeCurve ;
+                      pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestDataFile
+pmdao:TestDataFile rdf:type owl:NamedIndividual ,
+                            pmd:Measurement ,
+                            pmd:PrimaryData ,
+                            pmd:ValueObject ;
+                   pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestDate
+pmdao:TestDate rdf:type owl:NamedIndividual ,
+                        pmd:Date ,
+                        pmd:Metadata ;
+               ns1:value "TestDateIdentifier"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestDisplacement
+pmdao:TestDisplacement rdf:type owl:NamedIndividual ,
+                                pmdao:Displacement ,
+                                pmd:Dataset ,
+                                pmd:Measurement ,
+                                pmd:PrimaryData ;
+                       pmd:input pmdao:StrainCalculation ;
+                       pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestEnvironment
+pmdao:TestEnvironment rdf:type owl:NamedIndividual ,
+                               pmdao:Atmosphere ,
+                               pmd:Measurement ,
+                               pmd:Metadata ;
+                      ns1:value "TestEnvironment"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestOperator_
+pmdao:TestOperator_ rdf:type owl:NamedIndividual ,
+                             pmd:Metadata ,
+                             pmd:Operator ;
+                    ns1:actedOnBehalfOf pmdao:Laboratory_ ;
+                    ns1:value "TestOperator"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceComposition
+pmdao:TestPieceComposition rdf:type owl:NamedIndividual ,
+                                    pmd:ChemicalComposition ,
+                                    pmd:Metadata ;
+                           ns1:value "TestPieceComposition"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceCrossSectionShape
+pmdao:TestPieceCrossSectionShape rdf:type owl:NamedIndividual ,
+                                          pmd:GeometryShape ,
+                                          pmd:Metadata ;
+                                 prov:influenced pmdao:DeterminationOfOriginalCrossSectionArea ;
+                                 ns1:value "TestPieceCrossSectionShape"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceHeatTreatment
+pmdao:TestPieceHeatTreatment rdf:type owl:NamedIndividual ,
+                                      pmd:HeatTreatmentProcess ,
+                                      pmd:Metadata ;
+                             ns1:value "TestPieceHeatTreatmentNote"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceID
+pmdao:TestPieceID rdf:type owl:NamedIndividual ,
+                           pmd:Metadata ,
+                           pmd:TestPieceName ;
+                  ns1:value "TestPieceIndenter"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceParallelLength
+pmdao:TestPieceParallelLength rdf:type owl:NamedIndividual ,
+                                       pmd:Metadata ,
+                                       pmd:ParallelLength ;
+                              prov:influenced pmdao:MarkingTheOriginalGaugeLength ;
+                              pmd:unit pmd:PixelUnit ;
+                              ns1:value "TestPieceParallelLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPiecePreparation
+pmdao:TestPiecePreparation rdf:type owl:NamedIndividual ,
+                                    pmdao:SpecimenPreparationProcess ,
+                                    pmd:Metadata ;
+                           ns1:value "TestPiecePreparation"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceSupplimentaryNote
+pmdao:TestPieceSupplimentaryNote rdf:type owl:NamedIndividual ,
+                                          pmd:Metadata ,
+                                          pmd:Note ;
+                                 ns1:value "TestPieceSupplimentaryNote"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestPieceTotalLength
+pmdao:TestPieceTotalLength rdf:type owl:NamedIndividual ,
+                                    pmd:Length ,
+                                    pmd:Metadata ;
+                           prov:influenced pmdao:MarkingTheOriginalGaugeLength ;
+                           pmd:unit pmd:PixelUnit ;
+                           ns1:value "TestPieceTotalLength"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestStandard
+pmdao:TestStandard rdf:type owl:NamedIndividual ,
+                            pmd:Metadata ,
+                            pmd:Norm ;
+                   ns1:value "TestStandardIdentifier"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestStrain
+pmdao:TestStrain rdf:type owl:NamedIndividual ,
+                          pmdao:Strain ,
+                          pmd:Measurement ,
+                          pmd:SecondaryData ;
+                 pmd:input pmdao:DeterminationOfCyclicStrainHardeningExponent ,
+                           pmdao:DeterminationOfCyclicStrengthCoefficient ,
+                           pmdao:DeterminationOfFatigueDuctilityCoefficient ,
+                           pmdao:DeterminationOfFatigueDuctilityExponent ,
+                           pmdao:DeterminationOfFatigueLife ,
+                           pmdao:DeterminationOfFatigueStrengthCoefficient ,
+                           pmdao:DeterminationOfFatigueStrengthExponent ,
+                           pmdao:DeterminationOfModulusOfElasticity ,
+                           pmdao:PlottingStrainFatigueLifeCurve ,
+                           pmdao:PlottingStressStrainHystersisLoopCurve ;
+                 pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestStress
+pmdao:TestStress rdf:type owl:NamedIndividual ,
+                          pmd:SecondaryData ,
+                          pmd:Stress ;
+                 pmd:input pmdao:DeterminationOfCyclicStrainHardeningExponent ,
+                           pmdao:DeterminationOfCyclicStrengthCoefficient ,
+                           pmdao:DeterminationOfFatigueDuctilityCoefficient ,
+                           pmdao:DeterminationOfFatigueLife ,
+                           pmdao:DeterminationOfFatigueStrengthExponent ,
+                           pmdao:DeterminationOfModulusOfElasticity ,
+                           pmdao:PlottingStressStrainHystersisLoopCurve ;
+                 pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestTemperature
+pmdao:TestTemperature rdf:type owl:NamedIndividual ,
+                               pmd:Measurement ,
+                               pmd:Metadata ,
+                               pmd:Temperature ;
+                      pmd:unit pmd:PixelUnit ;
+                      ns1:value "TestTemperature"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/TestTime
+pmdao:TestTime rdf:type owl:NamedIndividual ,
+                        pmd:Dataset ,
+                        pmd:Measurement ,
+                        pmd:PrimaryData ,
+                        pmd:Time ;
+               pmd:resource pmdao:RowDataTable_ .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/WaveformID
+pmdao:WaveformID rdf:type owl:NamedIndividual ,
+                          pmd:Metadata ,
+                          pmd:NodeName ;
+                 ns1:value "WaveformName&Manufactore&ID"^^xsd:string .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/Waveform_
+pmdao:Waveform_ rdf:type owl:NamedIndividual ,
+                         pmdao:WaveformDevice ;
+                pmd:hasIdentifier pmdao:WaveformID .
+
+
+###  https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleToDefiningCriteria10%
+<https://gitlab.com/kupferdigital/process-graphs/lcf-test/-/raw/main/FatigueTest.ttl/CycleToDefiningCriteria10%> rdf:type owl:NamedIndividual ,
+                                                                                                                          pmdao:FatigueLife ,
+                                                                                                                          pmd:Measurement ,
+                                                                                                                          pmd:SecondaryData ;
+                                                                                                                 pmd:input pmdao:CalculateFatigueTestUncertainity ,
+                                                                                                                           pmdao:DeterminationOfFatigueStrengthCoefficient ;
+                                                                                                                 pmd:resource pmdao:RowDataTable_ ;
+                                                                                                                 ns1:value "FatigueLife"^^xsd:string .
+
+
+###  https://w3id.org/pmd/co/PixelUnit
+pmd:PixelUnit rdf:type owl:NamedIndividual ,
+                       ns2:Unit .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+pmdao:CyclicStrainHardeningExponent ns3:definition "slope of cyclic curve log(σ a) as a function of log(σpa)" ;
+                                    rdfs:label "Cyclic Strain Hardening Exponent" ;
+                                    pmd:definitionSource "ISO 23718:2007" .
+
+
+pmdao:CyclicStrengthCoefficient pmd:definitionSource "ISO 23718:2007" ;
+                                ns3:definition "value of stress that intercepts at εpa = 1 on a cyclic graph log(σa) as a function of log(εpa)" ;
+                                rdfs:label "Cyclic Strength Coefficient" .
+
+
+pmdao:FatigueDuctilityCoefficient pmd:definitionSource "ISO 23718:2007" ;
+                                  rdfs:label "Fatigue Ductility Coefficient" ;
+                                  ns3:definition "Plastic-strain intercept at 2Nf = 1 on lg (Δεp/2) − lg 2Nf plot" .
+
+
+pmdao:FatigueDuctilityExponent ns3:definition "Slope of lg (Δεp/2) − lg 2Nf plot (Specify 2Nf range)" ;
+                               rdfs:label "Fatigue Ductility Exponent" ;
+                               pmd:definitionSource "ISO 23718:2007" .
+
+
+pmdao:FatigueStrengthCoefficient pmd:definitionSource "ISO 23718:2007" ;
+                                 rdfs:label "Fatigue Strength Coefficient" ;
+                                 ns3:definition "Stress intercept at 2Nf = 1 on lg σa − lg 2Nf plot" .
+
+
+pmdao:FatigueStrengthExponent pmd:definitionSource "ISO 23718:2007" ;
+                              rdfs:label "Fatigue Strength Exponent" ;
+                              ns3:definition "value of slope of curve log(εe) as a function of log(2Nf)" .
+
+
+pmdao:FatigueTestingMachine rdfs:label "Fatige Test Machine" ;
+                            ns3:definition "machine for performing the fatigue test" .
+
+
+pmdao:StrainFatigueLifeCurve rdfs:label "Strain-Fatigue Life Curve" ;
+                             ns3:definition "plastic deformation that may occur during fatigue loading" .
+
+
+pmdao:StrainRatio pmd:definitionSource "ISO 23718:2007" ;
+                  rdfs:label "Strain Ratio" ;
+                  ns3:definition "ratio of minimum to maximum strain during any single cycle of fatigue operation" .
+
+
+pmdao:StressStrainHystersisLoopCurve pmd:definitionSource "ISO 12106:2017" ;
+                                     ns3:definition "closed curve of the stress-strain response during one complete cycle" ;
+                                     rdfs:label "Stress-Strain Hysteresis Loop Curve" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
