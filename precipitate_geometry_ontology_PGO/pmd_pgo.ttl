@@ -12,8 +12,12 @@
                             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-3717-7104> ,
                                                                       <https://orcid.org/0000-0002-7094-5371> ;
                             <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
-                            rdfs:label "Platform MaterialDigital - Precipitate Geometry Ontology (PGO)"@en ;
-                            <http://www.w3.org/2004/02/skos/core#definition> "This ontology is part of the \"Orowan Demonstrator\""@en .
+                            <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein. (December 13th, 2023) PGO: Precipitate Geometry Ontology. Version 1.0.0, https://w3id.org/pmd/pgo" ;
+                            <http://purl.org/dc/terms/created> "2023-12-13" ;
+                            <http://purl.org/dc/terms/title> "Platform MaterialDigital - Precipitate Geometry Ontology (PGO)"@en ;
+                            rdfs:comment """The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. 
+It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the \"Orowan Demonstrator\" (available at: https://github.com/materialdigital/demo-orowan)."""@en ;
+                            owl:versionInfo "1.0.0" .
 
 #################################################################
 #    Classes
