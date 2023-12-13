@@ -688,8 +688,12 @@ Note: Stress rate is only used in the elastic part of the test."""@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
              rdfs:label "Tensile Test"@en ,
                         "Zugversuch"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Tensile tests (tension tests) on materials provide information on their strength, ductility as well as other characteristic values under uniaxial tensile stress."@en ,
-                                                              "The tensile test involves straining a test piece by tensile force, generally to fracture, for the determination of one or more mechanical properties specified by the semantically related and defined terms."@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> """Tensile tests (tension tests) on materials provide information on their strength, ductility as well as other characteristic values under uniaxial tensile stress.
+
+The tensile test involves straining a test piece by tensile force, generally to fracture, for the determination of one or more mechanical properties specified by the semantically related and defined terms."""@en ,
+                                                              """Zugversuche (Zugprüfungen) an Werkstoffen geben Auskunft über deren Festigkeit, Duktilität sowie weitere Kennwerte unter einachsiger Zugbeanspruchung.
+
+Beim Zugversuch wird ein Prüfkörper durch Zugkraft belastet, im Allgemeinen bis zum Bruch, um eine oder mehrere mechanische Eigenschaften zu bestimmen, die durch die semantisch verknüpften und definierten Begriffe festgelegt sind."""@de ;
              <https://w3id.org/pmd/co/definitionSource> "DIN EN ISO 6892-1:2019"@en .
 
 
