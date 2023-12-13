@@ -17,14 +17,14 @@
                             <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (July 14th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/tto"@en ;
                             <http://purl.org/dc/terms/created> "2023-07-14"@en ;
                             <http://purl.org/dc/terms/title> "Tensile Test Ontology (TTO)"@en ;
-                            owl:versionInfo "2.0.1" ;
-                            <http://www.w3.org/2004/02/skos/core#definition> """This is the stable version of the PMD ontology of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
+                            rdfs:comment """This is the stable version of the PMD ontology of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
 
 The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile tests and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
 
 The TTO class structure forms a comprehensible and semantic layer for unified storage of data generated in a tensile test including the possibility to record data from analysis, re-evaluation and re-use. Furthermore, extensive metadata allows to assess data quality and reproduce experiments. Following the open world assumption, object properties are deliberately low restrictive and sparse.
 
-TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO"""@en .
+TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO"""@en ;
+                            owl:versionInfo "2.0.1" .
 
 #################################################################
 #    Annotation properties
