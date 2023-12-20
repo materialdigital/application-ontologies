@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/co/> .
+@base <https://w3id.org/pmd/pgo> .
 
 <https://w3id.org/pmd/pgo> rdf:type owl:Ontology ;
                             owl:versionIRI <https://w3id.org/pmd/pgo/1.0.0> ;
@@ -23,105 +23,105 @@ It was created in the frame of the collaborative project Platform MaterialDigita
 #    Classes
 #################################################################
 
-###  http://w3id.org/pmd/pgo/AveragePrecipitateDistance
-<http://w3id.org/pmd/pgo/AveragePrecipitateDistance> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://w3id.org/pmd/pgo/PrecipitateDistance> ;
-                                                     rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                                     rdfs:label "Average Precipitate Distance"@en ,
-                                                                "Mittlerer Ausscheidungsabstand"@de ;
-                                                     <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Ausscheidungsabstand wird der mittlere Ausscheidungsabstand aus mehreren Ausscheidungsabständen ermittelt, z. B. durch die Delauney-Triangulation."@de ,
-                                                                                                      "As a subclass of precipitate distance, the average precipitate distance is determined from several precipitate distances via, e.g., the Delauney triangulation."@en .
+###  https://w3id.org/pmd/pgo/AveragePrecipitateDistance
+<https://w3id.org/pmd/pgo/AveragePrecipitateDistance> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://w3id.org/pmd/pgo/PrecipitateDistance> ;
+                                                      rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                                      rdfs:label "Average Precipitate Distance"@en ,
+                                                                 "Mittlerer Ausscheidungsabstand"@de ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Ausscheidungsabstand wird der mittlere Ausscheidungsabstand aus mehreren Ausscheidungsabständen ermittelt, z. B. durch die Delauney-Triangulation."@de ,
+                                                                                                       "As a subclass of precipitate distance, the average precipitate distance is determined from several precipitate distances via, e.g., the Delauney triangulation."@en .
 
 
-###  http://w3id.org/pmd/pgo/CalibrationFactor
-<http://w3id.org/pmd/pgo/CalibrationFactor> rdf:type owl:Class ;
-                                            rdfs:subClassOf :ValueObject ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                            <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Values Objects bietet der Kalibrierungsfaktor einen Umrechnungsfaktor von Pixeln in reale Dimensionen, der die Skalierung von Bildern in metrische Einheiten ermöglicht."@de ,
-                                                                                             "As a subclass of value object, the calibration factor provides a pixel-to-real-distance conversion factor, that allows image scaling to metric units."@en ,
-                                                                                             "Calibration Factor"@en ,
-                                                                                             "Kalibrierungsfaktor"@de .
+###  https://w3id.org/pmd/pgo/CalibrationFactor
+<https://w3id.org/pmd/pgo/CalibrationFactor> rdf:type owl:Class ;
+                                             rdfs:subClassOf :ValueObject ;
+                                             rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Values Objects bietet der Kalibrierungsfaktor einen Umrechnungsfaktor von Pixeln in reale Dimensionen, der die Skalierung von Bildern in metrische Einheiten ermöglicht."@de ,
+                                                                                              "As a subclass of value object, the calibration factor provides a pixel-to-real-distance conversion factor, that allows image scaling to metric units."@en ,
+                                                                                              "Calibration Factor"@en ,
+                                                                                              "Kalibrierungsfaktor"@de .
 
 
-###  http://w3id.org/pmd/pgo/DarkFieldImage
-<http://w3id.org/pmd/pgo/DarkFieldImage> rdf:type owl:Class ;
-                                         rdfs:subClassOf :Image ;
-                                         rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                         rdfs:label "Dark-field Image"@en ,
-                                                    "Dunkelfeldbild"@de ;
-                                         <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Bildes wird das Dunkelfeldbild mit einem hochauflösenden Transmissionselektronenmikroskop (HR-TEM) erzeugt."@de ,
-                                                                                          "As a subclass of image, the dark-field image is generated from a high-resolution transmission electron microscope (HR-TEM)."@en .
+###  https://w3id.org/pmd/pgo/DarkFieldImage
+<https://w3id.org/pmd/pgo/DarkFieldImage> rdf:type owl:Class ;
+                                          rdfs:subClassOf :Image ;
+                                          rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                          rdfs:label "Dark-field Image"@en ,
+                                                     "Dunkelfeldbild"@de ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Bildes wird das Dunkelfeldbild mit einem hochauflösenden Transmissionselektronenmikroskop (HR-TEM) erzeugt."@de ,
+                                                                                           "As a subclass of image, the dark-field image is generated from a high-resolution transmission electron microscope (HR-TEM)."@en .
 
 
-###  http://w3id.org/pmd/pgo/ImageAnalysisProcess
-<http://w3id.org/pmd/pgo/ImageAnalysisProcess> rdf:type owl:Class ;
-                                               rdfs:subClassOf :NonTransformativeAnalysisProcess ;
-                                               rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                               rdfs:label "Bildanalyse-Prozess"@de ,
-                                                          "Image Analysis Process"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "Als Unterklasse eines nicht-transformativen Analyseverfahrens ist das Bildanalyseverfahren ein Prozess, mit dem nützliche Informationen, wie z. B. Koordinaten von Ausscheidungen in metallischen Legierungen und deren Abständen, aus einem Bild extrahiert und für die weitere Verwendung interpretiert werden."@de ,
-                                                                                                "As subclass of a non-transformative analysis process, the image analysis process is a process by which useful information, such as precipitate coordinates and their distances, are extracted from an image and interpreted for further application."@en .
+###  https://w3id.org/pmd/pgo/ImageAnalysisProcess
+<https://w3id.org/pmd/pgo/ImageAnalysisProcess> rdf:type owl:Class ;
+                                                rdfs:subClassOf :NonTransformativeAnalysisProcess ;
+                                                rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                                rdfs:label "Bildanalyse-Prozess"@de ,
+                                                           "Image Analysis Process"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Als Unterklasse eines nicht-transformativen Analyseverfahrens ist das Bildanalyseverfahren ein Prozess, mit dem nützliche Informationen, wie z. B. Koordinaten von Ausscheidungen in metallischen Legierungen und deren Abständen, aus einem Bild extrahiert und für die weitere Verwendung interpretiert werden."@de ,
+                                                                                                 "As subclass of a non-transformative analysis process, the image analysis process is a process by which useful information, such as precipitate coordinates and their distances, are extracted from an image and interpreted for further application."@en .
 
 
-###  http://w3id.org/pmd/pgo/Particle
-<http://w3id.org/pmd/pgo/Particle> rdf:type owl:Class ;
-                                   rdfs:subClassOf :Object ;
-                                   rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                   rdfs:label "Particle"@en ,
-                                              "Partikel"@de ;
-                                   <http://www.w3.org/2004/02/skos/core#definition> "Als eine Subklasse von Objekt ist ein Partikel ein kleines, lokalisiertes Objekt, das durch mehrere physikalische oder chemische Eigenschaften wie Volumen, Dichte oder Masse beschrieben werden kann."@de ,
-                                                                                    "As a subclass of object, a particle is a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass."@en ;
-                                   :definitionSource <https://en.wikipedia.org/wiki/Particle> .
+###  https://w3id.org/pmd/pgo/Particle
+<https://w3id.org/pmd/pgo/Particle> rdf:type owl:Class ;
+                                    rdfs:subClassOf :Object ;
+                                    rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                    rdfs:label "Particle"@en ,
+                                               "Partikel"@de ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "Als eine Subklasse von Objekt ist ein Partikel ein kleines, lokalisiertes Objekt, das durch mehrere physikalische oder chemische Eigenschaften wie Volumen, Dichte oder Masse beschrieben werden kann."@de ,
+                                                                                     "As a subclass of object, a particle is a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass."@en ;
+                                    :definitionSource <https://en.wikipedia.org/wiki/Particle> .
 
 
-###  http://w3id.org/pmd/pgo/ParticleArea
-<http://w3id.org/pmd/pgo/ParticleArea> rdf:type owl:Class ;
-                                       rdfs:subClassOf :Area ;
+###  https://w3id.org/pmd/pgo/ParticleArea
+<https://w3id.org/pmd/pgo/ParticleArea> rdf:type owl:Class ;
+                                        rdfs:subClassOf :Area ;
+                                        rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                        rdfs:label "Particle Area"@en ,
+                                                   "Partikelfläche"@de ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Fläche ist die Partikelfläche ein Maß,welches zum Vergleich von Partikelgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet."@de ,
+                                                                                         "As a subclass of area, particle area is a measure used to compare particle sizes. Usually, a circular approximation is used for precipitating particles."@en .
+
+
+###  https://w3id.org/pmd/pgo/ParticleRadius
+<https://w3id.org/pmd/pgo/ParticleRadius> rdf:type owl:Class ;
+                                          rdfs:subClassOf :Radius ;
+                                          rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                          rdfs:label "Particle Radius"@en ,
+                                                     "Partikelradius"@de ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Radius ist der Partikelradius ein Maß, das für eine spezifische Korrelation der Partikelgröße verwendet wird. Der Partikelradius wird in der Regel aus der kreisförmigen Annäherung der Partikelfläche berechnet."@de ,
+                                                                                           "As a subclass of radius, particle radius is a measure used to perform a specific particle size correlation. The particle radius is usually obtained from the circular approximation of the particle area."@en .
+
+
+###  https://w3id.org/pmd/pgo/Precipitate
+<https://w3id.org/pmd/pgo/Precipitate> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/pgo/Particle> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                       rdfs:label "Particle Area"@en ,
-                                                  "Partikelfläche"@de ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Fläche ist die Partikelfläche ein Maß,welches zum Vergleich von Partikelgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet."@de ,
-                                                                                        "As a subclass of area, particle area is a measure used to compare particle sizes. Usually, a circular approximation is used for precipitating particles."@en .
+                                       rdfs:label "Ausscheidung"@de ,
+                                                  "Precipitate"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden."@de ,
+                                                                                        "As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments."@en .
 
 
-###  http://w3id.org/pmd/pgo/ParticleRadius
-<http://w3id.org/pmd/pgo/ParticleRadius> rdf:type owl:Class ;
-                                         rdfs:subClassOf :Radius ;
-                                         rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                         rdfs:label "Particle Radius"@en ,
-                                                    "Partikelradius"@de ;
-                                         <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Radius ist der Partikelradius ein Maß, das für eine spezifische Korrelation der Partikelgröße verwendet wird. Der Partikelradius wird in der Regel aus der kreisförmigen Annäherung der Partikelfläche berechnet."@de ,
-                                                                                          "As a subclass of radius, particle radius is a measure used to perform a specific particle size correlation. The particle radius is usually obtained from the circular approximation of the particle area."@en .
+###  https://w3id.org/pmd/pgo/PrecipitateDistance
+<https://w3id.org/pmd/pgo/PrecipitateDistance> rdf:type owl:Class ;
+                                               rdfs:subClassOf :Distance ;
+                                               rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                               rdfs:label "Ausscheidungsabstand"@de ,
+                                                          "Precipitate Distance"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Abstands ist der Ausscheidungsabstand ein Maß für den Abstand zwischen zwei Ausscheidungen in metallischen Legierungen. Üblicherweise wird dieser Abstand aus der Analyse von Dunkelfeld-TEM-Bildern gewonnen und in Nanometern angegeben."@de ,
+                                                                                                "As a subclass of distance, the precipitate distance is a measure of the distance between two precipitates. Usually, this distance is obtained from analysing dark-field TEM images and given in nanometers."@en .
 
 
-###  http://w3id.org/pmd/pgo/Precipitate
-<http://w3id.org/pmd/pgo/Precipitate> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://w3id.org/pmd/pgo/Particle> ;
-                                      rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                      rdfs:label "Ausscheidung"@de ,
-                                                 "Precipitate"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden."@de ,
-                                                                                       "As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments."@en .
+###  https://w3id.org/pmd/pgo/PrecipitateNumber
+<https://w3id.org/pmd/pgo/PrecipitateNumber> rdf:type owl:Class ;
+                                             rdfs:subClassOf :Index ;
+                                             rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ,
+                                                              "Die Ausscheidungsnummer ermöglicht die eindeutige Zuordnung der gemessenen Eigenschaften zu einem bestimmten Ausscheidung."@de ,
+                                                              "The precipitate number enables the explicit assignment of measured properties to a specific precipitate."@en ;
+                                             rdfs:label "Ausscheidungsnummer"@de ,
+                                                        "Precipitate Number"@en .
 
 
-###  http://w3id.org/pmd/pgo/PrecipitateDistance
-<http://w3id.org/pmd/pgo/PrecipitateDistance> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Distance ;
-                                              rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                              rdfs:label "Ausscheidungsabstand"@de ,
-                                                         "Precipitate Distance"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Abstands ist der Ausscheidungsabstand ein Maß für den Abstand zwischen zwei Ausscheidungen in metallischen Legierungen. Üblicherweise wird dieser Abstand aus der Analyse von Dunkelfeld-TEM-Bildern gewonnen und in Nanometern angegeben."@de ,
-                                                                                               "As a subclass of distance, the precipitate distance is a measure of the distance between two precipitates. Usually, this distance is obtained from analysing dark-field TEM images and given in nanometers."@en .
-
-
-###  http://w3id.org/pmd/pgo/PrecipitateNumber
-<http://w3id.org/pmd/pgo/PrecipitateNumber> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Index ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ,
-                                                             "Die Ausscheidungsnummer ermöglicht die eindeutige Zuordnung der gemessenen Eigenschaften zu einem bestimmten Ausscheidung."@de ,
-                                                             "The precipitate number enables the explicit assignment of measured properties to a specific precipitate."@en ;
-                                            rdfs:label "Ausscheidungsnummer"@de ,
-                                                       "Particle Number"@en .
-
-
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
