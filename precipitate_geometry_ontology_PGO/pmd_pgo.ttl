@@ -74,26 +74,6 @@ It was created in the frame of the collaborative project Platform MaterialDigita
                                     :definitionSource <https://en.wikipedia.org/wiki/Particle> .
 
 
-###  https://w3id.org/pmd/pgo/ParticleArea
-<https://w3id.org/pmd/pgo/ParticleArea> rdf:type owl:Class ;
-                                        rdfs:subClassOf :Area ;
-                                        rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                        rdfs:label "Particle Area"@en ,
-                                                   "Partikelfläche"@de ;
-                                        <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Fläche ist die Partikelfläche ein Maß,welches zum Vergleich von Partikelgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet."@de ,
-                                                                                         "As a subclass of area, particle area is a measure used to compare particle sizes. Usually, a circular approximation is used for precipitating particles."@en .
-
-
-###  https://w3id.org/pmd/pgo/ParticleRadius
-<https://w3id.org/pmd/pgo/ParticleRadius> rdf:type owl:Class ;
-                                          rdfs:subClassOf :Radius ;
-                                          rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
-                                          rdfs:label "Particle Radius"@en ,
-                                                     "Partikelradius"@de ;
-                                          <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Radius ist der Partikelradius ein Maß, das für eine spezifische Korrelation der Partikelgröße verwendet wird. Der Partikelradius wird in der Regel aus der kreisförmigen Annäherung der Partikelfläche berechnet."@de ,
-                                                                                           "As a subclass of radius, particle radius is a measure used to perform a specific particle size correlation. The particle radius is usually obtained from the circular approximation of the particle area."@en .
-
-
 ###  https://w3id.org/pmd/pgo/Precipitate
 <https://w3id.org/pmd/pgo/Precipitate> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/pgo/Particle> ;
@@ -102,6 +82,16 @@ It was created in the frame of the collaborative project Platform MaterialDigita
                                                   "Precipitate"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden."@de ,
                                                                                         "As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments."@en .
+
+
+###  https://w3id.org/pmd/pgo/PrecipitateArea
+<https://w3id.org/pmd/pgo/PrecipitateArea> rdf:type owl:Class ;
+                                           rdfs:subClassOf :Area ;
+                                           rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                           rdfs:label "Ausscheidungsfläche"@de ,
+                                                      "Precipitate Area"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse der Fläche ist die Ausscheidungsfläche ein Maß,welches zum Vergleich von Ausscheidungsgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet."@de ,
+                                                                                            "As a subclass of the area, the precipitate area is a measure that is used to compare precipitate sizes. As a rule, a circular approximation is used for precipitation particles."@en .
 
 
 ###  https://w3id.org/pmd/pgo/PrecipitateDistance
@@ -122,6 +112,16 @@ It was created in the frame of the collaborative project Platform MaterialDigita
                                                               "The precipitate number enables the explicit assignment of measured properties to a specific precipitate."@en ;
                                              rdfs:label "Ausscheidungsnummer"@de ,
                                                         "Precipitate Number"@en .
+
+
+###  https://w3id.org/pmd/pgo/PrecipitateRadius
+<https://w3id.org/pmd/pgo/PrecipitateRadius> rdf:type owl:Class ;
+                                             rdfs:subClassOf :Radius ;
+                                             rdfs:isDefinedBy <https://w3id.org/pmd/pgo> ;
+                                             rdfs:label "Ausscheidungsradius"@de ,
+                                                        "Precipitate Radius"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Als Subklasse des Radius ist der Ausscheidungsradius ein Maß, mit dem eine spezifische Korrelation der Ausscheidungsgröße vorgenommen werden kann. Der Ausscheidungsradius wird in der Regel aus der kreisförmigen Annäherung der Ausscheidungsfläche ermittelt."@de ,
+                                                                                              "As a subclass of radius, precipitate radius is a measure used to perform a specific precipitate size correlation. The precipitate radius is usually obtained from the circular approximation of the precipitate area."@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
