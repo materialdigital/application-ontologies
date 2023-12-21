@@ -1,0 +1,394 @@
+@prefix : <https://w3id.org/pmd/co/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <https://qudt.org/vocab/unit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/pmd/hmo> .
+
+<https://w3id.org/pmd/hmo> rdf:type owl:Ontology ;
+                            owl:versionIRI <https://w3id.org/pmd/hmo/0.0.1> ;
+                            owl:imports <https://w3id.org/pmd/co> ;
+                            <http://purl.org/dc/terms/created> "2023-09-28"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> """This is the development version of the PMD ontology module of hardness measurements (Hardness Measurement Ontology - HMO) as developed on the basis of the standard ISO 6507-1:2018.
+
+The HMO was developed in the frame of the PMD project. The HMO provides conceptualizations valid for the description of hardness measurements and corresponding data in accordance with the respective standard. By using HMO for storing hardness measurement data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of HMO facilitates data retrieval and downstream usage. Due to a close connection to the mid-level PMD core ontology (PMDco), the interoperability of hardness measurement data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
+
+The HMO class structure forms a comprehensible and semantic layer for unified storage of data generated in hardness measurements including the possibility to record data from analysis, re-evaluation and re-use. Furthermore, extensive metadata allows to assess data quality and reproduce experiments. Following the open world assumption, object properties are deliberately low restrictive and sparse.
+
+HMO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/hardness_measurement_ontology_HMO
+
+Development of HMO was based on and fueled by the TTO: Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (June 07th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/tto"""@en ;
+                            <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
+                            owl:versionInfo "0.0.1" ;
+                            <http://www.w3.org/ns/prov#editorialNote> "The hardness measurement ontology (HMO) was developed in the frame of the joint project of platform material digital (PMD). As being one of the modules of it, the HMO is strongly connected to the PMD core ontology (PMDco) and thus, HMO concepts use the namespace https://w3id.org/pmd/co."@en ;
+                            <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-0086-5808> ;
+                            <http://purl.org/dc/terms/bibliographicCitation> "Matthias Jung. (September 28th, 2023) HMO: Hardness Measurement Ontology. Version 0.0.1, https://w3id.org/pmd/hmo"@en ;
+                            <http://purl.org/dc/terms/title> "Hardness Measurement Ontology (HMO)"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/pmd/co/Hardness
+:Hardness rdf:type owl:Class ;
+          rdfs:subClassOf :ValueObject ;
+          rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+          rdfs:label "Hardness"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+          :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/HardnessTest
+:HardnessTest rdf:type owl:Class ;
+              rdfs:subClassOf :MechanicalTestingProcess ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "Hardness Test"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+              :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/ISO6507-1VickersHardnessTest
+:ISO6507-1VickersHardnessTest rdf:type owl:Class ;
+                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :participant ;
+                                                    owl:someValuesFrom :TestPiece
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :participant ;
+                                                    owl:someValuesFrom :VickersDiagonalMeasuringSystem
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :participant ;
+                                                    owl:someValuesFrom :VickersHardnessTestingMachine
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :participant ;
+                                                    owl:someValuesFrom :VickersIndenter
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :characteristic ;
+                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :VickersTestForce
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :characteristic ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :VickersTestDuration
+                                                  ] ;
+                              rdfs:subClassOf :VickersHardnessTest ;
+                              rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                              rdfs:label "ISO6507-1 Vickers Hardness Test"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "Vickers hardness test in accordance with ISO 6507-1:2018"@en ;
+                              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/VickersDiagonalMeasuringSystem
+:VickersDiagonalMeasuringSystem rdf:type owl:Class ;
+                                rdfs:subClassOf :DimensionMeasuringDevice ;
+                                rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                                rdfs:label "Vickers diagonal measuring system"@en ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "A system for measuring the diagonal lengths of the indentation produced during a Vickers hardness test. The diagonal measuring system shall satisfy the requirements in ISO 6507-2."@en ;
+                                :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/VickersHardnessTest
+:VickersHardnessTest rdf:type owl:Class ;
+                     rdfs:subClassOf :HardnessTest ;
+                     rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                     rdfs:label "Vickers Hardness Test"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Vickers hardness test"@en .
+
+
+###  https://w3id.org/pmd/co/VickersHardnessTestingMachine
+:VickersHardnessTestingMachine rdf:type owl:Class ;
+                               rdfs:subClassOf :TestingMachine ;
+                               rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                               rdfs:label "Vickers Hardness Testing Machine"@en ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The testing machine shall be capable of applying a predetermined force or forces within the desired range of test forces, in accordance with ISO 6507-2."@en ;
+                               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/VickersHardnessValue
+:VickersHardnessValue rdf:type owl:Class ;
+                      rdfs:subClassOf :Hardness ;
+                      rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                      rdfs:label "Vickers Hardness Value"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+                      :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/VickersIndenter
+:VickersIndenter rdf:type owl:Class ;
+                 rdfs:subClassOf :Component ;
+                 rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                 rdfs:label "Vickers Indenter"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The indenter shall be a diamond in the shape of a right pyramid with a square base, as specified in ISO 6507-2."@en ;
+                 :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/VickersIndentionDiagonalLength
+:VickersIndentionDiagonalLength rdf:type owl:Class ;
+                                rdfs:subClassOf :Length ;
+                                rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+                                rdfs:label "Vickers Indention Diagonal Length"@en ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+                                :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/VickersIndentionIndividualDiagonalLength
+:VickersIndentionIndividualDiagonalLength rdf:type owl:Class ;
+                                          rdfs:subClassOf :VickersIndentionDiagonalLength ;
+                                          rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+                                          rdfs:label "Vickers indention individual diagonal length"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+                                          :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/VickersTestDuration
+:VickersTestDuration rdf:type owl:Class ;
+                     rdfs:subClassOf :Duration ;
+                     rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+                     rdfs:label "Vickers test duration"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+                     :definitionSource "FIXME"@en .
+
+
+###  https://w3id.org/pmd/co/VickersTestForce
+:VickersTestForce rdf:type owl:Class ;
+                  rdfs:subClassOf :Force ;
+                  rdfs:isDefinedBy <http://w3id.org/pmd/hmo> ;
+                  rdfs:label "Vickers Test Force"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "FIXME"@en ;
+                  :definitionSource "FIXME"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/pmd/co/TestForceHV0001
+:TestForceHV0001 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.001"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.001 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV0002
+:TestForceHV0002 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.002"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.002 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV0003
+:TestForceHV0003 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.003"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.003 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV0005
+:TestForceHV0005 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.005"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.005 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV001
+:TestForceHV001 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.01"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.01 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV0015
+:TestForceHV0015 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.015"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.015 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV002
+:TestForceHV002 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.02"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.02 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV0025
+:TestForceHV0025 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.025"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.025 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV005
+:TestForceHV005 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.05"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.05 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV01
+:TestForceHV01 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.1"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.1 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+			  
+
+
+###  https://w3id.org/pmd/co/TestForceHV02
+:TestForceHV02 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.2"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.2 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+			  
+
+
+###  https://w3id.org/pmd/co/TestForceHV03
+:TestForceHV03 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.3"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.3 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+			  
+
+
+###  https://w3id.org/pmd/co/TestForceHV05
+:TestForceHV05 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "0.5"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV0.5 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV1
+:TestForceHV1 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "1.0"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV1 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV2
+:TestForceHV2 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "2.0"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV2 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV3
+:TestForceHV3 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "3.0"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV3 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV5
+:TestForceHV5 rdf:type owl:NamedIndividual ,
+                       :VickersTestForce ;
+              :unit qudt:KiloPOND ;
+              :value "5.0"^^xsd:float ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+              rdfs:label "HV5 Test Force"@en ;
+              :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  https://w3id.org/pmd/co/TestForceHV10
+:TestForceHV10 rdf:type owl:NamedIndividual ,
+                        :VickersTestForce ;
+               :unit qudt:KiloPOND ;
+               :value "10.0"^^xsd:float ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+               rdfs:label "HV10 Test Force"@en ;
+               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+			   
+###  https://w3id.org/pmd/co/TestForceHV20
+:TestForceHV20 rdf:type owl:NamedIndividual ,
+                        :VickersTestForce ;
+               :unit qudt:KiloPOND ;
+               :value "20.0"^^xsd:float ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+               rdfs:label "HV20 Test Force"@en ;
+               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+			   
+###  https://w3id.org/pmd/co/TestForceHV30
+:TestForceHV30 rdf:type owl:NamedIndividual ,
+                        :VickersTestForce ;
+               :unit qudt:KiloPOND ;
+               :value "30.0"^^xsd:float ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+               rdfs:label "HV30 Test Force"@en ;
+               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+			   
+###  https://w3id.org/pmd/co/TestForceHV50
+:TestForceHV50 rdf:type owl:NamedIndividual ,
+                        :VickersTestForce ;
+               :unit qudt:KiloPOND ;
+               :value "50.0"^^xsd:float ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+               rdfs:label "HV50 Test Force"@en ;
+               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+			   
+###  https://w3id.org/pmd/co/TestForceHV100
+:TestForceHV100 rdf:type owl:NamedIndividual ,
+                        :VickersTestForce ;
+               :unit qudt:KiloPOND ;
+               :value "100.0"^^xsd:float ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/hmo> ;
+               rdfs:label "HV100 Test Force"@en ;
+               :definitionSource "DIN EN ISO 6507-1:2018"@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
