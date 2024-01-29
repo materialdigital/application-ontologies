@@ -1,6 +1,6 @@
 # Precipitate Geometry Ontology (PGO)
 
-This repository comprises information on the precipitate geometry ontology (TTO) that was developed within the frame of the joint project 
+This repository comprises information on the precipitate geometry ontology (PGO) that was developed within the frame of the collaborative project 
 Platform MaterialDigital (PMD): [PMD website](https://materialdigital.de/). 
 It is designed as an application ontology by importing and thus making use of the mid-level PMD Core Ontology (PMDco). Hence, it can be found within this [PGO application ontology repository](https://github.com/materialdigital/application-ontologies/tree/main/precipitate_geometry_ontology_PGO) as a part of the [PMD application ontology (PMDao)](https://github.com/materialdigital/application-ontologies/tree/main) repository.
 
@@ -10,7 +10,7 @@ Thereby, within the "Orowan Demonstrator", several ontologies are combined, one 
 ## Namespaces
 In this section, the namespaces used in PGO are listed. These can also be found in the [pmd_pgo.ttl file](https://github.com/materialdigital/application-ontologies/blob/main/precipitate_geometry_ontology_PGO/pmd_pgo.ttl).
 Since PGO imports the PMDco, the PMDco namespace (https://w3id.org/pmd/co/) is used for ontological concepts.
-The base of the PGO itself (IRI of the ontology) is https://w3id.org/pmd/pgo. 
+The base of the PGO (IRI of the ontology) is https://w3id.org/pmd/pgo/. 
 
 | Prefix | Namespace / URI                             |
 |:-------|---------------------------------------------|
