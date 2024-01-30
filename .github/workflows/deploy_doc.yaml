@@ -42,6 +42,15 @@ jobs:
            mkdir -p public/${{ env.ao }}
            java -jar widoco.jar -ontFile deploy_checkout/${{ env.aodir }}/${{ env.aottl }} -outFolder public/${{ env.ao }} -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
            cp public/${{ env.ao }}/index-en.html public/${{ env.ao }}/index.html
+    - env:
+        ao: mo
+        aodir: microscopy_ontology_MO
+        aottl: pmd_mo.ttl
+      name: Build HTML docs for ${{ env.ao }} on ${{ github.ref_name }}
+      run: | 
+           mkdir -p public/${{ env.ao }}
+           java -jar widoco.jar -ontFile deploy_checkout/${{ env.aodir }}/${{ env.aottl }} -outFolder public/${{ env.ao }} -htaccess -uniteSections -includeAnnotationProperties -lang en-de  -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
+           cp public/${{ env.ao }}/index-en.html public/${{ env.ao }}/index.html
 ## Somehow this isn't working for hto
 #    - env:
 #        ao: hto
