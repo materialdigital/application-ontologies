@@ -4,20 +4,21 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/mo> .
+@base <https://w3id.org/pmd/co/2.0.7> .
 
-<https://w3id.org/pmd/mo> rdf:type owl:Ontology ;
-                           owl:imports <https://w3id.org/pmd/co/2.0.7> ;
-                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-3717-7104> ,
-                                                                     <https://orcid.org/0000-0002-7094-5371> ;
-                           <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
-                           <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, June Lau. (January 29th, 2024) MO: microscopy ontology. Version 1.0.0, https://w3id.org/pmd/mo/"@en ;
-                           <http://purl.org/dc/terms/title> "Microscopy Ontology (MO)"@en ;
-                           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                           <http://www.w3.org/2004/02/skos/core#definition> """Die Mikroskopie-Ontologie (MO) ist ein umfassender Rahmen für die Darstellung von Wissen, der Konzepte aus den Bereichen Mikroskopie und Mikroanalyse umfasst. Die MO basiert semantisch auf der PMD-Kernontologie PMDco (die in MO importiert wird), um eine Verbindung zu anderen MSE-Anwendungsontologien und domänenneutralen Konzepten in etablierten Top-Level-Ontologien zu ermöglichen. Das Hauptziel von MO ist es, ein standardisiertes Vokabular und einen Rahmen für die Beschreibung und Organisation von Konzepten, Entitäten und Beziehungen im Bereich der Mikroskopie und Mikroanalyse bereitzustellen. Diese Standardisierung erleichtert die Kommunikation und Interoperabilität zwischen verschiedenen Systemen, Datenbanken und Forschungsgruppen. Um ein Vokabular zu erhalten, das in diesem Bereich relevant und daher standardisierungswürdig ist, wurde ein NLP-Ansatz angewandt, mit dessen Hilfe häufig verwendete Begriffe ermittelt wurden. Auf der Grundlage dieser Liste von Begriffen wurde dann die MO entwickelt. In der Mikroskopie und Mikroanalytik fallen große Datenmengen aus verschiedenen Techniken und Instrumenten an. Die MO kann dazu beitragen, heterogene Datenquellen zu integrieren und zu verknüpfen, so dass Daten aus verschiedenen Experimenten und Studien effektiver kombiniert und analysiert werden können.
+<https://w3id.org/pmd/co/2.0.7> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://w3id.org/pmd/mo/1.0.0> ;
+                                 owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                                 <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-3717-7104> ,
+                                                                           <https://orcid.org/0000-0002-7094-5371> ;
+                                 <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
+                                 <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, June Lau. (January 29th, 2024) MO: microscopy ontology. Version 1.0.0, https://w3id.org/pmd/mo/"@en ;
+                                 <http://purl.org/dc/terms/title> "Microscopy Ontology (MO)"@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> """Die Mikroskopie-Ontologie (MO) ist ein umfassender Rahmen für die Darstellung von Wissen, der Konzepte aus den Bereichen Mikroskopie und Mikroanalyse umfasst. Die MO basiert semantisch auf der PMD-Kernontologie PMDco (die in MO importiert wird), um eine Verbindung zu anderen MSE-Anwendungsontologien und domänenneutralen Konzepten in etablierten Top-Level-Ontologien zu ermöglichen. Das Hauptziel von MO ist es, ein standardisiertes Vokabular und einen Rahmen für die Beschreibung und Organisation von Konzepten, Entitäten und Beziehungen im Bereich der Mikroskopie und Mikroanalyse bereitzustellen. Diese Standardisierung erleichtert die Kommunikation und Interoperabilität zwischen verschiedenen Systemen, Datenbanken und Forschungsgruppen. Um ein Vokabular zu erhalten, das in diesem Bereich relevant und daher standardisierungswürdig ist, wurde ein NLP-Ansatz angewandt, mit dessen Hilfe häufig verwendete Begriffe ermittelt wurden. Auf der Grundlage dieser Liste von Begriffen wurde dann die MO entwickelt. In der Mikroskopie und Mikroanalytik fallen große Datenmengen aus verschiedenen Techniken und Instrumenten an. Die MO kann dazu beitragen, heterogene Datenquellen zu integrieren und zu verknüpfen, so dass Daten aus verschiedenen Experimenten und Studien effektiver kombiniert und analysiert werden können.
 Darüber hinaus dient die MO als Grundlage für die Annotation von Mikroskopie- und Mikroanalysedaten mit standardisierten Metadaten. Diese erweiterte Metadatenbeschreibung verbessert die Interpretierbarkeit, Durchsuchbarkeit und Wiederverwendbarkeit von Daten und fördert die Transparenz und Reproduzierbarkeit in der Forschung. Darüber hinaus kann die MO durch die Formalisierung des Wissens über Instrumente, Techniken, Materialien und Phänomene die Grundlage für maschinelles Denken zur Unterstützung der Dateninterpretation, Hypothesenbildung und Versuchsplanung bilden.
 Insgesamt soll MO die Forschung voranbringen, die Zusammenarbeit fördern und den Wissensaustausch in diesem interdisziplinären Bereich erleichtern."""@de ,
-                                                                            """The Microscopy Ontology (MO) is a comprehensive framework for representing knowledge that encompasses concepts from the domains of microscopy and microanalysis. The MO is semantically based on the mid-level PMD Core Ontology PMDco (which is imported in MO) to allow a connection to other MSE application ontologies and domain neutral concepts found in established top-level ontologies. The primary goal of MO is to provide a standardized vocabulary and framework for describing and organizing concepts, entities, and relationships within the field of microscopy and microanalysis. This standardization facilitates communication and interoperability between different systems, databases, and research groups. In order to obtain a vocabulary that is relevant in the field and therefore worth standardizing, an NLP approach was applied, with the help of which commonly used terms were determined. MO was then developed based on the respective list of terms. Microscopy and microanalysis generate vast amounts of data from various techniques and instruments. MO may help to integrate and link heterogeneous data sources, enabling the combination and analysis of data from different experiments and studies more effectively. Furthermore, MO serves as a basis for annotating microscopy and microanalysis data with standardized metadata. This improved metadata description enhances the interpretability, searchability, and reusability of data, promoting transparency and reproducibility in research. Moreover, by formalizing knowledge about instruments, techniques, materials, and phenomena, MO may provide the basis to enable machine reasoning to support data interpretation, hypothesis generation, and experimental design.
+                                                                                  """The Microscopy Ontology (MO) is a comprehensive framework for representing knowledge that encompasses concepts from the domains of microscopy and microanalysis. The MO is semantically based on the mid-level PMD Core Ontology PMDco (which is imported in MO) to allow a connection to other MSE application ontologies and domain neutral concepts found in established top-level ontologies. The primary goal of MO is to provide a standardized vocabulary and framework for describing and organizing concepts, entities, and relationships within the field of microscopy and microanalysis. This standardization facilitates communication and interoperability between different systems, databases, and research groups. In order to obtain a vocabulary that is relevant in the field and therefore worth standardizing, an NLP approach was applied, with the help of which commonly used terms were determined. MO was then developed based on the respective list of terms. Microscopy and microanalysis generate vast amounts of data from various techniques and instruments. MO may help to integrate and link heterogeneous data sources, enabling the combination and analysis of data from different experiments and studies more effectively. Furthermore, MO serves as a basis for annotating microscopy and microanalysis data with standardized metadata. This improved metadata description enhances the interpretability, searchability, and reusability of data, promoting transparency and reproducibility in research. Moreover, by formalizing knowledge about instruments, techniques, materials, and phenomena, MO may provide the basis to enable machine reasoning to support data interpretation, hypothesis generation, and experimental design.
 Overall, MO is intended to advance research, promoting collaboration, and facilitating knowledge exchange in this interdisciplinary domain."""@en .
 
 #################################################################
@@ -41,7 +42,10 @@ Overall, MO is intended to advance research, promoting collaboration, and facili
             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Aberration"@de ,
-                       "Aberration"@en .
+                       "Aberration"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Abweichung vom idealen oder erwarteten Verhalten, häufig im Zusammenhang mit optischen Systemen verwendet."@de ,
+                                                             "Deviation from the ideal or expected behavior, often used in the context of optical systems."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/AccelerationVoltage
@@ -120,7 +124,10 @@ Note: The concept of an angle is fundamental in geometry and is often used to de
                   rdfs:subClassOf :Resolution ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                   rdfs:label "Atomare Auflösung"@de ,
-                             "Atomic Resolution"@en .
+                             "Atomic Resolution"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Die Fähigkeit, einzelne Atome in einem Bild oder einer Struktur aufzulösen."@de ,
+                                                                   "The ability to resolve individual atoms in an image or structure."@en ;
+                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/AugerElectronSpectroscopy
@@ -169,7 +176,10 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             rdfs:subClassOf :Energy ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Beam Energy"@en ,
-                       "Strahlungsenergie"@de .
+                       "Strahlungsenergie"@de ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Die Energie eines Teilchen- oder Photonenstrahls, der in verschiedenen Analyseverfahren verwendet wird."@de ,
+                                                             "The energy of a particle or photon beam used in various analytical techniques."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/BeamPath
@@ -225,7 +235,10 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                      rdfs:subClassOf :Aberration ;
                      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                      rdfs:label "Chromatic Aberration"@en ,
-                                "Chromatische Aberration"@de .
+                                "Chromatische Aberration"@de ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Die Unfähigkeit eines Objektivs, alle Farben auf denselben Konvergenzpunkt zu fokussieren."@de ,
+                                                                      "The failure of a lens to focus all colors to the same convergence point."@en ;
+                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/CoherentBeam
@@ -246,7 +259,10 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                       rdfs:subClassOf :Efficiency ;
                       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                       rdfs:label "Collection Efficiency"@en ,
-                                 "Kollektoreffizienz"@de .
+                                 "Kollektoreffizienz"@de ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Die Fähigkeit eines Detektors oder Systems, relevante Signale oder Daten zu erfassen und aufzuzeichnen."@de ,
+                                                                       "The ability of a detector or system to capture and record relevant signals or data."@en ;
+                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/CondensorLense
@@ -286,10 +302,15 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope
 :Cryo-ScanningElectronMicroscope rdf:type owl:Class ;
                                  rdfs:subClassOf :ScanningElectronMicroscope ;
+                                 rdfs:comment "A cryo-scanning electron microscope is typically used for imaging biological samples."@en ,
+                                              "Ein Kryo-Rasterelektronenmikroskop wird in der Regel zur Abbildung biologischer Proben verwendet."@de ,
+                                              "Eine Art Elektronenmikroskop, das bei kryogenen Temperaturen arbeitet."@de ;
                                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                  rdfs:label "Cryo Scanning Electron Microscope"@en ,
                                             "Kryo-Rasterelektronenmikroskop"@de ,
-                                            "cryo-SEM"@en .
+                                            "cryo-SEM"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A type of electron microscope that operates under cryogenic temperatures."@en ;
+                                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/CryoElectronTomography
@@ -309,16 +330,24 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                                     rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                     rdfs:label "Cryo Transmission Electron Microscope"@en ,
                                                "Kryo-Transmissionselektronenmikroskop"@de ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "A transmission electron microscope that operates at cryogenic temperatures."@en ,
+                                                                                     "Ein Transmissionselektronenmikroskop, das bei kryogenen Temperaturen arbeitet."@de ;
+                                    <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                     :abbreviation "cryo-TEM"@en .
 
 
 ###  https://w3id.org/pmd/mo/Current
 :Current rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+         rdfs:comment "Der Strom wird normalerweise in Ampere (A) gemessen."@de ,
+                      "The current is typically measured in amperes (A)."@en ;
          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
          rdfs:label "Current"@en ,
                     "Strom"@de ;
-         <http://www.w3.org/2004/02/skos/core#altLabel> "Stromstärke"@de .
+         <http://www.w3.org/2004/02/skos/core#altLabel> "Stromstärke"@de ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Der Fluss der elektrischen Ladung."@de ,
+                                                          "The flow of electric charge."@en ;
+         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/DetectorQuantumEfficiency
@@ -326,7 +355,10 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                            rdfs:subClassOf :Efficiency ;
                            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                            rdfs:label "Detector Quantum Efficiency"@en ,
-                                      "Detektor Quantenausbeute"@de .
+                                      "Detektor Quantenausbeute"@de ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Die Effizienz, mit der ein Detektor einfallende Strahlung in Nutzsignale umwandelt."@de ,
+                                                                            "The efficiency with which a detector converts incident radiation into useful signals."@en ;
+                           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Diffraction
@@ -425,7 +457,10 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Efficiency"@en ,
-                       "Effizienz"@de .
+                       "Effizienz"@de ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Das Verhältnis von nützlichem / nutzbarem Output zum gesamten Input in einem System."@de ,
+                                                             "The ratio of useful output to total input in any system."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Electrode
@@ -514,7 +549,10 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                     rdfs:subClassOf <https://w3id.org/pmd/co/ElectronMicroscope> ;
                     rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                     rdfs:label "Electron Microprobe"@en ,
-                               "Elektronenmikrosonde"@de .
+                               "Elektronenmikrosonde"@de ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "An analytical instrument used to determine the chemical composition of materials."@en ,
+                                                                     "Ein Analyseinstrument zur Bestimmung der chemischen Zusammensetzung von Materialien."@de ;
+                    <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ElectronProbe
@@ -535,7 +573,10 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                             rdfs:subClassOf :ElectronMicroprobe ;
                             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                             rdfs:label "Electron Probe Micro Analyzer"@en ,
-                                       "Elektronensonden-Mikro-Analysator"@de .
+                                       "Elektronensonden-Mikro-Analysator"@de ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "An instrument used for elemental analysis of solid materials by bombarding them with a focused electron beam."@en ,
+                                                                             "Ein Instrument zur Elementaranalyse fester Materialien durch Beschuss mit einem fokussierten Elektronenstrahl."@de ;
+                            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ElectronTomograph
@@ -544,6 +585,9 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Electron Tomograph"@en ,
                               "Elektronentomograph"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An instrument used for tomographic imaging using electrons."@en ,
+                                                                    "Ein Instrument für die tomografische Bildgebung mit Elektronen."@de ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                    :abbreviation "ET"@en .
 
 
@@ -574,9 +618,14 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/Energy
 :Energy rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+        rdfs:comment "Die Energie wird üblicherweise in Joule (J) oder Elektronenvolt (eV) gemessen."@de ,
+                     "The energy is usually measured in joules (J) or electron volts (eV)."@en ;
         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
         rdfs:label "Energie"@de ,
-                   "Energy"@en .
+                   "Energy"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Die Fähigkeit eines physischen Systems, Arbeit zu verrichten."@de ,
+                                                         "The capacity of a physical system to perform work."@en ;
+        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/EnergyDispersiveXRaySpectroscopy
@@ -598,7 +647,10 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                                               rdfs:subClassOf :TransmissionElectronMicroscope ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                               rdfs:label "Energiegefiltertes Transmissionselektronenmikroskop"@de ,
-                                                         "Energy-filtered Transmission Electron Microscope"@en .
+                                                         "Energy-filtered Transmission Electron Microscope"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A transmission electron microscope equipped with an energy filter to select electrons of specific energy levels."@en ,
+                                                                                               "Ein Transmissionselektronenmikroskop, das mit einem Energiefilter ausgestattet ist, um Elektronen bestimmter Energieniveaus zu selektieren."@de ;
+                                              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/EnergyLoss
@@ -606,7 +658,10 @@ By studying the energy loss spectrum, researchers can identify the types of atom
             rdfs:subClassOf :Energy ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Energieverlust"@de ,
-                       "Energy Loss"@en .
+                       "Energy Loss"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Der Energieverlust, den ein Teilchen beim Durchgang durch ein Medium erfährt."@de ,
+                                                             "The loss of energy experienced by a particle as it passes through a medium."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/EnergyResolution
@@ -614,7 +669,10 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                   rdfs:subClassOf :Resolution ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                   rdfs:label "Energieauflösung"@de ,
-                             "Energy Resolution"@en .
+                             "Energy Resolution"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Die Fähigkeit eines Detektors, zwischen verschiedenen Energieniveaus der einfallenden Strahlung zu unterscheiden."@de ,
+                                                                   "The ability of a detector to distinguish between different energy levels of incident radiation."@en ;
+                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscope
@@ -623,6 +681,9 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                                          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                          rdfs:label "Environmental Scanning Electron Microscope"@en ,
                                                     "Umwelt-Rasterelektronenmikroskop"@de ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> "A type of electron microscope that can image non-conductive samples in their natural state."@en ,
+                                                                                          "Eine Art Elektronenmikroskop, das nicht leitende Proben in ihrem natürlichen Zustand abbilden kann."@de ;
+                                         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                          :abbreviation "ESEM"@en .
 
 
@@ -689,6 +750,9 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                     rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                     rdfs:label "Feldionenmikroskop"@de ,
                                "Field Ion Microscope"@en ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "A type of microscope that uses the phenomenon of field ionization to image surfaces with atomic resolution."@en ,
+                                                                     "Ein Mikroskoptyp, der das Phänomen der Feldionisation nutzt, um Oberflächen mit atomarer Auflösung abzubilden."@de ;
+                    <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                     :abbreviation "FIM"@en .
 
 
@@ -802,6 +866,9 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                                            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                            rdfs:label "Focus(ed) Ion Beam - Scanning Electron Microscope"@en ,
                                                       "Fokussierter Ionenstrahl - Rasterelektronenmikroskop"@de ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A dual-beam microscope that combines a focused ion beam with a scanning electron microscope."@en ,
+                                                                                            "Ein Zweistrahlmikroskop, das einen fokussierten Ionenstrahl mit einem Rasterelektronenmikroskop kombiniert."@de ;
+                                           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                            :abbreviation "FIB-SEM"@en .
 
 
@@ -883,6 +950,9 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                      rdfs:label "Helium Ion Microscope"@en ,
                                 "Helium-Ionen-Mikroskop"@de ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A type of microscope that uses helium ions to image samples with high resolution."@en ,
+                                                                      "Eine Art Mikroskop, das Helium-Ionen verwendet, um Proben mit hoher Auflösung abzubilden."@de ;
+                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                      :abbreviation "HIM"@en .
 
 
@@ -903,6 +973,9 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                                                                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                                                  rdfs:label "High-angle Annular Dark-field Scanning Transmission Electron Microscope"@en ,
                                                                             "Hochwinkel-Dunkelfeld-Rastertransmissionselektronenmikroskop mit annularem Winkel"@de ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "A type of scanning transmission electron microscope that detects scattered electrons at high angles."@en ,
+                                                                                                                  "Eine Art Rastertransmissionselektronenmikroskop, das gestreute Elektronen in hohen Winkeln erkennt."@de ;
+                                                                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                                                  :abbreviation "HAADF-STEM"@en .
 
 
@@ -912,6 +985,9 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                                               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                               rdfs:label "High Resolution Transmission Electron Microscope"@en ,
                                                          "Hochauflösendes Transmissionselektronenmikroskop"@de ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A transmission electron microscope capable of achieving high-resolution images."@en ,
+                                                                                               "Ein Transmissionselektronenmikroskop, das hochauflösende Bilder liefert."@de ;
+                                              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                               :abbreviation "HRTEM"@en .
 
 
@@ -972,7 +1048,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                    rdfs:subClassOf :Volume ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Interaction Volume"@en ,
-                              "Überlagerungsvolumen"@de .
+                              "Überlagerungsvolumen"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Der Bereich innerhalb einer Probe, in dem ein Teilchenstrahl mit dem Material in Wechselwirkung tritt."@de ,
+                                                                    "The region within a sample where a particle beam interacts with the material."@en ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/IonBeam
@@ -991,7 +1070,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                rdfs:subClassOf <https://w3id.org/pmd/co/Micropscope> ;
                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                rdfs:label "Ion Microscope"@en ,
-                          "Ionenmikroskop"@de .
+                          "Ionenmikroskop"@de ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A microscope that uses ions to create images of samples."@en ,
+                                                                "Ein Mikroskop, das mit Hilfe von Ionen Bilder von Proben erzeugt."@de ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/IonMicroscopy
@@ -1009,7 +1091,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                  rdfs:subClassOf :OpticalMicroscope ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Lichtmikroskop"@de ,
-                            "Light Microscope"@en .
+                            "Light Microscope"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "An optical microscope that uses visible light to illuminate and magnify samples."@en ,
+                                                                  "Ein optisches Mikroskop, das sichtbares Licht verwendet, um Proben zu beleuchten und zu vergrößern."@de ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/LightMicroscopy
@@ -1017,7 +1102,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                  rdfs:subClassOf <https://w3id.org/pmd/co/OpticalMicroscopy> ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Lichtmikroskopie"@de ,
-                            "Light Microscopy"@en .
+                            "Light Microscopy"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Die Verwendung von sichtbarem Licht zur Beobachtung und Untersuchung kleiner Objekte oder Strukturen."@de ,
+                                                                  "The use of visible light to observe and study small objects or structures."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Magnification
@@ -1025,7 +1113,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                rdfs:label "Magnification"@en ,
-                          "Vergrößerung"@de .
+                          "Vergrößerung"@de ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Das Verhältnis zwischen der Größe eines von einem optischen System erzeugten Bildes und der Größe des Objekts."@de ,
+                                                                "The ratio of the size of an image produced by an optical system to the size of the object."@en ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/MechanicalPolishing
@@ -1060,7 +1151,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                rdfs:label "Monochromator"@de ,
-                          "Monochromator"@en .
+                          "Monochromator"@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An optical device that transmits a narrow range of wavelengths of light."@en ,
+                                                                "Ein optisches Gerät, das einen engen Wellenlängenbereich von Licht überträgt."@de ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/OpticalMicroscope
@@ -1068,7 +1162,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                    rdfs:subClassOf <https://w3id.org/pmd/co/Micropscope> ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Optical Microscope"@en ,
-                              "Optisches Mikroskop"@de .
+                              "Optisches Mikroskop"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A microscope that uses visible light and lenses to magnify specimens."@en ,
+                                                                    "Ein Mikroskop, das sichtbares Licht und Linsen zur Vergrößerung von Proben verwendet."@de ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/OrientationImagingMicroscopy
@@ -1097,7 +1194,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Pixel Size"@en ,
-                      "Pixelgröße"@en .
+                      "Pixelgröße"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Die Größe der einzelnen Pixel in einem digitalen Bild oder einer Anzeige."@de ,
+                                                            "The size of individual pixels in a digital image or display."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/PolarizedLightMicroscope
@@ -1106,6 +1206,9 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                           rdfs:label "Polarisiertes Lichtmikroskop"@de ,
                                      "Polarized Light Microscope"@en ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "A microscope that uses polarized light to observe and analyze samples."@en ,
+                                                                           "Ein Mikroskop, das polarisiertes Licht zur Beobachtung und Analyse von Proben verwendet."@de ;
+                          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                           :abbreviation "PLM"@en .
 
 
@@ -1165,17 +1268,23 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 :ProbeSize rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-           rdfs:label "Probe Size"@en ;
+           rdfs:label "Probe Size"@en ,
+                      "Sensorgröße"@de ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "Messfühlergröße"@de ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sensorgröße"@de .
+           <http://www.w3.org/2004/02/skos/core#definition> "Die Größe der Sonde oder des Strahls, die bei Mikroskopie- oder Spektroskopieverfahren verwendet werden."@de ,
+                                                            "The size of the probe or beam used in microscopy or spectroscopy techniques."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Reconstruction
 :Reconstruction rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                 rdfs:label "Reconstruction"@en ,
-                           "Rekonstruktion"@de .
+                           "Rekonstruktion"@de ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Der Prozess der Erstellung eines dreidimensionalen Bildes oder Modells aus zweidimensionalen Daten."@de ,
+                                                                 "The process of creating a three-dimensional image or model from two-dimensional data."@en ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Resolution
@@ -1183,7 +1292,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Auflösung"@de ,
-                       "Resolution"@en .
+                       "Resolution"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "In various contexts, resolution refers to the degree of detail that can be discerned in an image, measurement, or other representation of an object or phenomenon."@en ,
+                                                             "In verschiedenen Zusammenhängen bezieht sich die Auflösung auf den Grad der Detailgenauigkeit, die in einem Bild, einer Messung oder einer anderen Darstellung eines Objekts oder Phänomens erkennbar ist."@de ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ScanningElectronMicroscope
@@ -1192,6 +1304,9 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                             rdfs:label "Rasterelektronenmikroskop"@de ,
                                        "Scanning Electron Microscope"@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A microscope that produces images of a sample by scanning it with a focused beam of electrons."@en ,
+                                                                             "Ein Mikroskop, das Bilder einer Probe erzeugt, indem es diese mit einem fokussierten Elektronenstrahl abtastet."@de ;
+                            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                             :abbreviation "REM"@de ,
                                           "SEM"@en .
 
@@ -1212,7 +1327,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                          rdfs:subClassOf <https://w3id.org/pmd/co/ElectronMicroscope> ;
                          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                          rdfs:label "Rastersondenmikroskop"@de ,
-                                    "Scanning Probe Microscope"@en .
+                                    "Scanning Probe Microscope"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A type of microscope that images surfaces by scanning a probe over the sample."@en ,
+                                                                          "Ein Mikroskoptyp, der Oberflächen abbildet, indem er eine Sonde über die Probe führt."@de ;
+                         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ScanningProbeMicroscopy
@@ -1232,6 +1350,9 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                                         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                         rdfs:label "Rastertransmissionselektronenmikroskop"@de ,
                                                    "Scanning Transmission Electron Microscope"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "A type of transmission electron microscope where a focused electron beam is scanned across the sample."@en ,
+                                                                                         "Eine Art von Transmissionselektronenmikroskop, bei dem ein fokussierter Elektronenstrahl über die Probe gescannt wird."@de ;
+                                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                         :abbreviation "STEM"@en .
 
 
@@ -1263,6 +1384,9 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                              rdfs:label "Rastertunnelmikroskop"@de ,
                                         "Scanning Tunneling Microscope"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "A microscope that uses quantum tunneling to image surfaces at the atomic level."@en ,
+                                                                              "Ein Mikroskop, das Quanten-Tunneling nutzt, um Oberflächen auf atomarer Ebene abzubilden."@de ;
+                             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                              :abbreviation "STM"@en .
 
 
@@ -1282,7 +1406,10 @@ Mechanical polishing is commonly used in various scientific and industrial appli
               rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Scintillator"@en ,
-                         "Szintillator"@de .
+                         "Szintillator"@de ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A material that emits light when it absorbs ionizing radiation."@en ,
+                                                               "Ein Material, das Licht aussendet, wenn es ionisierende Strahlung absorbiert."@de ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/SecondaryIonMassSpectrometry
@@ -1317,6 +1444,9 @@ SIMS has applications in diverse fields, including materials characterization, s
                       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                       rdfs:label "Silicon Drift Detector"@en ,
                                  "Silizium-Driftdetektor"@de ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A type of X-ray detector that offers high-speed performance and high energy resolution."@en ,
+                                                                       "Eine Art Röntgendetektor, der Hochgeschwindigkeitsleistung und hohe Energieauflösung bietet."@de ;
+                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                       :abbreviation "SDD"@en .
 
 
@@ -1326,6 +1456,9 @@ SIMS has applications in diverse fields, including materials characterization, s
                               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                               rdfs:label "Röntgenemissionsspektrometer mit weicher Röntgenstrahlung"@de ,
                                          "Soft X-ray Emission Spectrometer"@en ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "An instrument used to analyze the emission of soft X-rays from a sample."@en ,
+                                                                               "Ein Instrument zur Analyse der Emission weicher Röntgenstrahlen aus einer Probe."@de ;
+                              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                               :abbreviation "SXES"@en .
 
 
@@ -1356,7 +1489,10 @@ SIMS has applications in diverse fields, including materials characterization, s
                    rdfs:subClassOf :Resolution ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Ortsauflösung"@de ,
-                              "Spatial Resolution"@en .
+                              "Spatial Resolution"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Die Fähigkeit eines Bildgebungssystems, feine Details in einem Objekt anzuzeigen. Sie bezieht sich auf das kleinste wahrnehmbare Detail in einem Bild."@de ,
+                                                                    "The ability of an imaging system to discern fine details in an object. It refers to the smallest discernible detail in an image."@en ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Spectrometer
@@ -1364,7 +1500,10 @@ SIMS has applications in diverse fields, including materials characterization, s
               rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Spectrometer"@en ,
-                         "Spektrometer"@de .
+                         "Spektrometer"@de ;
+              <http://www.w3.org/2004/02/skos/core#definition> "An instrument used to measure properties of light over a specific portion of the electromagnetic spectrum."@en ,
+                                                               "Ein Instrument zur Messung der Eigenschaften von Licht in einem bestimmten Teil des elektromagnetischen Spektrums."@de ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Spectroscopy
@@ -1384,7 +1523,10 @@ SIMS has applications in diverse fields, including materials characterization, s
                      rdfs:subClassOf :Aberration ;
                      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                      rdfs:label "Spherical Aberration"@en ,
-                                "Sphärische Aberration"@de .
+                                "Sphärische Aberration"@de ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A type of optical aberration caused by deviations from the ideal spherical shape in lenses or mirrors."@en ,
+                                                                      "Eine Art von optischer Aberration, die durch Abweichungen von der idealen sphärischen Form in Linsen oder Spiegeln verursacht wird."@de ;
+                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/SurfaceStructure
@@ -1392,7 +1534,10 @@ SIMS has applications in diverse fields, including materials characterization, s
                   rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                   rdfs:label "Oberflächenstruktur"@de ,
-                             "Surface Structure"@en .
+                             "Surface Structure"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Die Anordnung und die Merkmale der äußersten Schicht eines Materials."@de ,
+                                                                   "The arrangement and features of the outermost layer of a material."@en ;
+                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/TiltCorrection
@@ -1427,7 +1572,10 @@ TOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling lay
                            rdfs:subClassOf :Reconstruction ;
                            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                            rdfs:label "Tomographic Reconstruction"@en ,
-                                      "Tomographische Rekonstruktion"@de .
+                                      "Tomographische Rekonstruktion"@de ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Der Prozess der Rekonstruktion einer dreidimensionalen Struktur aus einer Reihe von zweidimensionalen Bildern, die aus verschiedenen Winkeln aufgenommen wurden."@de ,
+                                                                            "The process of reconstructing a three-dimensional structure from a series of two-dimensional images taken at different angles."@en ;
+                           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/TransmissionElectronAberrationCorrectedMicroscope
@@ -1436,6 +1584,9 @@ TOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling lay
                                                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                                    rdfs:label "Transmission Electron Aberration-corrected Microscope"@en ,
                                                               "Transmissionselektronen-Aberrations-korrigiertes Mikroskop"@de ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A transmission electron microscope equipped with aberration correction to achieve high-resolution imaging."@en ,
+                                                                                                    "Ein Transmissions-Elektronenmikroskop mit Aberrationskorrektur zur Erzielung hochauflösender Bilder."@de ;
+                                                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                                    :abbreviation "TEAM"@en .
 
 
@@ -1445,6 +1596,9 @@ TOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling lay
                                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                 rdfs:label "Transmission Electron Microscope"@en ,
                                            "Transmissionelektronenmikroskop"@de ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "A microscope that transmits a beam of electrons through a specimen, forming an image."@en ,
+                                                                                 "Ein Mikroskop, das einen Elektronenstrahl durch eine Probe sendet und ein Bild erzeugt."@de ;
+                                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                 :abbreviation "TEM" .
 
 
@@ -1478,7 +1632,10 @@ Note: Voltage is measured in volts (V), and it represents the potential energy d
         rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
         rdfs:label "Volume"@en ,
-                   "Volumen"@de .
+                   "Volumen"@de ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Die Menge an Raum, die ein Stoff oder Gegenstand einnimmt."@de ,
+                                                         "The amount of space that a substance or object occupies."@en ;
+        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/WaitTime
@@ -1499,9 +1656,15 @@ Note: Voltage is measured in volts (V), and it represents the potential energy d
 ###  https://w3id.org/pmd/mo/WorkingDistance
 :WorkingDistance rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/pmd/co/Distance> ;
+                 rdfs:comment "Der Arbeitsabstand ist eine Eigenschaft des optischen Systems und als solche unabhängig von der Position der Probe. Bei regulärem Betrieb, z. B. von REM und STEM, befindet sich der hier erwähnte Fokuspunkt in unmittelbarer Nähe der Probenoberfläche. Die übliche Einheit für den Arbeitsabstand ist Millimeter. Der Begriff wird häufig in der Rasterelektronenmikroskopie und der Rasterionenmikroskopie verwendet. In modernen Rasterelektronenmikroskopen und Mikroskopen mit fokussiertem Ionenstrahl wird er auf der Benutzeroberfläche angezeigt und ist ein kalibrierter Wert, der auf der endgültigen Linsenanregung basiert. Aus praktischen Gründen bezieht er sich in der Regel auf das untere Ende der Säule und nicht auf die Linse, da dies dem Benutzer einen Hinweis darauf gibt, wie viel Platz zwischen der Säule und der Probenoberfläche ist, wenn letztere im Fokus ist. Im Allgemeinen verbessert ein kurzer Arbeitsabstand die Auflösung und die Signalerfassung bei In-Säulen-Detektoren."@de ,
+                              "Working distance is a property of the optical system and as such independent of the position of  the specimen. During regular operation, e.g. of SEM & STEM, the here mentioned point of focus will be in direct vicinity of the specimen surface. Typically, the unit used for expressing the working distance is millimetre. The term is frequently used in scanning electron microscopy & scanning ion microscopy. In modern SEM and focused ion beam microscopes it is displayed in the user interface and it's a calibrated value based on the final lens excitation. For practical reasons it commonly refers to the lower end of the column instead of the lens as this gives the user an indication how much space  there is between the column and the sample surface when the latter is in focus. In general, a short working distance improves resolution and signal collection for in-column detectors."@en ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Arbeitsabstand"@de ,
-                            "Working Distance"@en .
+                            "Working Distance"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Abstand, der entlang der optischen Achse innerhalb der Säule von (1) dem unteren Ende des letzten optischen Elements zwischen der Quelle und dem Probentisch bis (2) dem Punkt, an dem der Strahl fokussiert wird, bestimmt wird."@de ,
+                                                                  "Distance which is determined along the optical axis within the column from (1) the lower end of the final optical element between the source and the  specimen stage; to (2) the point where the beam is focused."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/working_distance.yaml> ,
+                                                            <https://www.globalsino.com/EM/page4586.html> .
 
 
 ###  https://w3id.org/pmd/mo/XRayAbsorptionNearEdgeSpectroscopy
@@ -1598,7 +1761,10 @@ This technique is widely used in various scientific fields, including chemistry,
                                            rdfs:subClassOf :Reconstruction ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                            rdfs:label "Dreidimensionale Rekonstruktion"@de ,
-                                                      "Three dimensional reconstruction"@en .
+                                                      "Three dimensional reconstruction"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Der Prozess der Erstellung einer dreidimensionalen Darstellung eines Objekts oder einer Szene aus zweidimensionalen Bildern oder Daten."@de ,
+                                                                                            "The process of creating a three-dimensional representation of an object or scene from two-dimensional images or data."@en ;
+                                           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/4D-ScanningTransmissionElectronMicroscopy
