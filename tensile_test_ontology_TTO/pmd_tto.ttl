@@ -5,7 +5,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/tto> .
+@base <https://w3id.org/pmd/tto/> .
 
 <https://w3id.org/pmd/tto> rdf:type owl:Ontology ;
                             owl:imports <https://w3id.org/pmd/co> ;
@@ -80,6 +80,34 @@ pmd:Extensometer rdf:type owl:Class .
 pmd:Force rdf:type owl:Class .
 
 
+###  https://w3id.org/pmd/co/FractureCrossSectionArea
+pmd:FractureCrossSectionArea rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Class ;
+                                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty pmd:relatesTo ;
+                                                                                          owl:someValuesFrom :ThicknessAfterFracture
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty pmd:relatesTo ;
+                                                                                          owl:someValuesFrom :WidthAfterFracture
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty pmd:relatesTo ;
+                                                                   owl:someValuesFrom :DiameterAfterFracture
+                                                                 ]
+                                                               )
+                                                 ] ;
+                             rdfs:subClassOf pmd:CrossSectionArea ;
+                             <http://purl.obolibrary.org/obo/IAO_0000119> "DIN EN ISO 6892-1:2020-06" ;
+                             rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
+                             rdfs:label "Minimum cross-sectional Area after Fracture"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "minimum cross-sectional area after fracture"@en ;
+                             pmd:symbol "S_u" .
+
+
 ###  https://w3id.org/pmd/co/Length
 pmd:Length rdf:type owl:Class .
 
@@ -90,6 +118,34 @@ pmd:LoadCell rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/co/MechanicalTestingProcess
 pmd:MechanicalTestingProcess rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/OriginalCrossSectionArea
+pmd:OriginalCrossSectionArea rdf:type owl:Class ;
+                             owl:equivalentClass [ rdf:type owl:Class ;
+                                                   owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty pmd:relatesTo ;
+                                                                                          owl:someValuesFrom :OriginalThickness
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty pmd:relatesTo ;
+                                                                                          owl:someValuesFrom :OriginalWidth
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty pmd:relatesTo ;
+                                                                   owl:someValuesFrom :OriginalDiameter
+                                                                 ]
+                                                               )
+                                                 ] ;
+                             rdfs:subClassOf pmd:CrossSectionArea ;
+                             <http://purl.obolibrary.org/obo/IAO_0000119> "DIN EN ISO 6892-1:2020-06" ;
+                             rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
+                             rdfs:label "Original cross-sectional Area of the parallel Length"@en ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "original cross-sectional area of the parallel length"@en ;
+                             pmd:symbol "S_o" .
 
 
 ###  https://w3id.org/pmd/co/PercentageExtension
@@ -441,23 +497,16 @@ Note: The concept of parallel length is replaced by the concept of distance betw
 
 ###  https://w3id.org/pmd/tto/PercentageReductionOfArea
 :PercentageReductionOfArea rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Class ;
-                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty pmd:relatesTo ;
-                                                                                        owl:someValuesFrom :OriginalThickness
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty pmd:relatesTo ;
-                                                                                        owl:someValuesFrom :OriginalWidth
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ]
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty pmd:relatesTo ;
-                                                                 owl:someValuesFrom :OriginalDiameter
-                                                               ]
-                                                             )
+                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty pmd:relatesTo ;
+                                                                        owl:someValuesFrom pmd:FractureCrossSectionArea
+                                                                      ]
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty pmd:relatesTo ;
+                                                                        owl:someValuesFrom pmd:OriginalCrossSectionArea
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
                                                ] ;
                            rdfs:subClassOf pmd:ValueObject ;
                            rdfs:isDefinedBy <https://w3id.org/pmd/tto> ;
@@ -807,4 +856,4 @@ Beim Zugversuch wird ein Prüfkörper durch Zugkraft belastet, im Allgemeinen bi
                pmd:definitionSource "DIN EN ISO 6892-1:2019"@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
