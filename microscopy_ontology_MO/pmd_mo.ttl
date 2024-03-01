@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/co/2.0.7> .
+@base <https://w3id.org/pmd/mo/> .
 
 <https://w3id.org/pmd/co/2.0.7> rdf:type owl:Ontology ;
                                  owl:versionIRI <https://w3id.org/pmd/mo/1.0.0> ;
@@ -51,14 +51,14 @@ Overall, MO is intended to advance research, promoting collaboration, and facili
 ###  https://w3id.org/pmd/mo/AccelerationVoltage
 :AccelerationVoltage rdf:type owl:Class ;
                      rdfs:subClassOf :Voltage ;
-                     rdfs:comment "Die Beschleunigungsspannung führt den Teilchen des Strahls kinetische Energie zu."@de ,
-                                  "The acceleration voltage adds kinetic energy to the particles of the beam."@en ;
+                     rdfs:comment "Die Beschleunigungsspannung bestimmt die kinetische Energie der Elektronen und beeinflusst die Auflösung und die Eindringtiefe in die Probe."@de ,
+                                  "The acceleration voltage determines the kinetic energy of the electrons and affects the resolution and depth of penetration in the sample."@en ;
                      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                      rdfs:label "Acceleration Voltage"@en ,
                                 "Beschleunigungsspannung"@de ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "Die Potentialdifferenz zwischen Anode und Kathode."@de ,
-                                                                      "The potential difference between anode and cathode."@en ;
-                     <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/acceleration_voltage.yaml> .
+                     <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Spannung, die an ein Elektronenmikroskop angelegt wird, um die von der Elektronenquelle (in der Regel eine Kathode) emittierten Elektronen auf die Probe zu beschleunigen."@de ,
+                                                                      "This class decribes the voltage applied to an electron microscope to accelerate the electrons emitted from the electron source (usually a cathode) towards the specimen."@en ;
+                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/Angle
@@ -146,29 +146,23 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/Beam
 :Beam rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
-      rdfs:comment "In an electron microscope particles are originally emitted by an  particle source and intended to interact with a sample or a detector. The definition here should be differentiated from particles moving due to electrochemical gradient (i.e. in diffusion of liquids). Due to the wave-particle duality, a beam can also be  considered as a series of waves propagating in a common direction."@en ,
-                   "In einem Elektronenmikroskop werden Teilchen ursprünglich von einer Teilchenquelle emittiert und sollen mit einer Probe oder einem Detektor wechselwirken. Die Definition sollte hier von Teilchen unterschieden werden, die sich aufgrund eines elektrochemischen Gradienten bewegen (z. B. bei der Diffusion von Flüssigkeiten). Aufgrund des Welle-Teilchen-Dualismus kann ein Strahl auch als eine Reihe von Wellen betrachtet werden, die sich in einer gemeinsamen Richtung ausbreiten."@de ;
       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
       rdfs:label "Beam"@en ,
                  "Strahl"@de ;
-      <http://www.w3.org/2004/02/skos/core#altLabel> "Strahl geladener Teilchen"@de ,
-                                                     "charged particle beam"@en ;
-      <http://www.w3.org/2004/02/skos/core#definition> "A group of particles which move, on average, in a common direction."@en ,
-                                                       "Eine Gruppe von Teilchen, die sich im Durchschnitt in eine gemeinsame Richtung bewegen."@de ;
-      <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/beam.yaml> .
+      <http://www.w3.org/2004/02/skos/core#definition> "A stream of electrons emitted from the electron source and directed towards the specimen in an electron microscope."@en ,
+                                                       "Ein Strom von Elektronen, der von der Elektronenquelle emittiert und auf die Probe in einem Elektronenmikroskop gerichtet wird."@de ;
+      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/BeamCurrent
 :BeamCurrent rdf:type owl:Class ;
              rdfs:subClassOf :Current ;
-             rdfs:comment "Der Wert des Strahlstroms variiert entlang der Strahlachse. Die Punkte, an denen der Strahlstrom gemessen wird, sind je nach Gerät und Hersteller unterschiedlich. Der Strahlstrom wird immer in Bezug auf die Erde gemessen."@de ,
-                          "The value of beam current varies along the beam axis. The points  at which the beam current is measured varies between instruments and manufacturers. Beam current is always measured with respect to ground."@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Beam Current"@en ,
-                        "Strahlungsstrom"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Electrical current which flows along the beam path."@en ,
-                                                              "Elektrischer Strom, der entlang des Strahlengangs fließt."@de ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/beam_current.yaml> .
+                        "Strahlstrom"@de ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Die Intensität des Elektronenstrahls, gemessen als Anzahl der Elektronen, die eine bestimmte Fläche pro Zeiteinheit durchdringen."@de ,
+                                                              "The intensity of the electron beam, measured as the number of electrons passing through a given area per unit time."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/BeamEnergy
@@ -189,9 +183,9 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
           rdfs:label "Beam Path"@en ,
                      "Strahlengang"@de ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "Strahlenweg"@de ;
-          <http://www.w3.org/2004/02/skos/core#definition> "Path which the beam flows along defined by the optical components of the instrument."@en ,
-                                                           "Pfad, den der Strahl entlangfließt und der durch die optischen Komponenten des Geräts definiert ist."@de ;
-          <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/beam_path.yaml> .
+          <http://www.w3.org/2004/02/skos/core#definition> "Die Flugbahn des Elektronenstrahls auf seinem Weg durch das Elektronenmikroskop von der Elektronenquelle zur Probe und dann zum Detektor."@de ,
+                                                           "The trajectory followed by the electron beam as it travels through the electron microscope, from the electron source to the specimen and then to the detector."@en ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/BrightFieldTransmissionElectronMicroscopy
@@ -208,16 +202,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/CameraLength
 :CameraLength rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/pmd/co/Length> ;
-              rdfs:comment "Diese Definition gilt für die experimentelle Technik der Fraunhofer-Fernfeldbeugung. Im Beugungsmodus wird die Größe Kameralänge verwendet, um den Grad der Vergrößerung des Beugungsmusters auf dem Detektor zu bestimmen. Man beachte, dass die Kameralänge durch das Hinzufügen von Linsen im Strahl verändert werden kann, wodurch die physikalische Größe in eine virtuelle Größe umgewandelt wird. Ursprünglich wurde der Begriff Kameralänge im TEM verwendet, in jüngster Zeit gibt es jedoch auch innovative Anwendungen im REM (siehe Beispiele). Die Kameralänge hängt vom optischen Aufbau ab und wird idealerweise durch Kalibrierungsmessungen mit bekannten Proben, z. B. Gold auf Kohlenstoff, bestimmt."@de ,
-                           "This definition applies to the experimental technique of Fraunhofer far field diffraction.  In diffraction mode the quantity camera length is used to qualify the level of magnification of  the diffraction pattern onto the detector. Note that the camera length may by altered by the addition of lenses in the beam transforming the physical quantity in a virtual one. Historically the term camera length was used in TEM, however more recently there have been innovative applications in SEM, see examples. Camera length depends on the optical setup and it is ideally determined from calibration measurements using known samples, e.g., gold on carbon."@en ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Abstand, der zwischen der Probenoberfläche und der Detektorebene besteht."@de ,
-                                                               "Distance which is present between the specimen surface and the detector plane."@en ;
-              <http://www.w3.org/2004/02/skos/core#example> <https://doi.org/10.1016/j.ultramic.2020.112956> ,
-                                                            <https://doi.org/10.1017/S1431927619002988> ;
-              <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/camera_length.yaml> ,
-                                                         "Camera Length"@en ,
-                                                         "Kameralänge"@de .
+              <http://www.w3.org/2004/02/skos/core#definition> "Der Abstand zwischen der Probe und der Kamera, die zur Aufnahme von Bildern in einem Elektronenmikroskop verwendet wird."@de ,
+                                                               "The distance between the specimen and the camera used to capture images in an electron microscope."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "Camera Length"@en ,
+                                                         "Kameralänge"@de ,
+                                                         "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/Cathode
@@ -244,14 +234,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/CoherentBeam
 :CoherentBeam rdf:type owl:Class ;
               rdfs:subClassOf :Beam ;
-              rdfs:comment "In dieser Definition beziehen wir uns auf Teilwellen."@de ,
-                           "In this definition we refer to partial waves."@en ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Coherent Beam"@en ,
                          "Kohärenter Strahl"@de ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A monochromatic beam which consists of waves that have a defined phase relationship."@en ,
-                                                               "Ein monochromatischer Strahl, der aus Wellen besteht, die eine bestimmte Phasenbeziehung haben."@de ;
-              <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/coherent_beam.yaml> .
+              <http://www.w3.org/2004/02/skos/core#definition> "An electron beam in which the individual electrons maintain a constant phase relationship with each other, resulting in interference patterns when interacting with a sample."@en ,
+                                                               "Ein Elektronenstrahl, bei dem die einzelnen Elektronen eine konstante Phasenbeziehung zueinander haben, was bei der Wechselwirkung mit einer Probe zu Interferenzmustern führt."@de ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/CollectionEfficiency
@@ -289,14 +277,14 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/ConvergenceAngle
 :ConvergenceAngle rdf:type owl:Class ;
                   rdfs:subClassOf :Angle ;
-                  rdfs:comment "Der Konvergenzwinkel eines Strahls ist sowohl im REM als auch im TEM von großer Bedeutung, da er sich auf eine Vielzahl von Bildeigenschaften auswirkt. Er wird durch die Fokussierungsstärke der strahlformenden Linse beeinflusst und kann durch Einfügen von Blenden in den Strahlengang verringert werden."@de ,
-                               "The convergence angle of a beam is of high relevance in both SEM and TEM as it impacts a variety of image properties. It is affected by the focusing strength of the beam forming lens and can be reduced by inserting apertures into the beam path."@en ;
+                  rdfs:comment "Der Konvergenzwinkel beeinflusst die Schärfentiefe und die Auflösung des Bildes."@de ,
+                               "The convergence angle affects the depth of field and resolution of the image."@en ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                   rdfs:label "Convergence Angle"@en ,
                              "Konvergenzwinkel"@de ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Der Winkel, der durch den Halböffnungswinkel des Kegels bei einem konvergenten Strahl gegeben ist."@de ,
-                                                                   "The angle which is given by the semi-opening angle of the cone in a convergent beam."@en ;
-                  <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/convergence_angle.yaml> .
+                  <http://www.w3.org/2004/02/skos/core#definition> "Der Winkel, in dem der Elektronenstrahl in einem Elektronenmikroskop auf die Probe trifft."@de ,
+                                                                   "The angle at which the electron beam converges onto the specimen in an electron microscope."@en ;
+                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope
@@ -364,29 +352,25 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/Diffraction
 :Diffraction rdf:type owl:Class ;
              rdfs:subClassOf :PhysicalProcess ;
-             rdfs:comment "Der in dieser Definition verwendete Begriff \"Materie\" bezieht sich sowohl auf kristalline als auch auf amorphe Materie (z. B. Gase oder Gegenstände)."@de ,
-                          "The term \"matter\" used in this definition is meant to represent crystalline as well as amorphous matter (e.g. gases or objects)."@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Diffraction"@en ,
                         "Diffraktion"@de ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Beugung"@de ,
                                                             "Scattering"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A physical phenomenon during which the direction and intensity of a propagating wave is changed due to interaction with matter having structure dimensions in the order of the wavelength."@en ,
-                                                              "Ein physikalisches Phänomen, bei dem sich die Richtung und Intensität einer sich ausbreitenden Welle aufgrund der Wechselwirkung mit Materie mit Strukturabmessungen in der Größenordnung der Wellenlänge ändert."@de ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/diffraction.yaml> .
+             <http://www.w3.org/2004/02/skos/core#definition> "Die Biegung von Elektronenwellen beim Durchgang durch eine kristalline Probe, was zur Bildung von Beugungsmustern führt, die Informationen über die Kristallstruktur liefern."@de ,
+                                                              "The bending of electron waves as they pass through a crystalline sample, resulting in the formation of diffraction patterns that provide information about the crystal structure."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DiffractionPattern
 :DiffractionPattern rdf:type owl:Class ;
                     rdfs:subClassOf <https://w3id.org/pmd/co/DigitalEntity> ;
-                    rdfs:comment "Aus praktischen Gründen unterscheiden wir hier nicht zwischen dem physikalischen Phänomen eines Beugungsmusters und der experimentellen Aufzeichnung eines Beugungsmusters, obwohl wir wissen, dass es sich dabei um zwei verschiedene Konzepte handelt. Ein Beugungsmuster wird in der Regel als Bild aufgezeichnet. Eine Änderung der Geometrie und/oder der Ausrichtung des Detektors hat einen direkten Einfluss auf das erfasste Muster."@de ,
-                                 "For practical purposes we do not distinguish here between the physical phenomenon of a diffraction pattern, and the experimental recording of a diffraction pattern although we realize that these are indeed separate concepts. A diffraction pattern is commonly recorded  as an image. Changing the geometry and/or the orientation of the detector will directly influence the pattern detected."@en ;
                     rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                     rdfs:label "Beugungsmuster"@de ,
                                "Diffraction Pattern"@en ;
-                    <http://www.w3.org/2004/02/skos/core#definition> "A spatial intensity modulation which is generated by diffraction."@en ,
-                                                                     "Eine räumliche Intensitätsmodulation, die durch Beugung erzeugt wird."@de ;
-                    <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/diffraction_pattern.yaml> .
+                    <http://www.w3.org/2004/02/skos/core#definition> "Das Muster von Flecken oder Banden, das auf einem Detektor entsteht, wenn Elektronen nach der Wechselwirkung mit einer kristallinen Probe gebeugt werden."@de ,
+                                                                     "The pattern of spots or bands produced on a detector when electrons diffract after interacting with a crystalline sample."@en ;
+                    <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DiskOfLeastConfusion
@@ -395,9 +379,9 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                       rdfs:label "Disk Of Least Confusion"@en ,
                                  "Scheibe der geringsten Konfusion"@de ;
-                      <http://www.w3.org/2004/02/skos/core#definition> "A cross section of a beam at which the beam has the smallest spatial extent."@en ,
-                                                                       "Ein Querschnitt eines Strahls, an dem der Strahl die kleinste räumliche Ausdehnung hat."@de ;
-                      <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/disk_of_least_confusion.yaml> .
+                      <http://www.w3.org/2004/02/skos/core#definition> "Der Bereich in der Bildebene eines Elektronenmikroskops, in dem der Elektronenstrahl auf die kleinste Punktgröße fokussiert wird, wodurch die durch sphärische Aberration verursachte Unschärfe minimiert wird."@de ,
+                                                                       "The region in the image plane of an electron microscope where the electron beam is focused to the smallest spot size, minimizing the blurring effect due to spherical aberration."@en ;
+                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DwellTime
@@ -407,38 +391,31 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
            rdfs:label "Dwell Time"@en ,
                       "Verweilzeit"@de ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "Verweildauer"@de ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Time period during which the beam remains at one position."@en ,
-                                                            "Zeitspanne, in der der Strahl an einer Position bleibt."@de ;
-           <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/dwell_time.yaml> ,
-                                                      <https://doi.org/10.1007/978-1-4939-6676-9> ,
-                                                      <https://www.iso.org/obp/ui/#iso:std:iso:22493:ed-2:v1:en> .
+           <http://www.w3.org/2004/02/skos/core#definition> "Die Zeitspanne, in der der Elektronenstrahl während der Bildgebung oder Analyse auf einen bestimmten Punkt oder einen interessierenden Bereich der Probe fokussiert wird."@de ,
+                                                            "The amount of time that the electron beam is focused on a specific point or region of interest on the specimen during imaging or analysis."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DynamicFocusCorrection
 :DynamicFocusCorrection rdf:type owl:Class ;
                         rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
-                        rdfs:comment "Relevant when an area is scanned which extends off-(tilt) axis. An option in a GUI to switch on. An automatic change of the electron optics to keep the sample in focus. Implementation strongly depends on the microscope and its control software. Information about dynamic focus correction may help others to understand the quality of an experiment."@en ,
-                                     "Relevant, wenn ein Bereich gescannt wird, der sich außerhalb der (Neigungs-)Achse befindet. Eine Option in einer GUI zum Einschalten. Eine automatische Änderung der Elektronenoptik, um die Probe im Fokus zu halten. Die Implementierung hängt stark vom Mikroskop und dessen Steuerungssoftware ab. Informationen über die dynamische Fokuskorrektur können anderen helfen, die Qualität eines Experiments zu verstehen."@de ;
                         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                         rdfs:label "Dynamic Focus Correction"@en ,
                                    "Dynamische Fokuskorrektur"@de ;
-                        <http://www.w3.org/2004/02/skos/core#definition> "Dynamic refocussing which keeps the electron probe focused on the surface of a tilted sample."@en ,
-                                                                         "Dynamische Refokussierung, die die Elektronensonde auf der Oberfläche einer gekippten Probe fokussiert."@de ;
-                        <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/dynamic_focus_correction.yaml> .
+                        <http://www.w3.org/2004/02/skos/core#definition> "A technique used in electron microscopy to continuously adjust the focus of the electron beam in real-time to maintain optimal image quality, especially when imaging uneven or rough surfaces."@en ,
+                                                                         "Eine Technik, die in der Elektronenmikroskopie eingesetzt wird, um den Fokus des Elektronenstrahls kontinuierlich in Echtzeit anzupassen und so eine optimale Bildqualität zu erhalten, insbesondere bei der Abbildung unebener oder rauer Oberflächen."@de ;
+                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DynamicRefocusing
 :DynamicRefocusing rdf:type owl:Class ;
                    rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
-                   rdfs:comment "To achieve experimental reproducibility this workflow should be described in detail."@en ,
-                                "Um die Reproduzierbarkeit der Versuche zu gewährleisten, sollte dieser Arbeitsablauf detailliert beschrieben werden."@de ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Dynamic Refocusing"@en ,
                               "Dynamische Refokussierung"@de ;
-                   <http://www.w3.org/2004/02/skos/core#altLabel> "Dynamische Neufokussierung"@de ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "A workflow to keep the specimen in focus by automatic means."@en ,
-                                                                    "Ein Arbeitsablauf, bei dem die Probe automatisch fokussiert wird."@de ;
-                   <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/dynamic_refocusing.yaml> .
+                   <http://www.w3.org/2004/02/skos/core#definition> "Der Prozess, bei dem der Fokus des Elektronenstrahls während der Bildgebung angepasst wird, um Änderungen der Probenhöhe oder -topografie zu kompensieren und sicherzustellen, dass die gesamte Probe im Fokus bleibt."@de ,
+                                                                    "The process of adjusting the focus of the electron beam during imaging to compensate for changes in the specimen height or topography, ensuring that the entire specimen remains in focus."@en ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/DynamicTransmissionElectronMicroscopy
@@ -490,9 +467,9 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Electron Beam"@en ,
                          "Elektronenstrahl"@de ;
-              <http://www.w3.org/2004/02/skos/core#definition> "A beam which consists of electrons."@en ,
-                                                               "Ein Strahl, der aus Elektronen besteht."@de ;
-              <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/electron_beam.yaml> .
+              <http://www.w3.org/2004/02/skos/core#definition> "A stream of electrons emitted from an electron source and accelerated towards the specimen in an electron microscope for imaging or analysis."@en ,
+                                                               "Ein Strom von Elektronen, der von einer Elektronenquelle emittiert und in einem Elektronenmikroskop zur Abbildung oder Analyse auf die Probe beschleunigt wird."@de ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ElectronChannelingContrastImaging
@@ -512,11 +489,9 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                      rdfs:label "Electron Diffraction"@en ,
                                 "Elektronenbeugung"@de ;
-                     <http://www.w3.org/2004/02/skos/core#definition> "Beugung, die auf einer sich ausbreitenden Elektronenwelle beruht."@de ,
-                                                                      "Diffraction which is based on a propagating electron wave."@en ;
-                     <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/electron_diffraction.yaml> ,
-                                                                <https://en.wikipedia.org/wiki/Diffraction> ,
-                                                                <https://www.sciencedirect.com/topics/chemistry/electron-diffraction#:~:text=Electron%20diffraction%20is%20a%20technique,resulting%20in%20a%20diffraction%20pattern> .
+                     <http://www.w3.org/2004/02/skos/core#definition> "Das Phänomen der Beugung von Elektronenwellen beim Durchgang durch eine kristalline Probe, das Informationen über die Kristallstruktur liefert."@de ,
+                                                                      "The phenomenon of electron waves diffracting as they pass through a crystalline sample, providing information about the crystal structure."@en ;
+                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ElectronDiffractionPattern
@@ -525,10 +500,9 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                             rdfs:label "Electron Diffraction Pattern"@en ,
                                        "Elektronenbeugungsmuster"@de ;
-                            <http://www.w3.org/2004/02/skos/core#altLabel> "Elektronenbeugungsbild"@de ;
-                            <http://www.w3.org/2004/02/skos/core#definition> "A diffraction pattern which is generated from electron diffraction."@en ,
-                                                                             "Ein Beugungsmuster, das durch Elektronenbeugung erzeugt wird."@de ;
-                            <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/electron_diffraction_pattern.yaml> .
+                            <http://www.w3.org/2004/02/skos/core#definition> "Das Muster von Flecken oder Ringen, das auf einem Detektor entsteht, wenn Elektronen nach der Wechselwirkung mit einer kristallinen Probe gebeugt werden, und das zur Bestimmung der Kristallstruktur verwendet wird."@de ,
+                                                                             "The pattern of spots or rings produced on a detector when electrons diffract after interacting with a crystalline sample, used to determine the crystal structure."@en ;
+                            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ElectronEnergyLossSpectroscopy
@@ -558,14 +532,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/ElectronProbe
 :ElectronProbe rdf:type owl:Class ;
                rdfs:subClassOf :Beam ;
-               rdfs:comment "Häufig wird der Begriff Elektronensonde verwendet, um einen Punkt zu beschreiben, an dem der Strahl fokussiert ist. Der Begriff wird daher häufig im Zusammenhang mit fokussierten Strahlen verwendet."@de ,
-                            "Often electron probe is used to describe a point where the beam is focused. It is commonly used in connection with focused beams."@en ;
                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                rdfs:label "Electron Probe"@en ,
                           "Elektronensonde"@de ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Der Teil des Strahls, der mit der Probe in Wechselwirkung tritt."@de ,
-                                                                "The part of the beam which interacts with the sample."@en ;
-               <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/electron_probe.yaml> .
+               <http://www.w3.org/2004/02/skos/core#definition> "Der fokussierte Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."@de ,
+                                                                "The focused electron beam used for imaging or analysis in an electron microscope."@en ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ElectronProbeMicroAnalyzer
@@ -605,14 +577,14 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/EmissionCurrent
 :EmissionCurrent rdf:type owl:Class ;
                  rdfs:subClassOf :Current ;
-                 rdfs:comment "Der Emissionsstrom ist eine geräte- und komponentenabhängige numerische Eigenschaft, die im Laufe der Zeit überwacht werden kann, um z. B. die Lebensdauer und den Verschleiß einer Quelle zu bewerten. Er ist nicht hersteller- oder geräteübergreifend vergleichbar."@de ,
-                              "Emission current is a device- and component-dependent numerical property that can be monitored over time to evaluate e.g. service life and wear of a source. It is not cross-vendor or cross-device comparable."@en ;
+                 rdfs:comment "Der Emissionsstrom wird normalerweise in Mikroampere (μA) oder Milliampere (mA) gemessen."@de ,
+                              "The emission current usually measured in microamperes (μA) or milliamperes (mA)." ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Emission Current"@en ,
                             "Emissionsstrom"@de ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "Electrical current which is released from the source."@en ,
-                                                                  "Elektrischer Strom, der von der Quelle abgegeben wird."@de ;
-                 <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/emission_current.yaml> .
+                 <http://www.w3.org/2004/02/skos/core#definition> "Der Strom der von der Elektronenquelle emittierten Elektronen."@de ,
+                                                                  "The current of electrons emitted from the electron source."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/Energy
@@ -712,14 +684,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/ExtractionVoltage
 :ExtractionVoltage rdf:type owl:Class ;
                    rdfs:subClassOf :Voltage ;
-                   rdfs:comment "Die Extraktionsspannung wird bei Schottky- und Kaltfeldemissions-Elektronenquellen angelegt, nicht jedoch bei thermionischen Emittern. Sie soll dazu beitragen, dass Elektronen aus dem Inneren des Quellenmaterials emittiert werden, um die Arbeitsfunktion zu überwinden und emittiert zu werden. Gallium-Flüssigmetall-Ionenquellen verwenden ebenfalls eine Extraktionsspannung, um Ionen zu erzeugen. Höhere Extraktionsspannungen führen zu höheren Strahlströmen."@de ,
-                                "Extraction voltage is applied to Schottky and Cold Field Emission electron sources, but not to thermionic emitters. It's purpose is to help emit electrons from inside the  source material to overcome the work function and be emitted. Gallium liquid metal  ion sources also use an extraction voltage to produce ions. Higher extraction voltages  will lead to higher beam currents."@en ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Extraction Voltage"@en ,
                               "Extraktionsspannung"@de ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "Spannung, mit der ein elektrisches Feld erzeugt wird, das Partikel von der Quelle anzieht."@de ,
-                                                                    "Voltage which is utilised to create an electric field that draws particles from the source."@en ;
-                   <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/extraction_voltage.yaml> .
+                   <http://www.w3.org/2004/02/skos/core#definition> "Die Spannung, die an die Elektronenquelle in einem Elektronenmikroskop angelegt wird, um Elektronen aus der Kathode zu extrahieren und sie auf die Probe zu beschleunigen."@de ,
+                                                                    "The voltage applied to the electron source in an electron microscope to extract electrons from the cathode and accelerate them towards the specimen."@en ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FieldEmissionGun
@@ -770,14 +740,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/FilamentCurrent
 :FilamentCurrent rdf:type owl:Class ;
                  rdfs:subClassOf :Current ;
-                 rdfs:comment "Dieser wird in der Regel zum Heizen einer Quelle verwendet und liefert den Emissionsstrom. Höhere Glühfadenströme führen zu höheren Strahlströmen."@de ,
-                              "This is typically used for heating a source and supplies the emission  current. Higher filament currents will result in higher beam currents."@en ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Filament Current"@en ,
                             "Glühfadenstrom"@de ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "Electrical current which flows through the source."@en ,
-                                                                  "Elektrischer Strom, der durch die Quelle fließt."@de ;
-                 <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/filament_current.yaml> .
+                 <http://www.w3.org/2004/02/skos/core#definition> "Der Strom, der durch den Glühfaden der Elektronenkanone in einem Elektronenmikroskop fließt und den Glühfaden erhitzt, um Elektronen zu emittieren."@de ,
+                                                                  "The current passing through the filament of the electron gun in an electron microscope, which heats up the filament to emit electrons."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FluorescenceMicroscopy
@@ -793,71 +761,56 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/FlybackTime
 :FlybackTime rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
-             rdfs:comment "Die Rücklaufzeit wird in der Regel mit rechteckigen Abtastmustern in Verbindung gebracht und in den Metadaten der Hersteller oft als solche beschrieben. Ein typisches geometrisches Primitiv für rechteckige Abtastungen sind Linien. Die Rücklaufzeit kann als ein spezielles Beispiel für die Wartezeit betrachtet werden, allerdings können einige Geräte auch während der Rücklaufzeit Daten erfassen, weshalb sie in diesem Artefakt separat definiert wird."@de ,
-                          "Flyback time is commonly associated with rectangular scan patterns and often described in metadata from vendors as such. A typical geometrical primitive for rectangular scans are lines. Flyback time may be considered a specific  instance of wait time, however some instruments might still be able to acquire  data during flyback time which is why it is defined separately in this artefact."@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Flyback Time"@en ,
                         "Rücklaufzeit"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Time period during which the beam moves from the final position of one scan line to the starting position of the subsequent scan line."@en ,
-                                                              "Zeitspanne, in der sich der Strahl von der Endposition einer Scanlinie zur Startposition der nächsten Scanlinie bewegt."@de ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/flyback_time.yaml> .
+             <http://www.w3.org/2004/02/skos/core#definition> "Die Zeit, die der Elektronenstrahl benötigt, um nach dem Abtasten einer Zeile oder eines Bildes in einem Elektronenmikroskop in seine Ausgangsposition zurückzukehren."@de ,
+                                                              "The time taken for the electron beam to return to its starting position after scanning a line or frame in an electron microscope."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FocalLength
 :FocalLength rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/pmd/co/Length> ;
-             rdfs:comment "A beam consisting of parallel rays converges into one point for positive focal lengths. The focal length is an inherent property of a lens."@en ,
-                          "Ein aus parallelen Strahlen bestehender Strahl konvergiert bei positiven Brennweiten in einem Punkt. Die Brennweite ist eine inhärente Eigenschaft einer Linse."@de ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Brennweite"@de ,
                         "Focal Length"@en ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Abstand zwischen der Hauptebene des Objektivs und dem Brennpunkt entlang der optischen Achse."@de ,
-                                                              "Distance which lies between the principal plane of the lens and the focal point along the optical axis."@en ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/focal_length.yaml> .
+             <http://www.w3.org/2004/02/skos/core#definition> "Der Abstand zwischen dem Brennpunkt (wo der Elektronenstrahl fokussiert wird) und der Linse oder Blende in einem Elektronenmikroskop."@de ,
+                                                              "The distance between the focal point (where the electron beam is focused) and the lens or aperture in an electron microscope."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FocalPlane
 :FocalPlane rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/pmd/co/Area> ;
-            rdfs:comment "Die Ebene befindet sich in der Regel auf dem Probekörper."@de ,
-                         "The plane is typically on the specimen."@en ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Brennebene"@de ,
                        "Focal Plane"@en ;
-            <http://www.w3.org/2004/02/skos/core#altLabel> "Front Focal Plane"@en ,
-                                                           "Vordere Brennebene"@de ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Ebene, die senkrecht zur optischen Achse liegt und den Brennpunkt einschließt."@de ,
-                                                             "Plane which is perpendicular to the optical axis and includes the focal point."@en ;
-            <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/focal_plane.yaml> .
+            <http://www.w3.org/2004/02/skos/core#definition> "Die Ebene senkrecht zur optischen Achse eines Elektronenmikroskops, in der der Elektronenstrahl fokussiert wird, um ein Bild zu erzeugen."@de ,
+                                                             "The plane perpendicular to the optical axis of an electron microscope where the electron beam is focused to form an image."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FocalPoint
 :FocalPoint rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/pmd/co/DigitalEntity> ;
-            rdfs:comment "Die hier gegebene Definition gilt für elektromagnetische Linsen und ist eine allgemeinere Definition im Vergleich zu den in der klassischen Optik üblichen Definitionen. Der Brennpunkt ist eine inhärente Eigenschaft einer Linse. Die Definition gilt nur, wenn sich die (virtuelle) Quelle \"im Unendlichen\" befindet, d. h. sehr weit entfernt im Vergleich zur Brennweite des Objektivs. Dies gilt für ein ideales Objektiv; in der Realität kann es zu Abbildungsfehlern kommen, die das Strahlprofil im Brennpunkt beeinflussen."@de ,
-                         "The here given definition applies to electromagnetic lenses and is a more general definition compared to those typically given in classical optics. The focal point is an inherent property of a lens. Definition only holds if the (virtual) source is \"at infinity\", meaning very far away as compared to the focal length of the objective lens. This is for an ideal lens, in the reality there might be aberrations affecting the beam profile at the focal point."@en ;
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Brennpunkt"@de ,
                        "Focal Point"@en ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Point at which the optical axis is crossed by backwards extrapolated path of a ray that (1) is tending towards infinity, (2) was parallel to the optical axis in the incident beam, and (3) that was deflected by an electron lens."@en ,
-                                                             "Punkt, an dem die optische Achse von der rückwärts extrapolierten Bahn eines Strahls gekreuzt wird, der (1) ins Unendliche tendiert, (2) im einfallenden Strahl parallel zur optischen Achse verlief und (3) durch eine Elektronenlinse abgelenkt wurde."@de ;
-            <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/focal_point.yaml> ,
-                                                       <https://www.iso.org/obp/ui/#iso:std:iso:15932:ed-1:v1:en_2.1.4> ,
-                                                       <https://www.iso.org/obp/ui/#iso:std:iso:22493:ed-2:v1:en_3.1.4> .
+            <http://www.w3.org/2004/02/skos/core#definition> "Der Punkt, an dem der Elektronenstrahl in einem Elektronenmikroskop fokussiert wird, um ein Bild der Probe zu erzeugen."@de ,
+                                                             "The point at which the electron beam is focused in an electron microscope to form an image of the specimen."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FocusedBeam
 :FocusedBeam rdf:type owl:Class ;
              rdfs:subClassOf :Beam ;
-             rdfs:comment "Die Begriffe fokussierter Strahl und konvergenter Strahl werden umgangssprachlich oft fast gleichbedeutend verwendet. Hier werden diese Begriffe unterschieden, indem darauf hinweisen wird, dass fokussierte Strahlen mit der Absicht verwendet werden, den Strahl auf den physikalisch kleinstmöglichen Bereich zu richten."@de ,
-                          "The terms focused beam and convergent beam are colloquially often used almost interchangeably. Here, these terms are differentiated by pointing to focused beams being used with the intention to direct the beam to the physically smallest possible area."@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Focused Beam"@en ,
                         "Fokussierter Strahl"@de ;
-             <http://www.w3.org/2004/02/skos/core#altLabel> "Gebündelter Strahl"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A convergent beam which originates from a coherent beam and whose cross section is decreased to the physically smallest possible disc of least confusion."@en ,
-                                                              "Ein konvergierender Strahl, der von einem kohärenten Strahl ausgeht und dessen Querschnitt auf die physikalisch kleinstmögliche Scheibe der geringsten Konfusion reduziert ist."@de ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/focused_beam.yaml> .
+             <http://www.w3.org/2004/02/skos/core#definition> "An electron beam that has been narrowed or focused to a small spot size on the specimen surface."@en ,
+                                                              "Ein Elektronenstrahl, der auf einen kleinen Punkt auf der Probenoberfläche eingeengt oder fokussiert wurde."@de ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/FocusedIonBeam-ScanningElectronMicroscope
@@ -897,31 +850,15 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                                       :abbreviation "FTIR"@en .
 
 
-###  https://w3id.org/pmd/mo/FrameFlybackTime
-:FrameFlybackTime rdf:type owl:Class ;
-                  rdfs:subClassOf :FlybackTime ;
-                  rdfs:comment "Die Rahmen-Rücklaufzeit kann als ein spezieller Fall von Wartezeit betrachtet werden, allerdings können einige Geräte auch während der Rahmen-Rücklaufzeit Daten erfassen, weshalb sie in diesem Artefakt separat definiert wird."@de ,
-                               "Frame flyback time may be considered a specific instance of wait time, however some instruments might still be able to acquire data during frame flyback time which is why it is defined separately in this artefact."@en ;
-                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                  rdfs:label "Frame Flyback Time"@en ,
-                             "Rahmen-Rücklaufzeit"@de ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Time period during which the beam moves from the final position of one frame to the starting position of the subsequent frame."@en ,
-                                                                   "Zeitspanne, in der sich der Strahl von der Endposition eines Bildes zur Startposition des nächsten Bildes bewegt."@de ;
-                  <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/frame_flyback_time.yaml> .
-
-
 ###  https://w3id.org/pmd/mo/FrameTime
 :FrameTime rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
-           rdfs:comment "Die Rahmenscanzeit wird in der Regel durch eine gewichtete Summe aus folgenden Faktoren bestimmt: Verweilzeit, Bewegungszeiten und möglicherweise Wartezeit. Die Gewichtungsfaktoren werden durch das spezifische Scanmuster bestimmt."@de ,
-                        "The frame time is typically determined by a weighted sum of: Dwell time, move times and potentially wait time. The weighting factors are determined by the specific scan pattern."@en ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Frame Time"@en ,
                       "Rahmenscanzeit"@de ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Time period during which a frame is fully scanned."@en ,
-                                                            "Zeitspanne, in der ein Bild (Rahmen, Frame) vollständig gescannt wird."@de ;
-           <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/frame_time.yaml> ,
-                                                      <https://doi.org/10.1007/978-1-4939-6676-9> .
+           <http://www.w3.org/2004/02/skos/core#definition> "Die Zeit, die benötigt wird, um ein Einzelbild in einem Elektronenmikroskop aufzunehmen und anzuzeigen."@de ,
+                                                            "The time required to capture and display a single frame of an image in an electron microscope."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/GatanImageFilter
@@ -1015,22 +952,12 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 ###  https://w3id.org/pmd/mo/IncidentBeam
 :IncidentBeam rdf:type owl:Class ;
               rdfs:subClassOf :Beam ;
-              rdfs:comment "Ein einfallender Strahl kann nur in Gegenwart einer Probe auftreten. Einfallend in diesem Sinne ist ein Verb, das die Wirkung des Strahls beschreibt. Der Strahlengang eines einfallenden Strahls schneidet sich in der Regel mit der Probe."@de ,
-                           "You can only have an incident beam in the presence of a specimen. Incident in this  sense is a verb used to describe the action of the beam. Typically the beam path of an incident beam intersects with the specimen."@en ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Einfallender Strahl"@de ,
                          "Incident Beam"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Primary beam before it interacts with the specimen."@en ,
-                                                               "Primärstrahl, bevor er auf die Probe trifft."@de ;
-              <http://www.w3.org/2004/02/skos/core#example> """- Beispiel für einen Begriff
-- Beispiel für einen größeren Begriff
-- Beispiel für eine Instanz"""@de ,
-                                                            """- term example
-- larger term example
-- instance example"""@en ;
-              <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/incident_beam.yaml> ,
-                                                         <https://www.iso.org/obp/ui/#iso:std:iso:15932:ed-1:v1:en> ,
-                                                         <https://www.iso.org/obp/ui/#iso:std:iso:23833:ed-2:v1:en> .
+              <http://www.w3.org/2004/02/skos/core#definition> "Der Elektronenstrahl, der in einem Elektronenmikroskop auf die Probenoberfläche trifft und Wechselwirkungen hervorruft, die Signale für die Abbildung oder Analyse erzeugen."@de ,
+                                                               "The electron beam that strikes the specimen surface in an electron microscope, causing interactions that produce signals for imaging or analysis."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/InelasticScattering
@@ -1060,9 +987,9 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
          rdfs:label "Ion Beam"@en ,
                     "Ionenstrahl"@de ;
-         <http://www.w3.org/2004/02/skos/core#definition> "A beam which consists of ions."@en ,
-                                                          "Ein Strahl, der aus Ionen besteht."@de ;
-         <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/ion_beam.yaml> .
+         <http://www.w3.org/2004/02/skos/core#definition> "A stream of ions used for grinding or analysis, especially in ion microscopy techniques for imaging."@en ,
+                                                          "Ein Ionenstrom, der zum Mahlen oder zur Analyse verwendet wird, insbesondere bei Ionenmikroskopietechniken zur Bildgebung."@de ;
+         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/IonMicroscope
@@ -1136,14 +1063,12 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/MonochromaticBeam
 :MonochromaticBeam rdf:type owl:Class ;
                    rdfs:subClassOf :Beam ;
-                   rdfs:comment "According to the wave particle dualism the here given definition translates also to a beam which consists of waves having the same wavelength. Note that in practice, absolute monochromaticity cannot be achieved and consequently a small energy spread always persists."@en ,
-                                "Gemäß dem Welle-Teilchen-Dualismus lässt sich die hier gegebene Definition auch auf einen Strahl übertragen, der aus Wellen mit der gleichen Wellenlänge besteht. Es ist zu beachten, dass in der Praxis eine absolute Monochromatizität nicht erreicht werden kann und daher immer eine kleine Energiespanne bestehen bleibt."@de ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                    rdfs:label "Monochromatic Beam"@en ,
                               "Monochromatischer Strahl"@de ;
-                   <http://www.w3.org/2004/02/skos/core#definition> "A beam which consists of particles of the same energy."@en ,
-                                                                    "Ein Strahl, der aus Teilchen der gleichen Energie besteht."@de ;
-                   <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/monochromatic_beam.yaml> .
+                   <http://www.w3.org/2004/02/skos/core#definition> "An electron beam consisting of electrons with a narrow range of energies, typically achieved using electron energy filters or monochromators."@en ,
+                                                                    "Ein Elektronenstrahl, der aus Elektronen mit einem engen Energiebereich besteht, der in der Regel durch Elektronenenergiefilter oder Monochromatoren erreicht wird."@de ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/Monochromator
@@ -1226,31 +1151,23 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/PolePiece
 :PolePiece rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
-           rdfs:comment "A given electron microscope is likely to have multiple pole pieces; however the term is commonly used to refer to the pole piece of the final optical element between the source  and the specimen."@en ,
-                        "Ein bestimmtes Elektronenmikroskop hat wahrscheinlich mehrere Polschuhe; der Begriff wird jedoch üblicherweise für den Polschuh des letzten optischen Elements zwischen der Quelle und der Probe verwendet."@de ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Pole Piece"@en ,
                       "Polschuh"@de ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Component of the electromagnetic lens which amplifies and shapes the magnetic field used to manipulate the beam."@en ,
-                                                            "Komponente der elektromagnetischen Linse, die das zur Manipulation des Strahls verwendete Magnetfeld verstärkt und formt."@de ;
-           <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/pole_piece.yaml> ,
-                                                      <https://en.wikipedia.org/wiki/Pole_piece> ,
-                                                      <https://www.jeol.co.jp/en/words/emterms/search_result.html?keyword=polepiece> .
+           <http://www.w3.org/2004/02/skos/core#definition> "A component of the electron column in an electron microscope that focuses and guides the electron beam onto the specimen."@en ,
+                                                            "Eine Komponente der Elektronensäule in einem Elektronenmikroskop, die den Elektronenstrahl fokussiert und auf die Probe lenkt."@de ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/PrimaryBeam
 :PrimaryBeam rdf:type owl:Class ;
              rdfs:subClassOf :Beam ;
-             rdfs:comment "Der Begriff wird bei Beugungsexperimenten üblicherweise verwendet, um den nicht gebeugten/nicht gestreuten Teil des Strahls nach der Probe zu beschreiben."@de ,
-                          "The term is commonly used in diffraction experiments to describe the non-diffracted/non-scattered part of the beam after the specimen."@en ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Primary Beam"@en ,
                         "Primärstrahl"@de ;
-             <http://www.w3.org/2004/02/skos/core#definition> "A beam which is unaltered in terms of its direction after interaction with the specimen."@en ,
-                                                              "Ein Strahl, der nach der Wechselwirkung mit dem Probekörper in seiner Richtung unverändert bleibt."@de ;
-             <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/primary-beam.yaml> ,
-                                                        <https://www.iso.org/obp/ui/#iso:std:iso:15932:ed-1:v1:en> ,
-                                                        <https://www.iso.org/obp/ui/#iso:std:iso:23833:ed-2:v1:en> .
+             <http://www.w3.org/2004/02/skos/core#definition> "Der Hauptelektronenstrahl, der von der Elektronenquelle ausgesandt und auf die Probe in einem Elektronenmikroskop gerichtet wird."@de ,
+                                                              "The main electron beam emitted from the electron source and directed towards the specimen in an electron microscope."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ProbeCurrent
@@ -1259,9 +1176,9 @@ Mechanical polishing is commonly used in various scientific and industrial appli
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Probe Current"@en ,
                          "Sondenstrom"@de ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Electrical current which arrives at the specimen."@en ,
-                                                               "Elektrischer Strom, der an der Probe ankommt."@de ;
-              <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/probe_current.yaml> .
+              <http://www.w3.org/2004/02/skos/core#definition> "Der Strom der Elektronen im fokussierten Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."@de ,
+                                                               "The current of electrons in the focused electron beam used for imaging or analysis in an electron microscope."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ProbeSize
@@ -1465,23 +1382,12 @@ SIMS has applications in diverse fields, including materials characterization, s
 ###  https://w3id.org/pmd/mo/Source
 :Source rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
-        rdfs:comment "Die Art und Funktion der Quellen unterscheiden sich je nach Anwendungsfall und Gerät. Es gibt zwei Klassen von Emissionsquellen: thermionische Strahler (Glühfaden und LaB6) und Feldstrahler."@de ,
-                     "The nature and the function of sources differ depending on application case and  instrument. There are two classes of emission sources, thermionic emitters (filament & LaB6) and field emitters."@en ;
         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
         rdfs:label "Quelle"@de ,
                    "Source"@en ;
-        <http://www.w3.org/2004/02/skos/core#definition> "A physical part of an electron or ion microscope from which the particles that form the beam are emitted."@en ,
-                                                         "Ein physischer Teil eines Elektronen- oder Ionenmikroskops, aus dem die Teilchen, die den Strahl bilden, emittiert werden."@de ;
-        <http://www.w3.org/2004/02/skos/core#example> """- Wolfram-Draht
-- LaB_6-Kristall
-- Wolfram-Kristall
-- Flüssigmetall Gallium"""@de ,
-                                                      """- tungsten wire
-- LaB_6 crystal
-- tungsten crystal
-- liquid metal Gallium"""@en ;
-        <https://w3id.org/pmd/co/definitionSource> <https://cmrf.research.uiowa.edu/scanning-electron-microscopy> ,
-                                                   <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/source.yaml> .
+        <http://www.w3.org/2004/02/skos/core#definition> "Die Elektronenquelle, z. B. ein Wolframfaden oder eine Feldemissionskathode, die in einem Elektronenmikroskop Elektronen emittiert."@de ,
+                                                         "The electron source, such as a tungsten filament or field-emission cathode, that emits electrons in an electron microscope."@en ;
+        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/SpatialResolution
@@ -1543,14 +1449,12 @@ SIMS has applications in diverse fields, including materials characterization, s
 ###  https://w3id.org/pmd/mo/TiltCorrection
 :TiltCorrection rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
-                rdfs:comment "Applied during acquisition to compensate for tilt. Tilt correction needs to be noted at data collection. Involves either stretching or compression along one direction / dimension of the scan area. An option in a GUI to switch on. Triggers a set of algorithms to apply stretching transformation on the image."@en ,
-                             "Wird während der Erfassung angewendet, um die Neigung auszugleichen. Die Neigungskorrektur muss bei der Datenerfassung vermerkt werden. Dehnung oder Stauchung entlang einer Richtung/Dimension des Scanbereichs. Eine Option in einer grafischen Benutzeroberfläche zum Einschalten. Löst eine Reihe von Algorithmen aus, um eine Streckungstransformation auf das Bild anzuwenden."@de ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                 rdfs:label "Neigungskorrektur"@de ,
                            "Tilt Correction"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "An imaging setting which can be used during acquisition to correct perspective distortion when imaging a tilted surface or cross section."@en ,
-                                                                 "Eine Bildgebungseinstellung, die während der Aufnahme verwendet werden kann, um perspektivische Verzerrungen bei der Abbildung einer geneigten Oberfläche oder eines Querschnitts zu korrigieren."@de ;
-                <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/tilt_correction.yaml> .
+                <http://www.w3.org/2004/02/skos/core#definition> "A correction applied to images obtained from tilted specimens in electron microscopy to compensate for distortions caused by the tilt angle."@en ,
+                                                                 "Eine Korrektur, die bei Bildern von gekippten Proben in der Elektronenmikroskopie angewendet wird, um durch den Kippwinkel verursachte Verzerrungen zu kompensieren."@de ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/TimeOfFlightSecondaryIonMassSpectrometry
@@ -1641,30 +1545,27 @@ Note: Voltage is measured in volts (V), and it represents the potential energy d
 ###  https://w3id.org/pmd/mo/WaitTime
 :WaitTime rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
-          rdfs:comment "Wait time can happen for multiple reasons. For example, the time period until a detector is ready (e.g. eds detector is cooled down. The time period until the specimen has reached the desired state for a measurement (e.g. in-situ heating/cooling). The time period until the machine has reached the desired state (e.g. switching from high vacuum to low vacuum mode in a variable pressure SEM). Frame flyback time may also be considered a wait time."@en ,
-                       "Wartezeiten können aus verschiedenen Gründen entstehen. Zum Beispiel die Zeitspanne, bis ein Detektor bereit ist (z. B. der Detektor wird abgekühlt). Die Zeitspanne, bis die Probe den gewünschten Zustand für eine Messung erreicht hat (z. B. In-situ-Erwärmung/Kühlung). Die Zeitspanne, bis das Gerät den gewünschten Zustand erreicht hat (z. B. Umschalten von Hochvakuum auf Niedrigvakuum in einem REM mit variablem Druck). Die Rahmenrücklaufzeit kann auch als Wartezeit betrachtet werden."@de ;
+          rdfs:comment "Die Wartezeit wird häufig genutzt, um die Probe zu stabilisieren oder um die Beschädigung der Probe zu minimieren."@de ,
+                       "The wait time is often used to allow the specimen to stabilize or to minimize sample damage."@en ;
           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
           rdfs:label "Wait Time"@en ,
                      "Wartezeit"@de ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "Abgelaufene Zeit"@de ,
-                                                         "Elapsed Time"@en ;
-          <http://www.w3.org/2004/02/skos/core#definition> "Time period in which no data are acquired."@en ,
-                                                           "Zeitspanne, in der keine Daten erfasst werden."@de ;
-          <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/wait_time.yaml> .
+          <http://www.w3.org/2004/02/skos/core#definition> "Das Zeitintervall zwischen aufeinander folgenden Messungen oder Operationen in einem Elektronenmikroskop."@de ,
+                                                           "The time interval between successive measurements or operations in an electron microscope."@en ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/WorkingDistance
 :WorkingDistance rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/pmd/co/Distance> ;
-                 rdfs:comment "Der Arbeitsabstand ist eine Eigenschaft des optischen Systems und als solche unabhängig von der Position der Probe. Bei regulärem Betrieb, z. B. von REM und STEM, befindet sich der hier erwähnte Fokuspunkt in unmittelbarer Nähe der Probenoberfläche. Die übliche Einheit für den Arbeitsabstand ist Millimeter. Der Begriff wird häufig in der Rasterelektronenmikroskopie und der Rasterionenmikroskopie verwendet. In modernen Rasterelektronenmikroskopen und Mikroskopen mit fokussiertem Ionenstrahl wird er auf der Benutzeroberfläche angezeigt und ist ein kalibrierter Wert, der auf der endgültigen Linsenanregung basiert. Aus praktischen Gründen bezieht er sich in der Regel auf das untere Ende der Säule und nicht auf die Linse, da dies dem Benutzer einen Hinweis darauf gibt, wie viel Platz zwischen der Säule und der Probenoberfläche ist, wenn letztere im Fokus ist. Im Allgemeinen verbessert ein kurzer Arbeitsabstand die Auflösung und die Signalerfassung bei In-Säulen-Detektoren."@de ,
-                              "Working distance is a property of the optical system and as such independent of the position of  the specimen. During regular operation, e.g. of SEM & STEM, the here mentioned point of focus will be in direct vicinity of the specimen surface. Typically, the unit used for expressing the working distance is millimetre. The term is frequently used in scanning electron microscopy & scanning ion microscopy. In modern SEM and focused ion beam microscopes it is displayed in the user interface and it's a calibrated value based on the final lens excitation. For practical reasons it commonly refers to the lower end of the column instead of the lens as this gives the user an indication how much space  there is between the column and the sample surface when the latter is in focus. In general, a short working distance improves resolution and signal collection for in-column detectors."@en ;
+                 rdfs:comment "Der Arbeitsabstand wirkt sich auf die Tiefenschärfe und die Auflösung des Bildes aus."@de ,
+                              "The working distance affects the depth of field and the resolution of the image."@en ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Arbeitsabstand"@de ,
                             "Working Distance"@en ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "Abstand, der entlang der optischen Achse innerhalb der Säule von (1) dem unteren Ende des letzten optischen Elements zwischen der Quelle und dem Probentisch bis (2) dem Punkt, an dem der Strahl fokussiert wird, bestimmt wird."@de ,
-                                                                  "Distance which is determined along the optical axis within the column from (1) the lower end of the final optical element between the source and the  specimen stage; to (2) the point where the beam is focused."@en ;
-                 <https://w3id.org/pmd/co/definitionSource> <https://codebase.helmholtz.cloud/em_glossary/em_glossary/-/blob/main/terms/working_distance.yaml> ,
-                                                            <https://www.globalsino.com/EM/page4586.html> .
+                 <http://www.w3.org/2004/02/skos/core#definition> "Der Abstand zwischen der Objektivlinse des Elektronenmikroskops und der Probenoberfläche, wenn der Elektronenstrahl auf die Probe fokussiert wird."@de ,
+                                                                  "The distance between the electron microscope objective lens and the specimen surface when the electron beam is focused on the specimen."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/XRayAbsorptionNearEdgeSpectroscopy
@@ -1778,4 +1679,4 @@ This technique is widely used in various scientific fields, including chemistry,
                                                                     :abbreviation "4D-STEM"@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
