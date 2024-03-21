@@ -162,6 +162,7 @@ Hence, the TTO (IRI of the ontology) can be addressed by using https://w3id.org/
 |:-------|---------------------------------------------|
 | :      | https://w3id.org/pmd/tto/                   |
 | owl    | http://www.w3.org/2002/07/owl#              |
+| pmd    | https://w3id.org/pmd/co/ |
 | rdf    | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | xml    | http://www.w3.org/XML/1998/namespace        |
 | xsd    | http://www.w3.org/2001/XMLSchema#           |
