@@ -1,5 +1,6 @@
 # Microscopy Ontology (MO)
 This repository contains the [Microscopy Ontology (MO)](https://github.com/materialdigital/application-ontologies/blob/main/microscopy_ontology_MO/pmd_mo.ttl) and other relevant information. The MO has been developed as part of the Platform MaterialDigital [(PMD)](https://materialdigital.de/) project in collaboration with the National Institute of Standards and Technology [(NIST)](https://www.nist.gov/).
+
 Designed as an application ontology, the MO imports and builds upon the PMD Core Ontology ([PMDco](https://github.com/materialdigital/core-ontology/tree/main)), a mid-level ontology for materials science and engineering ([more details here](https://doi.org/10.1016/j.matdes.2023.112603)), and extends the PMDco with approx. 200 terms retrieved from an NLP approach by analyzing 2 decades of [Microscopy and Microanalysis Conference](https://microscopy.org/past-m-m-meetings) proceedings. 
 
 ## Scope 
