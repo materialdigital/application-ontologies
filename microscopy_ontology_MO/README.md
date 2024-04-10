@@ -3,7 +3,17 @@ This repository contains the [Microscopy Ontology (MO)](https://github.com/mater
 Designed as an application ontology, the MO imports and builds upon the PMD Core Ontology ([PMDco](https://github.com/materialdigital/core-ontology/tree/main)), a mid-level ontology for materials science and engineering ([more details here](https://doi.org/10.1016/j.matdes.2023.112603)), and extends the PMDco with approx. 200 terms retrieved from an NLP approach by analyzing 2 decades of [Microscopy and Microanalysis Conference](https://microscopy.org/past-m-m-meetings) proceedings. 
 
 ## Scope 
-"available soon"
+The Microscopy Ontology (MO) extends the ontological framework of the PMDco v2.0.7 as an [application ontology](https://github.com/materialdigital/application-ontologies). The MO facilitates semantic integration and the interoperable connection of diverse data sources from the fields of microscopy and microanalysis. Consequently, the MO paves the way for new, adaptable data applications and analyses across various experiments and studies ([Click here for more info](10.1038/s41597-024-03169-4)).
+
+MO serves as a crucial foundation for annotating (meta)data in microscopy and microanalysis. With the MO, such data can be seamlessly transformed into RDF formats for advanced data management. This simplifies the understanding and communication between humans and machines and also boosts the data's interpretability, findability, and reusability, significantly contributing to research transparency and reproducibility.
+
+By formalizing specialized knowledge about instruments, techniques, and related aspects, the MO facilitates the application of codified human knowledge in machine-driven processes. This enhances informed, automated decision-making, leading to better data interpretation, hypothesis generation, and experimental design. Moreover, these knowledge representations promote a sustainable, data-centric approach and hold the potential to further the development of large language models.
+
+MO incorporates the most commonly used and, therefore, pivotal terms and abbreviations within the professional community. As a standardized structure, the MO allows for easy customization to suit individual needs by adding extra (meta)data classes specific to particular techniques and instruments, already identified in various output formats like dm3, tiff, and more.
+
+Developed as a prototype for swift application ontology creation, MO employs a reproducible and transferable approach based on a specialized community text corpus using natural language processing (NLP) techniques and tools. This corpus includes contributions from two decades of the Microscopy and Microanalysis Conference, with the derived terms being categorized according to PMDco.
+
+In addition to the increased speed of the methodology, the attractiveness of this method for other areas is that it can potentially circumvent special interests and individual biases. The methodology can therefore be reapplied at regular intervals to reflect the fact that our technology, and therefore language, is constantly evolving. As a result, the ontology and its subsequent versions evolve into dynamic representations of the field's accumulated knowledge.
 
 ## Documentation
 An HTML documentation of MO that was auto-generated using [Widoco tool](https://github.com/dgarijo/Widoco) implemented as an GitHub action can be found at the [gh-pages of MO](https://materialdigital.github.io/application-ontologies/mo/index-en.html) and using the MO namespace [https://w3id.org/pmd/mo](https://w3id.org/pmd/mo).
