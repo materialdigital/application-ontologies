@@ -6,8 +6,9 @@ It is designed on the basis of the [PMD Core Ontology (PMDco)](https://github.co
 
 <!-- TOC -->
 1. [Abstract](#Abstract)
-2. [Documents | Links](#Documents-|-Links)
-3. [Documentation](#Documentation)
+2. [Scientific Publication](#scientific-publication)
+3. [Documents | Links](#Documents-|-Links)
+4. [Documentation](#Documentation)
    1. [Ontology Development Steps](#Ontology-Development-Steps)
    2. [Design Principles | Decision log](#Design-Principles-|-Decision-log)
       1. [Fundamentals](#Fundamentals)
