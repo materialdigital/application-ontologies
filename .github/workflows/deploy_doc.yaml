@@ -8,10 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Check if forked repository
-      if: github.event.repository.fork == 'true'
-      run: exit 78  # Exit the workflow if it's a fork
-         
     - uses: actions/checkout@v3
       with:
         ref: ${{ github.ref_name }}
