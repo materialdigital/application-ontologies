@@ -1,0 +1,4053 @@
+[ {
+  "@id" : "https://w3id.org/pmd/co/2.0.7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@id" : "https://orcid.org/0000-0002-3717-7104"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-7094-5371"
+  } ],
+  "http://purl.org/dc/elements/1.1/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@language" : "en",
+    "@value" : "Markus Schilling, Bernd Bayerlein, June Lau. (January 29th, 2024) MO: microscopy ontology. Version 1.0.0, https://w3id.org/pmd/mo/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Microscopy Ontology (MO)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/pmd/co/2.0.7"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/pmd/mo/1.0.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Mikroskopie-Ontologie (MO) ist ein umfassender Rahmen für die Darstellung von Wissen, der Konzepte aus den Bereichen Mikroskopie und Mikroanalyse umfasst. Die MO basiert semantisch auf der PMD-Kernontologie PMDco (die in MO importiert wird), um eine Verbindung zu anderen MSE-Anwendungsontologien und domänenneutralen Konzepten in etablierten Top-Level-Ontologien zu ermöglichen. Das Hauptziel von MO ist es, ein standardisiertes Vokabular und einen Rahmen für die Beschreibung und Organisation von Konzepten, Entitäten und Beziehungen im Bereich der Mikroskopie und Mikroanalyse bereitzustellen. Diese Standardisierung erleichtert die Kommunikation und Interoperabilität zwischen verschiedenen Systemen, Datenbanken und Forschungsgruppen. Um ein Vokabular zu erhalten, das in diesem Bereich relevant und daher standardisierungswürdig ist, wurde ein NLP-Ansatz angewandt, mit dessen Hilfe häufig verwendete Begriffe ermittelt wurden. Auf der Grundlage dieser Liste von Begriffen wurde dann die MO entwickelt. In der Mikroskopie und Mikroanalytik fallen große Datenmengen aus verschiedenen Techniken und Instrumenten an. Die MO kann dazu beitragen, heterogene Datenquellen zu integrieren und zu verknüpfen, so dass Daten aus verschiedenen Experimenten und Studien effektiver kombiniert und analysiert werden können.\nDarüber hinaus dient die MO als Grundlage für die Annotation von Mikroskopie- und Mikroanalysedaten mit standardisierten Metadaten. Diese erweiterte Metadatenbeschreibung verbessert die Interpretierbarkeit, Durchsuchbarkeit und Wiederverwendbarkeit von Daten und fördert die Transparenz und Reproduzierbarkeit in der Forschung. Darüber hinaus kann die MO durch die Formalisierung des Wissens über Instrumente, Techniken, Materialien und Phänomene die Grundlage für maschinelles Denken zur Unterstützung der Dateninterpretation, Hypothesenbildung und Versuchsplanung bilden.\nInsgesamt soll MO die Forschung voranbringen, die Zusammenarbeit fördern und den Wissensaustausch in diesem interdisziplinären Bereich erleichtern."
+  }, {
+    "@language" : "en",
+    "@value" : "The Microscopy Ontology (MO) is a comprehensive framework for representing knowledge that encompasses concepts from the domains of microscopy and microanalysis. The MO is semantically based on the mid-level PMD Core Ontology PMDco (which is imported in MO) to allow a connection to other MSE application ontologies and domain neutral concepts found in established top-level ontologies. The primary goal of MO is to provide a standardized vocabulary and framework for describing and organizing concepts, entities, and relationships within the field of microscopy and microanalysis. This standardization facilitates communication and interoperability between different systems, databases, and research groups. In order to obtain a vocabulary that is relevant in the field and therefore worth standardizing, an NLP approach was applied, with the help of which commonly used terms were determined. MO was then developed based on the respective list of terms. Microscopy and microanalysis generate vast amounts of data from various techniques and instruments. MO may help to integrate and link heterogeneous data sources, enabling the combination and analysis of data from different experiments and studies more effectively. Furthermore, MO serves as a basis for annotating microscopy and microanalysis data with standardized metadata. This improved metadata description enhances the interpretability, searchability, and reusability of data, promoting transparency and reproducibility in research. Moreover, by formalizing knowledge about instruments, techniques, materials, and phenomena, MO may provide the basis to enable machine reasoning to support data interpretation, hypothesis generation, and experimental design.\nOverall, MO is intended to advance research, promoting collaboration, and facilitating knowledge exchange in this interdisciplinary domain."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/co/abbreviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/3DReconstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Dreidimensionale Rekonstruktion"
+  }, {
+    "@language" : "en",
+    "@value" : "Three dimensional reconstruction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Reconstruction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Prozess der Erstellung einer dreidimensionalen Darstellung eines Objekts oder einer Szene aus zweidimensionalen Bildern oder Daten."
+  }, {
+    "@language" : "en",
+    "@value" : "The process of creating a three-dimensional representation of an object or scene from two-dimensional images or data."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/4D-ScanningTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "4D Scanning Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "4D-Rastertransmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "4D-STEM is a technique that adds an additional dimension of information, time, to STEM imaging, allowing the study of dynamic processes in materials at high spatial and temporal resolutions."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "4D-STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Aberration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Aberration"
+  }, {
+    "@language" : "en",
+    "@value" : "Aberration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Abweichung vom idealen oder erwarteten Verhalten, häufig im Zusammenhang mit optischen Systemen verwendet."
+  }, {
+    "@language" : "en",
+    "@value" : "Deviation from the ideal or expected behavior, often used in the context of optical systems."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AccelerationVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Die Beschleunigungsspannung bestimmt die kinetische Energie der Elektronen und beeinflusst die Auflösung und die Eindringtiefe in die Probe."
+  }, {
+    "@language" : "en",
+    "@value" : "The acceleration voltage determines the kinetic energy of the electrons and affects the resolution and depth of penetration in the sample."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acceleration Voltage"
+  }, {
+    "@language" : "de",
+    "@value" : "Beschleunigungsspannung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Voltage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Diese Klasse beschreibt die Spannung, die an ein Elektronenmikroskop angelegt wird, um die von der Elektronenquelle (in der Regel eine Kathode) emittierten Elektronen auf die Probe zu beschleunigen."
+  }, {
+    "@language" : "en",
+    "@value" : "This class decribes the voltage applied to an electron microscope to accelerate the electrons emitted from the electron source (usually a cathode) towards the specimen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Angle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  }, {
+    "@language" : "en",
+    "@value" : "Angle"
+  }, {
+    "@language" : "de",
+    "@value" : "Winkel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "In der Geometrie und Trigonometrie ist ein Winkel ein Maß für eine Drehung, das erforderlich ist, um eine Linie oder Ebene mit einer anderen zur Deckung zu bringen. Ein Winkel wird durch zwei Strahlen gebildet, die einen gemeinsamen Endpunkt haben, der als Scheitelpunkt des Winkels bezeichnet wird. Die Strahlen werden als die Seiten des Winkels bezeichnet. \n\nHinweis: Das Konzept des Winkels ist in der Geometrie von grundlegender Bedeutung und wird häufig verwendet, um die relative Ausrichtung von Linien, Ebenen oder Flächen zu beschreiben. Winkel werden in der Regel in Grad (°) oder Bogenmaß (rad) gemessen."
+  }, {
+    "@language" : "en",
+    "@value" : "In geometry and trigonometry, an angle is a measure of the amount of rotation needed to bring one line or plane into coincidence with another. An angle is formed by two rays that share a common endpoint, known as the vertex of the angle. The rays are referred to as the sides of the angle. \n\nNote: The concept of an angle is fundamental in geometry and is often used to describe the relative orientation of lines, planes, or surfaces. Angles are typically measured in degrees (°) or radians (rad)."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AnnularBrightFieldScanningTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annular Bright Field Scanning Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Ringförmige Hellfeld-Rastertransmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ABF STEM is a technique that utilizes a specific arrangement of detectors to enhance contrast in STEM images, particularly for heavy elements."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ABF-STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AnnularDarkFieldScanningTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annular Dark Field Scanning Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Ringförmige Dunkelfeld-Rastertransmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ADF STEM is a technique that utilizes a specific arrangement of detectors to create contrast in STEM images based on the scattered electrons."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ADF-STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Anode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Anode"
+  }, {
+    "@language" : "en",
+    "@value" : "Anode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Electrode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The anode is the positively charged electrode in an electrochemical cell or other electrically driven systems. It serves as the site where oxidation occurs, meaning electrons are released from the anode, typically moving towards the cathode. In devices like batteries, the anode is where electrons are produced during the discharge process."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AtmosphericScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Atmospheric Scanning Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Atmosphärische Rasterelektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Atmospheric Scanning Electron Microscopy is a technique that allows samples to be imaged in their natural, hydrated state at atmospheric pressure. It enables the observation of biological and other hydrated specimens without the need for dehydration or coating."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ASEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AtomicResolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Atomare Auflösung"
+  }, {
+    "@language" : "en",
+    "@value" : "Atomic Resolution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Resolution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Fähigkeit, einzelne Atome in einem Bild oder einer Struktur aufzulösen."
+  }, {
+    "@language" : "en",
+    "@value" : "The ability to resolve individual atoms in an image or structure."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/AugerElectronSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Auger Electron Spectroscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Auger-Elektronen-Spektroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Auger Electron Spectroscopy (AES) is a surface analysis technique used in the field of materials science and surface chemistry. It involves the study of the interactions between high-energy electrons and atoms on the surface of a material. The process is named after Pierre Auger, who made significant contributions to the understanding of this phenomenon.\nIn AES, a sample's surface is bombarded with a beam of high-energy electrons, which causes inner-shell electrons to be ejected from the atoms in the sample. These vacancies are then filled by higher-energy electrons from outer shells, leading to the emission of Auger electrons. The energy of these emitted Auger electrons is characteristic of the specific elements present in the sample and their chemical states.\nBy analyzing the energy spectrum of the emitted Auger electrons, researchers can identify the elements present on the surface of the material and determine their relative concentrations. Auger Electron Spectroscopy provides valuable information about the elemental composition and chemical bonding of the top few atomic layers of a material, making it a powerful tool for studying surface properties, thin films, and interfaces in various scientific and industrial applications."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "AES"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Beam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Strahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A stream of electrons emitted from the electron source and directed towards the specimen in an electron microscope."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Strom von Elektronen, der von der Elektronenquelle emittiert und auf die Probe in einem Elektronenmikroskop gerichtet wird."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/BeamCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beam Current"
+  }, {
+    "@language" : "de",
+    "@value" : "Strahlstrom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Current"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Intensität des Elektronenstrahls, gemessen als Anzahl der Elektronen, die eine bestimmte Fläche pro Zeiteinheit durchdringen."
+  }, {
+    "@language" : "en",
+    "@value" : "The intensity of the electron beam, measured as the number of electrons passing through a given area per unit time."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/BeamEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beam Energy"
+  }, {
+    "@language" : "de",
+    "@value" : "Strahlungsenergie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Energy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Energie eines Teilchen- oder Photonenstrahls, der in verschiedenen Analyseverfahren verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The energy of a particle or photon beam used in various analytical techniques."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/BeamPath",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beam Path"
+  }, {
+    "@language" : "de",
+    "@value" : "Strahlengang"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Strahlenweg"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Flugbahn des Elektronenstrahls auf seinem Weg durch das Elektronenmikroskop von der Elektronenquelle zur Probe und dann zum Detektor."
+  }, {
+    "@language" : "en",
+    "@value" : "The trajectory followed by the electron beam as it travels through the electron microscope, from the electron source to the specimen and then to the detector."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/BrightFieldTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bright Field Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Hellfeld-Transmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Bright Field TEM is an imaging mode in transmission electron microscopy where regions of the sample that scatter electrons less appear brighter in the resulting image."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "BFTEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CameraLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Length"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Abstand zwischen der Probe und der Kamera, die zur Aufnahme von Bildern in einem Elektronenmikroskop verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The distance between the specimen and the camera used to capture images in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "Camera Length"
+  }, {
+    "@language" : "de",
+    "@value" : "Kameralänge"
+  }, {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Cathode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cathode"
+  }, {
+    "@language" : "de",
+    "@value" : "Kathode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Electrode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The cathode is the negatively charged electrode in an electrochemical cell or other electrical systems. It is the site where reduction occurs, leading to the acceptance of electrons from the external circuit. In batteries, for instance, the cathode is where electrons are consumed during the discharge process."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ChromaticAberration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Chromatic Aberration"
+  }, {
+    "@language" : "de",
+    "@value" : "Chromatische Aberration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Aberration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Unfähigkeit eines Objektivs, alle Farben auf denselben Konvergenzpunkt zu fokussieren."
+  }, {
+    "@language" : "en",
+    "@value" : "The failure of a lens to focus all colors to the same convergence point."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CoherentBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coherent Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Kohärenter Strahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An electron beam in which the individual electrons maintain a constant phase relationship with each other, resulting in interference patterns when interacting with a sample."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Elektronenstrahl, bei dem die einzelnen Elektronen eine konstante Phasenbeziehung zueinander haben, was bei der Wechselwirkung mit einer Probe zu Interferenzmustern führt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CollectionEfficiency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collection Efficiency"
+  }, {
+    "@language" : "de",
+    "@value" : "Kollektoreffizienz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Efficiency"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Fähigkeit eines Detektors oder Systems, relevante Signale oder Daten zu erfassen und aufzuzeichnen."
+  }, {
+    "@language" : "en",
+    "@value" : "The ability of a detector or system to capture and record relevant signals or data."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CondensorLense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Condensor Lense"
+  }, {
+    "@language" : "de",
+    "@value" : "Kondensorlinse"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A condenser lens is an optical element used in microscopy and other optical systems to focus and control the illumination on the sample being observed. It is positioned below the light source and directs light rays onto the specimen, making the illumination uniform and optimizing the quality of the sample's image. The condenser lens helps enhance contrast, resolution, and overall image quality by ensuring that a consistent and concentrated light beam illuminates the specimen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ConfocalLaserScanningMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Confocal Laser Scanning Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Konfokale Laser-Scanning-Mikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/LightMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Confocal Laser Scanning Microscopy (CLSM) is an optical imaging technique that enhances resolution and eliminates out-of-focus blur by using a spatial pinhole and laser illumination. A focused laser beam is scanned across the sample's surface or depth, and only the light emitted from the focal plane (or a defined section) passes through the pinhole to form an image. CLSM provides high-resolution three-dimensional images, making it popular for biological imaging and studying fluorescently labeled samples."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "CLSM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ConvergenceAngle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Der Konvergenzwinkel beeinflusst die Schärfentiefe und die Auflösung des Bildes."
+  }, {
+    "@language" : "en",
+    "@value" : "The convergence angle affects the depth of field and resolution of the image."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Convergence Angle"
+  }, {
+    "@language" : "de",
+    "@value" : "Konvergenzwinkel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Angle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Winkel, in dem der Elektronenstrahl in einem Elektronenmikroskop auf die Probe trifft."
+  }, {
+    "@language" : "en",
+    "@value" : "The angle at which the electron beam converges onto the specimen in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A cryo-scanning electron microscope is typically used for imaging biological samples."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Kryo-Rasterelektronenmikroskop wird in der Regel zur Abbildung biologischer Proben verwendet."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art Elektronenmikroskop, das bei kryogenen Temperaturen arbeitet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cryo Scanning Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Kryo-Rasterelektronenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "cryo-SEM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of electron microscope that operates under cryogenic temperatures."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CryoElectronTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cryo Electron Tomography"
+  }, {
+    "@language" : "de",
+    "@value" : "Kryo-Elektronentomographie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ElectronTomography"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Cryo Electron Tomography is a form of electron tomography that is performed at cryogenic temperatures. It is used to study the three-dimensional structure of frozen-hydrated samples."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "cryo-ET"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/CryoTransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cryo Transmission Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Kryo-Transmissionselektronenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A transmission electron microscope that operates at cryogenic temperatures."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Transmissionselektronenmikroskop, das bei kryogenen Temperaturen arbeitet."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "cryo-TEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Current",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Der Strom wird normalerweise in Ampere (A) gemessen."
+  }, {
+    "@language" : "en",
+    "@value" : "The current is typically measured in amperes (A)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Current"
+  }, {
+    "@language" : "de",
+    "@value" : "Strom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Stromstärke"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Fluss der elektrischen Ladung."
+  }, {
+    "@language" : "en",
+    "@value" : "The flow of electric charge."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DetectorQuantumEfficiency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Detector Quantum Efficiency"
+  }, {
+    "@language" : "de",
+    "@value" : "Detektor Quantenausbeute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Efficiency"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Effizienz, mit der ein Detektor einfallende Strahlung in Nutzsignale umwandelt."
+  }, {
+    "@language" : "en",
+    "@value" : "The efficiency with which a detector converts incident radiation into useful signals."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Diffraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Diffraction"
+  }, {
+    "@language" : "de",
+    "@value" : "Diffraktion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/PhysicalProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Beugung"
+  }, {
+    "@language" : "en",
+    "@value" : "Scattering"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Biegung von Elektronenwellen beim Durchgang durch eine kristalline Probe, was zur Bildung von Beugungsmustern führt, die Informationen über die Kristallstruktur liefern."
+  }, {
+    "@language" : "en",
+    "@value" : "The bending of electron waves as they pass through a crystalline sample, resulting in the formation of diffraction patterns that provide information about the crystal structure."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DiffractionPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Beugungsmuster"
+  }, {
+    "@language" : "en",
+    "@value" : "Diffraction Pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/DigitalEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Muster von Flecken oder Banden, das auf einem Detektor entsteht, wenn Elektronen nach der Wechselwirkung mit einer kristallinen Probe gebeugt werden."
+  }, {
+    "@language" : "en",
+    "@value" : "The pattern of spots or bands produced on a detector when electrons diffract after interacting with a crystalline sample."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DiskOfLeastConfusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Disk Of Least Confusion"
+  }, {
+    "@language" : "de",
+    "@value" : "Scheibe der geringsten Konfusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/CrossSectionArea"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Bereich in der Bildebene eines Elektronenmikroskops, in dem der Elektronenstrahl auf die kleinste Punktgröße fokussiert wird, wodurch die durch sphärische Aberration verursachte Unschärfe minimiert wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The region in the image plane of an electron microscope where the electron beam is focused to the smallest spot size, minimizing the blurring effect due to spherical aberration."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DwellTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dwell Time"
+  }, {
+    "@language" : "de",
+    "@value" : "Verweilzeit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Duration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Verweildauer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Zeitspanne, in der der Elektronenstrahl während der Bildgebung oder Analyse auf einen bestimmten Punkt oder einen interessierenden Bereich der Probe fokussiert wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The amount of time that the electron beam is focused on a specific point or region of interest on the specimen during imaging or analysis."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DynamicFocusCorrection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dynamic Focus Correction"
+  }, {
+    "@language" : "de",
+    "@value" : "Dynamische Fokuskorrektur"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A technique used in electron microscopy to continuously adjust the focus of the electron beam in real-time to maintain optimal image quality, especially when imaging uneven or rough surfaces."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Technik, die in der Elektronenmikroskopie eingesetzt wird, um den Fokus des Elektronenstrahls kontinuierlich in Echtzeit anzupassen und so eine optimale Bildqualität zu erhalten, insbesondere bei der Abbildung unebener oder rauer Oberflächen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DynamicRefocusing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dynamic Refocusing"
+  }, {
+    "@language" : "de",
+    "@value" : "Dynamische Refokussierung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Prozess, bei dem der Fokus des Elektronenstrahls während der Bildgebung angepasst wird, um Änderungen der Probenhöhe oder -topografie zu kompensieren und sicherzustellen, dass die gesamte Probe im Fokus bleibt."
+  }, {
+    "@language" : "en",
+    "@value" : "The process of adjusting the focus of the electron beam during imaging to compensate for changes in the specimen height or topography, ensuring that the entire specimen remains in focus."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/DynamicTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dynamic Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Dynamische Transmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Dynamic Transmission Electron Microscopy is a technique that uses ultrafast electron pulses to capture rapid processes in materials with nanosecond to picosecond time resolution."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "DTEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Efficiency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Efficiency"
+  }, {
+    "@language" : "de",
+    "@value" : "Effizienz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Verhältnis von nützlichem / nutzbarem Output zum gesamten Input in einem System."
+  }, {
+    "@language" : "en",
+    "@value" : "The ratio of useful output to total input in any system."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Electrode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electrode"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektrode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An electrode is a conductor through which electric current enters or exits a substance. In the context of electrochemical systems, an electrode facilitates the transfer of electrons between a solid material and an electrolyte. Electrodes are essential components in batteries, fuel cells, electroplating, and other electrochemical processes. They play a critical role in facilitating chemical reactions and energy storage or conversion."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronBackscatterDiffraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Backscatter Diffraction"
+  }, {
+    "@language" : "de",
+    "@value" : "Rückstreuelektronenbeugung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ElectronDiffraction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Electron Backscatter Diffraction is a microscopy technique used to analyze the crystallographic orientation and microstructure of materials. It involves directing an electron beam onto a sample's surface and measuring the backscattered electrons. By analyzing the diffraction patterns of these electrons, researchers can determine the crystallographic orientation of the material's grains."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "EBSD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenstrahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A stream of electrons emitted from an electron source and accelerated towards the specimen in an electron microscope for imaging or analysis."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Strom von Elektronen, der von einer Elektronenquelle emittiert und in einem Elektronenmikroskop zur Abbildung oder Analyse auf die Probe beschleunigt wird."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronChannelingContrastImaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Channeling Contrast Imaging"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenkanal-Kontrastbildgebung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Electron Channeling Contrast Imaging is a technique used in SEM or TEM to study crystallographic defects, such as dislocations, in crystalline materials. It utilizes the contrast resulting from the deviation of electron trajectories due to crystal defects."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ECCI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronDiffraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Diffraction"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenbeugung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Diffraction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Phänomen der Beugung von Elektronenwellen beim Durchgang durch eine kristalline Probe, das Informationen über die Kristallstruktur liefert."
+  }, {
+    "@language" : "en",
+    "@value" : "The phenomenon of electron waves diffracting as they pass through a crystalline sample, providing information about the crystal structure."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronDiffractionPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Diffraction Pattern"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenbeugungsmuster"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/DiffractionPattern"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Muster von Flecken oder Ringen, das auf einem Detektor entsteht, wenn Elektronen nach der Wechselwirkung mit einer kristallinen Probe gebeugt werden, und das zur Bestimmung der Kristallstruktur verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The pattern of spots or rings produced on a detector when electrons diffract after interacting with a crystalline sample, used to determine the crystal structure."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronEnergyLossSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Energy Loss Spectroscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenenergieverlustspektroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Electron Energy Loss Spectroscopy (EELS) is a specialized analytical technique in the field of materials science and electron microscopy. It involves the measurement of the energy loss of electrons as they interact with a sample. EELS is commonly performed in transmission electron microscopy (TEM) setups.\nIn EELS, a focused beam of high-energy electrons is directed at a sample. As these electrons pass through the material, they can lose energy through various interactions, such as inelastic scattering and excitation of inner-shell electrons. The energy loss is measured and analyzed to gain information about the sample's composition, electronic structure, and bonding characteristics.\nBy studying the energy loss spectrum, researchers can identify the types of atoms present in the sample, determine their chemical states, and gather insights into the electronic properties of the material. EELS is particularly useful for investigating nanoscale materials, thin films, and interfaces, providing valuable information about their electronic and atomic structure. It is a powerful technique for understanding the behavior of materials at the nanometer scale and plays a significant role in advancing fields such as materials science, nanotechnology, and semiconductor research."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "EELS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronMicroprobe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Microprobe"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronenmikrosonde"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An analytical instrument used to determine the chemical composition of materials."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Analyseinstrument zur Bestimmung der chemischen Zusammensetzung von Materialien."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronProbe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Probe"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronensonde"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der fokussierte Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The focused electron beam used for imaging or analysis in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronProbeMicroAnalyzer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Probe Micro Analyzer"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronensonden-Mikro-Analysator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ElectronMicroprobe"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An instrument used for elemental analysis of solid materials by bombarding them with a focused electron beam."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Instrument zur Elementaranalyse fester Materialien durch Beschuss mit einem fokussierten Elektronenstrahl."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronTomograph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Tomograph"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronentomograph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An instrument used for tomographic imaging using electrons."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Instrument für die tomografische Bildgebung mit Elektronen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ET"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ElectronTomography",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Electron Tomography"
+  }, {
+    "@language" : "de",
+    "@value" : "Elektronentomographie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Electron Tomography is a technique that involves collecting a series of transmission electron microscopy (TEM) images from different angles to reconstruct a three-dimensional image of a sample."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ET"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EmissionCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Der Emissionsstrom wird normalerweise in Mikroampere (μA) oder Milliampere (mA) gemessen."
+  }, {
+    "@value" : "The emission current usually measured in microamperes (μA) or milliamperes (mA)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Emission Current"
+  }, {
+    "@language" : "de",
+    "@value" : "Emissionsstrom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Current"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Strom der von der Elektronenquelle emittierten Elektronen."
+  }, {
+    "@language" : "en",
+    "@value" : "The current of electrons emitted from the electron source."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Energy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Die Energie wird üblicherweise in Joule (J) oder Elektronenvolt (eV) gemessen."
+  }, {
+    "@language" : "en",
+    "@value" : "The energy is usually measured in joules (J) or electron volts (eV)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Energie"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Fähigkeit eines physischen Systems, Arbeit zu verrichten."
+  }, {
+    "@language" : "en",
+    "@value" : "The capacity of a physical system to perform work."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnergyDispersiveXRaySpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Energy Dispersive X-ray Spectroscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayMicroanalysis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "energiedispersive Röntgenmikroanalyse"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Energy Dispersive X-ray Spectroscopy is a technique used to analyze the elemental composition of a sample by detecting the X-rays emitted when the sample is bombarded with electrons in an electron microscope or other instrument. EDS provides information about the elements present in the sample and their relative concentrations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "de",
+    "@value" : "energiedispersive Röntgenanalyse"
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "EDS"
+  }, {
+    "@language" : "en",
+    "@value" : "EDX"
+  }, {
+    "@language" : "en",
+    "@value" : "XEDS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnergyFilteredTransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Energiegefiltertes Transmissionselektronenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy-filtered Transmission Electron Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A transmission electron microscope equipped with an energy filter to select electrons of specific energy levels."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Transmissionselektronenmikroskop, das mit einem Energiefilter ausgestattet ist, um Elektronen bestimmter Energieniveaus zu selektieren."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnergyLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Energieverlust"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy Loss"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Energy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Energieverlust, den ein Teilchen beim Durchgang durch ein Medium erfährt."
+  }, {
+    "@language" : "en",
+    "@value" : "The loss of energy experienced by a particle as it passes through a medium."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnergyResolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Energieauflösung"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy Resolution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Resolution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Fähigkeit eines Detektors, zwischen verschiedenen Energieniveaus der einfallenden Strahlung zu unterscheiden."
+  }, {
+    "@language" : "en",
+    "@value" : "The ability of a detector to distinguish between different energy levels of incident radiation."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Scanning Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Umwelt-Rasterelektronenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of electron microscope that can image non-conductive samples in their natural state."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art Elektronenmikroskop, das nicht leitende Proben in ihrem natürlichen Zustand abbilden kann."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ESEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnvironmentalScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Scanning Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Umgebungs-Rasterelektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Scanning Electron Microscopy is a technique that allows imaging of samples in a gaseous environment. It is particularly useful for observing hydrated or non-conductive samples without the need for extensive sample preparation."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ESEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/EnvironmentalTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Umgebungs-Transmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Environmental Transmission Electron Microscopy allows imaging and analysis of materials in controlled gaseous environments, simulating real-world conditions."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "ETEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ExtractionVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Extraction Voltage"
+  }, {
+    "@language" : "de",
+    "@value" : "Extraktionsspannung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Voltage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Spannung, die an die Elektronenquelle in einem Elektronenmikroskop angelegt wird, um Elektronen aus der Kathode zu extrahieren und sie auf die Probe zu beschleunigen."
+  }, {
+    "@language" : "en",
+    "@value" : "The voltage applied to the electron source in an electron microscope to extract electrons from the cathode and accelerate them towards the specimen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FieldEmissionGun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Feldemissionskanone"
+  }, {
+    "@language" : "en",
+    "@value" : "Field Emission Gun"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Gun"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Field Emission Gun is an electron gun used in electron microscopes to produce an electron beam with extremely high brightness and coherence. It relies on the phenomenon of field emission, where electrons are emitted from a sharp emitter tip under the influence of a strong electric field. FEGs are capable of producing highly focused electron beams, leading to enhanced imaging resolution and analytical capabilities."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FEG"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FieldEmissionScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Feldemissions-Rasterelektronenmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Field Emission Scanning Electron Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Field Emission Scanning Electron Microscopy is an advanced form of SEM that uses a field emitter to produce a highly focused electron beam, enabling high-resolution imaging and surface analysis."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FESEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FieldIonMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Feldionenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Field Ion Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/IonMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of microscope that uses the phenomenon of field ionization to image surfaces with atomic resolution."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskoptyp, der das Phänomen der Feldionisation nutzt, um Oberflächen mit atomarer Auflösung abzubilden."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FIM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FieldIonMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Feldionenmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Field Ion Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/IonMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Field Ion Microscopy is a specialized microscopy technique that uses a strong electric field to ionize atoms on the surface of a metal sample. These ionized atoms are then repelled from the surface and can be detected to create an image of the sample's surface topography at atomic resolution. FIM is especially powerful for imaging the arrangement of atoms on metallic surfaces."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FIM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FilamentCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filament Current"
+  }, {
+    "@language" : "de",
+    "@value" : "Glühfadenstrom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Current"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Strom, der durch den Glühfaden der Elektronenkanone in einem Elektronenmikroskop fließt und den Glühfaden erhitzt, um Elektronen zu emittieren."
+  }, {
+    "@language" : "en",
+    "@value" : "The current passing through the filament of the electron gun in an electron microscope, which heats up the filament to emit electrons."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FluorescenceMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fluorescence Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Fluoreszenzmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/LightMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fluorescence Microscopy is an optical imaging technique used to visualize biological structures and molecules that fluoresce when illuminated with specific wavelengths of light. Fluorescent molecules absorb light energy and then emit light of a longer wavelength, allowing the visualization of specific molecules or cellular components. Fluorescence microscopy is widely used in cell biology, molecular biology, and medical research."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FlybackTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flyback Time"
+  }, {
+    "@language" : "de",
+    "@value" : "Rücklaufzeit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Duration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Zeit, die der Elektronenstrahl benötigt, um nach dem Abtasten einer Zeile oder eines Bildes in einem Elektronenmikroskop in seine Ausgangsposition zurückzukehren."
+  }, {
+    "@language" : "en",
+    "@value" : "The time taken for the electron beam to return to its starting position after scanning a line or frame in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocalLength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Brennweite"
+  }, {
+    "@language" : "en",
+    "@value" : "Focal Length"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Length"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Abstand zwischen dem Brennpunkt (wo der Elektronenstrahl fokussiert wird) und der Linse oder Blende in einem Elektronenmikroskop."
+  }, {
+    "@language" : "en",
+    "@value" : "The distance between the focal point (where the electron beam is focused) and the lens or aperture in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocalPlane",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Brennebene"
+  }, {
+    "@language" : "en",
+    "@value" : "Focal Plane"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Area"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Ebene senkrecht zur optischen Achse eines Elektronenmikroskops, in der der Elektronenstrahl fokussiert wird, um ein Bild zu erzeugen."
+  }, {
+    "@language" : "en",
+    "@value" : "The plane perpendicular to the optical axis of an electron microscope where the electron beam is focused to form an image."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocalPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Brennpunkt"
+  }, {
+    "@language" : "en",
+    "@value" : "Focal Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/DigitalEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Punkt, an dem der Elektronenstrahl in einem Elektronenmikroskop fokussiert wird, um ein Bild der Probe zu erzeugen."
+  }, {
+    "@language" : "en",
+    "@value" : "The point at which the electron beam is focused in an electron microscope to form an image of the specimen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocusedBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focused Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Fokussierter Strahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An electron beam that has been narrowed or focused to a small spot size on the specimen surface."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Elektronenstrahl, der auf einen kleinen Punkt auf der Probenoberfläche eingeengt oder fokussiert wurde."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocusedIonBeam-ScanningElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focus(ed) Ion Beam - Scanning Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Fokussierter Ionenstrahl - Rasterelektronenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/IonMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A dual-beam microscope that combines a focused ion beam with a scanning electron microscope."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Zweistrahlmikroskop, das einen fokussierten Ionenstrahl mit einem Rasterelektronenmikroskop kombiniert."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FIB-SEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FocusedIonBeamScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Focused Ion Beam Scanning Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Fokussierte Ionenstrahl-Rasterelektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/IonMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Focused Ion Beam Scanning Electron Microscopy is a combination of two techniques: focused ion beam (FIB) and scanning electron microscopy (SEM). FIB-SEM systems use a focused ion beam to both image and modify a sample's surface. The ion beam can be used for milling, cutting, and deposition processes, making FIB-SEM a versatile tool for materials analysis, sample preparation, and three-dimensional imaging."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FIB-SEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FourierTransformInfraredSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fourier Transform Infrared Spectroscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Fourier-Transformations-Infrarotspektroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fourier Transform Infrared Spectroscopy (FTIR) is a powerful analytical technique used in various scientific disciplines to study the molecular composition and properties of materials. It is based on the interaction between infrared radiation and a sample, providing information about the vibrational modes of molecules.\nIn FTIR spectroscopy, an infrared beam is directed through a sample, and the interaction between the radiation and the sample's molecules leads to absorption of specific infrared frequencies. Each type of molecular bond and functional group in the sample absorbs infrared radiation at characteristic frequencies, which correspond to the energies of molecular vibrations. The resulting absorption spectrum represents a fingerprint of the sample's molecular structure.\nThe Fourier transform technique is used to convert the raw data obtained from the absorption measurements into a Fourier-transformed spectrum. This transformation improves the signal-to-noise ratio and enhances the accuracy of spectral analysis.\nFTIR is extensively used in a wide range of fields, including chemistry, biology, materials science, pharmaceuticals, and environmental science. It is employed for qualitative and quantitative analysis, identification of compounds, monitoring chemical reactions, and studying molecular interactions. FTIR spectroscopy provides valuable insights into molecular bonding, functional groups, and the chemical composition of substances, making it an indispensable tool in modern analytical science."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "FTIR"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/FrameTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Frame Time"
+  }, {
+    "@language" : "de",
+    "@value" : "Rahmenscanzeit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Duration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Zeit, die benötigt wird, um ein Einzelbild in einem Elektronenmikroskop aufzunehmen und anzuzeigen."
+  }, {
+    "@language" : "en",
+    "@value" : "The time required to capture and display a single frame of an image in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/GatanImageFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gatan Abbildungsfilter"
+  }, {
+    "@language" : "en",
+    "@value" : "Gatan Image Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ImageFilter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Gatan Image Filter refers to an image filter manufactured by Gatan, Inc., a company specializing in electron microscopy and related products. Gatan's image filters are designed for electron microscopes and electron energy loss spectroscopy (EELS) applications. These filters allow researchers to control and enhance the acquisition of electron energy loss spectra while obtaining high-resolution images of the sample under investigation."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Gun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gun"
+  }, {
+    "@language" : "de",
+    "@value" : "Kanone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "In the context of electron microscopy and particle acceleration, a \"gun\" typically refers to an electron or particle source that generates and emits the particles. In electron microscopy, an electron gun is used to generate a beam of electrons for imaging or analysis. In particle accelerators, a particle gun generates and launches particles at high speeds for various experimental purposes."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/HeliumIonMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Helium Ion Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Helium-Ionen-Mikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/FocusedIonBeam-ScanningElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of microscope that uses helium ions to image samples with high resolution."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art Mikroskop, das Helium-Ionen verwendet, um Proben mit hoher Auflösung abzubilden."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "HIM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/HeliumIonMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Helium Ion Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Helium-Ionen-Mikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/IonMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Helium Ion Microscopy is a microscopy technique that uses a beam of helium ions instead of electrons to interact with a sample's surface. The smaller mass of helium ions compared to electrons allows for higher resolution imaging and reduced sample damage. HIM provides high-resolution images and is often used for imaging delicate or sensitive samples."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "HIM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/HighAngleAnnularDarkFieldScanningTransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High-angle Annular Dark-field Scanning Transmission Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Hochwinkel-Dunkelfeld-Rastertransmissionselektronenmikroskop mit annularem Winkel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of scanning transmission electron microscope that detects scattered electrons at high angles."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art Rastertransmissionselektronenmikroskop, das gestreute Elektronen in hohen Winkeln erkennt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "HAADF-STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/HighResolutionTransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Resolution Transmission Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Hochauflösendes Transmissionselektronenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A transmission electron microscope capable of achieving high-resolution images."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Transmissionselektronenmikroskop, das hochauflösende Bilder liefert."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "HRTEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/HighResolutionTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Resolution Transmission Electron Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Hochauflösende Transmissionselektronenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "High Resolution TEM is a technique that provides exceptionally high-resolution images of a sample's internal structure, revealing atomic-level details."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "HRTEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ImageFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Abbildungsfilter"
+  }, {
+    "@language" : "en",
+    "@value" : "Image Filter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An image filter is a device or component used in imaging systems, such as microscopy or photography, to modify the appearance of an image by selectively altering certain characteristics. Filters can be used to adjust contrast, brightness, color balance, and other image properties. They are often used to enhance specific features or to correct for distortions caused by lighting conditions or optical imperfections."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/IncidentBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Einfallender Strahl"
+  }, {
+    "@language" : "en",
+    "@value" : "Incident Beam"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Elektronenstrahl, der in einem Elektronenmikroskop auf die Probenoberfläche trifft und Wechselwirkungen hervorruft, die Signale für die Abbildung oder Analyse erzeugen."
+  }, {
+    "@language" : "en",
+    "@value" : "The electron beam that strikes the specimen surface in an electron microscope, causing interactions that produce signals for imaging or analysis."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/InelasticScattering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inelastic Scattering"
+  }, {
+    "@language" : "de",
+    "@value" : "Inelastische Streuung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/PhysicalProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Inelastic scattering is a scattering process that involves the transfer of energy and momentum between the incident particle (e.g., photon, electron) and the target particle. During inelastic scattering, the energy of the scattered particle changes, and the interaction may result in various outcomes, such as excitation, emission, or other energy transfers that alter the internal state of the target particle."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/InteractionVolume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Interaction Volume"
+  }, {
+    "@language" : "de",
+    "@value" : "Überlagerungsvolumen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Volume"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Bereich innerhalb einer Probe, in dem ein Teilchenstrahl mit dem Material in Wechselwirkung tritt."
+  }, {
+    "@language" : "en",
+    "@value" : "The region within a sample where a particle beam interacts with the material."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/IonBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ion Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Ionenstrahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A stream of ions used for grinding or analysis, especially in ion microscopy techniques for imaging."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Ionenstrom, der zum Mahlen oder zur Analyse verwendet wird, insbesondere bei Ionenmikroskopietechniken zur Bildgebung."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/IonMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ion Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Ionenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Micropscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that uses ions to create images of samples."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das mit Hilfe von Ionen Bilder von Proben erzeugt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/IonMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ion Microscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Ionenmikroskopie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/MicroscopyProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Ion Microscopy refers to a group of microscopy techniques that use focused ion beams to image and analyze samples. These techniques utilize ions, such as protons or heavy ions, instead of electrons or photons to interact with the sample, providing valuable information about its composition and structure."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/LightMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lichtmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Light Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/OpticalMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An optical microscope that uses visible light to illuminate and magnify samples."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein optisches Mikroskop, das sichtbares Licht verwendet, um Proben zu beleuchten und zu vergrößern."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/LightMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lichtmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Light Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/OpticalMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Verwendung von sichtbarem Licht zur Beobachtung und Untersuchung kleiner Objekte oder Strukturen."
+  }, {
+    "@language" : "en",
+    "@value" : "The use of visible light to observe and study small objects or structures."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Magnification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Magnification"
+  }, {
+    "@language" : "de",
+    "@value" : "Vergrößerung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Verhältnis zwischen der Größe eines von einem optischen System erzeugten Bildes und der Größe des Objekts."
+  }, {
+    "@language" : "en",
+    "@value" : "The ratio of the size of an image produced by an optical system to the size of the object."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/MechanicalPolishing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mechanical Polishing"
+  }, {
+    "@language" : "de",
+    "@value" : "Mechanisches Polieren"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ManufacturingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Mechanical polishing is a material preparation technique used to enhance the surface quality and finish of a sample by removing thin layers of material through abrasion. It involves using abrasive materials, such as polishing cloths, diamond suspensions, or abrasive pastes, along with a polishing machine or device. The process typically includes several steps, each using progressively finer abrasives to achieve a smooth and mirror-like surface.\n\nDuring mechanical polishing, the sample is pressed against the rotating polishing medium with controlled pressure. The abrasive particles embedded in the medium gradually remove surface irregularities, scratches, and imperfections, resulting in improved flatness, clarity, and reflectivity. The process can be adjusted to target specific levels of surface roughness and precision.\n\nMechanical polishing is commonly used in various scientific and industrial applications, such as metallography, materials science, electronics, and optics. It is an essential step before further analyses like microscopy, spectroscopy, or surface profiling, as it provides a pristine surface for accurate characterization and observation of material properties."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/MonochromaticBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Monochromatic Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Monochromatischer Strahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An electron beam consisting of electrons with a narrow range of energies, typically achieved using electron energy filters or monochromators."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Elektronenstrahl, der aus Elektronen mit einem engen Energiebereich besteht, der in der Regel durch Elektronenenergiefilter oder Monochromatoren erreicht wird."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Monochromator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Monochromator"
+  }, {
+    "@language" : "en",
+    "@value" : "Monochromator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An optical device that transmits a narrow range of wavelengths of light."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein optisches Gerät, das einen engen Wellenlängenbereich von Licht überträgt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/OpticalMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Optical Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Optisches Mikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Micropscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that uses visible light and lenses to magnify specimens."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das sichtbares Licht und Linsen zur Vergrößerung von Proben verwendet."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/OrientationImagingMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bildgebende Orientierungsmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Orientation Imaging Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Orientation Imaging Microscopy is a microscopy technique used to map the crystallographic orientations of grains within a material. It is commonly applied in SEM to study the microstructural properties of polycrystalline materials."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "OIM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PhysicalProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Physical Process"
+  }, {
+    "@language" : "de",
+    "@value" : "Physikalischer Prozess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Process"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A physical process refers to a sequence of events or interactions that occur in the physical world and can be described and analyzed based on the principles of physics. These processes involve the transformation of energy, matter, or both, and they often follow established laws and theories of physics. In particular, a physical process may just occur due to natural circumstances and does not necessarily have to be induced by human activities or interactions."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PixelSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pixel Size"
+  }, {
+    "@language" : "en",
+    "@value" : "Pixelgröße"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Größe der einzelnen Pixel in einem digitalen Bild oder einer Anzeige."
+  }, {
+    "@language" : "en",
+    "@value" : "The size of individual pixels in a digital image or display."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PolarizedLightMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Polarisiertes Lichtmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Polarized Light Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/LightMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that uses polarized light to observe and analyze samples."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das polarisiertes Licht zur Beobachtung und Analyse von Proben verwendet."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "PLM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PolarizedLightMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Polarisationslichtmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Polarized Light Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/LightMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Polarized Light Microscopy is a technique that uses polarized light to enhance the contrast and reveal structural information in transparent samples. Light waves vibrate in specific directions, and by using polarizers to control the orientation of light waves, polarized light microscopy can highlight birefringent materials, anisotropic structures, and stress patterns within samples. This technique is valuable for studying crystalline structures, fibers, and anisotropic materials."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "PLM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PolePiece",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pole Piece"
+  }, {
+    "@language" : "de",
+    "@value" : "Polschuh"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A component of the electron column in an electron microscope that focuses and guides the electron beam onto the specimen."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Komponente der Elektronensäule in einem Elektronenmikroskop, die den Elektronenstrahl fokussiert und auf die Probe lenkt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/PrimaryBeam",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Primary Beam"
+  }, {
+    "@language" : "de",
+    "@value" : "Primärstrahl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Beam"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Hauptelektronenstrahl, der von der Elektronenquelle ausgesandt und auf die Probe in einem Elektronenmikroskop gerichtet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The main electron beam emitted from the electron source and directed towards the specimen in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ProbeCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Probe Current"
+  }, {
+    "@language" : "de",
+    "@value" : "Sondenstrom"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Current"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Strom der Elektronen im fokussierten Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The current of electrons in the focused electron beam used for imaging or analysis in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ProbeSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Probe Size"
+  }, {
+    "@language" : "de",
+    "@value" : "Sensorgröße"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Messfühlergröße"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Größe der Sonde oder des Strahls, die bei Mikroskopie- oder Spektroskopieverfahren verwendet werden."
+  }, {
+    "@language" : "en",
+    "@value" : "The size of the probe or beam used in microscopy or spectroscopy techniques."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Reconstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reconstruction"
+  }, {
+    "@language" : "de",
+    "@value" : "Rekonstruktion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Prozess der Erstellung eines dreidimensionalen Bildes oder Modells aus zweidimensionalen Daten."
+  }, {
+    "@language" : "en",
+    "@value" : "The process of creating a three-dimensional image or model from two-dimensional data."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Resolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Auflösung"
+  }, {
+    "@language" : "en",
+    "@value" : "Resolution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "In various contexts, resolution refers to the degree of detail that can be discerned in an image, measurement, or other representation of an object or phenomenon."
+  }, {
+    "@language" : "de",
+    "@value" : "In verschiedenen Zusammenhängen bezieht sich die Auflösung auf den Grad der Detailgenauigkeit, die in einem Bild, einer Messung oder einer anderen Darstellung eines Objekts oder Phänomens erkennbar ist."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rasterelektronenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Electron Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that produces images of a sample by scanning it with a focused beam of electrons."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das Bilder einer Probe erzeugt, indem es diese mit einem fokussierten Elektronenstrahl abtastet."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "de",
+    "@value" : "REM"
+  }, {
+    "@language" : "en",
+    "@value" : "SEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rasterelektronenmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Electron Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Electron Microscopy is a microscopy technique that uses a focused beam of electrons to scan the surface of a sample. The interaction of the electrons with the sample generates signals that provide information about the sample's topography, morphology, and composition."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningProbeMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastersondenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Probe Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of microscope that images surfaces by scanning a probe over the sample."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskoptyp, der Oberflächen abbildet, indem er eine Sonde über die Probe führt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningProbeMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastersondenmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Probe Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Probe Microscopy encompasses various techniques, such as Atomic Force Microscopy (AFM) and Scanning Tunneling Microscopy (STM), that use a sharp probe to scan a sample's surface. These techniques provide high-resolution images and information about surface properties on the nanometer scale."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SPM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastertransmissionselektronenmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Transmission Electron Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of transmission electron microscope where a focused electron beam is scanned across the sample."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art von Transmissionselektronenmikroskop, bei dem ein fokussierter Elektronenstrahl über die Probe gescannt wird."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastertransmissionselektronenmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Transmission Electron Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Transmission Electron Microscopy is a technique that combines the principles of scanning and transmission electron microscopy. It allows imaging and spectroscopy with high spatial resolution."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "STEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy-ElectronEnergyLossSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastertransmissionselektronenmikroskopie Elektronen-Energieverlust-Spektroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Transmission Electron Microscopy Electron Energy Loss Spectroscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningTransmissionElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "STEM-EELS combines STEM imaging with electron energy loss spectroscopy to provide information about the elemental composition and electronic structure of a sample at high spatial resolution."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "STEM-EELS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningTunnelingMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastertunnelmikroskop"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Tunneling Microscope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningProbeMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that uses quantum tunneling to image surfaces at the atomic level."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das Quanten-Tunneling nutzt, um Oberflächen auf atomarer Ebene abzubilden."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "STM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/ScanningTunnelingMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rastertunnelmikroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "Scanning Tunneling Microscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/ScanningProbeMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Scanning Tunneling Microscopy is a technique that uses a conducting probe to measure the tunneling current between the probe and the sample's surface. It provides atomic-scale images of surfaces and is often used to study conductive materials."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "STM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Scintillator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Scintillator"
+  }, {
+    "@language" : "de",
+    "@value" : "Szintillator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A material that emits light when it absorbs ionizing radiation."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Material, das Licht aussendet, wenn es ionisierende Strahlung absorbiert."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SecondaryIonMassSpectrometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Secondary Ion Mass Spectrometry"
+  }, {
+    "@language" : "de",
+    "@value" : "Sekundärionen-Massenspektrometrie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Secondary Ion Mass Spectrometry (SIMS) is an advanced analytical technique used to determine the elemental and isotopic composition of solid surfaces and thin films at a very high sensitivity and spatial resolution. It is widely employed in various scientific and industrial applications, including materials science, semiconductor research, and surface analysis.\nIn SIMS, a focused beam of high-energy primary ions is directed at a sample's surface. The impact of these primary ions causes the ejection of secondary ions from the sample's surface. These secondary ions are then extracted, mass-separated, and detected using a mass spectrometer. The mass spectrometer measures the mass-to-charge ratios of the secondary ions, providing information about the elemental and isotopic composition of the sample.\nThe sensitivity and spatial resolution of SIMS allow researchers to analyze very small areas, often down to the micrometer or nanometer scale. This makes SIMS particularly valuable for investigating surface composition, depth profiling of layered structures, and detecting trace elements in complex materials. The technique is non-destructive in its elemental analysis, which is beneficial for studying delicate samples or preserving valuable materials.\nSIMS has applications in diverse fields, including materials characterization, semiconductor device analysis, biological and medical research, and geological studies. It provides essential information about the chemical composition, structure, and distribution of elements in complex samples, contributing to advancements in materials science and various technological developments."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SIMS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SelectedAreaElectronDiffraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Elektronenbeugung ausgewählter Regionen"
+  }, {
+    "@language" : "en",
+    "@value" : "Selected Area Electron Diffraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Diffraction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Selected Area Electron Diffraction is a technique used in transmission electron microscopy (TEM) to study the crystallographic orientation of small regions within a sample. By selecting a specific area of the sample and directing an electron beam onto it, diffraction patterns are generated. These patterns offer insights into the sample's crystal structure and orientation."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SAD"
+  }, {
+    "@language" : "en",
+    "@value" : "SAED"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SiliconDriftDetector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Silicon Drift Detector"
+  }, {
+    "@language" : "de",
+    "@value" : "Silizium-Driftdetektor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of X-ray detector that offers high-speed performance and high energy resolution."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art Röntgendetektor, der Hochgeschwindigkeitsleistung und hohe Energieauflösung bietet."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SDD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SoftXRayEmissionSpectrometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenemissionsspektrometer mit weicher Röntgenstrahlung"
+  }, {
+    "@language" : "en",
+    "@value" : "Soft X-ray Emission Spectrometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectrometer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An instrument used to analyze the emission of soft X-rays from a sample."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Instrument zur Analyse der Emission weicher Röntgenstrahlen aus einer Probe."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "SXES"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Quelle"
+  }, {
+    "@language" : "en",
+    "@value" : "Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Elektronenquelle, z. B. ein Wolframfaden oder eine Feldemissionskathode, die in einem Elektronenmikroskop Elektronen emittiert."
+  }, {
+    "@language" : "en",
+    "@value" : "The electron source, such as a tungsten filament or field-emission cathode, that emits electrons in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SpatialResolution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ortsauflösung"
+  }, {
+    "@language" : "en",
+    "@value" : "Spatial Resolution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Resolution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Fähigkeit eines Bildgebungssystems, feine Details in einem Objekt anzuzeigen. Sie bezieht sich auf das kleinste wahrnehmbare Detail in einem Bild."
+  }, {
+    "@language" : "en",
+    "@value" : "The ability of an imaging system to discern fine details in an object. It refers to the smallest discernible detail in an image."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Spectrometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spectrometer"
+  }, {
+    "@language" : "de",
+    "@value" : "Spektrometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ProcessingNode"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An instrument used to measure properties of light over a specific portion of the electromagnetic spectrum."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Instrument zur Messung der Eigenschaften von Licht in einem bestimmten Teil des elektromagnetischen Spektrums."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Spectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Spectrometry"
+  }, {
+    "@language" : "de",
+    "@value" : "Spektrometrie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Spectroscopy is a scientific technique used to study and analyze the interaction of matter with electromagnetic radiation, such as light. It involves measuring the way in which different substances absorb, emit, or scatter light at various wavelengths or frequencies. By examining the spectrum of light emitted, absorbed, or transmitted by a sample, scientists can gain insights into its chemical composition, molecular structure, and physical properties. Spectroscopy is widely utilized in various fields, including chemistry, physics, astronomy, and biochemistry, to investigate the characteristics and behavior of materials at the atomic and molecular level."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Spectroscopy"
+  }, {
+    "@language" : "de",
+    "@value" : "Spektroskopie"
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SphericalAberration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Spherical Aberration"
+  }, {
+    "@language" : "de",
+    "@value" : "Sphärische Aberration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Aberration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A type of optical aberration caused by deviations from the ideal spherical shape in lenses or mirrors."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Art von optischer Aberration, die durch Abweichungen von der idealen sphärischen Form in Linsen oder Spiegeln verursacht wird."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/SurfaceStructure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Oberflächenstruktur"
+  }, {
+    "@language" : "en",
+    "@value" : "Surface Structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Anordnung und die Merkmale der äußersten Schicht eines Materials."
+  }, {
+    "@language" : "en",
+    "@value" : "The arrangement and features of the outermost layer of a material."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TiltCorrection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Neigungskorrektur"
+  }, {
+    "@language" : "en",
+    "@value" : "Tilt Correction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A correction applied to images obtained from tilted specimens in electron microscopy to compensate for distortions caused by the tilt angle."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Korrektur, die bei Bildern von gekippten Proben in der Elektronenmikroskopie angewendet wird, um durch den Kippwinkel verursachte Verzerrungen zu kompensieren."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TimeOfFlightSecondaryIonMassSpectrometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Flugzeit-Sekundärionen-Massenspektrometrie"
+  }, {
+    "@language" : "en",
+    "@value" : "Time Of Flight Secondary Ion Mass Spectrometry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS) is an advanced surface analysis technique used to determine the elemental and molecular composition of solid surfaces and thin films with high sensitivity and spatial resolution. It is employed in various scientific and industrial fields, including materials science, nanotechnology, biomedicine, and semiconductor research.\nTOF-SIMS builds upon the principles of Secondary Ion Mass Spectrometry (SIMS), where a focused beam of high-energy primary ions is directed at a sample's surface, causing the ejection of secondary ions. In TOF-SIMS, the flight time of these secondary ions is measured as they travel through a field-free region and enter a time-of-flight mass spectrometer. The mass spectrometer measures the time taken by the ions to reach the detector, which is directly proportional to their mass-to-charge ratio.\nBy analyzing the flight times of the secondary ions, TOF-SIMS can determine the elemental, isotopic, and molecular composition of the sample's surface. It provides information about the presence of specific elements, chemical compounds, and molecular fragments, along with their spatial distribution. The high sensitivity of TOF-SIMS allows for the detection of trace elements and molecular species in complex samples.\nTOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling layered structures, investigating organic and inorganic materials, and studying biological specimens. Its ability to provide detailed chemical information while maintaining spatial resolution makes it an essential tool for understanding surface properties and material interactions in a wide range of applications."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "TOF-SIMS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TomographicReconstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tomographic Reconstruction"
+  }, {
+    "@language" : "de",
+    "@value" : "Tomographische Rekonstruktion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Reconstruction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Prozess der Rekonstruktion einer dreidimensionalen Struktur aus einer Reihe von zweidimensionalen Bildern, die aus verschiedenen Winkeln aufgenommen wurden."
+  }, {
+    "@language" : "en",
+    "@value" : "The process of reconstructing a three-dimensional structure from a series of two-dimensional images taken at different angles."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TransmissionElectronAberrationCorrectedMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transmission Electron Aberration-corrected Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Transmissionselektronen-Aberrations-korrigiertes Mikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A transmission electron microscope equipped with aberration correction to achieve high-resolution imaging."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Transmissions-Elektronenmikroskop mit Aberrationskorrektur zur Erzielung hochauflösender Bilder."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "TEAM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transmission Electron Microscope"
+  }, {
+    "@language" : "de",
+    "@value" : "Transmissionelektronenmikroskop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A microscope that transmits a beam of electrons through a specimen, forming an image."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Mikroskop, das einen Elektronenstrahl durch eine Probe sendet und ein Bild erzeugt."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@value" : "TEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/TransmissionElectronMicroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ElectronMicroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Transmission Electron Microscopy is a microscopy technique that involves transmitting a beam of electrons through a thin sample to create high-resolution images. It is used to study the internal structure and morphology of materials at the nanometer scale."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "TEM"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Voltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Spannung"
+  }, {
+    "@language" : "en",
+    "@value" : "Voltage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Stromspannung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Spannung, auch elektrische Potentialdifferenz, ist ein Maß für die elektrische potentielle Energie pro Ladungseinheit in einem elektrischen Stromkreis. Sie ist die Kraft, die den elektrischen Strom durch einen Leiter treibt. \n\nHinweis: Die Spannung wird in Volt (V) gemessen und stellt die potenzielle Energiedifferenz zwischen zwei Punkten in einem Stromkreis dar. Je höher die Spannung ist, desto größer ist die Kraft, die die elektrischen Ladungen antreibt, und desto höher ist folglich auch das Potenzial für einen Stromfluss."
+  }, {
+    "@language" : "en",
+    "@value" : "Voltage, also known as electric potential difference, is a measure of the electric potential energy per unit charge in an electrical circuit. It is the force or pressure that drives electric current through a conductor. \n\nNote: Voltage is measured in volts (V), and it represents the potential energy difference between two points in a circuit. The higher the voltage, the greater the force pushing the electric charges, and consequently, the higher the potential for current to flow."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/Volume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Volume"
+  }, {
+    "@language" : "de",
+    "@value" : "Volumen"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Die Menge an Raum, die ein Stoff oder Gegenstand einnimmt."
+  }, {
+    "@language" : "en",
+    "@value" : "The amount of space that a substance or object occupies."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/WaitTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Die Wartezeit wird häufig genutzt, um die Probe zu stabilisieren oder um die Beschädigung der Probe zu minimieren."
+  }, {
+    "@language" : "en",
+    "@value" : "The wait time is often used to allow the specimen to stabilize or to minimize sample damage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wait Time"
+  }, {
+    "@language" : "de",
+    "@value" : "Wartezeit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Duration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Das Zeitintervall zwischen aufeinander folgenden Messungen oder Operationen in einem Elektronenmikroskop."
+  }, {
+    "@language" : "en",
+    "@value" : "The time interval between successive measurements or operations in an electron microscope."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/WorkingDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Der Arbeitsabstand wirkt sich auf die Tiefenschärfe und die Auflösung des Bildes aus."
+  }, {
+    "@language" : "en",
+    "@value" : "The working distance affects the depth of field and the resolution of the image."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Arbeitsabstand"
+  }, {
+    "@language" : "en",
+    "@value" : "Working Distance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Distance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Abstand zwischen der Objektivlinse des Elektronenmikroskops und der Probenoberfläche, wenn der Elektronenstrahl auf die Probe fokussiert wird."
+  }, {
+    "@language" : "en",
+    "@value" : "The distance between the electron microscope objective lens and the specimen surface when the electron beam is focused on the specimen."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayAbsorptionNearEdgeSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenabsorptionsspektroskopie im Nahbereich"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Absorption Near Edge Spectroscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Spectroscopy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Absorption Near Edge Spectroscopy (XANES) is a specialized technique used in the field of materials science and spectroscopy to study the electronic and structural properties of materials. It focuses on the X-ray absorption spectra of atoms within a sample, particularly the region just above the absorption edge of an element's X-ray absorption spectrum.\nIn XANES, a sample is irradiated with X-rays, typically generated by a synchrotron radiation source. These X-rays are tuned to specific energy levels corresponding to the absorption edges of the elements of interest in the sample. As the X-rays are absorbed by the sample, the energy levels of the atoms are altered, leading to various transitions in their electron configurations. The resulting X-ray absorption spectrum is measured, specifically targeting the energies just above the absorption edge.\nXANES provides information about the electronic structure of the atoms within the sample, including the oxidation state, chemical bonding, and local environment of the absorbing element. The fine details of the XANES spectrum offer insights into the atomic and molecular interactions, as well as the coordination and symmetry of atoms in different chemical environments.\nThis technique is widely used in various scientific fields, including chemistry, solid-state physics, and materials science. XANES helps researchers understand the properties and behavior of materials at the atomic level, making it an invaluable tool for investigating the characteristics of complex materials, catalysts, minerals, and biomolecules."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "XANES"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayAbsorptionSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenabsorptionsspektroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Absorption Spectroscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayMapping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Absorption Spectroscopy is a technique used to study the electronic and local structural properties of materials by analyzing the absorption of X-rays. It involves measuring how X-rays are absorbed by a sample at various energies, providing insights into the electronic states and chemical environments of specific elements."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "XAS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayAnalysis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenanalyse"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Analysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/AnalysingProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray analysis is a technique used to investigate the composition and structure of materials by exposing them to X-rays. When X-rays interact with a material, they can be absorbed, scattered, or diffracted in ways that provide information about the material's internal arrangement of atoms and its elemental composition."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayDiffraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Diffraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/Diffraction"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenstrahlbeugung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Diffraction is a technique that utilizes the diffraction of X-rays by crystals to determine their atomic arrangement and lattice structure. X-ray diffraction patterns are produced when X-rays strike a crystalline sample, and the resulting pattern provides information about the arrangement of atoms in the crystal lattice."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenbeugung"
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "XRD"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayFluorescence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenfluoreszenz"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Fluorescence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayMapping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Fluorescence is a method used to determine the elemental composition of a sample by analyzing the X-rays emitted when the sample is exposed to high-energy X-rays. The X-rays emitted are characteristic of the elements present, allowing for quantitative analysis of the sample's elemental composition."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "XRF"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayMapping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgen-Mapping"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Mapping"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayAnalysis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray mapping is a process that involves generating spatially resolved images of the distribution of specific elements within a sample. By collecting X-ray signals emitted or scattered from a sample at different points, an elemental map can be created, showing the varying concentrations of elements across the sample's surface."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayMicroanalysis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgen-Mikroanalyse"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Microanalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayAnalysis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Microanalysis is a technique that combines microscopy and X-ray analysis to study the elemental composition of small regions within a sample. It involves focusing an electron or X-ray beam on a specific area of the sample and measuring the X-rays emitted from that area to determine the elemental composition."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/XRayPhotoelectronSpectroscopy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/mo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Röntgenphotoelektronenspektroskopie"
+  }, {
+    "@language" : "en",
+    "@value" : "X-ray Photoelectron Spectroscopy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/mo/XRayMapping"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "X-ray Photoelectron Spectroscopy, also known as Electron Spectroscopy for Chemical Analysis (ESCA), is a technique used to study the surface chemistry of materials. XPS involves bombarding a sample's surface with X-rays to emit photoelectrons, which are then analyzed to determine the elemental composition and chemical states of the elements on the surface."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@language" : "en",
+    "@value" : "ChatGPT 3.5"
+  } ],
+  "https://w3id.org/pmd/mo/abbreviation" : [ {
+    "@language" : "en",
+    "@value" : "XPS"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/mo/abbreviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
