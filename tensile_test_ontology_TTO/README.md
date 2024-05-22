@@ -1,4 +1,4 @@
-# Tensile Test Ontology (TTO)
+# Tensile Test Ontology (TTO) 2.0
 
 This [repository](https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO) comprises information on the tensile test ontology (TTO) that was developed within the frame of the joint project 
 [Platform MaterialDigital (PMD)](https://materialdigital.de/). 
