@@ -7,26 +7,60 @@
 @base <https://w3id.org/pmd/mo/> .
 
 <https://w3id.org/pmd/co/2.0.7> rdf:type owl:Ontology ;
-                                 owl:versionIRI <https://w3id.org/pmd/mo/1.0.0> ;
+                                 owl:versionIRI <https://w3id.org/pmd/mo/1.1> ;
                                  owl:imports <https://w3id.org/pmd/co/2.0.7> ;
                                  <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-3717-7104> ,
                                                                            <https://orcid.org/0000-0002-7094-5371> ;
                                  <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
-                                 <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, Bernd Bayerlein, June Lau. (January 29th, 2024) MO: microscopy ontology. Version 1.0.0, https://w3id.org/pmd/mo/"@en ;
+                                 <http://purl.org/dc/terms/bibliographicCitation> "Markus Schilling, June Lau, Bernd Bayerlein. (July 22th, 2024) MO: microscopy ontology. Version 1.1, https://w3id.org/pmd/mo/"@en ;
                                  <http://purl.org/dc/terms/title> "Microscopy Ontology (MO)"@en ;
                                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                                 <http://www.w3.org/2004/02/skos/core#definition> """Die Mikroskopie-Ontologie (MO) ist ein umfassender Rahmen für die Darstellung von Wissen, der Konzepte aus den Bereichen Mikroskopie und Mikroanalyse umfasst. Die MO basiert semantisch auf der PMD-Kernontologie PMDco (die in MO importiert wird), um eine Verbindung zu anderen MSE-Anwendungsontologien und domänenneutralen Konzepten in etablierten Top-Level-Ontologien zu ermöglichen. Das Hauptziel von MO ist es, ein standardisiertes Vokabular und einen Rahmen für die Beschreibung und Organisation von Konzepten, Entitäten und Beziehungen im Bereich der Mikroskopie und Mikroanalyse bereitzustellen. Diese Standardisierung erleichtert die Kommunikation und Interoperabilität zwischen verschiedenen Systemen, Datenbanken und Forschungsgruppen. Um ein Vokabular zu erhalten, das in diesem Bereich relevant und daher standardisierungswürdig ist, wurde ein NLP-Ansatz angewandt, mit dessen Hilfe häufig verwendete Begriffe ermittelt wurden. Auf der Grundlage dieser Liste von Begriffen wurde dann die MO entwickelt. In der Mikroskopie und Mikroanalytik fallen große Datenmengen aus verschiedenen Techniken und Instrumenten an. Die MO kann dazu beitragen, heterogene Datenquellen zu integrieren und zu verknüpfen, so dass Daten aus verschiedenen Experimenten und Studien effektiver kombiniert und analysiert werden können.
-Darüber hinaus dient die MO als Grundlage für die Annotation von Mikroskopie- und Mikroanalysedaten mit standardisierten Metadaten. Diese erweiterte Metadatenbeschreibung verbessert die Interpretierbarkeit, Durchsuchbarkeit und Wiederverwendbarkeit von Daten und fördert die Transparenz und Reproduzierbarkeit in der Forschung. Darüber hinaus kann die MO durch die Formalisierung des Wissens über Instrumente, Techniken, Materialien und Phänomene die Grundlage für maschinelles Denken zur Unterstützung der Dateninterpretation, Hypothesenbildung und Versuchsplanung bilden.
-Insgesamt soll MO die Forschung voranbringen, die Zusammenarbeit fördern und den Wissensaustausch in diesem interdisziplinären Bereich erleichtern."""@de ,
-                                                                                  """The Microscopy Ontology (MO) is a comprehensive framework for representing knowledge that encompasses concepts from the domains of microscopy and microanalysis. The MO is semantically based on the mid-level PMD Core Ontology PMDco (which is imported in MO) to allow a connection to other MSE application ontologies and domain neutral concepts found in established top-level ontologies. The primary goal of MO is to provide a standardized vocabulary and framework for describing and organizing concepts, entities, and relationships within the field of microscopy and microanalysis. This standardization facilitates communication and interoperability between different systems, databases, and research groups. In order to obtain a vocabulary that is relevant in the field and therefore worth standardizing, an NLP approach was applied, with the help of which commonly used terms were determined. MO was then developed based on the respective list of terms. Microscopy and microanalysis generate vast amounts of data from various techniques and instruments. MO may help to integrate and link heterogeneous data sources, enabling the combination and analysis of data from different experiments and studies more effectively. Furthermore, MO serves as a basis for annotating microscopy and microanalysis data with standardized metadata. This improved metadata description enhances the interpretability, searchability, and reusability of data, promoting transparency and reproducibility in research. Moreover, by formalizing knowledge about instruments, techniques, materials, and phenomena, MO may provide the basis to enable machine reasoning to support data interpretation, hypothesis generation, and experimental design.
-Overall, MO is intended to advance research, promoting collaboration, and facilitating knowledge exchange in this interdisciplinary domain."""@en .
+                                 owl:versionInfo 1.1 ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "Die Mikroskopie-Ontologie (MO) baut auf der PMD Core Ontology (PMDco) auf und bietet Konzepte für die semantische (Meta-)Datendarstellung im Bereich der Mikroskopie und Mikroanalyse. Mithilfe eines NLP-Ansatzes wird aus einem großen Korpus von Abstracts aus zwei Jahrzehnten Mikroskopie- und Mikroanalyse-Konferenzbeiträgen die zugrunde liegende Sprache der Community halbautomatisch abgeleitet und in die MO integriert. Die MO ermöglicht die semantische Integration und Verknüpfung von heterogenen Mikroskopie- und Mikroanalysedaten."@de ,
+                                                                                  "The Microscopy Ontology (MO) is built on the PMD Core Ontology (PMDco) and provides concepts for semantic (meta)data representation within the domains of microscopy and microanalysis. Using an NLP approach on a large corpus of abstracts from 2 decades of Microscopy and Microanalysis Conference Proceedings, the underlying language of the community is semiautomatically derived and incorporated in the MO. The MO enables semantic integration and linkage of heterogeneous microscopy and microanalysis data."@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
 ###  https://w3id.org/pmd/co/abbreviation
 <https://w3id.org/pmd/co/abbreviation> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pmd/co/definitionSource
+<https://w3id.org/pmd/co/definitionSource> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/pmd/mo/abbreviation
@@ -36,6 +70,98 @@ Overall, MO is intended to advance research, promoting collaboration, and facili
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/pmd/co/AnalysingProcess
+<https://w3id.org/pmd/co/AnalysingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Area
+<https://w3id.org/pmd/co/Area> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Component
+<https://w3id.org/pmd/co/Component> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Coordinates
+<https://w3id.org/pmd/co/Coordinates> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/CrossSectionArea
+<https://w3id.org/pmd/co/CrossSectionArea> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Date
+<https://w3id.org/pmd/co/Date> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/DigitalEntity
+<https://w3id.org/pmd/co/DigitalEntity> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Distance
+<https://w3id.org/pmd/co/Distance> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Duration
+<https://w3id.org/pmd/co/Duration> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ElectronMicroscope
+<https://w3id.org/pmd/co/ElectronMicroscope> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ElectronMicroscopy
+<https://w3id.org/pmd/co/ElectronMicroscopy> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Identifier
+<https://w3id.org/pmd/co/Identifier> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Length
+<https://w3id.org/pmd/co/Length> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ManufacturingProcess
+<https://w3id.org/pmd/co/ManufacturingProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Micropscope
+<https://w3id.org/pmd/co/Micropscope> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/MicroscopyProcess
+<https://w3id.org/pmd/co/MicroscopyProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Object
+<https://w3id.org/pmd/co/Object> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/OpticalMicroscopy
+<https://w3id.org/pmd/co/OpticalMicroscopy> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Process
+<https://w3id.org/pmd/co/Process> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ProcessingNode
+<https://w3id.org/pmd/co/ProcessingNode> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/TestingRate
+<https://w3id.org/pmd/co/TestingRate> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/Time
+<https://w3id.org/pmd/co/Time> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/ValueObject
+<https://w3id.org/pmd/co/ValueObject> rdf:type owl:Class .
+
 
 ###  https://w3id.org/pmd/mo/Aberration
 :Aberration rdf:type owl:Class ;
@@ -59,6 +185,37 @@ Overall, MO is intended to advance research, promoting collaboration, and facili
                      <http://www.w3.org/2004/02/skos/core#definition> "Diese Klasse beschreibt die Spannung, die an ein Elektronenmikroskop angelegt wird, um die von der Elektronenquelle (in der Regel eine Kathode) emittierten Elektronen auf die Probe zu beschleunigen."@de ,
                                                                       "This class decribes the voltage applied to an electron microscope to accelerate the electrons emitted from the electron source (usually a cathode) towards the specimen."@en ;
                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/AcquisitionDate
+:AcquisitionDate rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/pmd/co/Date> ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                 rdfs:label "Acquisition Date"@en ,
+                            "Erfassungsdatum"@de ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The date when the image or data was acquired."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/AcquisitionTime
+:AcquisitionTime rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                 rdfs:label "Acquisition Time"@en ,
+                            "Erfassungszeit"@de ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The time when the image or data was acquired."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Age
+:Age rdf:type owl:Class ;
+     rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
+     rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+     rdfs:label "Age"@en ,
+                "Alter"@de ;
+     <http://www.w3.org/2004/02/skos/core#definition> "Die Dauer, die ein Objekt oder Organismus existiert hat."@de ,
+                                                      "The duration that an object or organism has existed."@en ;
+     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Angle
@@ -106,6 +263,29 @@ Note: The concept of an angle is fundamental in geometry and is often used to de
                   "Anode"@en ;
        <http://www.w3.org/2004/02/skos/core#definition> "The anode is the positively charged electrode in an electrochemical cell or other electrically driven systems. It serves as the site where oxidation occurs, meaning electrons are released from the anode, typically moving towards the cathode. In devices like batteries, the anode is where electrons are produced during the discharge process."@en ;
        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Aperture
+:Aperture rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Aperturblende"@de ,
+                     "Aperture"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "Pinhole"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "An opening through which light or other radiation enters a camera or other optical instrument."@en ,
+                                                           "Eine Öffnung, durch die Licht oder andere Strahlung in eine Kamera oder ein anderes optisches Instrument eintritt."@de ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ApertureSize
+:ApertureSize rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+              rdfs:label "Aperture Size"@en ,
+                         "Blendengröße"@de ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Die Größe der Öffnung in einer Blende, die die Menge des durchgehenden Lichts oder der Strahlung beeinflusst."@de ,
+                                                               "The size of the opening in an aperture, affecting the amount of light or radiation passing through."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/AtmosphericScanningElectronMicroscopy
@@ -176,6 +356,28 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/BeamOffsetX
+:BeamOffsetX rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+             rdfs:label "Beam Offset X"@en ,
+                        "Strahlversatz X"@de ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Der Versatz des Elektronenstrahls entlang der X-Achse in der Elektronenmikroskopie."@de ,
+                                                              "The offset of the electron beam along the X-axis in electron microscopy."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/BeamOffsetY
+:BeamOffsetY rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+             rdfs:label "Beam Offset Y"@en ,
+                        "Strahlversatz Y"@de ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Der Versatz des Elektronenstrahls entlang der Y-Achse in der Elektronenmikroskopie."@de ,
+                                                              "The offset of the electron beam along the Y-axis in electron microscopy."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/BeamPath
 :BeamPath rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
@@ -188,6 +390,39 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
+###  https://w3id.org/pmd/mo/BeamShiftX
+:BeamShiftX rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+            rdfs:label "Beam Shift X"@en ,
+                       "Strahlverschiebung X"@de ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Die Verschiebung des Elektronenstrahls entlang der X-Achse in der Elektronenmikroskopie."@de ,
+                                                             "The shift of the electron beam along the X-axis in electron microscopy."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/BeamShiftY
+:BeamShiftY rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+            rdfs:label "Beam Shift Y"@en ,
+                       "Strahlverschiebung Y"@de ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Die Verschiebung des Elektronenstrahls entlang der Y-Achse in der Elektronenmikroskopie."@de ,
+                                                             "The shift of the electron beam along the Y-axis in electron microscopy."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Bias
+:Bias rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+      rdfs:label "Bias"@en ,
+                 "Vorspannung"@de ;
+      <http://www.w3.org/2004/02/skos/core#definition> "A voltage or other value that influences the operation of an electronic component."@en ,
+                                                       "Eine Spannung oder ein anderer Wert, der den Betrieb eines elektronischen Bauteils beeinflusst."@de ;
+      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/BrightFieldTransmissionElectronMicroscopy
 :BrightFieldTransmissionElectronMicroscopy rdf:type owl:Class ;
                                            rdfs:subClassOf :TransmissionElectronMicroscopy ;
@@ -197,6 +432,16 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                                            <http://www.w3.org/2004/02/skos/core#definition> "Bright Field TEM is an imaging mode in transmission electron microscopy where regions of the sample that scatter electrons less appear brighter in the resulting image."@en ;
                                            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                            :abbreviation "BFTEM"@en .
+
+
+###  https://w3id.org/pmd/mo/Brightness
+:Brightness rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+            rdfs:label "Brightness"@en ,
+                       "Helligkeit"@de ;
+            <http://www.w3.org/2004/02/skos/core#definition> "The level of light intensity in an image."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/CameraLength
@@ -217,6 +462,28 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
          rdfs:label "Cathode"@en ,
                     "Kathode"@de ;
          <http://www.w3.org/2004/02/skos/core#definition> "The cathode is the negatively charged electrode in an electrochemical cell or other electrical systems. It is the site where reduction occurs, leading to the acceptance of electrons from the external circuit. In batteries, for instance, the cathode is where electrons are consumed during the discharge process."@en ;
+         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ChamberVacuum
+:ChamberVacuum rdf:type owl:Class ;
+               rdfs:subClassOf :Vacuum ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+               rdfs:label "Chamber Vacuum"@en ,
+                          "Kammervakuum"@de ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Das Vakuumniveau im Inneren der Kammer eines Elektronenmikroskops oder eines anderen Geräts."@de ,
+                                                                "The vacuum level inside the chamber of an electron microscope or other device."@en ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Channel
+:Channel rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+         rdfs:label "Channel"@en ,
+                    "Kanal"@de ;
+         <http://www.w3.org/2004/02/skos/core#definition> "A path along which signals such as data or electrical impulses are transmitted."@en ,
+                                                          "Ein Pfad, entlang dem Signale wie Daten oder elektrische Impulse übertragen werden."@de ;
          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -253,9 +520,31 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/Collector
+:Collector rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Collector"@en ,
+                      "Kollektor"@de ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A device that collects charged particles or radiation in a microscope or other instrument."@en ,
+                                                            "Ein Gerät, das geladene Teilchen oder Strahlung in einem Mikroskop oder einem anderen Instrument sammelt."@de ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/CondensorAperture
+:CondensorAperture rdf:type owl:Class ;
+                   rdfs:subClassOf :Aperture ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                   rdfs:label "Condensor Aperture"@en ,
+                              "Kondensorblende"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An aperture that controls the amount of light entering the condenser lens system in a microscope."@en ,
+                                                                    "Eine Blende, die die Lichtmenge steuert, die in das Kondensorlinsensystem eines Mikroskops eintritt."@de ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/CondensorLense
 :CondensorLense rdf:type owl:Class ;
-                rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+                rdfs:subClassOf :Lense ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                 rdfs:label "Condensor Lense"@en ,
                            "Kondensorlinse"@de ;
@@ -272,6 +561,16 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                                  <http://www.w3.org/2004/02/skos/core#definition> "Confocal Laser Scanning Microscopy (CLSM) is an optical imaging technique that enhances resolution and eliminates out-of-focus blur by using a spatial pinhole and laser illumination. A focused laser beam is scanned across the sample's surface or depth, and only the light emitted from the focal plane (or a defined section) passes through the pinhole to form an image. CLSM provides high-resolution three-dimensional images, making it popular for biological imaging and studying fluorescently labeled samples."@en ;
                                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                  :abbreviation "CLSM"@en .
+
+
+###  https://w3id.org/pmd/mo/Contrast
+:Contrast rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Contrast"@en ,
+                     "Kontrast"@de ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The difference in luminance or color that makes objects distinguishable in an image."@en ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ConvergenceAngle
@@ -338,6 +637,17 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/Detector
+:Detector rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Detector"@en ,
+                     "Detektor"@de ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A device used to detect and measure properties such as light, radiation, or particles."@en ,
+                                                           "Ein Gerät zur Erkennung und Messung von Eigenschaften wie Licht, Strahlung oder Teilchen."@de ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/DetectorQuantumEfficiency
 :DetectorQuantumEfficiency rdf:type owl:Class ;
                            rdfs:subClassOf :Efficiency ;
@@ -371,6 +681,17 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                     <http://www.w3.org/2004/02/skos/core#definition> "Das Muster von Flecken oder Banden, das auf einem Detektor entsteht, wenn Elektronen nach der Wechselwirkung mit einer kristallinen Probe gebeugt werden."@de ,
                                                                      "The pattern of spots or bands produced on a detector when electrons diffract after interacting with a crystalline sample."@en ;
                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/DiscAperture
+:DiscAperture rdf:type owl:Class ;
+              rdfs:subClassOf :Aperture ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+              rdfs:label "Disc Aperture"@en ,
+                         "Scheibenblende"@de ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A circular aperture used to limit the beam size in an optical instrument."@en ,
+                                                               "Eine kreisförmige Blende zur Begrenzung der Strahlgröße in einem optischen Instrument."@de ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/DiskOfLeastConfusion
@@ -681,6 +1002,16 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                                              :abbreviation "ETEM"@en .
 
 
+###  https://w3id.org/pmd/mo/ExposureTime
+:ExposureTime rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+              rdfs:label "Belichtungszeit"@de ,
+                         "Exposure Time"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "The duration for which the imaging sensor is exposed to light, measured in seconds."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/ExtractionVoltage
 :ExtractionVoltage rdf:type owl:Class ;
                    rdfs:subClassOf :Voltage ;
@@ -735,6 +1066,17 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                     <http://www.w3.org/2004/02/skos/core#definition> "Field Ion Microscopy is a specialized microscopy technique that uses a strong electric field to ionize atoms on the surface of a metal sample. These ionized atoms are then repelled from the surface and can be detected to create an image of the sample's surface topography at atomic resolution. FIM is especially powerful for imaging the arrangement of atoms on metallic surfaces."@en ;
                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                     :abbreviation "FIM"@en .
+
+
+###  https://w3id.org/pmd/mo/Filament
+:Filament rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Filament"@de ,
+                     "Filament"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A thin wire or thread that emits electrons when heated in a vacuum tube or electron microscope."@en ,
+                                                           "Ein dünner Draht oder Faden, der Elektronen emittiert, wenn er in einer Vakuumröhre oder einem Elektronenmikroskop erhitzt wird."@de ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/FilamentCurrent
@@ -850,6 +1192,28 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                                       :abbreviation "FTIR"@en .
 
 
+###  https://w3id.org/pmd/mo/Frame
+:Frame rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/DigitalEntity> ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+       rdfs:label "Bildrahmen"@de ,
+                  "Frame"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "A single image or capture in a sequence of images."@en ,
+                                                        "Ein einzelnes Bild oder eine Aufnahme in einer Bildsequenz."@de ;
+       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/FrameCount
+:FrameCount rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+            rdfs:label "Bildanzahl"@de ,
+                       "Frame Count"@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Die Gesamtanzahl der Bilder oder Aufnahmen in einer Sequenz."@de ,
+                                                             "The total number of frames or images in a sequence."@en ;
+            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/FrameTime
 :FrameTime rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
@@ -859,6 +1223,16 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
            <http://www.w3.org/2004/02/skos/core#definition> "Die Zeit, die benötigt wird, um ein Einzelbild in einem Elektronenmikroskop aufzunehmen und anzuzeigen."@de ,
                                                             "The time required to capture and display a single frame of an image in an electron microscope."@en ;
            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/Gamma
+:Gamma rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+       rdfs:label "Gamma"@de ,
+                  "Gamma"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "The nonlinear operation used to encode and decode luminance or color values in an image."@en ;
+       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/GatanImageFilter
@@ -879,6 +1253,17 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                 "Kanone"@de ;
      <http://www.w3.org/2004/02/skos/core#definition> "In the context of electron microscopy and particle acceleration, a \"gun\" typically refers to an electron or particle source that generates and emits the particles. In electron microscopy, an electron gun is used to generate a beam of electrons for imaging or analysis. In particle accelerators, a particle gun generates and launches particles at high speeds for various experimental purposes."@en ;
      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/GunVacuum
+:GunVacuum rdf:type owl:Class ;
+           rdfs:subClassOf :Vacuum ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Gun Vacuum"@en ,
+                      "Kanonen-Vakuum"@de ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Das Vakuumniveau im Inneren der Elektronenkanone eines Elektronenmikroskops."@de ,
+                                                            "The vacuum level inside the electron gun of an electron microscope."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/HeliumIonMicroscope
@@ -939,6 +1324,28 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                                               :abbreviation "HRTEM"@en .
 
 
+###  https://w3id.org/pmd/mo/Holder
+:Holder rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+        rdfs:label "Halter"@de ,
+                   "Holder"@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A device used to support or secure a specimen or component in place."@en ,
+                                                         "Ein Gerät, das verwendet wird, um eine Probe oder ein Bauteil zu stützen oder zu sichern."@de ;
+        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/IMAGEPATH
+:IMAGEPATH rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/Identifier> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Bildpfad"@de ,
+                      "Image Path"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Der Speicherort oder Verzeichnispfad, an dem eine Bilddatei gespeichert ist."@de ,
+                                                            "The location or directory path where an image file is stored."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/ImageFilter
 :ImageFilter rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
@@ -947,6 +1354,36 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                         "Image Filter"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "An image filter is a device or component used in imaging systems, such as microscopy or photography, to modify the appearance of an image by selectively altering certain characteristics. Filters can be used to adjust contrast, brightness, color balance, and other image properties. They are often used to enhance specific features or to correct for distortions caused by lighting conditions or optical imperfections."@en ;
              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ImageName
+:ImageName rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/Identifier> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Bildname"@de ,
+                      "Image Name"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The designated name or title for an image."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ImageSizeXAxis
+:ImageSizeXAxis rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                rdfs:label "Bildgröße X-Achse"@de ,
+                           "Image Size X-Axis"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The size of the image along the X-axis."@en ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ImageSizeYAxis
+:ImageSizeYAxis rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                rdfs:label "Bildgröße Y-Achse"@de ,
+                           "Image Size Y-Axis"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The size of the image along the Y-axis."@en ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/IncidentBeam
@@ -978,6 +1415,17 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                               "Überlagerungsvolumen"@de ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Der Bereich innerhalb einer Probe, in dem ein Teilchenstrahl mit dem Material in Wechselwirkung tritt."@de ,
                                                                     "The region within a sample where a particle beam interacts with the material."@en ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/IntermediateLense
+:IntermediateLense rdf:type owl:Class ;
+                   rdfs:subClassOf :Lense ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                   rdfs:label "Intermediate Lense"@en ,
+                              "Zwischenlinse"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A lens that is positioned between the objective lens and the projector lens in an optical system."@en ,
+                                                                    "Eine Linse, die zwischen der Objektivlinse und der Projektorlinse in einem optischen System positioniert ist."@de ;
                    <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -1013,6 +1461,17 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/Lense
+:Lense rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+       rdfs:label "Lense"@en ,
+                  "Linse"@de ;
+       <http://www.w3.org/2004/02/skos/core#definition> "A piece of optical glass or other transparent material used to focus or magnify light in optical instruments."@en ,
+                                                        "Ein Stück optisches Glas oder anderes transparentes Material, das zum Fokussieren oder Vergrößern von Licht in optischen Geräten verwendet wird."@de ;
+       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/LightMicroscope
 :LightMicroscope rdf:type owl:Class ;
                  rdfs:subClassOf :OpticalMicroscope ;
@@ -1042,8 +1501,19 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                rdfs:label "Magnification"@en ,
                           "Vergrößerung"@de ;
                <http://www.w3.org/2004/02/skos/core#definition> "Das Verhältnis zwischen der Größe eines von einem optischen System erzeugten Bildes und der Größe des Objekts."@de ,
+                                                                "The process of enlarging the appearance of an image."@en ,
                                                                 "The ratio of the size of an image produced by an optical system to the size of the object."@en ;
                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/MaximumExposure
+:MaximumExposure rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                 rdfs:label "Maximale Belichtung"@de ,
+                            "Maximum Exposure"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The maximum duration for which the imaging sensor can be exposed to light, measured in seconds."@en ;
+                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/MechanicalPolishing
@@ -1082,6 +1552,28 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/ObjectiveAperture
+:ObjectiveAperture rdf:type owl:Class ;
+                   rdfs:subClassOf :Aperture ;
+                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                   rdfs:label "Objective Aperture"@en ,
+                              "Objektivblende"@de ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An aperture in the objective lens system of a microscope."@en ,
+                                                                    "Eine Blende im Objektivlinsensystem eines Mikroskops."@de ;
+                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ObjectiveLense
+:ObjectiveLense rdf:type owl:Class ;
+                rdfs:subClassOf :Lense ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                rdfs:label "Objective Lense"@en ,
+                           "Objektivlinse"@de ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A lens in a microscope or similar optical device that is closest to the specimen."@en ,
+                                                                 "Eine Linse in einem Mikroskop oder ähnlichen optischen Gerät, die am nächsten zur Probe liegt."@de ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/OpticalMicroscope
 :OpticalMicroscope rdf:type owl:Class ;
                    rdfs:subClassOf <https://w3id.org/pmd/co/Micropscope> ;
@@ -1102,6 +1594,20 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                               <http://www.w3.org/2004/02/skos/core#definition> "Orientation Imaging Microscopy is a microscopy technique used to map the crystallographic orientations of grains within a material. It is commonly applied in SEM to study the microstructural properties of polycrystalline materials."@en ;
                               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                               :abbreviation "OIM"@en .
+
+
+###  https://w3id.org/pmd/mo/Palette
+:Palette rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+         rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+         rdfs:label "Palette"@de ,
+                    "Palette"@en ;
+         <http://www.w3.org/2004/02/skos/core#altLabel> "Color Lookup Table"@en ,
+                                                        "Farbzuordnungstabelle"@de ;
+         <http://www.w3.org/2004/02/skos/core#definition> "In computer graphics, a palette is the set of available colors from which an image can be made. In some systems, the palette is fixed by the hardware design, and in others it is dynamic, typically implemented via a color lookup table (CLUT), a correspondence table in which selected colors from a certain color space's color reproduction range are assigned an index, by which they can be referenced."@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "Typical colorscales may be, e.g., greyscale, RGB, or CMYK."@en ;
+         <https://w3id.org/pmd/co/definitionSource> "https://en.wikipedia.org/wiki/Palette_(computing)"@en ;
+         :abbreviation "CLUT"@en .
 
 
 ###  https://w3id.org/pmd/mo/PhysicalProcess
@@ -1150,13 +1656,24 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 
 ###  https://w3id.org/pmd/mo/PolePiece
 :PolePiece rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Pole Piece"@en ,
                       "Polschuh"@de ;
            <http://www.w3.org/2004/02/skos/core#definition> "A component of the electron column in an electron microscope that focuses and guides the electron beam onto the specimen."@en ,
                                                             "Eine Komponente der Elektronensäule in einem Elektronenmikroskop, die den Elektronenstrahl fokussiert und auf die Probe lenkt."@de ;
            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/Pressure
+:Pressure rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Druck"@de ,
+                     "Pressure"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Die auf eine Fläche ausgeübte Kraft in einem System, typischerweise gemessen in Pascal oder anderen Einheiten."@de ,
+                                                           "The force exerted per unit area in a system, typically measured in pascals or other units."@en ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/PrimaryBeam
@@ -1173,12 +1690,14 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/ProbeCurrent
 :ProbeCurrent rdf:type owl:Class ;
               rdfs:subClassOf :Current ;
+              rdfs:comment "The current in the probe is typically measured in nanoamperes (nA)."@en ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Probe Current"@en ,
                          "Sondenstrom"@de ;
               <http://www.w3.org/2004/02/skos/core#definition> "Der Strom der Elektronen im fokussierten Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."@de ,
                                                                "The current of electrons in the focused electron beam used for imaging or analysis in an electron microscope."@en ;
-              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ,
+                                                         "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ProbeSize
@@ -1186,11 +1705,34 @@ Mechanical polishing is commonly used in various scientific and industrial appli
            rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Probe Size"@en ,
-                      "Sensorgröße"@de ;
+                      "Sensorgröße"@de ,
+                      "Sondengröße"@de ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "Messfühlergröße"@de ;
            <http://www.w3.org/2004/02/skos/core#definition> "Die Größe der Sonde oder des Strahls, die bei Mikroskopie- oder Spektroskopieverfahren verwendet werden."@de ,
-                                                            "The size of the probe or beam used in microscopy or spectroscopy techniques."@en ;
+                                                            "The size of the probe or beam used in microscopy or spectroscopy techniques."@en ,
+                                                            "The size of the probe, typically measured in nanometers (nm)."@en ;
            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ProjectorLense
+:ProjectorLense rdf:type owl:Class ;
+                rdfs:subClassOf :Lense ;
+                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                rdfs:label "Projector Lense"@en ,
+                           "Projektorlinse"@de ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A lens used to project the image from the intermediate lens onto a viewing screen or detector."@en ,
+                                                                 "Eine Linse, die verwendet wird, um das Bild von der Zwischenlinse auf einen Bildschirm oder Detektor zu projizieren."@de ;
+                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ReadoutTime
+:ReadoutTime rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/Time> ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+             rdfs:label "Auslesezeit"@de ,
+                        "Readout Time"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The time taken to read out data from a sensor, typically measured in nanoseconds (ns)."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/Reconstruction
@@ -1213,6 +1755,28 @@ Mechanical polishing is commonly used in various scientific and industrial appli
             <http://www.w3.org/2004/02/skos/core#definition> "In various contexts, resolution refers to the degree of detail that can be discerned in an image, measurement, or other representation of an object or phenomenon."@en ,
                                                              "In verschiedenen Zusammenhängen bezieht sich die Auflösung auf den Grad der Detailgenauigkeit, die in einem Bild, einer Messung oder einer anderen Darstellung eines Objekts oder Phänomens erkennbar ist."@de ;
             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/RotationAngle
+:RotationAngle rdf:type owl:Class ;
+               rdfs:subClassOf :Angle ;
+               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+               rdfs:label "Rotation Angle"@en ,
+                          "Rotationswinkel"@de ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Der Winkel, um den ein Objekt um eine bestimmte Achse rotiert wird."@de ,
+                                                                "The angle by which an object is rotated around a specific axis."@en ;
+               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ScanRate
+:ScanRate rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/TestingRate> ;
+          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+          rdfs:label "Abtastrate"@de ,
+                     "Scan Rate"@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Die Geschwindigkeit, mit der Daten gescannt oder aufgezeichnet werden."@de ,
+                                                           "The speed at which data is scanned or recorded."@en ;
+          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/ScanningElectronMicroscope
@@ -1355,9 +1919,20 @@ SIMS has applications in diverse fields, including materials characterization, s
                                                "SAED"@en .
 
 
+###  https://w3id.org/pmd/mo/Sharpness
+:Sharpness rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Schärfe"@de ,
+                      "Sharpness"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Die Qualität, klar und gut definiert in einem Bild oder einer Probe zu sein."@de ,
+                                                            "The quality of being clear and well-defined in an image or specimen."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/SiliconDriftDetector
 :SiliconDriftDetector rdf:type owl:Class ;
-                      rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+                      rdfs:subClassOf :Detector ;
                       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                       rdfs:label "Silicon Drift Detector"@en ,
                                  "Silizium-Driftdetektor"@de ;
@@ -1435,6 +2010,50 @@ SIMS has applications in diverse fields, including materials characterization, s
                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/Stage
+:Stage rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+       rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+       rdfs:label "Bühne"@de ,
+                  "Stage"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "A platform or support used to hold and position a specimen in a microscope."@en ,
+                                                        "Eine Plattform oder Unterstützung, die verwendet wird, um eine Probe in einem Mikroskop zu halten und zu positionieren."@de ;
+       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/StigmationX
+:StigmationX rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+             rdfs:label "Stigmation X"@de ,
+                        "Stigmation X"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Die Einstellung des Astigmatismus in der X-Achse eines Elektronenstrahls in der Mikroskopie."@de ,
+                                                              "The adjustment of astigmatism in the X-axis of an electron beam in microscopy."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/StigmationY
+:StigmationY rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+             rdfs:label "Stigmation Y"@de ,
+                        "Stigmation Y"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Die Einstellung des Astigmatismus in der Y-Achse eines Elektronenstrahls in der Mikroskopie."@de ,
+                                                              "The adjustment of astigmatism in the Y-axis of an electron beam in microscopy."@en ;
+             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Stigmator
+:Stigmator rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Stigmator"@de ,
+                      "Stigmator"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A device in electron microscopy used to correct astigmatism in the electron beam."@en ,
+                                                            "Ein Gerät in der Elektronenmikroskopie zur Korrektur des Astigmatismus im Elektronenstrahl."@de ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/SurfaceStructure
 :SurfaceStructure rdf:type owl:Class ;
                   rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
@@ -1444,6 +2063,50 @@ SIMS has applications in diverse fields, including materials characterization, s
                   <http://www.w3.org/2004/02/skos/core#definition> "Die Anordnung und die Merkmale der äußersten Schicht eines Materials."@de ,
                                                                    "The arrangement and features of the outermost layer of a material."@en ;
                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/SystemVacuum
+:SystemVacuum rdf:type owl:Class ;
+              rdfs:subClassOf :Vacuum ;
+              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+              rdfs:label "System Vacuum"@en ,
+                         "Systemvakuum"@de ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Das allgemeine Vakuumniveau im gesamten System eines Elektronenmikroskops."@de ,
+                                                               "The overall vacuum level in the entire system of an electron microscope."@en ;
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/ThinFoilAperture
+:ThinFoilAperture rdf:type owl:Class ;
+                  rdfs:subClassOf :Aperture ;
+                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                  rdfs:label "Dünnfolienblende"@de ,
+                             "Thin Foil Aperture"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "An aperture used in electron microscopy to control the electron beam passing through a thin foil specimen."@en ,
+                                                                   "Eine Blende in der Elektronenmikroskopie zur Steuerung des Elektronenstrahls, der durch eine Dünnfolienprobe geht."@de ;
+                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Threshold
+:Threshold rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Schwelle"@de ,
+                      "Threshold"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A value or limit at which a specific effect or result occurs."@en ,
+                                                            "Ein Wert oder eine Grenze, bei der ein bestimmter Effekt oder ein Ergebnis eintritt."@de ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/TiltAngle
+:TiltAngle rdf:type owl:Class ;
+           rdfs:subClassOf :Angle ;
+           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+           rdfs:label "Neigungswinkel"@de ,
+                      "Tilt Angle"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Der Winkel, um den ein Objekt von seiner vertikalen oder horizontalen Position geneigt ist."@de ,
+                                                            "The angle at which an object is tilted from its vertical or horizontal position."@en ;
+           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/TiltCorrection
@@ -1515,6 +2178,17 @@ TOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling lay
                                 :abbreviation "TEM"@en .
 
 
+###  https://w3id.org/pmd/mo/Vacuum
+:Vacuum rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+        rdfs:label "Vacuum"@en ,
+                   "Vakuum"@de ;
+        <http://www.w3.org/2004/02/skos/core#definition> "A space entirely devoid of matter, or where the pressure is significantly lower than atmospheric pressure."@en ,
+                                                         "Ein Raum, der völlig materiefrei ist oder in dem der Druck deutlich unter dem atmosphärischen Druck liegt."@de ;
+        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/Voltage
 :Voltage rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
@@ -1558,8 +2232,8 @@ Note: Voltage is measured in volts (V), and it represents the potential energy d
 ###  https://w3id.org/pmd/mo/WorkingDistance
 :WorkingDistance rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/pmd/co/Distance> ;
-                 rdfs:comment "Der Arbeitsabstand wirkt sich auf die Tiefenschärfe und die Auflösung des Bildes aus."@de ,
-                              "The working distance affects the depth of field and the resolution of the image."@en ;
+                 rdfs:comment "Der Arbeitsabstand wirkt sich auf die Tiefenschärfe und die Auflösung des Bildes aus. In der Regel wird der Arbeitsabstand in Millimetern (mm) angegeben."@de ,
+                              "The working distance affects the depth of field and the resolution of the image. Usually, the working distance is specified in millimeters (mm)."@en ;
                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                  rdfs:label "Arbeitsabstand"@de ,
                             "Working Distance"@en ;
@@ -1657,6 +2331,17 @@ This technique is widely used in various scientific fields, including chemistry,
                                :abbreviation "XPS"@en .
 
 
+###  https://w3id.org/pmd/mo/3DCoordinates
+<https://w3id.org/pmd/mo/3DCoordinates> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/co/Coordinates> ;
+                                        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                                        rdfs:label "3D Coordinates"@en ,
+                                                   "3D-Koordinaten"@de ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Coordinates that specify a point in three-dimensional space."@en ,
+                                                                                         "Koordinaten, die einen Punkt im dreidimensionalen Raum spezifizieren."@de ;
+                                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
 ###  https://w3id.org/pmd/mo/3DReconstruction
 <https://w3id.org/pmd/mo/3DReconstruction> rdf:type owl:Class ;
                                            rdfs:subClassOf :Reconstruction ;
@@ -1666,6 +2351,39 @@ This technique is widely used in various scientific fields, including chemistry,
                                            <http://www.w3.org/2004/02/skos/core#definition> "Der Prozess der Erstellung einer dreidimensionalen Darstellung eines Objekts oder einer Szene aus zweidimensionalen Bildern oder Daten."@de ,
                                                                                             "The process of creating a three-dimensional representation of an object or scene from two-dimensional images or data."@en ;
                                            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/3DXCoordinate
+<https://w3id.org/pmd/mo/3DXCoordinate> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/mo/3DCoordinates> ;
+                                        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                                        rdfs:label "3D X Coordinate"@en ,
+                                                   "3D X-Koordinate"@de ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Die X-Koordinate in einem dreidimensionalen Koordinatensystem."@de ,
+                                                                                         "The X-coordinate in a three-dimensional coordinate system."@en ;
+                                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/3DYCoordinate
+<https://w3id.org/pmd/mo/3DYCoordinate> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/mo/3DCoordinates> ;
+                                        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                                        rdfs:label "3D Y Coordinate"@en ,
+                                                   "3D Y-Koordinate"@de ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Die Y-Koordinate in einem dreidimensionalen Koordinatensystem."@de ,
+                                                                                         "The Y-coordinate in a three-dimensional coordinate system."@en ;
+                                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/3DZCoordinate
+<https://w3id.org/pmd/mo/3DZCoordinate> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/mo/3DCoordinates> ;
+                                        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+                                        rdfs:label "3D Z Coordinate"@en ,
+                                                   "3D Z-Koordinate"@de ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Die Z-Koordinate in einem dreidimensionalen Koordinatensystem."@de ,
+                                                                                         "The Z-coordinate in a three-dimensional coordinate system."@en ;
+                                        <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
 ###  https://w3id.org/pmd/mo/4D-ScanningTransmissionElectronMicroscopy
