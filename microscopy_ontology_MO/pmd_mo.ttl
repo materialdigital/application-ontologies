@@ -8,7 +8,7 @@
 
 <https://w3id.org/pmd/co/2.0.7> rdf:type owl:Ontology ;
                                  owl:versionIRI <https://w3id.org/pmd/mo/1.1> ;
-                                 owl:imports <https://w3id.org/pmd/co/2.0.7> ;
+                                 owl:imports <https://w3id.org/pmd/co/> ;
                                  <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-3717-7104> ,
                                                                            <https://orcid.org/0000-0002-7094-5371> ;
                                  <http://purl.org/dc/elements/1.1/license> <http://creativecommons.org/licenses/by/4.0> ;
