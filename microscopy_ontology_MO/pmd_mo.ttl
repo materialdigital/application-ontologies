@@ -444,6 +444,13 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/CEOS-CEFIDfilter
+:CEOS-CEFIDfilter rdf:type owl:Class ;
+                  rdfs:subClassOf :EnergyFilter ,
+                                  :ImageFilter ;
+                  rdfs:label "CEOS-CEFID filter"@en .
+
+
 ###  https://w3id.org/pmd/mo/CameraLength
 :CameraLength rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/pmd/co/Length> ;
@@ -584,6 +591,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                   <http://www.w3.org/2004/02/skos/core#definition> "Der Winkel, in dem der Elektronenstrahl in einem Elektronenmikroskop auf die Probe trifft."@de ,
                                                                    "The angle at which the electron beam converges onto the specimen in an electron microscope."@en ;
                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/ConvergentBeamElectronDiffraction
+:ConvergentBeamElectronDiffraction rdf:type owl:Class ;
+                                   rdfs:subClassOf :ElectronDiffraction ;
+                                   rdfs:label "Convergent Beam Electron Diffraction"@en .
 
 
 ###  https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope
@@ -826,6 +839,28 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
+###  https://w3id.org/pmd/mo/ElectronEnergyLossSpectrometer
+:ElectronEnergyLossSpectrometer rdf:type owl:Class ;
+                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/pmd/co/hasFunction> ;
+                                                      owl:someValuesFrom :EnergyFilter
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/pmd/co/hasFunction> ;
+                                                      owl:someValuesFrom :ImageFilter
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/pmd/co/relatesTo> ;
+                                                      owl:someValuesFrom :CEOS-CEFIDfilter
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/pmd/co/relatesTo> ;
+                                                      owl:someValuesFrom :GatanImageFilter
+                                                    ] ;
+                                rdfs:subClassOf :Spectrometer ;
+                                rdfs:label "Electron Energy Loss Spectrometer"@en .
+
+
 ###  https://w3id.org/pmd/mo/ElectronEnergyLossSpectroscopy
 :ElectronEnergyLossSpectroscopy rdf:type owl:Class ;
                                 rdfs:subClassOf :Spectroscopy ;
@@ -923,7 +958,8 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 
 ###  https://w3id.org/pmd/mo/EnergyDispersiveXRaySpectroscopy
 :EnergyDispersiveXRaySpectroscopy rdf:type owl:Class ;
-                                  rdfs:subClassOf :XRayMicroanalysis ;
+                                  rdfs:subClassOf :Spectroscopy ,
+                                                  :XRayMicroanalysis ;
                                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                   rdfs:label "Energy Dispersive X-ray Spectroscopy"@en ;
                                   <http://www.w3.org/2004/02/skos/core#altLabel> "energiedispersive Röntgenmikroanalyse"@de ;
@@ -933,6 +969,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                                   :abbreviation "EDS"@en ,
                                                 "EDX"@en ,
                                                 "XEDS"@en .
+
+
+###  https://w3id.org/pmd/mo/EnergyFilter
+:EnergyFilter rdf:type owl:Class ;
+              rdfs:subClassOf :OpticalElement ;
+              rdfs:label "Energy Filter"@en .
 
 
 ###  https://w3id.org/pmd/mo/EnergyFilteredTransmissionElectronMicroscope
@@ -1237,7 +1279,8 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 
 ###  https://w3id.org/pmd/mo/GatanImageFilter
 :GatanImageFilter rdf:type owl:Class ;
-                  rdfs:subClassOf :ImageFilter ;
+                  rdfs:subClassOf :EnergyFilter ,
+                                  :ImageFilter ;
                   rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                   rdfs:label "Gatan Abbildungsfilter"@de ,
                              "Gatan Image Filter"@en ;
@@ -1247,6 +1290,10 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 
 ###  https://w3id.org/pmd/mo/Gun
 :Gun rdf:type owl:Class ;
+     owl:equivalentClass [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/pmd/co/component> ;
+                           owl:someValuesFrom :Source
+                         ] ;
      rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
      rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
      rdfs:label "Gun"@en ,
@@ -1348,7 +1395,7 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 
 ###  https://w3id.org/pmd/mo/ImageFilter
 :ImageFilter rdf:type owl:Class ;
-             rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+             rdfs:subClassOf :OpticalElement ;
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Abbildungsfilter"@de ,
                         "Image Filter"@en ;
@@ -1463,7 +1510,7 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 
 ###  https://w3id.org/pmd/mo/Lense
 :Lense rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+       rdfs:subClassOf :OpticalElement ;
        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
        rdfs:label "Lense"@en ,
                   "Linse"@de ;
@@ -1543,7 +1590,7 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 
 ###  https://w3id.org/pmd/mo/Monochromator
 :Monochromator rdf:type owl:Class ;
-               rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+               rdfs:subClassOf :OpticalElement ;
                rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                rdfs:label "Monochromator"@de ,
                           "Monochromator"@en ;
@@ -1572,6 +1619,12 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                 <http://www.w3.org/2004/02/skos/core#definition> "A lens in a microscope or similar optical device that is closest to the specimen."@en ,
                                                                  "Eine Linse in einem Mikroskop oder ähnlichen optischen Gerät, die am nächsten zur Probe liegt."@de ;
                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/OpticalElement
+:OpticalElement rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+                rdfs:label "Optical Element"@en .
 
 
 ###  https://w3id.org/pmd/mo/OpticalMicroscope
@@ -1656,13 +1709,19 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 
 ###  https://w3id.org/pmd/mo/PolePiece
 :PolePiece rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
+           rdfs:subClassOf :OpticalElement ;
            rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
            rdfs:label "Pole Piece"@en ,
                       "Polschuh"@de ;
            <http://www.w3.org/2004/02/skos/core#definition> "A component of the electron column in an electron microscope that focuses and guides the electron beam onto the specimen."@en ,
                                                             "Eine Komponente der Elektronensäule in einem Elektronenmikroskop, die den Elektronenstrahl fokussiert und auf die Probe lenkt."@de ;
            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/PrecessionElectronDiffraction
+:PrecessionElectronDiffraction rdf:type owl:Class ;
+                               rdfs:subClassOf :ElectronDiffraction ;
+                               rdfs:label "Precession Electron Diffraction"@en .
 
 
 ###  https://w3id.org/pmd/mo/Pressure
@@ -1696,8 +1755,7 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                          "Sondenstrom"@de ;
               <http://www.w3.org/2004/02/skos/core#definition> "Der Strom der Elektronen im fokussierten Elektronenstrahl, der zur Abbildung oder Analyse in einem Elektronenmikroskop verwendet wird."@de ,
                                                                "The current of electrons in the focused electron beam used for imaging or analysis in an electron microscope."@en ;
-              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ,
-                                                         "ChatGPT 3.5" .
+              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
 ###  https://w3id.org/pmd/mo/ProbeSize
@@ -1709,8 +1767,7 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                       "Sondengröße"@de ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "Messfühlergröße"@de ;
            <http://www.w3.org/2004/02/skos/core#definition> "Die Größe der Sonde oder des Strahls, die bei Mikroskopie- oder Spektroskopieverfahren verwendet werden."@de ,
-                                                            "The size of the probe or beam used in microscopy or spectroscopy techniques."@en ,
-                                                            "The size of the probe, typically measured in nanometers (nm)."@en ;
+                                                            "The size of the probe or beam used in microscopy or spectroscopy techniques. It is typically measured in nanometers (nm)."@en ;
            <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -1882,9 +1939,15 @@ Mechanical polishing is commonly used in various scientific and industrial appli
                              :abbreviation "STM"@en .
 
 
+###  https://w3id.org/pmd/mo/SchottkyEmissionGun
+:SchottkyEmissionGun rdf:type owl:Class ;
+                     rdfs:subClassOf :Gun ;
+                     rdfs:label "Schottky Emission Gun"@en .
+
+
 ###  https://w3id.org/pmd/mo/Scintillator
 :Scintillator rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+              rdfs:subClassOf :Detector ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Scintillator"@en ,
                          "Szintillator"@de ;
@@ -1909,7 +1972,7 @@ SIMS has applications in diverse fields, including materials characterization, s
 
 ###  https://w3id.org/pmd/mo/SelectedAreaElectronDiffraction
 :SelectedAreaElectronDiffraction rdf:type owl:Class ;
-                                 rdfs:subClassOf :Diffraction ;
+                                 rdfs:subClassOf :ElectronDiffraction ;
                                  rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
                                  rdfs:label "Elektronenbeugung ausgewählter Regionen"@de ,
                                             "Selected Area Electron Diffraction"@en ;
@@ -1978,7 +2041,7 @@ SIMS has applications in diverse fields, including materials characterization, s
 
 ###  https://w3id.org/pmd/mo/Spectrometer
 :Spectrometer rdf:type owl:Class ;
-              rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+              rdfs:subClassOf :Detector ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Spectrometer"@en ,
                          "Spektrometer"@de ;
@@ -2074,6 +2137,18 @@ SIMS has applications in diverse fields, including materials characterization, s
               <http://www.w3.org/2004/02/skos/core#definition> "Das allgemeine Vakuumniveau im gesamten System eines Elektronenmikroskops."@de ,
                                                                "The overall vacuum level in the entire system of an electron microscope."@en ;
               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/TemporalResolution
+:TemporalResolution rdf:type owl:Class ;
+                    rdfs:subClassOf :Resolution ;
+                    rdfs:label "Temporal Resolution"@en .
+
+
+###  https://w3id.org/pmd/mo/ThermionicEmissionGun
+:ThermionicEmissionGun rdf:type owl:Class ;
+                       rdfs:subClassOf :Gun ;
+                       rdfs:label "Thermionic Emission Gun"@en .
 
 
 ###  https://w3id.org/pmd/mo/ThinFoilAperture
@@ -2329,6 +2404,20 @@ This technique is widely used in various scientific fields, including chemistry,
                                <http://www.w3.org/2004/02/skos/core#definition> "X-ray Photoelectron Spectroscopy, also known as Electron Spectroscopy for Chemical Analysis (ESCA), is a technique used to study the surface chemistry of materials. XPS involves bombarding a sample's surface with X-rays to emit photoelectrons, which are then analyzed to determine the elemental composition and chemical states of the elements on the surface."@en ;
                                <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                :abbreviation "XPS"@en .
+
+
+###  https://w3id.org/pmd/mo/XrayEnergyDispersiveSpectrometer
+:XrayEnergyDispersiveSpectrometer rdf:type owl:Class ;
+                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/hasFunction> ;
+                                                        owl:someValuesFrom :EnergyFilter
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/hasFunction> ;
+                                                        owl:someValuesFrom :ImageFilter
+                                                      ] ;
+                                  rdfs:subClassOf :Spectrometer ;
+                                  rdfs:label "X-ray Energy Dispersive Spectrometer"@en .
 
 
 ###  https://w3id.org/pmd/mo/3DCoordinates
