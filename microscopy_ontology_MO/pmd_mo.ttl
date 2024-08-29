@@ -207,6 +207,12 @@
                  <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/ActualMagnification
+:ActualMagnification rdf:type owl:Class ;
+                     rdfs:subClassOf :Magnification ;
+                     rdfs:label "Actual Magnification"@en .
+
+
 ###  https://w3id.org/pmd/mo/Age
 :Age rdf:type owl:Class ;
      rdfs:subClassOf <https://w3id.org/pmd/co/Duration> ;
@@ -412,6 +418,20 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/BeamTiltX
+:BeamTiltX rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+           rdfs:label "Beam Tilt X"@en ,
+                      "Strahlneigung X-Richtung"@de .
+
+
+###  https://w3id.org/pmd/mo/BeamTiltY
+:BeamTiltY rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+           rdfs:label "Beam Tilt Y"@en ,
+                      "Strahlneigung Y-Richtung"@de .
+
+
 ###  https://w3id.org/pmd/mo/Bias
 :Bias rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
@@ -440,7 +460,8 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
             rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
             rdfs:label "Brightness"@en ,
                        "Helligkeit"@de ;
-            <http://www.w3.org/2004/02/skos/core#definition> "The level of light intensity in an image."@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Der Grad der Lichtintensität in einem Bild."@de ,
+                                                             "The level of light intensity in an image."@en ;
             <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -448,15 +469,22 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 :CEOS-CEFIDfilter rdf:type owl:Class ;
                   rdfs:subClassOf :EnergyFilter ,
                                   :ImageFilter ;
-                  rdfs:label "CEOS-CEFID filter"@en .
+                  <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                  <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                  rdfs:label "CEOS-CEFID Filter"@de ,
+                             "CEOS-CEFID Filter"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "A CEOS-CEFID Filter is a specialized energy filter used in electron microscopes for enhancing image contrast and resolution."@en ,
+                                                                   "Ein CEOS-CEFID Filter ist ein spezialisierter Energiefilter, der in Elektronenmikroskopen verwendet wird, um den Bildkontrast und die Auflösung zu verbessern."@de .
 
 
 ###  https://w3id.org/pmd/mo/CameraLength
 :CameraLength rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/pmd/co/Length> ;
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
+              rdfs:label "Camera Length"@en ;
               <http://www.w3.org/2004/02/skos/core#definition> "Der Abstand zwischen der Probe und der Kamera, die zur Aufnahme von Bildern in einem Elektronenmikroskop verwendet wird."@de ,
                                                                "The distance between the specimen and the camera used to capture images in an electron microscope."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "STEM camera length"@en ;
               <https://w3id.org/pmd/co/definitionSource> "Camera Length"@en ,
                                                          "Kameralänge"@de ,
                                                          "ChatGPT 3.5" .
@@ -470,6 +498,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                     "Kathode"@de ;
          <http://www.w3.org/2004/02/skos/core#definition> "The cathode is the negatively charged electrode in an electrochemical cell or other electrical systems. It is the site where reduction occurs, leading to the acceptance of electrons from the external circuit. In batteries, for instance, the cathode is where electrons are consumed during the discharge process."@en ;
          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
+
+
+###  https://w3id.org/pmd/mo/Chamber
+:Chamber rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+         rdfs:label "Chamber"@en .
 
 
 ###  https://w3id.org/pmd/mo/ChamberVacuum
@@ -553,7 +587,7 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 :CondensorLense rdf:type owl:Class ;
                 rdfs:subClassOf :Lense ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                rdfs:label "Condensor Lense"@en ,
+                rdfs:label "Condensor Lens"@en ,
                            "Kondensorlinse"@de ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A condenser lens is an optical element used in microscopy and other optical systems to focus and control the illumination on the sample being observed. It is positioned below the light source and directs light rays onto the specimen, making the illumination uniform and optimizing the quality of the sample's image. The condenser lens helps enhance contrast, resolution, and overall image quality by ensuring that a consistent and concentrated light beam illuminates the specimen."@en ;
                 <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
@@ -576,7 +610,8 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
           rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
           rdfs:label "Contrast"@en ,
                      "Kontrast"@de ;
-          <http://www.w3.org/2004/02/skos/core#definition> "The difference in luminance or color that makes objects distinguishable in an image."@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Der Unterschied in der Leuchtdichte oder Farbe, der Objekte in einem Bild unterscheidbar macht."@de ,
+                                                           "The difference in luminance or color that makes objects distinguishable in an image."@en ;
           <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -596,7 +631,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
 ###  https://w3id.org/pmd/mo/ConvergentBeamElectronDiffraction
 :ConvergentBeamElectronDiffraction rdf:type owl:Class ;
                                    rdfs:subClassOf :ElectronDiffraction ;
-                                   rdfs:label "Convergent Beam Electron Diffraction"@en .
+                                   <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                                   <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                                   rdfs:label "Convergent Beam Electron Diffraction"@en ,
+                                              "Konvergente Strahl-Elektronenbeugung"@de ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Convergent Beam Electron Diffraction is a technique in electron microscopy where a convergent electron beam is used to form diffraction patterns, allowing for precise analysis of crystal structures."@en ,
+                                                                                    "Konvergente Strahl-Elektronenbeugung ist eine Technik in der Elektronenmikroskopie, bei der ein konvergenter Elektronenstrahl verwendet wird, um Beugungsmuster zu erzeugen, die eine präzise Analyse von Kristallstrukturen ermöglichen."@de .
 
 
 ###  https://w3id.org/pmd/mo/Cryo-ScanningElectronMicroscope
@@ -716,6 +756,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                       <http://www.w3.org/2004/02/skos/core#definition> "Der Bereich in der Bildebene eines Elektronenmikroskops, in dem der Elektronenstrahl auf die kleinste Punktgröße fokussiert wird, wodurch die durch sphärische Aberration verursachte Unschärfe minimiert wird."@de ,
                                                                        "The region in the image plane of an electron microscope where the electron beam is focused to the smallest spot size, minimizing the blurring effect due to spherical aberration."@en ;
                       <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
+
+
+###  https://w3id.org/pmd/mo/DriftCorrection
+:DriftCorrection rdf:type owl:Class ;
+                 rdfs:subClassOf <https://w3id.org/pmd/co/AnalysingProcess> ;
+                 rdfs:label "Drift Correction"@en .
 
 
 ###  https://w3id.org/pmd/mo/DwellTime
@@ -858,7 +904,12 @@ By analyzing the energy spectrum of the emitted Auger electrons, researchers can
                                                       owl:someValuesFrom :GatanImageFilter
                                                     ] ;
                                 rdfs:subClassOf :Spectrometer ;
-                                rdfs:label "Electron Energy Loss Spectrometer"@en .
+                                <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                                <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                                rdfs:label "Electron Energy Loss Spectrometer"@en ,
+                                           "Elektronen-Energieverlust-Spektrometer"@de ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "An Electron Energy Loss Spectrometer is a device used to measure the energy loss of electrons as they pass through a sample, providing information on the sample's composition and electronic structure."@en ,
+                                                                                 "Ein Elektronen-Energieverlust-Spektrometer ist ein Gerät, das verwendet wird, um den Energieverlust von Elektronen beim Durchgang durch eine Probe zu messen, was Informationen über die Zusammensetzung und die elektronische Struktur der Probe liefert."@de .
 
 
 ###  https://w3id.org/pmd/mo/ElectronEnergyLossSpectroscopy
@@ -974,7 +1025,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
 ###  https://w3id.org/pmd/mo/EnergyFilter
 :EnergyFilter rdf:type owl:Class ;
               rdfs:subClassOf :OpticalElement ;
-              rdfs:label "Energy Filter"@en .
+              <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+              <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+              rdfs:label "Energie-Filter"@de ,
+                         "Energy Filter"@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "An Energy Filter is a device used in electron microscopy to filter electrons by their energy, improving image quality and enabling specific analytical techniques."@en ,
+                                                               "Ein Energie-Filter ist ein Gerät, das in der Elektronenmikroskopie verwendet wird, um Elektronen nach ihrer Energie zu filtern, die Bildqualität zu verbessern und spezifische Analysetechniken zu ermöglichen."@de .
 
 
 ###  https://w3id.org/pmd/mo/EnergyFilteredTransmissionElectronMicroscope
@@ -1050,7 +1106,8 @@ By studying the energy loss spectrum, researchers can identify the types of atom
               rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
               rdfs:label "Belichtungszeit"@de ,
                          "Exposure Time"@en ;
-              <http://www.w3.org/2004/02/skos/core#definition> "The duration for which the imaging sensor is exposed to light, measured in seconds."@en ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Die Dauer, während der der Bildsensor dem Licht ausgesetzt ist, gemessen in Sekunden (s)."@de ,
+                                                               "The duration for which the imaging sensor is exposed to light, measured in seconds (s)."@en ;
               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -1108,6 +1165,12 @@ By studying the energy loss spectrum, researchers can identify the types of atom
                     <http://www.w3.org/2004/02/skos/core#definition> "Field Ion Microscopy is a specialized microscopy technique that uses a strong electric field to ionize atoms on the surface of a metal sample. These ionized atoms are then repelled from the surface and can be detected to create an image of the sample's surface topography at atomic resolution. FIM is especially powerful for imaging the arrangement of atoms on metallic surfaces."@en ;
                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                     :abbreviation "FIM"@en .
+
+
+###  https://w3id.org/pmd/mo/FieldWidth
+:FieldWidth rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/Width> ;
+            rdfs:label "Field Width"@en .
 
 
 ###  https://w3id.org/pmd/mo/Filament
@@ -1288,6 +1351,12 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
                   <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/GridVoltage
+:GridVoltage rdf:type owl:Class ;
+             rdfs:subClassOf :Voltage ;
+             rdfs:label "Grid Voltage"@en .
+
+
 ###  https://w3id.org/pmd/mo/Gun
 :Gun rdf:type owl:Class ;
      owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -1382,6 +1451,12 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/HorizontalFieldWidth
+:HorizontalFieldWidth rdf:type owl:Class ;
+                      rdfs:subClassOf :FieldWidth ;
+                      rdfs:label "Horizontal Field Width"@en .
+
+
 ###  https://w3id.org/pmd/mo/IMAGEPATH
 :IMAGEPATH rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/pmd/co/Identifier> ;
@@ -1444,6 +1519,12 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
               <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5" .
 
 
+###  https://w3id.org/pmd/mo/IndicatedMagnification
+:IndicatedMagnification rdf:type owl:Class ;
+                        rdfs:subClassOf :Magnification ;
+                        rdfs:label "Indicated Magnification"@en .
+
+
 ###  https://w3id.org/pmd/mo/InelasticScattering
 :InelasticScattering rdf:type owl:Class ;
                      rdfs:subClassOf :PhysicalProcess ;
@@ -1469,7 +1550,7 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 :IntermediateLense rdf:type owl:Class ;
                    rdfs:subClassOf :Lense ;
                    rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                   rdfs:label "Intermediate Lense"@en ,
+                   rdfs:label "Intermediate Lens"@en ,
                               "Zwischenlinse"@de ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A lens that is positioned between the objective lens and the projector lens in an optical system."@en ,
                                                                     "Eine Linse, die zwischen der Objektivlinse und der Projektorlinse in einem optischen System positioniert ist."@de ;
@@ -1512,7 +1593,7 @@ FTIR is extensively used in a wide range of fields, including chemistry, biology
 :Lense rdf:type owl:Class ;
        rdfs:subClassOf :OpticalElement ;
        rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-       rdfs:label "Lense"@en ,
+       rdfs:label "Lens"@en ,
                   "Linse"@de ;
        <http://www.w3.org/2004/02/skos/core#definition> "A piece of optical glass or other transparent material used to focus or magnify light in optical instruments."@en ,
                                                         "Ein Stück optisches Glas oder anderes transparentes Material, das zum Fokussieren oder Vergrößern von Licht in optischen Geräten verwendet wird."@de ;
@@ -1614,7 +1695,7 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 :ObjectiveLense rdf:type owl:Class ;
                 rdfs:subClassOf :Lense ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                rdfs:label "Objective Lense"@en ,
+                rdfs:label "Objective Lens"@en ,
                            "Objektivlinse"@de ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A lens in a microscope or similar optical device that is closest to the specimen."@en ,
                                                                  "Eine Linse in einem Mikroskop oder ähnlichen optischen Gerät, die am nächsten zur Probe liegt."@de ;
@@ -1624,7 +1705,12 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/OpticalElement
 :OpticalElement rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
-                rdfs:label "Optical Element"@en .
+                <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                rdfs:label "Optical Element"@en ,
+                           "Optisches Element"@de ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An Optical Element is a component of an optical system that affects the propagation of light, such as lenses, mirrors, or prisms."@en ,
+                                                                 "Ein optisches Element ist eine Komponente eines optischen Systems, das die Ausbreitung von Licht beeinflusst, wie Linsen, Spiegel oder Prismen."@de .
 
 
 ###  https://w3id.org/pmd/mo/OpticalMicroscope
@@ -1721,7 +1807,12 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/PrecessionElectronDiffraction
 :PrecessionElectronDiffraction rdf:type owl:Class ;
                                rdfs:subClassOf :ElectronDiffraction ;
-                               rdfs:label "Precession Electron Diffraction"@en .
+                               <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                               <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                               rdfs:label "Precession Electron Diffraction"@en ,
+                                          "Präzessionselektronenbeugung"@de ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "Precession Electron Diffraction is a technique used in electron microscopy where the electron beam is tilted in a precession motion, improving the quality of diffraction patterns and reducing dynamical effects."@en ,
+                                                                                "Präzessionselektronenbeugung ist eine Technik in der Elektronenmikroskopie, bei der der Elektronenstrahl in einer Präzessionsbewegung geneigt wird, wodurch die Qualität der Beugungsmuster verbessert und dynamische Effekte reduziert werden."@de .
 
 
 ###  https://w3id.org/pmd/mo/Pressure
@@ -1775,7 +1866,7 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 :ProjectorLense rdf:type owl:Class ;
                 rdfs:subClassOf :Lense ;
                 rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
-                rdfs:label "Projector Lense"@en ,
+                rdfs:label "Projector Lens"@en ,
                            "Projektorlinse"@de ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A lens used to project the image from the intermediate lens onto a viewing screen or detector."@en ,
                                                                  "Eine Linse, die verwendet wird, um das Bild von der Zwischenlinse auf einen Bildschirm oder Detektor zu projizieren."@de ;
@@ -1942,7 +2033,12 @@ Mechanical polishing is commonly used in various scientific and industrial appli
 ###  https://w3id.org/pmd/mo/SchottkyEmissionGun
 :SchottkyEmissionGun rdf:type owl:Class ;
                      rdfs:subClassOf :Gun ;
-                     rdfs:label "Schottky Emission Gun"@en .
+                     <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                     <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                     rdfs:label "Schottky Emission Gun"@en ,
+                                "Schottky-Emissionsquelle"@de ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A Schottky Emission Gun is a device in electron microscopes that produces electrons by field-induced thermionic emission, using a Schottky emitter."@en ,
+                                                                      "Eine Schottky-Emissionsquelle ist ein Gerät in Elektronenmikroskopen, das durch feldinduzierte thermionische Emission Elektronen erzeugt und einen Schottky-Emitter verwendet."@de .
 
 
 ###  https://w3id.org/pmd/mo/Scintillator
@@ -2073,6 +2169,20 @@ SIMS has applications in diverse fields, including materials characterization, s
                      <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/Spot
+:Spot rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/pmd/co/Object> ;
+      rdfs:label "Spot"@de ,
+                 "Spot"@en .
+
+
+###  https://w3id.org/pmd/mo/SpotSize
+:SpotSize rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+          rdfs:label "Spot Size"@en ,
+                     "Spotgröße"@de .
+
+
 ###  https://w3id.org/pmd/mo/Stage
 :Stage rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/pmd/co/Component> ;
@@ -2090,6 +2200,8 @@ SIMS has applications in diverse fields, including materials characterization, s
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Stigmation X"@de ,
                         "Stigmation X"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Stigmator X Value"@en ,
+                                                            "Stigmator X Wert"@de ;
              <http://www.w3.org/2004/02/skos/core#definition> "Die Einstellung des Astigmatismus in der X-Achse eines Elektronenstrahls in der Mikroskopie."@de ,
                                                               "The adjustment of astigmatism in the X-axis of an electron beam in microscopy."@en ;
              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
@@ -2101,6 +2213,8 @@ SIMS has applications in diverse fields, including materials characterization, s
              rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
              rdfs:label "Stigmation Y"@de ,
                         "Stigmation Y"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Stigmator X Wert"@de ,
+                                                            "Stigmator Y Value"@en ;
              <http://www.w3.org/2004/02/skos/core#definition> "Die Einstellung des Astigmatismus in der Y-Achse eines Elektronenstrahls in der Mikroskopie."@de ,
                                                               "The adjustment of astigmatism in the Y-axis of an electron beam in microscopy."@en ;
              <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
@@ -2142,13 +2256,23 @@ SIMS has applications in diverse fields, including materials characterization, s
 ###  https://w3id.org/pmd/mo/TemporalResolution
 :TemporalResolution rdf:type owl:Class ;
                     rdfs:subClassOf :Resolution ;
-                    rdfs:label "Temporal Resolution"@en .
+                    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                    rdfs:label "Temporal Resolution"@en ,
+                               "Zeitliche Auflösung"@de ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "Temporal Resolution is the ability of a microscopy or imaging system to distinguish between events or changes occurring at different times, critical in capturing dynamic processes."@en ,
+                                                                     "Zeitliche Auflösung ist die Fähigkeit eines Mikroskopie- oder Bildgebungssystems, zwischen Ereignissen oder Änderungen zu unterscheiden, die zu unterschiedlichen Zeiten auftreten, was entscheidend für die Erfassung dynamischer Prozesse ist."@de .
 
 
 ###  https://w3id.org/pmd/mo/ThermionicEmissionGun
 :ThermionicEmissionGun rdf:type owl:Class ;
                        rdfs:subClassOf :Gun ;
-                       rdfs:label "Thermionic Emission Gun"@en .
+                       <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                       <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                       rdfs:label "Thermionic Emission Gun"@en ,
+                                  "Thermionische Emissionsquelle"@de ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A Thermionic Emission Gun is a device in electron microscopes that produces electrons by heating a filament to emit electrons through thermionic emission."@en ,
+                                                                        "Eine thermionische Emissionsquelle ist ein Gerät in Elektronenmikroskopen, das durch Erhitzen eines Filaments Elektronen durch thermionische Emission erzeugt."@de .
 
 
 ###  https://w3id.org/pmd/mo/ThinFoilAperture
@@ -2264,19 +2388,29 @@ TOF-SIMS is valuable for characterizing surfaces at the nanoscale, profiling lay
         <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
+###  https://w3id.org/pmd/mo/VacuumPump
+:VacuumPump rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/pmd/co/ProcessingNode> ;
+            rdfs:label "Vacuum Pump"@en .
+
+
+###  https://w3id.org/pmd/mo/VerticalFieldWidth
+:VerticalFieldWidth rdf:type owl:Class ;
+                    rdfs:subClassOf :FieldWidth ;
+                    rdfs:label "Vertical Field Width"@en .
+
+
 ###  https://w3id.org/pmd/mo/Voltage
 :Voltage rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/pmd/co/ValueObject> ;
+         rdfs:comment "Die Spannung wird in Volt (V) gemessen und in Kilovolt (kV) repräsentiert und stellt die potenzielle Energiedifferenz zwischen zwei Punkten in einem Stromkreis dar. Je höher die Spannung ist, desto größer ist die Kraft, die die elektrischen Ladungen antreibt, und desto höher ist folglich auch das Potenzial für einen Stromfluss."@de ,
+                      "Voltage is measured in volts (V) and typically represented in kilovolts (kV), and it represents the potential energy difference between two points in a circuit. The higher the voltage, the greater the force pushing the electric charges, and consequently, the higher the potential for current to flow."@en ;
          rdfs:isDefinedBy <https://w3id.org/pmd/mo> ;
          rdfs:label "Spannung"@de ,
                     "Voltage"@en ;
          <http://www.w3.org/2004/02/skos/core#altLabel> "Stromspannung"@de ;
-         <http://www.w3.org/2004/02/skos/core#definition> """Die Spannung, auch elektrische Potentialdifferenz, ist ein Maß für die elektrische potentielle Energie pro Ladungseinheit in einem elektrischen Stromkreis. Sie ist die Kraft, die den elektrischen Strom durch einen Leiter treibt. 
-
-Hinweis: Die Spannung wird in Volt (V) gemessen und stellt die potenzielle Energiedifferenz zwischen zwei Punkten in einem Stromkreis dar. Je höher die Spannung ist, desto größer ist die Kraft, die die elektrischen Ladungen antreibt, und desto höher ist folglich auch das Potenzial für einen Stromfluss."""@de ,
-                                                          """Voltage, also known as electric potential difference, is a measure of the electric potential energy per unit charge in an electrical circuit. It is the force or pressure that drives electric current through a conductor. 
-
-Note: Voltage is measured in volts (V), and it represents the potential energy difference between two points in a circuit. The higher the voltage, the greater the force pushing the electric charges, and consequently, the higher the potential for current to flow."""@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Die Spannung, auch elektrische Potentialdifferenz, ist ein Maß für die elektrische potentielle Energie pro Ladungseinheit in einem elektrischen Stromkreis. Sie ist die Kraft, die den elektrischen Strom durch einen Leiter treibt."@de ,
+                                                          "Voltage, also known as electric potential difference, is a measure of the electric potential energy per unit charge in an electrical circuit. It is the force or pressure that drives electric current through a conductor."@en ;
          <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en .
 
 
@@ -2417,7 +2551,12 @@ This technique is widely used in various scientific fields, including chemistry,
                                                         owl:someValuesFrom :ImageFilter
                                                       ] ;
                                   rdfs:subClassOf :Spectrometer ;
-                                  rdfs:label "X-ray Energy Dispersive Spectrometer"@en .
+                                  <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en ;
+                                  <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+                                  rdfs:label "Röntgen-Energie-dispersiver Spektrometer"@de ,
+                                             "X-ray Energy Dispersive Spectrometer"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "An X-ray Energy Dispersive Spectrometer is a device used in electron microscopes to analyze the elemental composition of samples by detecting X-rays emitted from the sample."@en ,
+                                                                                   "Ein Röntgen-Energie-dispersiver Spektrometer ist ein Gerät, das in Elektronenmikroskopen verwendet wird, um die Elementzusammensetzung von Proben durch Detektion der vom Probenmaterial emittierten Röntgenstrahlen zu analysieren."@de .
 
 
 ###  https://w3id.org/pmd/mo/3DCoordinates
@@ -2484,6 +2623,112 @@ This technique is widely used in various scientific fields, including chemistry,
                                                                     <http://www.w3.org/2004/02/skos/core#definition> "4D-STEM is a technique that adds an additional dimension of information, time, to STEM imaging, allowing the study of dynamic processes in materials at high spatial and temporal resolutions."@en ;
                                                                     <https://w3id.org/pmd/co/definitionSource> "ChatGPT 3.5"@en ;
                                                                     :abbreviation "4D-STEM"@en .
+
+
+### https://w3id.org/pmd/mo/BeamTiltX
+<https://w3id.org/pmd/mo/BeamTiltX> a owl:Class ;
+    rdfs:label "Beam Tilt X"@en, "Strahlneigung X"@de ;
+    skos:definition "Beam Tilt X refers to the tilting of the electron beam in the X-axis direction within an electron microscope."@en,
+                    "Strahlneigung X bezieht sich auf die Neigung des Elektronenstrahls in Richtung der X-Achse innerhalb eines Elektronenmikroskops."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/Spot
+<https://w3id.org/pmd/mo/Spot> a owl:Class ;
+    rdfs:label "Spot"@en, "Strahlfleck"@de ;
+    skos:definition "Spot refers to the focused point of the electron beam in an electron microscope, where the beam interacts with the specimen."@en,
+                    "Strahlfleck bezieht sich auf den fokussierten Punkt des Elektronenstrahls in einem Elektronenmikroskop, an dem der Strahl mit der Probe interagiert."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/SpotSize
+<https://w3id.org/pmd/mo/SpotSize> a owl:Class ;
+    rdfs:label "Spot Size"@en, "Strahlfleckgröße"@de ;
+    skos:definition "Spot Size refers to the diameter of the electron beam at the point where it is focused on the specimen in an electron microscope."@en,
+                    "Strahlfleckgröße bezieht sich auf den Durchmesser des Elektronenstrahls an dem Punkt, an dem er auf die Probe fokussiert wird."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/BeamTiltY
+<https://w3id.org/pmd/mo/BeamTiltY> a owl:Class ;
+    rdfs:label "Beam Tilt Y"@en, "Strahlneigung Y"@de ;
+    skos:definition "Beam Tilt Y refers to the tilting of the electron beam in the Y-axis direction within an electron microscope."@en,
+                    "Strahlneigung Y bezieht sich auf die Neigung des Elektronenstrahls in Richtung der Y-Achse innerhalb eines Elektronenmikroskops."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/VerticalFieldWidth
+<https://w3id.org/pmd/mo/VerticalFieldWidth> a owl:Class ;
+    rdfs:label "Vertical Field Width"@en, "Vertikale Feldbreite"@de ;
+    skos:definition "Vertical Field Width refers to the vertical extent of the observable field in an electron microscope."@en,
+                    "Vertikale Feldbreite bezieht sich auf den vertikalen Umfang des beobachtbaren Feldes in einem Elektronenmikroskop."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/FieldWidth
+<https://w3id.org/pmd/mo/FieldWidth> a owl:Class ;
+    rdfs:label "Field Width"@en, "Feldbreite"@de ;
+    skos:definition "Field Width refers to the horizontal extent of the observable field in an electron microscope."@en,
+                    "Feldbreite bezieht sich auf den horizontalen Umfang des beobachtbaren Feldes in einem Elektronenmikroskop."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/Chamber
+<https://w3id.org/pmd/mo/Chamber> a owl:Class ;
+    rdfs:label "Chamber"@en, "Kammer"@de ;
+    skos:definition "Chamber refers to the enclosed space within an electron microscope where the sample is placed and vacuum conditions are maintained."@en,
+                    "Kammer bezieht sich auf den abgeschlossenen Raum in einem Elektronenmikroskop, in dem die Probe platziert wird und Vakuumbedingungen aufrechterhalten werden."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/DriftCorrection
+<https://w3id.org/pmd/mo/DriftCorrection> a owl:Class ;
+    rdfs:label "Drift Correction"@en, "Driftkorrektur"@de ;
+    skos:definition "Drift Correction refers to techniques used in electron microscopy to compensate for the slow movement of the sample or beam, ensuring image stability and accuracy."@en,
+                    "Driftkorrektur bezieht sich auf Techniken in der Elektronenmikroskopie, die dazu dienen, die langsame Bewegung der Probe oder des Strahls auszugleichen und so Bildstabilität und Genauigkeit zu gewährleisten."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/IndicatedMagnification
+<https://w3id.org/pmd/mo/IndicatedMagnification> a owl:Class ;
+    rdfs:label "Indicated Magnification"@en, "Angegebene Vergrößerung"@de ;
+    skos:definition "Indicated Magnification refers to the magnification level shown by the instrument's controls or display in an electron microscope."@en,
+                    "Angegebene Vergrößerung bezieht sich auf den Vergrößerungsgrad, der von den Steuerungen oder Anzeigen des Instruments in einem Elektronenmikroskop angezeigt wird."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/GridVoltage
+<https://w3id.org/pmd/mo/GridVoltage> a owl:Class ;
+    rdfs:label "Grid Voltage"@en, "Gitterspannung"@de ;
+    skos:definition "Grid Voltage refers to the voltage applied to the control grid in an electron microscope, which influences the electron beam's focus and intensity."@en,
+                    "Gitterspannung bezieht sich auf die Spannung, die an das Steuergitter in einem Elektronenmikroskop angelegt wird und die den Fokus und die Intensität des Elektronenstrahls beeinflusst."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/VacuumPump
+<https://w3id.org/pmd/mo/VacuumPump> a owl:Class ;
+    rdfs:label "Vacuum Pump"@en, "Vakuumpumpe"@de ;
+    skos:definition "A Vacuum Pump is a device used in electron microscopes to evacuate air from the chamber, creating the necessary vacuum conditions for electron beam operation."@en,
+                    "Eine Vakuumpumpe ist ein Gerät, das in Elektronenmikroskopen verwendet wird, um Luft aus der Kammer zu evakuieren und die notwendigen Vakuumbedingungen für den Betrieb des Elektronenstrahls zu schaffen."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/ActualMagnification
+<https://w3id.org/pmd/mo/ActualMagnification> a owl:Class ;
+    rdfs:label "Actual Magnification"@en, "Tatsächliche Vergrößerung"@de ;
+    skos:definition "Actual Magnification refers to the true magnification level achieved in an electron microscope, which may differ from the indicated magnification."@en,
+                    "Tatsächliche Vergrößerung bezieht sich auf den tatsächlichen Vergrößerungsgrad, der in einem Elektronenmikroskop erreicht wird und sich von der angegebenen Vergrößerung unterscheiden kann."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
+### https://w3id.org/pmd/mo/HorizontalFieldWidth
+<https://w3id.org/pmd/mo/HorizontalFieldWidth> a owl:Class ;
+    rdfs:label "Horizontal Field Width"@en, "Horizontale Feldbreite"@de ;
+    skos:definition "Horizontal Field Width refers to the horizontal extent of the observable field in an electron microscope."@en,
+                    "Horizontale Feldbreite bezieht sich auf den horizontalen Umfang des beobachtbaren Feldes in einem Elektronenmikroskop."@de ;
+    <http://purl.obolibrary.org/obo/IAO_0000119> "ChatGPT 3.5"@en ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "PMDco Team"@en .
+
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
