@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/pmd/pgo#"
+     xml:base="https://w3id.org/pmd/pgo"
+     xmlns:co="https://w3id.org/pmd/co/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/pmd/pgo">
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/pgo/1.0.0"/>
+        <owl:imports rdf:resource="https://w3id.org/pmd/co"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-3717-7104"/>
+        <dc:creator rdf:resource="https://orcid.org/0000-0002-7094-5371"/>
+        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0"/>
+        <terms:bibliographicCitation>Markus Schilling, Bernd Bayerlein. (December 13th, 2023) PGO: Precipitate Geometry Ontology. Version 1.0.0, https://w3id.org/pmd/pgo</terms:bibliographicCitation>
+        <terms:created>2023-12-13</terms:created>
+        <terms:title xml:lang="en">Platform MaterialDigital - Precipitate Geometry Ontology (PGO)</terms:title>
+        <rdfs:comment xml:lang="en">The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. 
+It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the &quot;Orowan Demonstrator&quot; (available at: https://github.com/materialdigital/demo-orowan).</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/AveragePrecipitateDistance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/pgo/PrecipitateDistance"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="en">Average Precipitate Distance</rdfs:label>
+        <rdfs:label xml:lang="de">Mittlerer Ausscheidungsabstand</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse der Ausscheidungsabstand wird der mittlere Ausscheidungsabstand aus mehreren Ausscheidungsabständen ermittelt, z. B. durch die Delauney-Triangulation. Der mittlere Ausscheidungsabstand  lässt sich somit aus dem Median oder dem arithmetischen Mittelwert aller betrachteten Einzelmessungen von Ausscheidungsabständen berechnen.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of precipitate distance, the average precipitate distance is determined from several precipitate distances via, e.g., the Delauney triangulation. Hence, the average precipitate distance can be calculated using the median and the arithmetic mean value of all individual measurements of precipitate distances regarded.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/CalibrationFactor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/CalibrationFactor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/ValueObject"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <skos:definition xml:lang="de">Als Subklasse des Values Objects bietet der Kalibrierungsfaktor einen Umrechnungsfaktor von Pixeln in reale Dimensionen, der die Skalierung von Bildern in metrische Einheiten ermöglicht.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of value object, the calibration factor provides a pixel-to-real-distance conversion factor, that allows image scaling to metric units.</skos:definition>
+        <skos:definition xml:lang="en">Calibration Factor</skos:definition>
+        <skos:definition xml:lang="de">Kalibrierungsfaktor</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/DarkFieldImage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/DarkFieldImage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Image"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="en">Dark-field Image</rdfs:label>
+        <rdfs:label xml:lang="de">Dunkelfeldbild</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse des Bildes wird das Dunkelfeldbild mit einem hochauflösenden Transmissionselektronenmikroskop (HR-TEM) erzeugt.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of image, the dark-field image is generated from a high-resolution transmission electron microscope (HR-TEM).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/ImageAnalysisProcess -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/ImageAnalysisProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="de">Bildanalyse-Prozess</rdfs:label>
+        <rdfs:label xml:lang="en">Image Analysis Process</rdfs:label>
+        <skos:definition xml:lang="de">Als Unterklasse eines nicht-transformativen Analyseverfahrens ist das Bildanalyseverfahren ein Prozess, mit dem nützliche Informationen, wie z. B. Koordinaten von Ausscheidungen in metallischen Legierungen und deren Abständen, aus einem Bild extrahiert und für die weitere Verwendung interpretiert werden.</skos:definition>
+        <skos:definition xml:lang="en">As subclass of a non-transformative analysis process, the image analysis process is a process by which useful information, such as precipitate coordinates and their distances, are extracted from an image and interpreted for further application.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/Particle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/Particle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Object"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="en">Particle</rdfs:label>
+        <rdfs:label xml:lang="de">Partikel</rdfs:label>
+        <skos:definition xml:lang="de">Als eine Subklasse von Objekt ist ein Partikel ein kleines, lokalisiertes Objekt, das durch mehrere physikalische oder chemische Eigenschaften wie Volumen, Dichte oder Masse beschrieben werden kann.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of object, a particle is a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass.</skos:definition>
+        <co:definitionSource rdf:resource="https://en.wikipedia.org/wiki/Particle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/Precipitate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/Precipitate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/pgo/Particle"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="de">Ausscheidung</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitate</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/PrecipitateArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/PrecipitateArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Area"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="de">Ausscheidungsfläche</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitate Area</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse der Fläche ist die Ausscheidungsfläche ein Maß,welches zum Vergleich von Ausscheidungsgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of the area, the precipitate area is a measure that is used to compare precipitate sizes. As a rule, a circular approximation is used for precipitation particles.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/PrecipitateDistance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/PrecipitateDistance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Distance"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="de">Ausscheidungsabstand</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitate Distance</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse des Abstands ist der Ausscheidungsabstand ein Maß für den Abstand zwischen zwei Ausscheidungen in metallischen Legierungen. Üblicherweise wird dieser Abstand aus der Analyse von Dunkelfeld-TEM-Bildern gewonnen und in Nanometern angegeben.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of distance, the precipitate distance is a measure of the distance between two precipitates. Usually, this distance is obtained from analysing dark-field TEM images and given in nanometers.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/PrecipitateNumber -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/PrecipitateNumber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Index"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:isDefinedBy xml:lang="de">Die Ausscheidungsnummer ermöglicht die eindeutige Zuordnung der gemessenen Eigenschaften zu einem bestimmten Ausscheidung.</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">The precipitate number enables the explicit assignment of measured properties to a specific precipitate.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="de">Ausscheidungsnummer</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitate Number</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/pgo/PrecipitateRadius -->
+
+
+    <owl:Class rdf:about="https://w3id.org/pmd/pgo/PrecipitateRadius">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/Radius"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/pgo"/>
+        <rdfs:label xml:lang="de">Ausscheidungsradius</rdfs:label>
+        <rdfs:label xml:lang="en">Precipitate Radius</rdfs:label>
+        <skos:definition xml:lang="de">Als Subklasse des Radius ist der Ausscheidungsradius ein Maß, mit dem eine spezifische Korrelation der Ausscheidungsgröße vorgenommen werden kann. Der Ausscheidungsradius wird in der Regel aus der kreisförmigen Annäherung der Ausscheidungsfläche ermittelt.</skos:definition>
+        <skos:definition xml:lang="en">As a subclass of radius, precipitate radius is a measure used to perform a specific precipitate size correlation. The precipitate radius is usually obtained from the circular approximation of the precipitate area.</skos:definition>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
