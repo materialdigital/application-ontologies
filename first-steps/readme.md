@@ -1,6 +1,6 @@
 # Purpose of this document
 
-* This document is intended to provide you with initial orientation.
+* This document is intended to provide you with initial orientation concerning the development of ontologies.
 * Here you can find tutorials, links to teaching material, useful tools and much more for creating (MSE application) ontologies.
 * There are also opportunities to actively engage in PMDco development, to actively exchange ideas with the PMD core team and the MSE community.
 
@@ -17,17 +17,17 @@ Some information on technical requirement for ontology to be followed during ont
 
 # Community discussions and interactions
 
+## PMD Landing Page
+
+The [PMD Landing Page](https://forum.materialdigital.de) provides you with information on how and where you can exchange with experts and, e.g., start discussions, make recommendations, and ask questions. This is therefore a place to gather links and information to establish intensive discussions. We are happy about your contributions.
 ## PMD Ontology Playground (every second friday 1-2pm)
+
+#### [Sign up for the PMD Ontology Playground List](https://www.lists.kit.edu/sympa/subscribe/ontology-playground?previous_action=info)
+Following this link, you can enter you mail address to get all the information on the PMD Ontology Playground, including subscription for the appointment series and agenda updates.
 
 #### [Join meeting via MS Teams](https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWZjM2RlMTYtMmJiNy00ODRiLWI5NzktNDJmMzE2YmNkZTkz%40thread.v2/0?context=%7b%22Tid%22%3a%224f5409f4-026c-4e93-9ebc-0b6bb8c5ca2d%22%2c%22Oid%22%3a%22f0db94e8-95c8-4080-a27a-58f45844eed3%22%7d)
 
-#### [Conceptboard](https://app.conceptboard.com/board/b7i6-1os9-t66s-bb7i-exu3)
-
-## [PMD Forum](https://forum.materialdigital.de) 
-
-In the PMD Forum, you can exchange with experts and, e.g., start discussions, make recommendations, and ask questions. This is therefore a place to gather information and establish intensive discussions. We are happy about your contributions.
-
-### [Semantic Interoperability Onboarding](https://forum.materialdigital.de/t/onboarding-semantische-interoperabilitaet/257)
+#### [Collaborative Ontology Development using Miro Board](https://miro.com/app/board/uXjVNOTPrFo=/)
 
 # Relevant Youtube Channels
 
