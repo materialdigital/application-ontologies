@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Platform MaterialDigital - Precipitate Geometry Ontology (PGO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/pmd/pgo","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/pmd/pgo","name":"Platform MaterialDigital - Precipitate Geometry Ontology (PGO)", "headline":"The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the "Orowan Demonstrator" (available at: https://github.com/materialdigital/demo-orowan).", "datePublished":"2023-12-13", "version":"1.0.0", "author":[{"@type":"Person","name":"https://orcid.org/0000-0002-3717-7104","url":"https://orcid.org/0000-0002-3717-7104"},{"@type":"Person","name":"https://orcid.org/0000-0002-7094-5371","url":"https://orcid.org/0000-0002-7094-5371"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Platform MaterialDigital - Precipitate Geometry Ontology (PGO)</h1>
+<h2>Release 2023-12-13</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/pmd/pgo/1.0.0">https://w3id.org/pmd/pgo/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd><a href="https://orcid.org/0000-0002-3717-7104">https://orcid.org/0000-0002-3717-7104</a></dd><dd><a href="https://orcid.org/0000-0002-7094-5371">https://orcid.org/0000-0002-7094-5371</a></dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3.org/ns/prov-o-inverses#">prov-o-inverses#</a></dd><dd><a href="https://w3id.org/pmd/co">co</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Markus Schilling, Bernd Bayerlein. (December 13th, 2023) PGO: Precipitate Geometry Ontology. Version 1.0.0, https://w3id.org/pmd/pgo</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. 
+It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the "Orowan Demonstrator" (available at: https://github.com/materialdigital/demo-orowan).</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Platform MaterialDigital - Precipitate Geometry Ontology (PGO): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/AveragePrecipitateDistance"
+         title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Average Precipitate Distance</a>
+   </li>
+   <li>
+      <a href="#/CalibrationFactor" title="https://w3id.org/pmd/pgo/CalibrationFactor">
+         <span>calibration factor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DarkFieldImage" title="https://w3id.org/pmd/pgo/DarkFieldImage">Dark-field Image</a>
+   </li>
+   <li>
+      <a href="#/ImageAnalysisProcess" title="https://w3id.org/pmd/pgo/ImageAnalysisProcess">Image Analysis Process</a>
+   </li>
+   <li>
+      <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Particle</a>
+   </li>
+   <li>
+      <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Precipitate</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateArea" title="https://w3id.org/pmd/pgo/PrecipitateArea">Precipitate Area</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Precipitate Distance</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateNumber" title="https://w3id.org/pmd/pgo/PrecipitateNumber">Precipitate Number</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateRadius" title="https://w3id.org/pmd/pgo/PrecipitateRadius">Precipitate Radius</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Platform MaterialDigital - Precipitate Geometry Ontology (PGO) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Platform MaterialDigital - Precipitate Geometry Ontology (PGO).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/AveragePrecipitateDistance"
+            title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Average Precipitate Distance</a>
+      </li>
+      <li>
+         <a href="#/CalibrationFactor" title="https://w3id.org/pmd/pgo/CalibrationFactor">
+            <span>calibration factor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/DarkFieldImage" title="https://w3id.org/pmd/pgo/DarkFieldImage">Dark-field Image</a>
+      </li>
+      <li>
+         <a href="#/ImageAnalysisProcess" title="https://w3id.org/pmd/pgo/ImageAnalysisProcess">Image Analysis Process</a>
+      </li>
+      <li>
+         <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Particle</a>
+      </li>
+      <li>
+         <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Precipitate</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateArea" title="https://w3id.org/pmd/pgo/PrecipitateArea">Precipitate Area</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Precipitate Distance</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateNumber" title="https://w3id.org/pmd/pgo/PrecipitateNumber">Precipitate Number</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateRadius" title="https://w3id.org/pmd/pgo/PrecipitateRadius">Precipitate Radius</a>
+      </li>
+   </ul>
+   <div class="entity" id="/AveragePrecipitateDistance">
+      <h3>Average Precipitate Distance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/AveragePrecipitateDistance</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of precipitate distance, the average precipitate distance is determined from several precipitate distances via, e.g., the Delauney triangulation. Hence, the average precipitate distance can be calculated using the median and the arithmetic mean value of all individual measurements of precipitate distances regarded.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Precipitate Distance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/CalibrationFactor">
+      <h3>calibration factor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/CalibrationFactor</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of value object, the calibration factor provides a pixel-to-real-distance conversion factor, that allows image scaling to metric units.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DarkFieldImage">
+      <h3>Dark-field Image<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/DarkFieldImage</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of image, the dark-field image is generated from a high-resolution transmission electron microscope (HR-TEM).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Image"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Image">image</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ImageAnalysisProcess">
+      <h3>Image Analysis Process<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/ImageAnalysisProcess</p>
+      <div class="comment">
+         <span class="markdown">As subclass of a non-transformative analysis process, the image analysis process is a process by which useful information, such as precipitate coordinates and their distances, are extracted from an image and interpreted for further application.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"
+               target="_blank"
+               title="https://w3id.org/pmd/co/NonTransformativeAnalysisProcess">non transformative analysis process</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Particle">
+      <h3>Particle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/Particle</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of object, a particle is a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Object"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Object">object</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Precipitate</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Precipitate">
+      <h3>Precipitate<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/Precipitate</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Particle</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateArea">
+      <h3>Precipitate Area<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateArea</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of the area, the precipitate area is a measure that is used to compare precipitate sizes. As a rule, a circular approximation is used for precipitation particles.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Area"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Area">area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateDistance">
+      <h3>Precipitate Distance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateDistance</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of distance, the precipitate distance is a measure of the distance between two precipitates. Usually, this distance is obtained from analysing dark-field TEM images and given in nanometers.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Distance"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Distance">distance</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/AveragePrecipitateDistance"
+               title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Average Precipitate Distance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateNumber">
+      <h3>Precipitate Number<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateNumber</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+         <dd>https://w3id.org/pmd/pgo</dd>
+         <dd>https://w3id.org/pmd/pgo</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Index"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Index">index</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateRadius">
+      <h3>Precipitate Radius<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateRadius</p>
+      <div class="comment">
+         <span class="markdown">As a subclass of radius, precipitate radius is a measure used to perform a specific precipitate size correlation. The precipitate radius is usually obtained from the circular approximation of the precipitate area.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Radius"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Radius">radius</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Platform MaterialDigital - Precipitate Geometry Ontology (PGO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/pmd/pgo","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/pmd/pgo","name":"Platform MaterialDigital - Precipitate Geometry Ontology (PGO)", "headline":"The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the "Orowan Demonstrator" (available at: https://github.com/materialdigital/demo-orowan).", "datePublished":"2023-12-13", "version":"1.0.0", "author":[{"@type":"Person","name":"https://orcid.org/0000-0002-3717-7104","url":"https://orcid.org/0000-0002-3717-7104"},{"@type":"Person","name":"https://orcid.org/0000-0002-7094-5371","url":"https://orcid.org/0000-0002-7094-5371"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Platform MaterialDigital - Precipitate Geometry Ontology (PGO)</h1>
+<h2>Release 2023-12-13</h2>
+
+
+<dl>
+<dt>Diese Version:</dt>
+<dd><a href="https://w3id.org/pmd/pgo/1.0.0">https://w3id.org/pmd/pgo/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Autoren:</dt>
+<dd><a href="https://orcid.org/0000-0002-3717-7104">https://orcid.org/0000-0002-3717-7104</a></dd><dd><a href="https://orcid.org/0000-0002-7094-5371">https://orcid.org/0000-0002-7094-5371</a></dd>
+
+<dt>Importierte Ontologien:</dt>
+<dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3.org/ns/prov-o-inverses#">prov-o-inverses#</a></dd><dd><a href="https://w3id.org/pmd/co">co</a></dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-Dies%20ist%20der%20Lizenzname-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Markus Schilling, Bernd Bayerlein. (December 13th, 2023) PGO: Precipitate Geometry Ontology. Version 1.0.0, https://w3id.org/pmd/pgo</dd>
+</dl>
+
+<a href="provenance/provenance-de.html" target="_blank">Ursprung dieser Seite</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Zusammenfassung</h2><span class="markdown">
+The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. 
+It was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the "Orowan Demonstrator" (available at: https://github.com/materialdigital/demo-orowan).</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Platform MaterialDigital - Precipitate Geometry Ontology (PGO): &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Ausscheidung</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Ausscheidungsabstand</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateArea" title="https://w3id.org/pmd/pgo/PrecipitateArea">Ausscheidungsfläche</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateNumber" title="https://w3id.org/pmd/pgo/PrecipitateNumber">Ausscheidungsnummer</a>
+   </li>
+   <li>
+      <a href="#/PrecipitateRadius" title="https://w3id.org/pmd/pgo/PrecipitateRadius">Ausscheidungsradius</a>
+   </li>
+   <li>
+      <a href="#/ImageAnalysisProcess" title="https://w3id.org/pmd/pgo/ImageAnalysisProcess">Bildanalyse-Prozess</a>
+   </li>
+   <li>
+      <a href="#/CalibrationFactor" title="https://w3id.org/pmd/pgo/CalibrationFactor">
+         <span>calibration factor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/DarkFieldImage" title="https://w3id.org/pmd/pgo/DarkFieldImage">Dunkelfeldbild</a>
+   </li>
+   <li>
+      <a href="#/AveragePrecipitateDistance"
+         title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Mittlerer Ausscheidungsabstand</a>
+   </li>
+   <li>
+      <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Partikel</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... Platform MaterialDigital - Precipitate Geometry Ontology (PGO) Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch Platform MaterialDigital - Precipitate Geometry Ontology (PGO).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Klassen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Ausscheidung</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Ausscheidungsabstand</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateArea" title="https://w3id.org/pmd/pgo/PrecipitateArea">Ausscheidungsfläche</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateNumber" title="https://w3id.org/pmd/pgo/PrecipitateNumber">Ausscheidungsnummer</a>
+      </li>
+      <li>
+         <a href="#/PrecipitateRadius" title="https://w3id.org/pmd/pgo/PrecipitateRadius">Ausscheidungsradius</a>
+      </li>
+      <li>
+         <a href="#/ImageAnalysisProcess" title="https://w3id.org/pmd/pgo/ImageAnalysisProcess">Bildanalyse-Prozess</a>
+      </li>
+      <li>
+         <a href="#/CalibrationFactor" title="https://w3id.org/pmd/pgo/CalibrationFactor">
+            <span>calibration factor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/DarkFieldImage" title="https://w3id.org/pmd/pgo/DarkFieldImage">Dunkelfeldbild</a>
+      </li>
+      <li>
+         <a href="#/AveragePrecipitateDistance"
+            title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Mittlerer Ausscheidungsabstand</a>
+      </li>
+      <li>
+         <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Partikel</a>
+      </li>
+   </ul>
+   <div class="entity" id="/Precipitate">
+      <h3>Ausscheidung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/Precipitate</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/Particle" title="https://w3id.org/pmd/pgo/Particle">Partikel</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateDistance">
+      <h3>Ausscheidungsabstand<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateDistance</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse des Abstands ist der Ausscheidungsabstand ein Maß für den Abstand zwischen zwei Ausscheidungen in metallischen Legierungen. Üblicherweise wird dieser Abstand aus der Analyse von Dunkelfeld-TEM-Bildern gewonnen und in Nanometern angegeben.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Distance"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Distance">distance</a>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/AveragePrecipitateDistance"
+               title="https://w3id.org/pmd/pgo/AveragePrecipitateDistance">Mittlerer Ausscheidungsabstand</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateArea">
+      <h3>Ausscheidungsfläche<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateArea</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse der Fläche ist die Ausscheidungsfläche ein Maß,welches zum Vergleich von Ausscheidungsgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Area"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Area">area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateNumber">
+      <h3>Ausscheidungsnummer<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateNumber</p>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+         <dd>https://w3id.org/pmd/pgo</dd>
+         <dd>https://w3id.org/pmd/pgo</dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Index"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Index">index</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PrecipitateRadius">
+      <h3>Ausscheidungsradius<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/PrecipitateRadius</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse des Radius ist der Ausscheidungsradius ein Maß, mit dem eine spezifische Korrelation der Ausscheidungsgröße vorgenommen werden kann. Der Ausscheidungsradius wird in der Regel aus der kreisförmigen Annäherung der Ausscheidungsfläche ermittelt.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Radius"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Radius">radius</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ImageAnalysisProcess">
+      <h3>Bildanalyse-Prozess<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/ImageAnalysisProcess</p>
+      <div class="comment">
+         <span class="markdown">Als Unterklasse eines nicht-transformativen Analyseverfahrens ist das Bildanalyseverfahren ein Prozess, mit dem nützliche Informationen, wie z. B. Koordinaten von Ausscheidungen in metallischen Legierungen und deren Abständen, aus einem Bild extrahiert und für die weitere Verwendung interpretiert werden.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"
+               target="_blank"
+               title="https://w3id.org/pmd/co/NonTransformativeAnalysisProcess">non transformative analysis process</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/CalibrationFactor">
+      <h3>calibration factor<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/CalibrationFactor</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse des Values Objects bietet der Kalibrierungsfaktor einen Umrechnungsfaktor von Pixeln in reale Dimensionen, der die Skalierung von Bildern in metrische Einheiten ermöglicht.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DarkFieldImage">
+      <h3>Dunkelfeldbild<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/DarkFieldImage</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse des Bildes wird das Dunkelfeldbild mit einem hochauflösenden Transmissionselektronenmikroskop (HR-TEM) erzeugt.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Image"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Image">image</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/AveragePrecipitateDistance">
+      <h3>Mittlerer Ausscheidungsabstand<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/AveragePrecipitateDistance</p>
+      <div class="comment">
+         <span class="markdown">Als Subklasse der Ausscheidungsabstand wird der mittlere Ausscheidungsabstand aus mehreren Ausscheidungsabständen ermittelt, z. B. durch die Delauney-Triangulation. Der mittlere Ausscheidungsabstand  lässt sich somit aus dem Median oder dem arithmetischen Mittelwert aller betrachteten Einzelmessungen von Ausscheidungsabständen berechnen.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/PrecipitateDistance" title="https://w3id.org/pmd/pgo/PrecipitateDistance">Ausscheidungsabstand</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Particle">
+      <h3>Partikel<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/pgo/Particle</p>
+      <div class="comment">
+         <span class="markdown">Als eine Subklasse von Objekt ist ein Partikel ein kleines, lokalisiertes Objekt, das durch mehrere physikalische oder chemische Eigenschaften wie Volumen, Dichte oder Masse beschrieben werden kann.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/pgo">https://w3id.org/pmd/pgo</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Object"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Object">object</a>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/Precipitate" title="https://w3id.org/pmd/pgo/Precipitate">Ausscheidung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>

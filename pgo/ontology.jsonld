@@ -1,0 +1,266 @@
+[ {
+  "@id" : "https://w3id.org/pmd/pgo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@id" : "https://orcid.org/0000-0002-3717-7104"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-7094-5371"
+  } ],
+  "http://purl.org/dc/elements/1.1/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Markus Schilling, Bernd Bayerlein. (December 13th, 2023) PGO: Precipitate Geometry Ontology. Version 1.0.0, https://w3id.org/pmd/pgo"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2023-12-13"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Platform MaterialDigital - Precipitate Geometry Ontology (PGO)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Precipitate Geometry Ontology (PGO) is a small ontology used to describe data originating from transmission electron microscopy (TEM) analyses of precipitates. \nIt was created in the frame of the collaborative project Platform MaterialDigital (PMD, https://materialdigital.de). It is further part of a demonstrator showing possible interactions of semantic data created by the application of multiple ontologies and used by federated SPARQL querying - the \"Orowan Demonstrator\" (available at: https://github.com/materialdigital/demo-orowan)."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/pmd/co"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/pmd/pgo/1.0.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/AveragePrecipitateDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Average Precipitate Distance"
+  }, {
+    "@language" : "de",
+    "@value" : "Mittlerer Ausscheidungsabstand"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/pgo/PrecipitateDistance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse der Ausscheidungsabstand wird der mittlere Ausscheidungsabstand aus mehreren Ausscheidungsabständen ermittelt, z. B. durch die Delauney-Triangulation. Der mittlere Ausscheidungsabstand  lässt sich somit aus dem Median oder dem arithmetischen Mittelwert aller betrachteten Einzelmessungen von Ausscheidungsabständen berechnen."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of precipitate distance, the average precipitate distance is determined from several precipitate distances via, e.g., the Delauney triangulation. Hence, the average precipitate distance can be calculated using the median and the arithmetic mean value of all individual measurements of precipitate distances regarded."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/CalibrationFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/ValueObject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse des Values Objects bietet der Kalibrierungsfaktor einen Umrechnungsfaktor von Pixeln in reale Dimensionen, der die Skalierung von Bildern in metrische Einheiten ermöglicht."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of value object, the calibration factor provides a pixel-to-real-distance conversion factor, that allows image scaling to metric units."
+  }, {
+    "@language" : "en",
+    "@value" : "Calibration Factor"
+  }, {
+    "@language" : "de",
+    "@value" : "Kalibrierungsfaktor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/DarkFieldImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Dark-field Image"
+  }, {
+    "@language" : "de",
+    "@value" : "Dunkelfeldbild"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Image"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse des Bildes wird das Dunkelfeldbild mit einem hochauflösenden Transmissionselektronenmikroskop (HR-TEM) erzeugt."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of image, the dark-field image is generated from a high-resolution transmission electron microscope (HR-TEM)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/ImageAnalysisProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bildanalyse-Prozess"
+  }, {
+    "@language" : "en",
+    "@value" : "Image Analysis Process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Unterklasse eines nicht-transformativen Analyseverfahrens ist das Bildanalyseverfahren ein Prozess, mit dem nützliche Informationen, wie z. B. Koordinaten von Ausscheidungen in metallischen Legierungen und deren Abständen, aus einem Bild extrahiert und für die weitere Verwendung interpretiert werden."
+  }, {
+    "@language" : "en",
+    "@value" : "As subclass of a non-transformative analysis process, the image analysis process is a process by which useful information, such as precipitate coordinates and their distances, are extracted from an image and interpreted for further application."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/Particle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Particle"
+  }, {
+    "@language" : "de",
+    "@value" : "Partikel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Object"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als eine Subklasse von Objekt ist ein Partikel ein kleines, lokalisiertes Objekt, das durch mehrere physikalische oder chemische Eigenschaften wie Volumen, Dichte oder Masse beschrieben werden kann."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of object, a particle is a small localized object which can be described by several physical or chemical properties, such as volume, density, or mass."
+  } ],
+  "https://w3id.org/pmd/co/definitionSource" : [ {
+    "@id" : "https://en.wikipedia.org/wiki/Particle"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/Precipitate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausscheidung"
+  }, {
+    "@language" : "en",
+    "@value" : "Precipitate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/pgo/Particle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse von Particle sind Ausscheidungen fein verteilte metastabile Phasen (z. B. intermetallischen Verbindungen), die als wirksame Hindernisse für Versetzungsbewegungen in aushärtbaren metallischen Legierungen durch gezielte Wärmenbehandlungen erzeugt werden."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of particle, precipitates are finely distributed metastable phases (e.g., intermetallic compounds) that are created as effective obstacles to dislocation motion in age-hardenable metallic alloys by specific heat treatments."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/PrecipitateArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausscheidungsfläche"
+  }, {
+    "@language" : "en",
+    "@value" : "Precipitate Area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Area"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse der Fläche ist die Ausscheidungsfläche ein Maß,welches zum Vergleich von Ausscheidungsgrößen verwendet wird. In der Regel wird für Ausscheidungspartikel eine kreisförmige Näherung verwendet."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of the area, the precipitate area is a measure that is used to compare precipitate sizes. As a rule, a circular approximation is used for precipitation particles."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/PrecipitateDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausscheidungsabstand"
+  }, {
+    "@language" : "en",
+    "@value" : "Precipitate Distance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Distance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse des Abstands ist der Ausscheidungsabstand ein Maß für den Abstand zwischen zwei Ausscheidungen in metallischen Legierungen. Üblicherweise wird dieser Abstand aus der Analyse von Dunkelfeld-TEM-Bildern gewonnen und in Nanometern angegeben."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of distance, the precipitate distance is a measure of the distance between two precipitates. Usually, this distance is obtained from analysing dark-field TEM images and given in nanometers."
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/PrecipitateNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  }, {
+    "@language" : "de",
+    "@value" : "Die Ausscheidungsnummer ermöglicht die eindeutige Zuordnung der gemessenen Eigenschaften zu einem bestimmten Ausscheidung."
+  }, {
+    "@language" : "en",
+    "@value" : "The precipitate number enables the explicit assignment of measured properties to a specific precipitate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausscheidungsnummer"
+  }, {
+    "@language" : "en",
+    "@value" : "Precipitate Number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Index"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pmd/pgo/PrecipitateRadius",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/pmd/pgo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ausscheidungsradius"
+  }, {
+    "@language" : "en",
+    "@value" : "Precipitate Radius"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/pmd/co/Radius"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Als Subklasse des Radius ist der Ausscheidungsradius ein Maß, mit dem eine spezifische Korrelation der Ausscheidungsgröße vorgenommen werden kann. Der Ausscheidungsradius wird in der Regel aus der kreisförmigen Annäherung der Ausscheidungsfläche ermittelt."
+  }, {
+    "@language" : "en",
+    "@value" : "As a subclass of radius, precipitate radius is a measure used to perform a specific precipitate size correlation. The precipitate radius is usually obtained from the circular approximation of the precipitate area."
+  } ]
+} ]

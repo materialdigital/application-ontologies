@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Tensile Test Ontology (TTO)</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/pmd/tto","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/pmd/tto","name":"Tensile Test Ontology (TTO)", "headline":"This is the stable version of the PMD ontology of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile tests and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.The TTO class structure forms a comprehensible and semantic layer for unified storage of data generated in a tensile test including the possibility to record data from analysis, re-evaluation and re-use. Furthermore, extensive metadata allows to assess data quality and reproduce experiments. Following the open world assumption, object properties are deliberately low restrictive and sparse.TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO", "datePublished":"2023-07-14", "version":"2.0.1", "author":[{"@type":"Person","name":"https://orcid.org/0000-0001-7192-7143","url":"https://orcid.org/0000-0001-7192-7143"},{"@type":"Person","name":"https://orcid.org/0000-0002-3717-7104","url":"https://orcid.org/0000-0002-3717-7104"},{"@type":"Person","name":"https://orcid.org/0000-0002-7094-5371","url":"https://orcid.org/0000-0002-7094-5371"},{"@type":"Person","name":"https://orcid.org/0000-0002-9014-2920","url":"https://orcid.org/0000-0002-9014-2920"},{"@type":"Person","name":"https://orcid.org/0000-0003-4971-3645","url":"https://orcid.org/0000-0003-4971-3645"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Tensile Test Ontology (TTO)</h1>
+<h2>Release 2023-07-14</h2>
+
+
+<dl>
+<dt>Revision:</dt>
+<dd>2.0.1</dd>
+<dt>Autoren:</dt>
+<dd><a href="https://orcid.org/0000-0001-7192-7143">https://orcid.org/0000-0001-7192-7143</a></dd><dd><a href="https://orcid.org/0000-0002-3717-7104">https://orcid.org/0000-0002-3717-7104</a></dd><dd><a href="https://orcid.org/0000-0002-7094-5371">https://orcid.org/0000-0002-7094-5371</a></dd><dd><a href="https://orcid.org/0000-0002-9014-2920">https://orcid.org/0000-0002-9014-2920</a></dd><dd><a href="https://orcid.org/0000-0003-4971-3645">https://orcid.org/0000-0003-4971-3645</a></dd>
+
+<dt>Importierte Ontologien:</dt>
+<dd><a href="http://www.w3.org/ns/prov-o#">prov-o#</a></dd><dd><a href="http://www.w3.org/ns/prov-o-inverses#">prov-o-inverses#</a></dd><dd><a href="https://w3id.org/pmd/co">co</a></dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="http://insertlicenseURIhere.org" target="_blank"><img src="https://img.shields.io/badge/License-Dies%20ist%20der%20Lizenzname-blue.svg" alt="http://insertlicenseURIhere.org" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Markus Schilling, Bernd Bayerlein, Henk Birkholz, Philipp von Hartrott, Jörg Waitelonis. (July 14th, 2023) TTO: Tensile Test Ontology. Version 2.0.0, https://w3id.org/pmd/tto</dd>
+</dl>
+
+<a href="provenance/provenance-de.html" target="_blank">Ursprung dieser Seite</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Zusammenfassung</h2><span class="markdown">
+This is the stable version of the PMD ontology of the tensile test (Tensile Test Ontology - TTO) as developed on the basis of the standard ISO 6892-1: Metallic materials - Tensile Testing - Part 1: Method of test at room temperature.
+
+The TTO was developed in the frame of the PMD project. The TTO provides conceptualizations valid for the description of tensile tests and corresponding data in accordance with the respective standard. By using TTO for storing tensile test data, all data will be well structured and based on a common vocabulary agreed on by an expert group (generation of FAIR data) which will lead to enhanced data interoperability. This comprises several data categories such as primary data, secondary data and metadata. Data will be human and machine readable. The usage of TTO facilitates data retrieval and downstream usage. Due to a close connection to the PMD core ontology (PMDco), the interoperability of tensile test data is enhanced and querying in combination with other aspects and data within the broad field of material science and engineering (MSE) is facilitated.
+
+The TTO class structure forms a comprehensible and semantic layer for unified storage of data generated in a tensile test including the possibility to record data from analysis, re-evaluation and re-use. Furthermore, extensive metadata allows to assess data quality and reproduce experiments. Following the open world assumption, object properties are deliberately low restrictive and sparse.
+
+TTO of PMD at GitHub: https://github.com/materialdigital/application-ontologies/tree/main/tensile_test_ontology_TTO</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Tensile Test Ontology (TTO): &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/EstimatedStrainRateOverTheParallelLength"
+         title="https://w3id.org/pmd/tto/EstimatedStrainRateOverTheParallelLength">Abgeschätzte Dehngeschwindigkeit Über Die Parallele Länge</a>
+   </li>
+   <li>
+      <a href="#/OriginalWidth" title="https://w3id.org/pmd/tto/OriginalWidth">Anfangs-Breite</a>
+   </li>
+   <li>
+      <a href="#/OriginalThickness" title="https://w3id.org/pmd/tto/OriginalThickness">Anfangs-Dicke</a>
+   </li>
+   <li>
+      <a href="#/OriginalDiameter" title="https://w3id.org/pmd/tto/OriginalDiameter">Anfangs-Probendurchmesser</a>
+   </li>
+   <li>
+      <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+   </li>
+   <li>
+      <a href="#/OriginalCrossSectionalArea"
+         title="https://w3id.org/pmd/tto/OriginalCrossSectionalArea">Anfangsquerschnitt innerhalb der parallelen Länge</a>
+   </li>
+   <li>
+      <a href="#/PercentagePermanentElongation"
+         title="https://w3id.org/pmd/tto/PercentagePermanentElongation">Bleibende Dehnung</a>
+   </li>
+   <li>
+      <a href="#/PercentagePermanentExtension"
+         title="https://w3id.org/pmd/tto/PercentagePermanentExtension">Bleibende Extensometer-Dehnung</a>
+   </li>
+   <li>
+      <a href="#/PercentageElongationAfterFracture"
+         title="https://w3id.org/pmd/tto/PercentageElongationAfterFracture">Bruchdehnung</a>
+   </li>
+   <li>
+      <a href="#/PercentageReductionOfArea"
+         title="https://w3id.org/pmd/tto/PercentageReductionOfArea">Brucheinschnürung</a>
+   </li>
+   <li>
+      <a href="#/StrainRate" title="https://w3id.org/pmd/tto/StrainRate">Dehngeschwindigkeit</a>
+   </li>
+   <li>
+      <a href="#/ProofStrength" title="https://w3id.org/pmd/tto/ProofStrength">Dehngrenze</a>
+   </li>
+   <li>
+      <a href="#/ProofStrengthTotalExtension"
+         title="https://w3id.org/pmd/tto/ProofStrengthTotalExtension">Dehngrenze bei gesamter Extensometer-Dehnung</a>
+   </li>
+   <li>
+      <a href="#/ProofStrengthPlasticExtension"
+         title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+   </li>
+   <li>
+      <a href="#/Rp01" title="https://w3id.org/pmd/tto/Rp01">Dehngrenze bei plastischer Extensometer-Dehnung Rp01</a>
+   </li>
+   <li>
+      <a href="#/Rp02" title="https://w3id.org/pmd/tto/Rp02">Dehngrenze bei plastischer Extensometer-Dehnung Rp02</a>
+   </li>
+   <li>
+      <a href="#/PercentageElongation" title="https://w3id.org/pmd/tto/PercentageElongation">Dehnung</a>
+   </li>
+   <li>
+      <a href="#/WidthAfterFracture" title="https://w3id.org/pmd/tto/WidthAfterFracture">End-Breite</a>
+   </li>
+   <li>
+      <a href="#/ThicknessAfterFracture" title="https://w3id.org/pmd/tto/ThicknessAfterFracture">End-Dicke</a>
+   </li>
+   <li>
+      <a href="#/DiameterAfterFracture" title="https://w3id.org/pmd/tto/DiameterAfterFracture">End-Probendurchmesser</a>
+   </li>
+   <li>
+      <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+   </li>
+   <li>
+      <a href="#/GeometryShape" title="https://w3id.org/pmd/tto/GeometryShape">Geometrische Form</a>
+   </li>
+   <li>
+      <a href="#/PercentageTotalExtensionAtMaximumForce"
+         title="https://w3id.org/pmd/tto/PercentageTotalExtensionAtMaximumForce">Gesamte Extensometer-Dehnung bei Höchstkraft</a>
+   </li>
+   <li>
+      <a href="#/PercentageTotalExtensionAtFracture"
+         title="https://w3id.org/pmd/tto/PercentageTotalExtensionAtFracture">Gesamte Extensometer-Dehnung beim Bruch</a>
+   </li>
+   <li>
+      <a href="#/MaximumForce" title="https://w3id.org/pmd/tto/MaximumForce">Höchstkraft</a>
+   </li>
+   <li>
+      <a href="#/MinimumCrossSectionalAreaAfterFracture"
+         title="https://w3id.org/pmd/tto/MinimumCrossSectionalAreaAfterFracture">Kleinster Querschnitt nach dem Bruch</a>
+   </li>
+   <li>
+      <a href="#/GaugeLength" title="https://w3id.org/pmd/tto/GaugeLength">Messlänge</a>
+   </li>
+   <li>
+      <a href="#/FinalGaugeLengthAfterFracture"
+         title="https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture">Messlänge nach dem Bruch</a>
+   </li>
+   <li>
+      <a href="#/UpperYieldStrength" title="https://w3id.org/pmd/tto/UpperYieldStrength">Obere Streckgrenze</a>
+   </li>
+   <li>
+      <a href="#/ParallelLength" title="https://w3id.org/pmd/tto/ParallelLength">Parallele Länge</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/pmd/co/PercentageExtension" title="https://w3id.org/pmd/co/PercentageExtension">
+         <span>percentage extension</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/PercentagePlasticExtensionAtMaximumForce"
+         title="https://w3id.org/pmd/tto/PercentagePlasticExtensionAtMaximumForce">Plastische Extensometer-Dehnung bei Höchstkraft</a>
+   </li>
+   <li>
+      <a href="#/CrossheadSeparation" title="https://w3id.org/pmd/tto/CrossheadSeparation">Querhaupttrennung</a>
+   </li>
+   <li>
+      <a href="#/StressRate" title="https://w3id.org/pmd/tto/StressRate">Spannungsgeschwindigkeit</a>
+   </li>
+   <li>
+      <a href="#/SlopeOfTheElasticPart" title="https://w3id.org/pmd/tto/SlopeOfTheElasticPart">Steigung des elastischen Bereichs</a>
+   </li>
+   <li>
+      <a href="#/YieldStrength" title="https://w3id.org/pmd/tto/YieldStrength">Streckgrenze</a>
+   </li>
+   <li>
+      <a href="#/PercentageYieldPointExtension"
+         title="https://w3id.org/pmd/tto/PercentageYieldPointExtension">Streckgrenzen-Extensometer-Dehnung</a>
+   </li>
+   <li>
+      <a href="#/CrossheadSeparationRate" title="https://w3id.org/pmd/tto/CrossheadSeparationRate">Traversengeschwindigkeit</a>
+   </li>
+   <li>
+      <a href="#/TypeGaugeLengthMarks" title="https://w3id.org/pmd/tto/TypeGaugeLengthMarks">Typ Der Messlängenmarkierungen</a>
+   </li>
+   <li>
+      <a href="#/TransitionPoint" title="https://w3id.org/pmd/tto/TransitionPoint">Umschaltpunkt</a>
+   </li>
+   <li>
+      <a href="#/TransitionPointTestingRate"
+         title="https://w3id.org/pmd/tto/TransitionPointTestingRate">Umschaltpunkt der Prüfgeschwindigkeit</a>
+   </li>
+   <li>
+      <a href="#/LowerYieldStrength" title="https://w3id.org/pmd/tto/LowerYieldStrength">untere Streckgrenze</a>
+   </li>
+   <li>
+      <a href="#/Elongation" title="https://w3id.org/pmd/tto/Elongation">Verlängerung</a>
+   </li>
+   <li>
+      <a href="#/TensileStrength" title="https://w3id.org/pmd/tto/TensileStrength">Zugfestigkeit</a>
+   </li>
+   <li>
+      <a href="#/TensileTestingMachine" title="https://w3id.org/pmd/tto/TensileTestingMachine">Zugprüfmaschine</a>
+   </li>
+   <li>
+      <a href="#/TensileTest" title="https://w3id.org/pmd/tto/TensileTest">Zugversuch</a>
+   </li>
+   <li>
+      <a href="#/TensileTestNode" title="https://w3id.org/pmd/tto/TensileTestNode">Zugversuchsprozessknoten</a>
+   </li>
+   <li>
+      <a href="#/ChangeOfTransverseDimension"
+         title="https://w3id.org/pmd/tto/ChangeOfTransverseDimension">Änderung der transversalen Dimension</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://w3id.org/pmd/co/definitionSource" title="https://w3id.org/pmd/co/definitionSource">
+         <span>definition source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/pmd/co/symbol" title="https://w3id.org/pmd/co/symbol">
+         <span>symbol</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... Tensile Test Ontology (TTO) Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch Tensile Test Ontology (TTO).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Klassen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/EstimatedStrainRateOverTheParallelLength"
+            title="https://w3id.org/pmd/tto/EstimatedStrainRateOverTheParallelLength">Abgeschätzte Dehngeschwindigkeit Über Die Parallele Länge</a>
+      </li>
+      <li>
+         <a href="#/OriginalWidth" title="https://w3id.org/pmd/tto/OriginalWidth">Anfangs-Breite</a>
+      </li>
+      <li>
+         <a href="#/OriginalThickness" title="https://w3id.org/pmd/tto/OriginalThickness">Anfangs-Dicke</a>
+      </li>
+      <li>
+         <a href="#/OriginalDiameter" title="https://w3id.org/pmd/tto/OriginalDiameter">Anfangs-Probendurchmesser</a>
+      </li>
+      <li>
+         <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+      </li>
+      <li>
+         <a href="#/OriginalCrossSectionalArea"
+            title="https://w3id.org/pmd/tto/OriginalCrossSectionalArea">Anfangsquerschnitt innerhalb der parallelen Länge</a>
+      </li>
+      <li>
+         <a href="#/PercentagePermanentElongation"
+            title="https://w3id.org/pmd/tto/PercentagePermanentElongation">Bleibende Dehnung</a>
+      </li>
+      <li>
+         <a href="#/PercentagePermanentExtension"
+            title="https://w3id.org/pmd/tto/PercentagePermanentExtension">Bleibende Extensometer-Dehnung</a>
+      </li>
+      <li>
+         <a href="#/PercentageElongationAfterFracture"
+            title="https://w3id.org/pmd/tto/PercentageElongationAfterFracture">Bruchdehnung</a>
+      </li>
+      <li>
+         <a href="#/PercentageReductionOfArea"
+            title="https://w3id.org/pmd/tto/PercentageReductionOfArea">Brucheinschnürung</a>
+      </li>
+      <li>
+         <a href="#/StrainRate" title="https://w3id.org/pmd/tto/StrainRate">Dehngeschwindigkeit</a>
+      </li>
+      <li>
+         <a href="#/ProofStrength" title="https://w3id.org/pmd/tto/ProofStrength">Dehngrenze</a>
+      </li>
+      <li>
+         <a href="#/ProofStrengthTotalExtension"
+            title="https://w3id.org/pmd/tto/ProofStrengthTotalExtension">Dehngrenze bei gesamter Extensometer-Dehnung</a>
+      </li>
+      <li>
+         <a href="#/ProofStrengthPlasticExtension"
+            title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+      </li>
+      <li>
+         <a href="#/Rp01" title="https://w3id.org/pmd/tto/Rp01">Dehngrenze bei plastischer Extensometer-Dehnung Rp01</a>
+      </li>
+      <li>
+         <a href="#/Rp02" title="https://w3id.org/pmd/tto/Rp02">Dehngrenze bei plastischer Extensometer-Dehnung Rp02</a>
+      </li>
+      <li>
+         <a href="#/PercentageElongation" title="https://w3id.org/pmd/tto/PercentageElongation">Dehnung</a>
+      </li>
+      <li>
+         <a href="#/WidthAfterFracture" title="https://w3id.org/pmd/tto/WidthAfterFracture">End-Breite</a>
+      </li>
+      <li>
+         <a href="#/ThicknessAfterFracture" title="https://w3id.org/pmd/tto/ThicknessAfterFracture">End-Dicke</a>
+      </li>
+      <li>
+         <a href="#/DiameterAfterFracture" title="https://w3id.org/pmd/tto/DiameterAfterFracture">End-Probendurchmesser</a>
+      </li>
+      <li>
+         <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+      </li>
+      <li>
+         <a href="#/GeometryShape" title="https://w3id.org/pmd/tto/GeometryShape">Geometrische Form</a>
+      </li>
+      <li>
+         <a href="#/PercentageTotalExtensionAtMaximumForce"
+            title="https://w3id.org/pmd/tto/PercentageTotalExtensionAtMaximumForce">Gesamte Extensometer-Dehnung bei Höchstkraft</a>
+      </li>
+      <li>
+         <a href="#/PercentageTotalExtensionAtFracture"
+            title="https://w3id.org/pmd/tto/PercentageTotalExtensionAtFracture">Gesamte Extensometer-Dehnung beim Bruch</a>
+      </li>
+      <li>
+         <a href="#/MaximumForce" title="https://w3id.org/pmd/tto/MaximumForce">Höchstkraft</a>
+      </li>
+      <li>
+         <a href="#/MinimumCrossSectionalAreaAfterFracture"
+            title="https://w3id.org/pmd/tto/MinimumCrossSectionalAreaAfterFracture">Kleinster Querschnitt nach dem Bruch</a>
+      </li>
+      <li>
+         <a href="#/GaugeLength" title="https://w3id.org/pmd/tto/GaugeLength">Messlänge</a>
+      </li>
+      <li>
+         <a href="#/FinalGaugeLengthAfterFracture"
+            title="https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture">Messlänge nach dem Bruch</a>
+      </li>
+      <li>
+         <a href="#/UpperYieldStrength" title="https://w3id.org/pmd/tto/UpperYieldStrength">Obere Streckgrenze</a>
+      </li>
+      <li>
+         <a href="#/ParallelLength" title="https://w3id.org/pmd/tto/ParallelLength">Parallele Länge</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/pmd/co/PercentageExtension" title="https://w3id.org/pmd/co/PercentageExtension">
+            <span>percentage extension</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/PercentagePlasticExtensionAtMaximumForce"
+            title="https://w3id.org/pmd/tto/PercentagePlasticExtensionAtMaximumForce">Plastische Extensometer-Dehnung bei Höchstkraft</a>
+      </li>
+      <li>
+         <a href="#/CrossheadSeparation" title="https://w3id.org/pmd/tto/CrossheadSeparation">Querhaupttrennung</a>
+      </li>
+      <li>
+         <a href="#/StressRate" title="https://w3id.org/pmd/tto/StressRate">Spannungsgeschwindigkeit</a>
+      </li>
+      <li>
+         <a href="#/SlopeOfTheElasticPart" title="https://w3id.org/pmd/tto/SlopeOfTheElasticPart">Steigung des elastischen Bereichs</a>
+      </li>
+      <li>
+         <a href="#/YieldStrength" title="https://w3id.org/pmd/tto/YieldStrength">Streckgrenze</a>
+      </li>
+      <li>
+         <a href="#/PercentageYieldPointExtension"
+            title="https://w3id.org/pmd/tto/PercentageYieldPointExtension">Streckgrenzen-Extensometer-Dehnung</a>
+      </li>
+      <li>
+         <a href="#/CrossheadSeparationRate" title="https://w3id.org/pmd/tto/CrossheadSeparationRate">Traversengeschwindigkeit</a>
+      </li>
+      <li>
+         <a href="#/TypeGaugeLengthMarks" title="https://w3id.org/pmd/tto/TypeGaugeLengthMarks">Typ Der Messlängenmarkierungen</a>
+      </li>
+      <li>
+         <a href="#/TransitionPoint" title="https://w3id.org/pmd/tto/TransitionPoint">Umschaltpunkt</a>
+      </li>
+      <li>
+         <a href="#/TransitionPointTestingRate"
+            title="https://w3id.org/pmd/tto/TransitionPointTestingRate">Umschaltpunkt der Prüfgeschwindigkeit</a>
+      </li>
+      <li>
+         <a href="#/LowerYieldStrength" title="https://w3id.org/pmd/tto/LowerYieldStrength">untere Streckgrenze</a>
+      </li>
+      <li>
+         <a href="#/Elongation" title="https://w3id.org/pmd/tto/Elongation">Verlängerung</a>
+      </li>
+      <li>
+         <a href="#/TensileStrength" title="https://w3id.org/pmd/tto/TensileStrength">Zugfestigkeit</a>
+      </li>
+      <li>
+         <a href="#/TensileTestingMachine" title="https://w3id.org/pmd/tto/TensileTestingMachine">Zugprüfmaschine</a>
+      </li>
+      <li>
+         <a href="#/TensileTest" title="https://w3id.org/pmd/tto/TensileTest">Zugversuch</a>
+      </li>
+      <li>
+         <a href="#/TensileTestNode" title="https://w3id.org/pmd/tto/TensileTestNode">Zugversuchsprozessknoten</a>
+      </li>
+      <li>
+         <a href="#/ChangeOfTransverseDimension"
+            title="https://w3id.org/pmd/tto/ChangeOfTransverseDimension">Änderung der transversalen Dimension</a>
+      </li>
+   </ul>
+   <div class="entity" id="/EstimatedStrainRateOverTheParallelLength">
+      <h3>Abgeschätzte Dehngeschwindigkeit Über Die Parallele Länge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/EstimatedStrainRateOverTheParallelLength</p>
+      <div class="comment">
+         <span class="markdown">Zunahme der Dehnung über die parallele Länge der Probe je Zeiteinheit, basierend auf der Traversengeschwindigkeit und der parallelen Länge der Probe</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OriginalWidth">
+      <h3>Anfangs-Breite<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/OriginalWidth</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt eine horizontale Messung eines Objekts (Prüfkörpers) im rechten Winkel zur Länge des Objekts (Prüfkörpers), wie sie vor einer Prüfung gemessen wird.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Width"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Width">width</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OriginalThickness">
+      <h3>Anfangs-Dicke<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/OriginalThickness</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks, wie sie vor der Prüfung gemessen wurde.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Thickness"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Thickness">thickness</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OriginalDiameter">
+      <h3>Anfangs-Probendurchmesser<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/OriginalDiameter</p>
+      <div class="comment">
+         <span class="markdown">Die Länge einer geraden Linie durch den Mittelpunkt eines Objekts (Zugprüfkörpers), die vor einer Prüfung gemessen wird.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Diameter"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Diameter">diameter</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OriginalGaugeLength">
+      <h3>Anfangsmesslänge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/OriginalGaugeLength</p>
+      <div class="comment">
+         <span class="markdown">Länge zwischen den Marken zur Kennzeichnung der Messlänge auf der Probe, die vor dem Versuch bei Raumtemperatur gemessen wird</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/GaugeLength" title="https://w3id.org/pmd/tto/GaugeLength">Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/OriginalCrossSectionalArea">
+      <h3>Anfangsquerschnitt innerhalb der parallelen Länge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/OriginalCrossSectionalArea</p>
+      <div class="comment">
+         <span class="markdown">Symbol: S_o</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Dieses Konzept beschreibt die initiale Querschnittsfläche des Zugprüfkörpers entlang seiner parallelen Länge, bevor eine Verformung auftritt.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>((<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalThickness" title="https://w3id.org/pmd/tto/OriginalThickness">Anfangs-Dicke</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalWidth" title="https://w3id.org/pmd/tto/OriginalWidth">Anfangs-Breite</a>
+            <sup class="type-c" title="Klasse">c</sup>)) <span class="logic">or</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalDiameter" title="https://w3id.org/pmd/tto/OriginalDiameter">Anfangs-Probendurchmesser</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/CrossSectionArea"
+               target="_blank"
+               title="https://w3id.org/pmd/co/CrossSectionArea">cross section area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentagePermanentElongation">
+      <h3>Bleibende Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentagePermanentElongation</p>
+      <div class="comment">
+         <span class="markdown">Zunahme der Anfangsmesslänge einer Probe nach Entfernen einer festgelegten Zugspannung, angegeben in Prozent, bezogen auf die Anfangsmesslänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/Elongation" title="https://w3id.org/pmd/tto/Elongation">Verlängerung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentagePermanentExtension">
+      <h3>Bleibende Extensometer-Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentagePermanentExtension</p>
+      <div class="comment">
+         <span class="markdown">Vergrößerung der Extensometer-Messlänge nach Entfernen einer festgelegten, auf die Probe aufgebrachten Zugspannung, angegeben in Prozent, bezogen auf die Extensometer-Messlänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Extension"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Extension">extension</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageElongationAfterFracture">
+      <h3>Bruchdehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageElongationAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">bleibende Verlängerung der Messlänge nach dem Bruch (L_u − L_o), angegeben in Prozent, bezogen auf die Anfangsmesslänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/Elongation" title="https://w3id.org/pmd/tto/Elongation">Verlängerung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageReductionOfArea">
+      <h3>Brucheinschnürung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageReductionOfArea</p>
+      <div class="comment">
+         <span class="markdown">größte während des Versuchs aufgetretene Änderung des Querschnitts (S_o − S_u), angegeben in Prozent, bezogen auf den Anfangsquerschnitt S_o</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>(<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/MinimumCrossSectionalAreaAfterFracture"
+               title="https://w3id.org/pmd/tto/MinimumCrossSectionalAreaAfterFracture">Kleinster Querschnitt nach dem Bruch</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalCrossSectionalArea"
+               title="https://w3id.org/pmd/tto/OriginalCrossSectionalArea">Anfangsquerschnitt innerhalb der parallelen Länge</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/StrainRate">
+      <h3>Dehngeschwindigkeit<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/StrainRate</p>
+      <div class="comment">
+         <span class="markdown">Zunahme der mit einem Extensometer in der Extensometer-Messlänge gemessenen Dehnung je Zeiteinheit</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ProofStrength">
+      <h3>Dehngrenze<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ProofStrength</p>
+      <div class="comment">
+         <span class="markdown">Spannung, bei der ein bestimmter Dehnungswert gleich einem bestimmten Prozentsatz der Messlänge des Dehnungsmessers ist</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/ProofStrengthTotalExtension"
+               title="https://w3id.org/pmd/tto/ProofStrengthTotalExtension">Dehngrenze bei gesamter Extensometer-Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/ProofStrengthPlasticExtension"
+               title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ProofStrengthTotalExtension">
+      <h3>Dehngrenze bei gesamter Extensometer-Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ProofStrengthTotalExtension</p>
+      <div class="comment">
+         <span class="markdown">Spannung, bei der die gesamte Extensometer-Dehnung (elastische und plastische Extensometer-Dehnung) einem vorgegebenen Prozentanteil der Extensometer-Messlänge entspricht
+
+Anmerkung: Der Index wird durch den Zahlenwert ergänzt, der den vorgegebenen Zahlenwert der gesamten Extensometer-Dehnung in Prozent angibt, z. B. R_t_0,5.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/ProofStrength" title="https://w3id.org/pmd/tto/ProofStrength">Dehngrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ProofStrengthPlasticExtension">
+      <h3>Dehngrenze bei plastischer Extensometer-Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ProofStrengthPlasticExtension</p>
+      <div class="comment">
+         <span class="markdown">Spannung, bei der die plastische Extensometer-Dehnung einem vorgegebenen Prozentanteil der Extensometer-Messlänge entspricht
+
+Anmerkung: Der Index wird durch den Zahlenwert ergänzt, der den vorgegebenen Zahlenwert der plastischen Extensometer-Dehnung in Prozent angibt, z. B. R_p_0,2.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/ns/prov#value"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#value">value</a> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/2001/XMLSchema#float"
+               target="_blank"
+               title="http://www.w3.org/2001/XMLSchema#float">float</a>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/ProofStrength" title="https://w3id.org/pmd/tto/ProofStrength">Dehngrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/Rp01" title="https://w3id.org/pmd/tto/Rp01">Dehngrenze bei plastischer Extensometer-Dehnung Rp01</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/Rp02" title="https://w3id.org/pmd/tto/Rp02">Dehngrenze bei plastischer Extensometer-Dehnung Rp02</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in der Domäne von</dt>
+         <dd>
+            <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Rp01">
+      <h3>Dehngrenze bei plastischer Extensometer-Dehnung Rp01<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/Rp01</p>
+      <div class="comment">
+         <span class="markdown">Spannung bei einer plastischen Extensometer-Dehnung, die 0,1 Prozent der Extensometer-Messlänge entspricht</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/ns/prov#value"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#value">value</a> 
+            <span class="logic">value</span> 0.1</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/ProofStrengthPlasticExtension"
+               title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Rp02">
+      <h3>Dehngrenze bei plastischer Extensometer-Dehnung Rp02<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/Rp02</p>
+      <div class="comment">
+         <span class="markdown">Spannung bei einer plastischen Extensometer-Dehnung, die 0,2 Prozent der Extensometer-Messlänge entspricht</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://www.w3.org/ns/prov#value"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#value">value</a> 
+            <span class="logic">value</span> 0.2</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/ProofStrengthPlasticExtension"
+               title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageElongation">
+      <h3>Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageElongation</p>
+      <div class="comment">
+         <span class="markdown">Verlängerung, angegeben in Prozent, bezogen auf die Anfangsmesslänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/Elongation" title="https://w3id.org/pmd/tto/Elongation">Verlängerung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/WidthAfterFracture">
+      <h3>End-Breite<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/WidthAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt eine horizontale Messung eines Objekts (Prüfkörpers) im rechten Winkel zur Länge des Objekts (Prüfkörpers), wie sie nach einer Prüfung gemessen wird.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Width"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Width">width</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ThicknessAfterFracture">
+      <h3>End-Dicke<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ThicknessAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt die gemessene Dimension in einer Richtung eines Prüfstücks, wie sie vor der Prüfung gemessen wurde.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Thickness"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Thickness">thickness</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/DiameterAfterFracture">
+      <h3>End-Probendurchmesser<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/DiameterAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">Die Länge einer geraden Linie durch den Mittelpunkt eines Objekts (Zugprüfstücks), gemessen nach einem Bruch, der während einer Prüfung aufgetreten ist.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Diameter"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Diameter">diameter</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ExtensometerGaugeLength">
+      <h3>Extensometer-Messlänge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ExtensometerGaugeLength</p>
+      <div class="comment">
+         <span class="markdown">Anfangsmesslänge des Dehnungsaufnehmers (Extensometer), die zum Messen der Verlängerung benutzt wird
+
+Anmerkung: Für die Bestimmung mehrerer Eigenschaften, die (teilweise oder vollständig) von der Verlängerung abhängig sind, z. B. R_p, A_e oder A_g, ist die Verwendung eines Extensometers zwingend erforderlich.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/GaugeLength" title="https://w3id.org/pmd/tto/GaugeLength">Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GeometryShape">
+      <h3>Geometrische Form<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/GeometryShape</p>
+      <div class="comment">
+         <span class="markdown">Diese Eigenschaft beschreibt die geometrischen Abmessungen und das Erscheinungsbild (Form und Abmaße) einer Probe, eines Prüfkörpers oder eines Prüfstücks, wie sie üblicherweise durch eine entsprechende Norm definiert sind. Dementsprechend ist der angegebene Formwert in Übereinstimmung mit der definierenden Norm anzugeben, z. B. "Zugprüfstück Form 1 gemäß Anhang B".</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestPieceInfo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestPieceInfo">test piece info</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageTotalExtensionAtMaximumForce">
+      <h3>Gesamte Extensometer-Dehnung bei Höchstkraft<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageTotalExtensionAtMaximumForce</p>
+      <div class="comment">
+         <span class="markdown">gesamte Verlängerung (elastische plus plastische Verlängerung) der Extensometer-Messlänge bei Höchstkraft, angegeben in Prozent, bezogen auf die Extensometer-Messlänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>(<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/MaximumForce" title="https://w3id.org/pmd/tto/MaximumForce">Höchstkraft</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Extension"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Extension">extension</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageTotalExtensionAtFracture">
+      <h3>Gesamte Extensometer-Dehnung beim Bruch<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageTotalExtensionAtFracture</p>
+      <div class="comment">
+         <span class="markdown">gesamte Verlängerung (elastische plus plastische Verlängerung) der Extensometer-Messlänge beim Bruch, angegeben in Prozent, bezogen auf die Extensometer-Messlänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Extension"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Extension">extension</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/MaximumForce">
+      <h3>Höchstkraft<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/MaximumForce</p>
+      <div class="comment">
+         <span class="markdown">Bei Werkstoffen, die kein diskontinuierliches Fließen zeigen: größte Kraft, der die Probe während des Versuchs standhält
+
+Bei Werkstoffen, die ein diskontinuierliches Fließen zeigen: größte Kraft, der die Probe während des Versuchs nach dem Beginn der Verfestigung standhält
+
+Anmerkung: Für Werkstoffe, die ein diskontinuierliches Fließen zeigen, aber keine Verfestigung erzielt werden kann, ist die Höchstkraft nicht definiert
+.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Force"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Force">force</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/MinimumCrossSectionalAreaAfterFracture">
+      <h3>Kleinster Querschnitt nach dem Bruch<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/MinimumCrossSectionalAreaAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">Symbol: S_u</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">Dieses Konzept beschreibt die kleinste Querschnittsfläche des Zugprüfkörers, die nach dem Bruch infolge der aufgebrachten Zugkraft erhalten wird.
+
+Anmerkung: Sie wird in der Regel senkrecht zur Richtung der aufgebrachten Kraft gemessen und dient zur Berechnung der technischen Spannung während der Prüfung.
+
+Anmerkung: Es wird empfohlen, den Anfangsquerschnitt innerhalb der parallelen Länge mit einer Genauigkeit von ±2 % zu messen. Bei runden Prüfkörpern mit kleinem Durchmesser oder Prüfkörpern mit anderen Querschnittsgeometrien ist es jedoch möglicherweise nicht möglich, den Anfangsquerschnitt innerhalb der parallelen Länge mit einer Genauigkeit von ±2 % zu messen.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>((<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ThicknessAfterFracture" title="https://w3id.org/pmd/tto/ThicknessAfterFracture">End-Dicke</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/WidthAfterFracture" title="https://w3id.org/pmd/tto/WidthAfterFracture">End-Breite</a>
+            <sup class="type-c" title="Klasse">c</sup>)) <span class="logic">or</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/DiameterAfterFracture" title="https://w3id.org/pmd/tto/DiameterAfterFracture">End-Probendurchmesser</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/CrossSectionArea"
+               target="_blank"
+               title="https://w3id.org/pmd/co/CrossSectionArea">cross section area</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/GaugeLength">
+      <h3>Messlänge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/GaugeLength</p>
+      <div class="comment">
+         <span class="markdown">Länge des parallelen Teils der Probe, an dem zu einem beliebigen Zeitpunkt während des Versuchs die Verlängerung gemessen wird</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Length"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Length">length</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/FinalGaugeLengthAfterFracture"
+               title="https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture">Messlänge nach dem Bruch</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/FinalGaugeLengthAfterFracture">
+      <h3>Messlänge nach dem Bruch<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/FinalGaugeLengthAfterFracture</p>
+      <div class="comment">
+         <span class="markdown">Länge zwischen den Marken zur Kennzeichnung der Messlänge auf der Probe, die nach dem Bruch bei Raumtemperatur gemessen wird, nachdem die beiden Probenbruchstücke sorgfältig so zusammengefügt wurden, dass ihre Achsen in einer Geraden liegen</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/GaugeLength" title="https://w3id.org/pmd/tto/GaugeLength">Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/UpperYieldStrength">
+      <h3>Obere Streckgrenze<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/UpperYieldStrength</p>
+      <div class="comment">
+         <span class="markdown">höchste Spannung, bevor der erste Kraftabfall auftritt</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Stress"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Stress">stress</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/YieldStrength" title="https://w3id.org/pmd/tto/YieldStrength">Streckgrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ParallelLength">
+      <h3>Parallele Länge<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ParallelLength</p>
+      <div class="comment">
+         <span class="markdown">Länge des parallelen reduzierten Querschnitts der Probe
+
+Anmerkung: Bei unbearbeiteten Proben tritt an die Stelle der parallelen Länge der Abstand zwischen den Einspannungen.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Length"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Length">length</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/pmd/co/PercentageExtension">
+      <h3>percentage extension<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/co/PercentageExtension</p>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>ist in Range von</dt>
+         <dd>
+            <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentagePlasticExtensionAtMaximumForce">
+      <h3>Plastische Extensometer-Dehnung bei Höchstkraft<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentagePlasticExtensionAtMaximumForce</p>
+      <div class="comment">
+         <span class="markdown">plastische Verlängerung der Extensometer-Messlänge bei Höchstkraft, angegeben in Prozent, bezogen auf die Extensometer-Messlänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>(<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/ExtensometerGaugeLength" title="https://w3id.org/pmd/tto/ExtensometerGaugeLength">Extensometer-Messlänge</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/MaximumForce" title="https://w3id.org/pmd/tto/MaximumForce">Höchstkraft</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Extension"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Extension">extension</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/CrossheadSeparation">
+      <h3>Querhaupttrennung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/CrossheadSeparation</p>
+      <div class="comment">
+         <span class="markdown">Diese Eigenschaft beschreibt die Verschiebung der Traverse einer Zugprüfmaschine.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/StressRate">
+      <h3>Spannungsgeschwindigkeit<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/StressRate</p>
+      <div class="comment">
+         <span class="markdown">Zunahme der Spannung je Zeiteinheit
+
+Anmerkung: Die Spannungsgeschwindigkeit wird nur im elastischen Bereich des Versuchs verwendet.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SlopeOfTheElasticPart">
+      <h3>Steigung des elastischen Bereichs<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/SlopeOfTheElasticPart</p>
+      <div class="comment">
+         <span class="markdown">Diese Eigenschaft beschreibt den Wert der Steigung des ersten linear ansteigenden Teils ("elastischer Teil") in der bei einem Zugversuch erhaltenen Spannungs-Dehnungs-Kurve. Im elastischen Teil der Spannungs-Dehnungs-Kurve muss der Wert der Steigung nicht unbedingt dem Elastizitätsmodul entsprechen. Dieser Wert kann mit dem Wert des Elastizitätsmoduls (nur) sehr gut übereinstimmen, wenn optimale Bedingungen herrschten.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/YieldStrength">
+      <h3>Streckgrenze<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/YieldStrength</p>
+      <div class="comment">
+         <span class="markdown">Wenn der metallische Werkstoff diese Eigenschaft aufweist: die Spannung zu einem bestimmten Zeitpunkt während des Versuchs bei dem eine plastische Verformung ohne Zunahme der Kraft auftritt</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Stress"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Stress">stress</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/UpperYieldStrength" title="https://w3id.org/pmd/tto/UpperYieldStrength">Obere Streckgrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/LowerYieldStrength" title="https://w3id.org/pmd/tto/LowerYieldStrength">untere Streckgrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/PercentageYieldPointExtension">
+      <h3>Streckgrenzen-Extensometer-Dehnung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/PercentageYieldPointExtension</p>
+      <div class="comment">
+         <span class="markdown">Bei Werkstoffen, die ein diskontinuierliches Fließen zeigen: Verlängerung der Extensometer-Messlänge zwischen dem Beginn örtlichen Fließens und dem Einsetzen gleichmäßiger Verfestigung, angegeben in Prozent, bezogen auf die Extensometer-Messlänge</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Extension"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Extension">extension</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/CrossheadSeparationRate">
+      <h3>Traversengeschwindigkeit<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/CrossheadSeparationRate</p>
+      <div class="comment">
+         <span class="markdown">Traversenweg je Zeiteinheit</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TypeGaugeLengthMarks">
+      <h3>Typ Der Messlängenmarkierungen<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TypeGaugeLengthMarks</p>
+      <div class="comment">
+         <span class="markdown">Diese Eigenschaft wird verwendet, um die sichtbaren Markierungen zu beschreiben, die in der Regel während eines Zugversuchs zur Messung der Dehnung an den Prüfkörpern angebracht werden.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/TestPieceInfo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestPieceInfo">test piece info</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TransitionPoint">
+      <h3>Umschaltpunkt<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TransitionPoint</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt einen einzelnen Punkt, an dem ein Übergang von einer Bedingung oder einem Zustand in einen anderen erfolgt, z. B. der Punkt, an dem verschiedene Phasen von Materie im Gleichgewicht miteinander existieren können (auch Inversionspunkt genannt) oder wenn Prozessparameter geändert werden, die zu einem Übergang des Prozesses während seiner Ausführung führen.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/TransitionPointTestingRate"
+               title="https://w3id.org/pmd/tto/TransitionPointTestingRate">Umschaltpunkt der Prüfgeschwindigkeit</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TransitionPointTestingRate">
+      <h3>Umschaltpunkt der Prüfgeschwindigkeit<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TransitionPointTestingRate</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt den Umschaltpunkt der Prüfgeschwindigkeit während eines Analyse- / Testprozesses, z.B. den Punkt bezogen auf die Dehnung oder Spannung, an welchem die Prüfgeschwindigkeit während eines Zugversuchs geändert wird. Typischerweise ist dieser Punkt mit einer Abnahme des Extensometers (Dehnungsaufnehmers) vom Prüfkörper während eines dehnungsgeregelten Zugversuchs verbunden.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/TestingRate"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingRate">testing rate</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/TransitionPoint" title="https://w3id.org/pmd/tto/TransitionPoint">Umschaltpunkt</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LowerYieldStrength">
+      <h3>untere Streckgrenze<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/LowerYieldStrength</p>
+      <div class="comment">
+         <span class="markdown">kleinste Spannung während des plastischen Fließens, wobei Einschwingerscheinungen nicht berücksichtigt werden</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Stress"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Stress">stress</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/YieldStrength" title="https://w3id.org/pmd/tto/YieldStrength">Streckgrenze</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Elongation">
+      <h3>Verlängerung<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/Elongation</p>
+      <div class="comment">
+         <span class="markdown">Zunahme der Anfangsmesslänge zu einem beliebigen Zeitpunkt während des Versuchs</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/OriginalGaugeLength" title="https://w3id.org/pmd/tto/OriginalGaugeLength">Anfangsmesslänge</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/PercentagePermanentElongation"
+               title="https://w3id.org/pmd/tto/PercentagePermanentElongation">Bleibende Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/PercentageElongationAfterFracture"
+               title="https://w3id.org/pmd/tto/PercentageElongationAfterFracture">Bruchdehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="#/PercentageElongation" title="https://w3id.org/pmd/tto/PercentageElongation">Dehnung</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TensileStrength">
+      <h3>Zugfestigkeit<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TensileStrength</p>
+      <div class="comment">
+         <span class="markdown">Spannung, die der Höchstkraft entspricht</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>(<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="https://w3id.org/pmd/co/Stress"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Stress">stress</a>
+            <sup class="type-c" title="Klasse">c</sup>) <span class="logic">and</span> (<a href="https://w3id.org/pmd/co/relatesTo"
+               target="_blank"
+               title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/MaximumForce" title="https://w3id.org/pmd/tto/MaximumForce">Höchstkraft</a>
+            <sup class="type-c" title="Klasse">c</sup>)</dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ValueObject"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ValueObject">value object</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TensileTestingMachine">
+      <h3>Zugprüfmaschine<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TensileTestingMachine</p>
+      <div class="comment">
+         <span class="markdown">Maschine zur Durchführung eines Zugversuches; die Regelung und Überwachung des Versuches, die Messungen und die Datenverarbeitung werden üblicherweise mithilfe eines Computers durchgeführt.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="#/TensileTestNode" title="https://w3id.org/pmd/tto/TensileTestNode">Zugversuchsprozessknoten</a>
+            <sup class="type-c" title="Klasse">c</sup>, <a href="https://w3id.org/pmd/co/TestingMachine"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestingMachine">testing machine</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TensileTest">
+      <h3>Zugversuch<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TensileTest</p>
+      <div class="comment">
+         <span class="markdown">Zugversuche (Zugprüfungen) an Werkstoffen geben Auskunft über deren Festigkeit, Duktilität sowie weitere Kennwerte unter einachsiger Zugbeanspruchung.
+
+Beim Zugversuch wird ein Prüfkörper durch Zugkraft belastet, im Allgemeinen bis zum Bruch, um eine oder mehrere mechanische Eigenschaften zu bestimmen, die durch die semantisch verknüpften und definierten Begriffe festgelegt sind.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>ist äquvivalent zu</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/participant"
+               target="_blank"
+               title="https://w3id.org/pmd/co/participant">participant</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="https://w3id.org/pmd/co/TestPiece"
+               target="_blank"
+               title="https://w3id.org/pmd/co/TestPiece">test piece</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/pmd/co/participant"
+               target="_blank"
+               title="https://w3id.org/pmd/co/participant">participant</a>
+            <sup class="type-op" title="Objekt Eigenschaft">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#/TensileTestingMachine" title="https://w3id.org/pmd/tto/TensileTestingMachine">Zugprüfmaschine</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/MechanicalTestingProcess"
+               target="_blank"
+               title="https://w3id.org/pmd/co/MechanicalTestingProcess">mechanical testing process</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/TensileTestNode">
+      <h3>Zugversuchsprozessknoten<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/TensileTestNode</p>
+      <div class="comment">
+         <span class="markdown">Diese Entität beschreibt einen Workflow-Bestandteil, der Werkzeuge und Geräte beinhaltet, die für die Durchführung eines Zugversuchs verwendet werden, z. B. eine Zugprüfmaschine.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/ProcessingNode"
+               target="_blank"
+               title="https://w3id.org/pmd/co/ProcessingNode">processing node</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+         <dt>hat Sub-Klassen</dt>
+         <dd>
+            <a href="#/TensileTestingMachine" title="https://w3id.org/pmd/tto/TensileTestingMachine">Zugprüfmaschine</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ChangeOfTransverseDimension">
+      <h3>Änderung der transversalen Dimension<sup class="type-c" title="Klasse">c</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/ChangeOfTransverseDimension</p>
+      <div class="comment">
+         <span class="markdown">Dieses Wertobjekt beschreibt eine Variation der Abmessungen eines Prüfkörpers in Bezug auf seine Querachse, die sich auf seine Querschnittsfläche auswirkt und möglicherweise während eines Zugversuchs auftritt. Das Verhältnis der wahren plastischen Breitendehnung und der wahren plastischen Dickendehnung in einem in uniaxialem Zug beanspruchten Prüfkörper (vertikale Anisotropie) kann anhand dieser Information berechnet werden.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>hat Super-Klassen</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/co/Length"
+               target="_blank"
+               title="https://w3id.org/pmd/co/Length">length</a>
+            <sup class="type-c" title="Klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h2>Objekt Eigenschaften</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#/relatesToExtension" title="https://w3id.org/pmd/tto/relatesToExtension">relates to extension</a>
+      </li>
+   </ul>
+   <div class="entity" id="/relatesToExtension">
+      <h3>relates to extension<sup class="type-op" title="Objekt Eigenschaft">op</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/tto/relatesToExtension</p>
+      <dl class="definedBy">
+         <dt>ist definiert durch</dt>
+         <dd>
+            <a href="https://w3id.org/pmd/tto">https://w3id.org/pmd/tto</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>hat Super-Eigenschaften</dt>
+            <dd>
+               <a href="https://w3id.org/pmd/co/relatesTo"
+                  target="_blank"
+                  title="https://w3id.org/pmd/co/relatesTo">relates to</a>
+               <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+            </dd>
+            <dt>hat Domäne</dt>
+            <dd>
+               <a href="#/ProofStrengthPlasticExtension"
+                  title="https://w3id.org/pmd/tto/ProofStrengthPlasticExtension">Dehngrenze bei plastischer Extensometer-Dehnung</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+            <dt>hat Range</dt>
+            <dd>
+               <a href="#https://w3id.org/pmd/co/PercentageExtension" title="https://w3id.org/pmd/co/PercentageExtension">percentage extension</a>
+               <sup class="type-c" title="Klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h2>Anmerkungseigenschaften</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/pmd/co/definitionSource" title="https://w3id.org/pmd/co/definitionSource">
+            <span>definition source</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/pmd/co/symbol" title="https://w3id.org/pmd/co/symbol">
+            <span>symbol</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/pmd/co/definitionSource">
+      <h3>definition source<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/co/definitionSource</p>
+   </div>
+   <div class="entity" id="https://w3id.org/pmd/co/symbol">
+      <h3>symbol<sup class="type-ap" title="Anmerkungseigenschaft">ap</sup>
+         <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#annotationproperties">Übersicht der Anmerkungseigenschaften</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/pmd/co/symbol</p>
+   </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>
